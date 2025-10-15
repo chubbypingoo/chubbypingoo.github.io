@@ -89,26 +89,74 @@
                     The <span class="brand-name">Sweeps Guide</span>
                 </div>
                 <nav class="hidden md:flex items-center space-x-2">
-                    <a id="nav-daily" class="nav-link active">Daily Bonus List</a>
-                    <a id="nav-washing" class="nav-link">Washing Strategy</a>
+                    <a id="nav-washing" class="nav-link active">Washing Promos & Sales</a>
+                    <a id="nav-daily" class="nav-link">Daily Bonus List</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main class="container mx-auto px-4 py-8 md:py-12">
-
-        <!-- Page 1: Daily Bonus List -->
-        <div id="page-daily">
+    
+        <!-- Page 1: Washing Strategy -->
+        <div id="page-washing">
             <!-- Hero Section -->
             <section class="text-center mb-12">
-                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-3">The ~$400/Month Daily Bonus Plan</h1>
-                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Your realistic, 10-minute daily checklist to earn consistent cash from sweepstakes casinos.</p>
+                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-3">The Advanced Strategy for ~$1,500+/Month</h1>
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">This is where the real money is. Learn the simple strategy of "washing" promotional sales to turn this into a serious side hustle.</p>
+            </section>
+
+            <!-- Washing Explanation -->
+            <section class="max-w-4xl mx-auto card p-6 md:p-8 mb-12">
+                 <h2 class="text-2xl font-bold text-slate-800 mb-4">What is "Promo Washing"? It's Literally Free Money.</h2>
+                 <p class="mb-4 text-slate-700">You'll notice many sites offer welcome packages and promotional sales with discounted Sweeps Coins (SC). For example: pay $40 to receive $80 in SC. By purchasing these offers and "washing" them, you are capturing that discounted difference as pure profit.</p>
+                 <p class="text-slate-700">If you want to make more money—<strong class="text-slate-900">upwards of $1,500+ per month on average</strong>—this is the method. It's really easy.</p>
+                
+                <h3 class="text-xl font-bold text-slate-800 mt-8 mb-4">The 6-Step Washing Method</h3>
+                <ol class="list-decimal list-inside space-y-4 text-slate-600">
+                    <li><span class="font-semibold text-slate-800">Choose a high-value offer:</span> As a rule, any offer where the SC value is at least 15-20% more than the purchase price is worth washing. All welcome bonuses listed below are highly profitable.</li>
+                    <li><span class="font-semibold text-slate-800">Purchase the offer:</span> You will receive the promotional SC in your account.</li>
+                    <li><span class="font-semibold text-slate-800">Play through the SC (The "Wash"):</span> Before redeeming, sites require you to play the promotional SC at least once. This is "washing".</li>
+                    <li><span class="font-semibold text-slate-800">Use High-RTP Games:</span> To minimize loss during the wash, you MUST play games with a high Return-to-Player (RTP). Blackjack with "Basic Strategy" is ~99.5% RTP and is the best tool. High-RTP slots are the next best option. The table below lists the best game for each site.</li>
+                    <li><span class="font-semibold text-slate-800">Calculate Your Profit:</span> In theory, you should keep around 95% of the SC you wash. For an offer where you pay $40 for $80 SC, keeping 95% leaves you with $76. <strong class="text-green-700">That's a $36 profit for less than 30 minutes of effort.</strong></li>
+                    <li><span class="font-semibold text-slate-800">Rinse and Repeat:</span> Consistently wash good offers as they appear across all sites. This is how you earn upwards of $1,500+ per month.</li>
+                </ol>
+            </section>
+            
+            <!-- Washing Promos Table -->
+             <div class="card overflow-hidden">
+                <div class="p-6 bg-slate-50 border-b border-slate-200">
+                    <h3 class="text-xl font-bold text-slate-800">Best Welcome Bonuses to Wash for Immediate Profit</h3>
+                    <p class="text-slate-600 mt-1">Completing these offers will net you an <span class="font-bold text-green-700">instant ~$617 profit</span> (<span class="italic">~$555 after accounting for a 90% wash retention rate</span>). I have personally made over <span class="font-bold text-blue-600">$5,800</span> from these sites alone.</p>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm md:text-base">
+                        <thead class="table-header">
+                            <tr>
+                                <th class="w-1/4">Name & Link</th>
+                                <th class="w-2/4">Initial Welcome Offer & Profit</th>
+                                <th class="w-1/4">Highest-RTP Game (Best Wash Method)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="washing-promo-table-body">
+                            <!-- Data populated by script -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 2: Daily Bonus List -->
+        <div id="page-daily" style="display: none;">
+            <!-- Hero Section -->
+            <section class="text-center mb-12">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-3">The ~$400/Month Foundational Plan</h1>
+                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">The easiest, low-effort method. A simple 10-minute daily checklist to earn consistent cash from daily login bonuses.</p>
             </section>
 
             <!-- How it Works Section -->
             <section class="max-w-4xl mx-auto card p-6 md:p-8 mb-12">
-                <h2 class="text-2xl font-bold text-slate-800 mb-6 text-center">How It Works: The 5-Step Method</h2>
+                <h2 class="text-2xl font-bold text-slate-800 mb-6 text-center">How It Works: The 5-Step Daily Method</h2>
                 <ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
                     <li class="flex flex-col items-center">
                         <div class="bg-blue-100 text-blue-800 rounded-full h-12 w-12 flex items-center justify-center font-bold text-xl mb-3">1</div>
@@ -161,7 +209,7 @@
             </div>
              <!-- Summary Section -->
             <div class="max-w-4xl mx-auto card p-6 md:p-8 mt-12">
-                <h2 class="text-2xl font-bold text-slate-800 mb-6">Profit Summary</h2>
+                <h2 class="text-2xl font-bold text-slate-800 mb-6">Daily Bonus Profit Summary</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
                     <div class="bg-slate-100 p-5 rounded-lg">
                         <p class="font-semibold text-slate-600">Avg. Daily Total:</p>
@@ -179,49 +227,6 @@
             </div>
         </div>
 
-        <!-- Page 2: Washing Strategy -->
-        <div id="page-washing" style="display: none;">
-            <!-- Hero Section -->
-            <section class="text-center mb-12">
-                <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 mb-3">The ~$1,500/Month Advanced Strategy</h1>
-                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">A simple guide to "washing" promotional offers and sales to dramatically increase your earnings.</p>
-            </section>
-
-            <!-- Washing Explanation -->
-            <section class="max-w-4xl mx-auto card p-6 md:p-8 mb-12">
-                 <h2 class="text-2xl font-bold text-slate-800 mb-6">Understanding "Washing"</h2>
-                 <p class="mb-4 text-slate-700">Many sites offer promotional packages with discounted Sweeps Coins (e.g., pay $40 for $80 in SC). By "washing" these offers, you can capture the difference as profit. It's the key to turning this side-hustle into a significant income stream.</p>
-                
-                <h3 class="text-xl font-bold text-slate-800 mt-6 mb-4">The 6-Step Washing Method</h3>
-                <ol class="list-decimal list-inside space-y-3 text-slate-600">
-                    <li><span class="font-semibold">Choose an Offer:</span> Look for offers where the SC value is at least 15-20% higher than the purchase price.</li>
-                    <li><span class="font-semibold">Purchase:</span> Buy the discounted SC package.</li>
-                    <li><span class="font-semibold">Play Through (Wash):</span> You must wager the full promotional SC amount at least once. Use the recommended high-RTP games to minimize loss.</li>
-                    <li><span class="font-semibold">Understand RTP:</span> Return-to-Player (RTP) is the key. A 97% RTP game theoretically returns $97 for every $100 wagered. Blackjack with basic strategy is ~99.5%, making it the best washing tool.</li>
-                    <li><span class="font-semibold">Calculate Profit:</span> If you wash $80 SC with a 95% retention rate, you'll have ~$76. Since you paid $40, your profit is $36. This process often takes less than 30 minutes.</li>
-                    <li><span class="font-semibold">Rinse and Repeat:</span> Consistently wash good offers across all sites to reach the $1,500+/month potential.</li>
-                </ol>
-            </section>
-            
-            <!-- Washing Promos Table -->
-             <div class="card overflow-hidden">
-                <div class="overflow-x-auto">
-                    <h3 class="p-6 text-xl font-bold text-slate-800 bg-slate-50">Best Welcome Bonuses to Wash Immediately</h3>
-                    <table class="w-full text-sm md:text-base">
-                        <thead class="table-header">
-                            <tr>
-                                <th class="w-1/4">Name</th>
-                                <th class="w-2/4">Initial Welcome Offer</th>
-                                <th class="w-1/4">Highest-RTP Game (Best Wash Method)</th>
-                            </tr>
-                        </thead>
-                        <tbody id="washing-promo-table-body">
-                            <!-- Data populated by script -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
         
         <!-- Common Footer -->
         <footer class="text-center mt-16 text-xs text-slate-500 max-w-4xl mx-auto">
@@ -334,6 +339,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             populateDailyBonusTable();
             populateWashingPromoTable();
+            showPage('washing'); // Default to washing page
         });
     </script>
 </body>
