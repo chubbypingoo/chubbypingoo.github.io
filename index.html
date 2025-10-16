@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="theme-color" content="#6366f1">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <title>Earn $800 in 1 Hour: The Complete Bonus Arbitrage Guide</title>
-    <meta name="description" content="Learn how to earn $800+ in one hour through bonus arbitrage. Step-by-step guide used by 1,200+ people to exploit company signup bonuses legally.">
+    <meta name="description" content="Learn how to earn $800+ in one hour through bonus arbitrage. Step-by-step guide used by 1,200+ people.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -23,32 +22,27 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.7;
             color: #1a1a1a;
             background: #ffffff;
             overflow-x: hidden;
         }
 
-        /* Animations - keeping all original animations */
+        /* Animations */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-40px); }
+            from { opacity: 0; transform: translateX(-30px); }
             to { opacity: 1; transform: translateX(0); }
-        }
-
-        @keyframes scaleIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
         }
 
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
+            50% { transform: scale(1.02); }
         }
 
         @keyframes shimmer {
@@ -61,7 +55,7 @@
             50% { background-position: 100% 50%; }
         }
 
-        /* Progress Indicator */
+        /* Progress Bar */
         .progress-indicator {
             position: fixed;
             top: 0;
@@ -83,18 +77,11 @@
         header {
             background: rgba(255,255,255,0.95);
             border-bottom: 1px solid #e5e7eb;
-            padding: 1.25rem 1.5rem;
+            padding: 1rem 1.5rem;
             position: sticky;
             top: 0;
             z-index: 100;
             backdrop-filter: blur(20px);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
-            transition: all 0.3s ease;
-        }
-
-        header.scrolled {
-            padding: 0.875rem 1.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         .header-content {
@@ -106,13 +93,13 @@
         }
 
         .site-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 700;
             color: #1a1a1a;
         }
 
         .presented-by {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #6b7280;
             font-weight: 500;
         }
@@ -134,15 +121,15 @@
         }
 
         .community-icon {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
         }
 
         /* Article Container */
         article {
             max-width: 900px;
             margin: 0 auto;
-            padding: 3rem 1.5rem 4rem;
+            padding: 2rem 1.5rem 3rem;
         }
 
         /* Social Proof Badge */
@@ -152,41 +139,41 @@
             gap: 0.5rem;
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
-            padding: 0.6rem 1.25rem;
+            padding: 0.5rem 1rem;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             animation: slideInLeft 0.8s ease;
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
         }
 
         /* Typography */
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             color: #111827;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.02em;
             animation: fadeInUp 0.8s ease;
         }
 
         .subtitle {
-            font-size: 1.4rem;
+            font-size: 1.15rem;
             color: #4b5563;
-            margin-bottom: 2.5rem;
-            line-height: 1.5;
-            font-weight: 400;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+            animation: fadeInUp 0.8s ease 0.1s backwards;
         }
 
         h2 {
-            font-size: 2.25rem;
+            font-size: 1.75rem;
             font-weight: 800;
-            margin: 4rem 0 1.5rem;
+            margin: 3rem 0 1.25rem;
             color: #111827;
             position: relative;
-            padding-bottom: 1rem;
+            padding-bottom: 0.75rem;
         }
 
         h2::after {
@@ -194,16 +181,23 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 60px;
-            height: 4px;
+            width: 50px;
+            height: 3px;
             background: linear-gradient(90deg, #6366f1, #8b5cf6);
             border-radius: 2px;
         }
 
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
+            color: #111827;
+        }
+
         p {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
             color: #374151;
-            font-size: 1.05rem;
+            font-size: 1rem;
         }
 
         strong {
@@ -211,166 +205,159 @@
             color: #111827;
         }
 
-        /* Stats Bar */
-        .stats-bar {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            margin: 3rem 0;
+        /* Compact Stats Row */
+        .stats-compact {
+            display: flex;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            border-left: 3px solid #3b82f6;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
-        .stat-item {
+        .stat-compact {
+            flex: 0 0 auto;
             text-align: center;
-            padding: 2rem 1.5rem;
-            background: white;
-            border-radius: 16px;
-            border: 2px solid #e5e7eb;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            min-width: 100px;
         }
 
-        .stat-item:hover {
-            border-color: #6366f1;
-            transform: translateY(-8px);
-            box-shadow: 0 12px 28px rgba(99, 102, 241, 0.15);
-        }
-
-        .stat-number {
-            font-size: 2.75rem;
+        .stat-compact-number {
+            font-size: 1.75rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
+            color: #6366f1;
+            line-height: 1;
+            margin-bottom: 0.25rem;
         }
 
-        .stat-label {
-            font-size: 0.9rem;
+        .stat-compact-label {
+            font-size: 0.75rem;
             color: #6b7280;
             font-weight: 500;
         }
 
-        /* Intro Section */
-        .intro-section {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin: 2.5rem 0;
-            border-left: 4px solid #3b82f6;
-            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
-        }
-
-        /* Early CTA */
-        .early-cta {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            border-radius: 20px;
-            padding: 3rem;
-            margin: 3rem 0;
+        /* Main CTA - IMMEDIATELY AFTER SUBTITLE */
+        .main-cta {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            border-radius: 16px;
+            padding: 1.75rem 1.5rem;
+            margin: 1.5rem 0 2rem;
             color: white;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+            position: relative;
+            overflow: hidden;
         }
 
-        .early-cta-content {
+        .main-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 6s ease-in-out infinite;
+        }
+
+        .main-cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-cta-header {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
 
-        .early-cta-logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 16px;
+        .main-cta-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
             flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        .early-cta-text h3 {
-            color: white;
-            margin: 0 0 0.5rem 0;
-            font-size: 1.85rem;
+        .main-cta-title {
+            font-size: 1.35rem;
             font-weight: 800;
-        }
-
-        .early-cta-text p {
+            color: white;
             margin: 0;
-            font-size: 1.1rem;
-            color: #e2e8f0;
+            line-height: 1.2;
         }
 
-        .early-cta-button {
+        .main-cta-text {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 1.25rem;
+            line-height: 1.5;
+        }
+
+        .main-cta-proof {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 0.85rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 1.25rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .main-cta-proof strong {
+            color: white;
+            font-weight: 700;
+        }
+
+        .main-cta-button {
             display: block;
             background: white;
-            color: #111827;
-            padding: 1.35rem 2.5rem;
-            border-radius: 14px;
+            color: #4f46e5;
+            padding: 1.15rem 2rem;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             text-align: center;
             transition: all 0.3s;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
         }
 
-        .early-cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        .main-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
 
-        .early-cta-features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin: 2rem 0;
-            padding: 2rem;
-            background: rgba(255,255,255,0.05);
-            border-radius: 12px;
-        }
-
-        .early-cta-feature {
-            text-align: center;
-        }
-
-        .early-cta-feature-value {
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-            color: #10b981;
-        }
-
-        .early-cta-feature-label {
-            font-size: 0.9rem;
-            opacity: 0.85;
-        }
-
-        .early-cta-social {
-            text-align: center;
-            padding: 1.25rem;
-            background: rgba(16, 185, 129, 0.12);
-            border-radius: 10px;
-            margin: 1.5rem 0;
-        }
-
-        .early-cta-code {
-            margin-top: 1.5rem;
-            text-align: center;
+        .main-cta-code {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 1rem;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.9);
         }
 
         .code-box {
             background: rgba(255,255,255,0.15);
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 0.85rem;
             border-radius: 8px;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.65rem;
+            backdrop-filter: blur(10px);
         }
 
         .code-box code {
             font-weight: 800;
             color: white;
-            font-size: 1.15rem;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
         }
 
         .copy-button {
@@ -380,124 +367,179 @@
             padding: 0.35rem 0.75rem;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
+            transition: all 0.3s;
         }
 
-        /* How It Works */
+        .copy-button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .copy-button.copied {
+            background: #10b981;
+        }
+
+        /* Intro Section - More Compact */
+        .intro-section {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-left: 3px solid #6b7280;
+        }
+
+        .intro-section p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.85rem;
+        }
+
+        .intro-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Key Points - Compact */
+        .key-points {
+            background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 3px solid #eab308;
+        }
+
+        .key-points h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+
+        .key-points ul {
+            margin: 0.75rem 0 0 1.25rem;
+        }
+
+        .key-points li {
+            margin-bottom: 0.65rem;
+            font-size: 0.9rem;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        /* How It Works - Horizontal Scroll on Mobile */
         .how-it-works {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            margin: 3rem 0;
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 0.5rem;
         }
 
         .how-step {
+            flex: 0 0 auto;
+            width: 200px;
             text-align: center;
-            padding: 2rem 1.5rem;
+            padding: 1.5rem 1rem;
             background: white;
             border: 2px solid #e5e7eb;
-            border-radius: 16px;
-            transition: all 0.4s;
+            border-radius: 14px;
+            transition: all 0.3s;
         }
 
         .how-step:hover {
             border-color: #6366f1;
-            transform: translateY(-8px);
-            box-shadow: 0 12px 28px rgba(99, 102, 241, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
         }
 
         .how-step-number {
-            width: 56px;
-            height: 56px;
+            width: 44px;
+            height: 44px;
             background: linear-gradient(135deg, #6366f1, #8b5cf6);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 800;
-            margin: 0 auto 1.25rem;
+            margin: 0 auto 1rem;
         }
 
         .how-step h4 {
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             font-weight: 700;
-            margin: 0 0 0.75rem 0;
+            margin: 0 0 0.5rem 0;
         }
 
         .how-step p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #6b7280;
             margin: 0;
-        }
-
-        /* Key Points */
-        .key-points {
-            background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
-            border-radius: 16px;
-            padding: 2rem;
-            margin: 2rem 0;
-            border-left: 4px solid #eab308;
-        }
-
-        .key-points ul {
-            margin: 1rem 0 0 1.5rem;
-        }
-
-        .key-points li {
-            margin-bottom: 0.85rem;
-            color: #374151;
+            line-height: 1.4;
         }
 
         /* Offers Section */
         .offers-intro {
-            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            border-radius: 16px;
-            padding: 2rem;
-            margin-bottom: 2.5rem;
-            border-left: 4px solid #6b7280;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #3b82f6;
         }
 
-        /* Offer Cards */
+        .offers-intro p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 0.65rem;
+        }
+
+        .offers-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Offer Cards - ULTRA COMPACT for Mobile */
         .offer-card {
             background: white;
             border: 2px solid #e5e7eb;
-            border-radius: 16px;
-            margin-bottom: 1.5rem;
+            border-radius: 14px;
+            margin-bottom: 1rem;
             overflow: hidden;
-            transition: all 0.4s;
+            transition: all 0.3s;
         }
 
         .offer-card:hover {
             border-color: #c7d2fe;
-            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.12);
-            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.12);
         }
 
         .offer-header {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 2fr 140px;
-            gap: 1.5rem;
-            padding: 1.75rem 2rem;
-            align-items: center;
+            padding: 1rem;
             cursor: pointer;
             background: #fafafa;
+        }
+
+        .offer-top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
         }
 
         .offer-name-section {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.65rem;
+            flex: 1;
+            min-width: 0;
         }
 
         .dropdown-arrow {
             width: 0;
             height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
-            border-top: 7px solid #6b7280;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid #6b7280;
             transition: all 0.3s;
             flex-shrink: 0;
         }
@@ -507,207 +549,250 @@
             border-top-color: #6366f1;
         }
 
-        .offer-name-content h3 {
-            font-size: 1.4rem;
+        .offer-name {
+            font-size: 1.2rem;
             font-weight: 700;
             color: #111827;
-            margin: 0 0 0.25rem 0;
-        }
-
-        .offer-hint {
-            font-size: 0.8rem;
-            color: #6b7280;
-            font-weight: 500;
         }
 
         .offer-payout {
-            font-size: 2.25rem;
+            font-size: 1.85rem;
             font-weight: 900;
             background: linear-gradient(135deg, #059669, #10b981);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .offer-meta-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
         }
 
         .offer-time {
             color: #1e40af;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.8rem;
             background: #dbeafe;
-            padding: 0.35rem 0.85rem;
+            padding: 0.3rem 0.65rem;
             border-radius: 6px;
-        }
-
-        .offer-meta-row {
-            display: contents;
+            white-space: nowrap;
         }
 
         .offer-description {
-            color: #4b5563;
-            font-size: 0.95rem;
+            color: #6b7280;
+            font-size: 0.9rem;
+            flex: 1;
         }
 
         .offer-button {
-            display: inline-block;
+            display: block;
+            width: 100%;
             background: linear-gradient(135deg, #111827, #374151);
             color: white;
-            padding: 0.85rem 1.75rem;
+            padding: 0.95rem;
             border-radius: 10px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 0.95rem;
+            text-align: center;
             transition: all 0.3s;
+            min-height: 48px;
         }
 
         .offer-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(17, 24, 39, 0.3);
+            box-shadow: 0 6px 18px rgba(17, 24, 39, 0.3);
         }
 
         /* Offer Details */
         .offer-details {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             background: #f8fafc;
-            border-top: 1px solid #e5e7eb;
         }
 
         .offer-card.expanded .offer-details {
-            max-height: 900px;
+            max-height: 800px;
         }
 
         .offer-details-content {
-            padding: 2.5rem 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            padding: 1.25rem 1rem;
         }
 
-        .details-col h4 {
-            font-size: 1.1rem;
+        .details-section {
+            margin-bottom: 1.25rem;
+        }
+
+        .details-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .details-section h4 {
+            font-size: 0.95rem;
             font-weight: 700;
-            margin: 0 0 1.25rem 0;
+            margin: 0 0 0.75rem 0;
+            color: #111827;
         }
 
-        .details-col ol {
+        .details-section ol {
             margin: 0;
-            padding-left: 1.25rem;
+            padding-left: 1.15rem;
         }
 
-        .details-col li {
-            margin-bottom: 0.75rem;
-            line-height: 1.7;
+        .details-section li {
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            color: #374151;
+        }
+
+        .details-section p {
+            font-size: 0.875rem;
+            line-height: 1.6;
+            margin-bottom: 0.65rem;
+            color: #374151;
+        }
+
+        .details-section p:last-child {
+            margin-bottom: 0;
         }
 
         /* Total Summary */
         .total-summary {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             color: white;
-            border-radius: 20px;
-            padding: 3.5rem;
-            margin: 4rem 0;
+            border-radius: 16px;
+            padding: 2.5rem 1.5rem;
+            margin: 3rem 0;
             text-align: center;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+        }
+
+        .total-summary h3 {
+            color: white;
+            margin: 0 0 1.5rem 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
 
         .total-amount {
-            font-size: 5.5rem;
+            font-size: 3.5rem;
             font-weight: 900;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
+            line-height: 1;
         }
 
         .total-time {
-            font-size: 1.25rem;
+            font-size: 1.05rem;
+            opacity: 0.9;
         }
 
         /* Social Proof */
         .social-proof-section {
             background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border-radius: 20px;
-            padding: 3rem;
-            margin: 4rem 0;
-            border-left: 4px solid #10b981;
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            margin: 3rem 0;
+            border-left: 3px solid #10b981;
+        }
+
+        .social-proof-section h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
         }
 
         .social-proof-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: 1fr;
+            gap: 0.85rem;
+            margin-top: 1.25rem;
         }
 
         .social-proof-item {
             text-align: center;
-            padding: 2rem 1.5rem;
+            padding: 1.25rem 1rem;
             background: white;
-            border-radius: 12px;
-            transition: all 0.4s;
+            border-radius: 10px;
+            transition: all 0.3s;
         }
 
         .social-proof-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 28px rgba(16, 185, 129, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
         }
 
         .social-proof-number {
-            font-size: 2.5rem;
+            font-size: 2.25rem;
             font-weight: 900;
             background: linear-gradient(135deg, #10b981, #059669);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .social-proof-label {
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-weight: 500;
         }
 
         /* Testimonials */
         .testimonials {
-            margin: 4rem 0;
+            margin: 3rem 0;
         }
 
         .testimonials h3 {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
         .testimonials-grid {
             display: grid;
-            gap: 2rem;
+            gap: 1rem;
         }
 
         .testimonial-card {
             background: #f9fafb;
-            border-radius: 16px;
-            padding: 1.25rem;
+            border-radius: 12px;
+            padding: 1rem;
             border: 2px solid #e5e7eb;
         }
 
         .testimonial-card img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 8px;
         }
 
         /* FAQ */
         .faq-section {
-            margin: 4rem 0;
+            margin: 3rem 0;
         }
 
         .faq-item {
             background: white;
             border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            margin-bottom: 1rem;
+            border-radius: 10px;
+            margin-bottom: 0.75rem;
             overflow: hidden;
         }
 
         .faq-question {
-            padding: 1.5rem;
+            padding: 1rem;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-weight: 600;
+            font-size: 0.95rem;
+            color: #111827;
         }
 
         .faq-icon {
@@ -732,25 +817,42 @@
         }
 
         .faq-answer-content {
-            padding: 0 1.5rem 1.5rem;
-            line-height: 1.7;
+            padding: 0 1rem 1rem;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            color: #6b7280;
         }
 
         /* Info Note */
         .info-note {
             background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
-            border-radius: 16px;
-            padding: 2.5rem;
-            margin: 3rem 0;
-            border-left: 4px solid #6b7280;
+            border-radius: 14px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-left: 3px solid #6b7280;
+        }
+
+        .info-note h3 {
+            margin-top: 0;
+            font-size: 1.15rem;
+        }
+
+        .info-note p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .info-note p:last-child {
+            margin-bottom: 0;
         }
 
         /* Footer */
         footer {
             background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
             border-top: 1px solid #e5e7eb;
-            padding: 4rem 1.5rem 2rem;
-            margin-top: 6rem;
+            padding: 3rem 1.5rem 2rem;
+            margin-top: 4rem;
         }
 
         .footer-content {
@@ -759,40 +861,46 @@
         }
 
         .disclaimer {
-            font-size: 0.9rem;
-            line-height: 1.8;
+            font-size: 0.85rem;
+            line-height: 1.7;
             color: #6b7280;
         }
 
         .disclaimer-title {
             font-weight: 700;
             color: #374151;
+            margin-bottom: 0.85rem;
+            font-size: 0.95rem;
+        }
+
+        .disclaimer p {
             margin-bottom: 1rem;
+            font-size: 0.85rem;
         }
 
         .footer-bottom {
             text-align: center;
-            margin-top: 3rem;
-            padding-top: 2rem;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
             border-top: 1px solid #e5e7eb;
             color: #9ca3af;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
-        /* Mobile Sticky CTA */
+        /* Mobile Sticky CTA - FIXED CONTRAST */
         .mobile-sticky-cta {
             display: none;
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            padding: 1rem 1rem 1.25rem;
-            box-shadow: 0 -6px 20px rgba(0,0,0,0.2);
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            padding: 0.85rem 1rem 1rem;
+            box-shadow: 0 -6px 20px rgba(99, 102, 241, 0.3);
             z-index: 999;
             transform: translateY(100%);
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border-top: 2px solid rgba(99, 102, 241, 0.3);
+            border-top: 2px solid rgba(255,255,255,0.2);
         }
 
         .mobile-sticky-cta.visible {
@@ -803,371 +911,263 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 1rem;
+            gap: 0.85rem;
             max-width: 600px;
             margin: 0 auto;
         }
 
         .mobile-sticky-cta-text {
             flex: 1;
-            color: white;
         }
 
         .mobile-sticky-cta-text strong {
             display: block;
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 0.35rem;
+            font-size: 1rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
         }
 
         .mobile-sticky-cta-text span {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.95);
         }
 
         .mobile-sticky-cta-button {
             background: white;
-            color: #111827;
-            padding: 1rem 1.5rem;
+            color: #4f46e5;
+            padding: 0.95rem 1.5rem;
             border-radius: 10px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1rem;
+            font-size: 0.95rem;
             white-space: nowrap;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s;
         }
 
-        /* MOBILE OPTIMIZATIONS */
-        @media (max-width: 768px) {
-            .mobile-sticky-cta { display: block; }
-            
-            article { padding: 1rem 1rem 120px; }
-            
+        .mobile-sticky-cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Desktop Adjustments */
+        @media (min-width: 769px) {
+            article {
+                padding: 3rem 1.5rem 4rem;
+            }
+
             h1 {
-                font-size: 2rem;
-                line-height: 1.15;
-                letter-spacing: -0.02em;
+                font-size: 3rem;
             }
-            
+
             .subtitle {
-                font-size: 1.05rem;
-                line-height: 1.4;
+                font-size: 1.4rem;
             }
-            
+
             h2 {
-                font-size: 1.5rem;
-                margin: 2.5rem 0 1rem;
-            }
-            
-            p {
-                font-size: 1rem;
-                line-height: 1.6;
-            }
-
-            /* Mobile Header */
-            header { padding: 1rem; }
-            header.scrolled { padding: 0.75rem 1rem; }
-            .site-title { font-size: 1rem; }
-            .presented-by { font-size: 0.75rem; }
-            .community-icon { width: 22px; height: 22px; }
-
-            /* Mobile Stats */
-            .stats-bar {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-                margin: 2rem 0;
-            }
-            
-            .stat-item {
-                padding: 1.5rem 1rem;
-                border-radius: 12px;
-            }
-            
-            .stat-number {
                 font-size: 2.25rem;
             }
-            
-            .stat-label {
-                font-size: 0.8rem;
-            }
 
-            /* Mobile Intro */
-            .intro-section {
-                padding: 1.5rem;
-                margin: 2rem 0;
-                border-radius: 14px;
-            }
-
-            /* Mobile CTA */
-            .early-cta {
-                padding: 1.5rem 1.25rem;
-                margin: 2rem 0;
-                border-radius: 16px;
-            }
-            
-            .early-cta-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-                margin-bottom: 1.25rem;
-            }
-            
-            .early-cta-logo {
-                width: 64px;
-                height: 64px;
-            }
-            
-            .early-cta-text h3 {
-                font-size: 1.35rem;
-            }
-            
-            .early-cta-text p {
-                font-size: 0.95rem;
-            }
-            
-            .early-cta-features {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                gap: 0.75rem;
-                padding: 1rem;
-            }
-            
-            .early-cta-feature-value {
-                font-size: 1.5rem;
-            }
-            
-            .early-cta-feature-label {
-                font-size: 0.75rem;
-            }
-            
-            .early-cta-button {
-                padding: 1.15rem 1.75rem;
-                font-size: 1.15rem;
-                border-radius: 12px;
-            }
-
-            .early-cta-code {
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-
-            .code-box {
-                padding: 0.65rem 1rem;
-                width: 100%;
-                max-width: 280px;
+            .stats-compact {
                 justify-content: center;
             }
 
-            /* Mobile How It Works */
             .how-it-works {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-                margin: 2rem 0;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                overflow-x: visible;
             }
-            
+
             .how-step {
-                padding: 1.25rem 1rem;
-            }
-            
-            .how-step-number {
-                width: 48px;
-                height: 48px;
-                font-size: 1.5rem;
-            }
-            
-            .how-step h4 {
-                font-size: 1rem;
-            }
-            
-            .how-step p {
-                font-size: 0.85rem;
+                width: auto;
             }
 
-            /* Mobile Key Points */
-            .key-points {
-                padding: 1.5rem;
-                margin: 2rem 0;
-            }
-            
-            .key-points ul {
-                margin: 1rem 0 0 1.25rem;
-            }
-            
-            .key-points li {
-                font-size: 0.95rem;
-                line-height: 1.6;
+            .main-cta {
+                padding: 2.5rem;
             }
 
-            /* Mobile Offers */
-            .offers-intro {
-                padding: 1.5rem;
-                margin-bottom: 1.5rem;
+            .main-cta-header {
+                gap: 1.25rem;
             }
 
-            /* Mobile Offer Cards */
-            .offer-card {
-                margin-bottom: 1.25rem;
-                border-radius: 12px;
-            }
-            
-            .offer-header {
-                grid-template-columns: 1fr;
-                gap: 0.85rem;
-                padding: 1.25rem;
-                background: white;
-            }
-            
-            .offer-name-section {
-                padding-bottom: 0.85rem;
-                border-bottom: 1px solid #e5e7eb;
-            }
-            
-            .offer-name-content h3 {
-                font-size: 1.25rem;
-            }
-            
-            .offer-meta-row {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 1rem;
-            }
-            
-            .offer-payout {
-                font-size: 2rem;
-                margin: 0;
-            }
-            
-            .offer-time {
-                font-size: 0.85rem;
-                padding: 0.4rem 0.75rem;
-            }
-            
-            .offer-description {
-                font-size: 0.95rem;
-                margin: 0.85rem 0;
-            }
-            
-            .offer-button {
-                display: block;
-                width: 100%;
-                padding: 1rem;
-                font-size: 1rem;
-                border-radius: 10px;
-                min-height: 52px;
-            }
-            
-            .offer-details-content {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 1.5rem 1.25rem;
-            }
-            
-            .details-col h4 {
-                font-size: 1rem;
-            }
-            
-            .details-col li {
-                font-size: 0.9rem;
-                line-height: 1.6;
+            .main-cta-logo {
+                width: 64px;
+                height: 64px;
             }
 
-            /* Mobile Total Summary */
-            .total-summary {
-                padding: 3rem 1.75rem;
-                margin: 3.5rem 0;
+            .main-cta-title {
+                font-size: 1.75rem;
             }
-            
-            .total-amount {
-                font-size: 4rem;
-                letter-spacing: -0.02em;
-            }
-            
-            .total-time {
+
+            .main-cta-text {
                 font-size: 1.1rem;
             }
 
-            /* Mobile Social Proof */
-            .social-proof-section {
-                padding: 2rem 1.5rem;
-                margin: 3rem 0;
-            }
-            
-            .social-proof-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            
-            .social-proof-item {
-                padding: 1.5rem 1.25rem;
-            }
-            
-            .social-proof-number {
-                font-size: 2.5rem;
+            .offer-header {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 2fr 140px;
+                gap: 1.5rem;
+                padding: 1.5rem 1.75rem;
+                align-items: center;
             }
 
-            /* Mobile Testimonials */
-            .testimonials {
-                margin: 3rem 0;
+            .offer-top-row {
+                display: contents;
             }
-            
-            .testimonials h3 {
-                font-size: 1.6rem;
+
+            .offer-meta-row {
+                display: contents;
             }
-            
-            .testimonials-grid {
+
+            .offer-name-section {
+                gap: 1rem;
+            }
+
+            .offer-name {
+                font-size: 1.4rem;
+            }
+
+            .offer-payout {
+                font-size: 2.25rem;
+            }
+
+            .offer-button {
+                width: auto;
+                padding: 0.85rem 1.75rem;
+            }
+
+            .offer-details-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2.5rem;
+                padding: 2rem;
+            }
+
+            .details-section {
+                margin-bottom: 0;
+            }
+
+            .social-proof-grid {
+                grid-template-columns: repeat(3, 1fr);
                 gap: 1.5rem;
             }
 
-            /* Mobile FAQ */
-            .faq-question {
-                padding: 1.25rem 1rem;
-                font-size: 1rem;
-            }
-            
-            .faq-answer-content {
-                padding: 0 1rem 1.25rem;
-                font-size: 0.95rem;
+            .total-summary {
+                padding: 3.5rem;
             }
 
-            /* Mobile Info Note */
-            .info-note {
-                padding: 1.75rem;
-                margin: 2.5rem 0;
-            }
-            
-            .info-note h3 {
-                font-size: 1.2rem;
-            }
-            
-            .info-note p {
-                font-size: 0.95rem;
-            }
-
-            /* Mobile Footer */
-            footer {
-                padding: 3rem 1rem 2rem;
-            }
-            
-            .disclaimer {
-                font-size: 0.875rem;
+            .total-amount {
+                font-size: 5rem;
             }
         }
 
-        @media (max-width: 968px) {
+        /* Tablet Adjustments */
+        @media (min-width: 769px) and (max-width: 968px) {
+            .offer-header {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .offer-top-row {
+                display: flex;
+            }
+
+            .offer-meta-row {
+                display: flex;
+            }
+
             .how-it-works {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
-            .stats-bar {
-                grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .mobile-sticky-cta {
+                display: block;
             }
-            
-            .social-proof-grid {
-                grid-template-columns: 1fr;
+
+            article {
+                padding: 1.25rem 1rem 100px;
             }
-            
-            .early-cta-features {
-                grid-template-columns: 1fr;
+
+            h1 {
+                font-size: 1.85rem;
+            }
+
+            .subtitle {
+                font-size: 1.05rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                margin: 2.5rem 0 1rem;
+            }
+
+            .main-cta {
+                padding: 1.5rem 1.25rem;
+                margin: 1.25rem 0 1.75rem;
+            }
+
+            .main-cta-logo {
+                width: 44px;
+                height: 44px;
+            }
+
+            .main-cta-title {
+                font-size: 1.25rem;
+            }
+
+            .main-cta-text {
+                font-size: 0.9rem;
+            }
+
+            .main-cta-button {
+                padding: 1.05rem 1.75rem;
+                font-size: 1.05rem;
+            }
+
+            /* Touch Optimizations */
+            .offer-button {
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: rgba(99, 102, 241, 0.1);
+            }
+
+            .main-cta-button {
+                touch-action: manipulation;
+                -webkit-tap-highlight-color: rgba(99, 102, 241, 0.1);
+            }
+
+            .faq-question {
+                touch-action: manipulation;
+                user-select: none;
+            }
+
+            /* Better active states */
+            .offer-card:active {
+                transform: scale(0.99);
+            }
+
+            .offer-button:active,
+            .main-cta-button:active {
+                transform: scale(0.97);
+            }
+        }
+
+        /* Very Small Devices */
+        @media (max-width: 375px) {
+            h1 {
+                font-size: 1.65rem;
+            }
+
+            .total-amount {
+                font-size: 3rem;
+            }
+
+            .offer-payout {
+                font-size: 1.65rem;
             }
         }
     </style>
@@ -1196,168 +1196,145 @@
 
     <article>
         <div class="social-proof-badge">
-            1,200+ people already earning with this strategy
+            1,200+ people already earning
         </div>
 
         <h1>Earn $800 in One Hour Through Bonus Arbitrage</h1>
         <p class="subtitle">The complete step-by-step guide to exploiting company marketing budgets for immediate cash—completely legal and fully documented.</p>
 
-        <div class="stats-bar">
-            <div class="stat-item">
-                <div class="stat-number" data-count="805">$805</div>
-                <div class="stat-label">Total Available</div>
+        <!-- MAIN CTA - IMMEDIATELY AFTER SUBTITLE -->
+        <div class="main-cta">
+            <div class="main-cta-content">
+                <div class="main-cta-header">
+                    <img src="https://i.imgur.com/dnrNOx3.jpeg" alt="Gemsloot" class="main-cta-logo">
+                    <h3 class="main-cta-title">Get Started on Gemsloot</h3>
+                </div>
+                
+                <p class="main-cta-text">All offers below pay through Gemsloot—they track completions and handle payouts. Register now to get a free lootbox worth up to $250.</p>
+                
+                <div class="main-cta-proof">
+                    <strong>1,200+ people</strong> from our community already earning
+                </div>
+
+                <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="main-cta-button">Register Free & Get Bonus →</a>
+                
+                <div class="main-cta-code">
+                    <span>Referral code:</span>
+                    <div class="code-box">
+                        <code id="referralCode">SHG</code>
+                        <button class="copy-button" onclick="copyCode()">Copy</button>
+                    </div>
+                </div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">~1hr</div>
-                <div class="stat-label">Active Time</div>
+        </div>
+
+        <!-- COMPACT STATS ROW -->
+        <div class="stats-compact">
+            <div class="stat-compact">
+                <div class="stat-compact-number">$805</div>
+                <div class="stat-compact-label">Total Available</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number" data-count="1200">1,200+</div>
-                <div class="stat-label">Active Users</div>
+            <div class="stat-compact">
+                <div class="stat-compact-number">~1hr</div>
+                <div class="stat-compact-label">Active Time</div>
             </div>
-            <div class="stat-item">
-                <div class="stat-number" data-count="6">6</div>
-                <div class="stat-label">Best Offers</div>
+            <div class="stat-compact">
+                <div class="stat-compact-number">1,200+</div>
+                <div class="stat-compact-label">Users</div>
+            </div>
+            <div class="stat-compact">
+                <div class="stat-compact-number">6</div>
+                <div class="stat-compact-label">Best Offers</div>
             </div>
         </div>
 
         <div class="intro-section">
             <p>You're about to learn a strategy that sounds too good to be true, but is completely legitimate and has worked for thousands of people. It's called <strong>bonus arbitrage</strong>, and it's essentially exploiting companies' careless marketing budgets to pocket cash rewards that far exceed any effort or initial cost.</p>
-            <p>This isn't a "get rich quick" scheme or some sketchy loophole. Companies spend billions on customer acquisition every year. They'd rather pay you $100-$500 directly than spend that money on Facebook ads or billboards. You're simply taking advantage of their official promotional offers before they change or disappear.</p>
             <p><strong>The numbers are real:</strong> Over 1,200 people in our community have successfully completed these offers. The average person earns $800+ in their first hour. Some start small with the $20 SoFi offer to prove it works, then scale up to the bigger bonuses.</p>
-        </div>
-
-        <div class="early-cta">
-            <div class="early-cta-content">
-                <img src="https://i.imgur.com/dnrNOx3.jpeg" alt="Gemsloot" class="early-cta-logo">
-                <div class="early-cta-text">
-                    <h3>Get Started on Gemsloot</h3>
-                    <p>All offers below pay through Gemsloot—they track completions and handle payouts. Register now to get a free lootbox worth up to $250.</p>
-                </div>
-            </div>
-            
-            <div class="early-cta-social">
-                <strong>1,200+ people</strong> from our community are already earning through this platform
-            </div>
-
-            <div class="early-cta-features">
-                <div class="early-cta-feature">
-                    <div class="early-cta-feature-value">$805</div>
-                    <div class="early-cta-feature-label">Total Earnings</div>
-                </div>
-                <div class="early-cta-feature">
-                    <div class="early-cta-feature-value">~1hr</div>
-                    <div class="early-cta-feature-label">Time Required</div>
-                </div>
-                <div class="early-cta-feature">
-                    <div class="early-cta-feature-value">100%</div>
-                    <div class="early-cta-feature-label">Legal & Safe</div>
-                </div>
-            </div>
-
-            <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="early-cta-button">Register Free & Get Bonus →</a>
-            <div class="early-cta-code">
-                <span>Referral code:</span>
-                <div class="code-box">
-                    <code id="referralCode">SHG</code>
-                    <button class="copy-button" onclick="copyCode()">Copy</button>
-                </div>
-            </div>
         </div>
 
         <h2>What is Bonus Arbitrage?</h2>
         
-        <p>Bonus arbitrage is a straightforward concept: companies offer cash rewards for new signups that are larger than the cost of trying their product or service. Sometimes they even pay you just for signing up, hoping you'll stick around as a long-term customer.</p>
-
-        <p>Here's how the strategy works in practice:</p>
+        <p>Bonus arbitrage is a straightforward concept: companies offer cash rewards for new signups that are larger than the cost of trying their product or service.</p>
 
         <div class="how-it-works">
             <div class="how-step">
                 <div class="how-step-number">1</div>
                 <h4>Find Offers</h4>
-                <p>We've identified the best high-value signup bonuses</p>
+                <p>Best high-value signup bonuses</p>
             </div>
             <div class="how-step">
                 <div class="how-step-number">2</div>
                 <h4>Complete Tasks</h4>
-                <p>Simple requirements like deposits or account setup</p>
+                <p>Simple requirements</p>
             </div>
             <div class="how-step">
                 <div class="how-step-number">3</div>
                 <h4>Get Paid</h4>
-                <p>Bonuses tracked and paid through Gemsloot</p>
+                <p>Tracked via Gemsloot</p>
             </div>
             <div class="how-step">
                 <div class="how-step-number">4</div>
                 <h4>Cash Out</h4>
-                <p>Withdraw via PayPal or crypto instantly</p>
+                <p>PayPal or crypto</p>
             </div>
         </div>
 
         <div class="key-points">
             <h3>The Core Strategy</h3>
             <ul>
-                <li><strong>Find high-value signup bonuses</strong> – Banks, brokerages, and fintech companies regularly offer $50-$500 just for opening accounts</li>
-                <li><strong>Complete minimal requirements</strong> – Usually just setting up direct deposit, making a small deposit, or keeping an account open for 30 days</li>
-                <li><strong>Collect your bonus</strong> – Get paid through tracking platforms that aggregate these offers and handle payouts</li>
-                <li><strong>Move on or cancel</strong> – Most offers allow you to close accounts after receiving bonuses without penalty</li>
+                <li><strong>Find high-value signup bonuses</strong> – Banks and fintech companies offer $50-$500 for opening accounts</li>
+                <li><strong>Complete minimal requirements</strong> – Usually direct deposit or small deposits</li>
+                <li><strong>Collect your bonus</strong> – Get paid through platforms that handle payouts</li>
+                <li><strong>Move on or cancel</strong> – Most offers allow you to close accounts after getting bonuses</li>
             </ul>
         </div>
 
-        <p>The key insight most people miss: <strong>these aren't "deals" or "discounts"—they're pure profit opportunities</strong>. When a bank pays you $480 to redirect one paycheck to their checking account, that's free money for 15 minutes of your time. When a brokerage pays you $30 for depositing $5, that's a 500% return in days.</p>
+        <h2>Why This Works</h2>
 
-        <h2>Why This Works (And Won't Stop Working)</h2>
+        <p><strong>Customer acquisition costs are astronomical.</strong> Banks spend $200-$500 to acquire each new customer through traditional marketing. It's actually cheaper for them to pay you directly.</p>
 
-        <p>This isn't a loophole that will close. These are official, legal promotional offers from regulated financial companies. Here's why they exist:</p>
+        <p><strong>They're betting on retention.</strong> Most people forget to cancel. But if you're disciplined, you can take the bonus and walk away.</p>
 
-        <p><strong>Customer acquisition costs are astronomical.</strong> Banks and fintech companies spend $200-$500 to acquire each new customer through traditional marketing. It's actually cheaper for them to pay you directly and hope you become a long-term user.</p>
-
-        <p><strong>They're betting on retention.</strong> Most people who sign up will forget to cancel, keep using the service, or generate revenue through other means (transaction fees, interest, etc.). But if you're disciplined, you can take the bonus and walk away.</p>
-
-        <p><strong>Competition drives offers higher.</strong> As new fintech companies launch and compete with traditional banks, signup bonuses keep increasing. This creates a perfect environment for bonus arbitrage.</p>
-
-        <p><strong>It's sustainable.</strong> Our community has been doing this for months. Companies budget for this. As long as they're acquiring customers through traditional advertising, they'll continue offering these bonuses.</p>
+        <p><strong>It's sustainable.</strong> Companies budget for this. As long as they're acquiring customers through advertising, they'll continue offering these bonuses.</p>
 
         <h2>The 6 Best Offers Right Now</h2>
 
         <div class="offers-intro">
-            <p><strong>We spent hundreds of hours finding these.</strong> Each offer below has exceptional ROI—high payout for minimal effort. Click any offer to see complete step-by-step instructions.</p>
-            <p><strong>Where to start:</strong> Chime ($480, 15 min) if you have direct deposit access, or SoFi Plus ($20 profit, 5 min) for instant proof this works.</p>
+            <p><strong>We spent hundreds of hours finding these.</strong> Each offer has exceptional ROI. Click any offer for complete instructions.</p>
+            <p><strong>Start with:</strong> Chime ($480) if you have direct deposit, or SoFi Plus ($20 profit) for instant proof.</p>
         </div>
 
         <div class="offer-card" onclick="toggleOffer(this)">
             <div class="offer-header">
-                <div class="offer-name-section">
-                    <span class="dropdown-arrow"></span>
-                    <div class="offer-name-content">
-                        <h3>Chime</h3>
-                        <span class="offer-hint">Click for instructions</span>
+                <div class="offer-top-row">
+                    <div class="offer-name-section">
+                        <span class="dropdown-arrow"></span>
+                        <span class="offer-name">Chime</span>
                     </div>
+                    <div class="offer-payout">$480</div>
                 </div>
                 <div class="offer-meta-row">
-                    <div class="offer-payout">$480</div>
                     <div class="offer-time">&lt; 15 min</div>
+                    <div class="offer-description">Set up direct deposit from employer</div>
                 </div>
-                <div class="offer-description">Set up direct deposit from employer</div>
-                <div class="offer-action">
-                    <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-2879" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
-                </div>
+                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-2879" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
             </div>
             <div class="offer-details">
                 <div class="offer-details-content">
-                    <div class="details-col">
-                        <h4>📋 Step-by-Step Instructions</h4>
+                    <div class="details-section">
+                        <h4>📋 Instructions</h4>
                         <ol>
-                            <li>Sign up for Chime account (5 minutes)</li>
-                            <li>Set up direct deposit of $200+ from employer</li>
-                            <li>Wait for deposit to hit (next payday)</li>
+                            <li>Sign up for Chime (5 min)</li>
+                            <li>Set up direct deposit $200+</li>
+                            <li>Wait for deposit to hit</li>
                             <li>Receive $480 on Gemsloot</li>
                         </ol>
                     </div>
-                    <div class="details-col">
+                    <div class="details-section">
                         <h4>💡 Why This Works</h4>
-                        <p>Highest payout for minimal effort. Works with gig jobs like Uber/DoorDash. Switch your direct deposit back immediately after. No monthly fees or minimum balance.</p>
-                        <p><strong>Pro tip:</strong> Use this same direct deposit for HSBC and Current to stack bonuses from one paycheck redirect.</p>
+                        <p>Highest payout for minimal effort. Works with Uber/DoorDash. No fees.</p>
+                        <p><strong>Pro tip:</strong> Stack with HSBC and Current using same direct deposit.</p>
                     </div>
                 </div>
             </div>
@@ -1365,38 +1342,35 @@
 
         <div class="offer-card" onclick="toggleOffer(this)">
             <div class="offer-header">
-                <div class="offer-name-section">
-                    <span class="dropdown-arrow"></span>
-                    <div class="offer-name-content">
-                        <h3>HSBC</h3>
-                        <span class="offer-hint">Click for instructions</span>
+                <div class="offer-top-row">
+                    <div class="offer-name-section">
+                        <span class="dropdown-arrow"></span>
+                        <span class="offer-name">HSBC</span>
                     </div>
+                    <div class="offer-payout">$150</div>
                 </div>
                 <div class="offer-meta-row">
-                    <div class="offer-payout">$150</div>
                     <div class="offer-time">&lt; 15 min</div>
+                    <div class="offer-description">Open checking, keep open 30 days</div>
                 </div>
-                <div class="offer-description">Open checking, keep open 30 days</div>
-                <div class="offer-action">
-                    <a href="https://gemsloot.com/earn?&modal=offer_2&name=Gemsloot__as-3284" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
-                </div>
+                <a href="https://gemsloot.com/earn?&modal=offer_2&name=Gemsloot__as-3284" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
             </div>
             <div class="offer-details">
                 <div class="offer-details-content">
-                    <div class="details-col">
-                        <h4>📋 Step-by-Step Instructions</h4>
+                    <div class="details-section">
+                        <h4>📋 Instructions</h4>
                         <ol>
-                            <li>Sign up for HSBC Premier Checking</li>
-                            <li>Make a direct deposit (avoids $50 fee)</li>
-                            <li>Keep account open for 30 days</li>
+                            <li>Sign up for HSBC Premier</li>
+                            <li>Make direct deposit (avoids $50 fee)</li>
+                            <li>Keep open 30 days</li>
                             <li>Receive $150 on Gemsloot</li>
-                            <li>Close account after 30 days if desired</li>
+                            <li>Close after 30 days</li>
                         </ol>
                     </div>
-                    <div class="details-col">
+                    <div class="details-section">
                         <h4>💡 Why This Works</h4>
-                        <p>Free money for keeping an account open one month. Set calendar reminder to close after 30 days. Without direct deposit, you'll pay $50 fee (still $100 profit).</p>
-                        <p><strong>Pro tip:</strong> Use same direct deposit as Chime offer.</p>
+                        <p>Free money for keeping account open one month. Set reminder to close after 30 days.</p>
+                        <p><strong>Pro tip:</strong> Use same direct deposit as Chime.</p>
                     </div>
                 </div>
             </div>
@@ -1404,37 +1378,34 @@
 
         <div class="offer-card" onclick="toggleOffer(this)">
             <div class="offer-header">
-                <div class="offer-name-section">
-                    <span class="dropdown-arrow"></span>
-                    <div class="offer-name-content">
-                        <h3>Current</h3>
-                        <span class="offer-hint">Click for instructions</span>
+                <div class="offer-top-row">
+                    <div class="offer-name-section">
+                        <span class="dropdown-arrow"></span>
+                        <span class="offer-name">Current</span>
                     </div>
+                    <div class="offer-payout">$90</div>
                 </div>
                 <div class="offer-meta-row">
-                    <div class="offer-payout">$90</div>
                     <div class="offer-time">&lt; 15 min</div>
+                    <div class="offer-description">Connect eligible direct deposit</div>
                 </div>
-                <div class="offer-description">Connect eligible direct deposit</div>
-                <div class="offer-action">
-                    <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-78" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
-                </div>
+                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-78" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
             </div>
             <div class="offer-details">
                 <div class="offer-details-content">
-                    <div class="details-col">
-                        <h4>📋 Step-by-Step Instructions</h4>
+                    <div class="details-section">
+                        <h4>📋 Instructions</h4>
                         <ol>
                             <li>Register for Current</li>
-                            <li>Verify your account</li>
-                            <li>Connect direct deposit from employer</li>
-                            <li>Wait for deposit to process</li>
+                            <li>Verify account</li>
+                            <li>Connect direct deposit</li>
+                            <li>Wait for deposit</li>
                             <li>Receive $90 on Gemsloot</li>
                         </ol>
                     </div>
-                    <div class="details-col">
+                    <div class="details-section">
                         <h4>💡 Why This Works</h4>
-                        <p>Mobile banking app with no monthly fees. Stacks well with Chime and HSBC—all three can use the same direct deposit.</p>
+                        <p>No monthly fees. Stacks with Chime and HSBC—all three can use same direct deposit.</p>
                     </div>
                 </div>
             </div>
@@ -1442,36 +1413,33 @@
 
         <div class="offer-card" onclick="toggleOffer(this)">
             <div class="offer-header">
-                <div class="offer-name-section">
-                    <span class="dropdown-arrow"></span>
-                    <div class="offer-name-content">
-                        <h3>SoFi Plus</h3>
-                        <span class="offer-hint">Click for instructions</span>
+                <div class="offer-top-row">
+                    <div class="offer-name-section">
+                        <span class="dropdown-arrow"></span>
+                        <span class="offer-name">SoFi Plus</span>
                     </div>
+                    <div class="offer-payout">$30</div>
                 </div>
                 <div class="offer-meta-row">
-                    <div class="offer-payout">$30</div>
                     <div class="offer-time">&lt; 5 min</div>
+                    <div class="offer-description">Pay $10, get $30 back (+$20 profit)</div>
                 </div>
-                <div class="offer-description">Pay $10, get $30 back (+$20 profit)</div>
-                <div class="offer-action">
-                    <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-3232" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
-                </div>
+                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-3232" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
             </div>
             <div class="offer-details">
                 <div class="offer-details-content">
-                    <div class="details-col">
-                        <h4>📋 Step-by-Step Instructions</h4>
+                    <div class="details-section">
+                        <h4>📋 Instructions</h4>
                         <ol>
                             <li>Sign up for SoFi</li>
-                            <li>Purchase SoFi Plus subscription ($10)</li>
-                            <li>Receive $30 on Gemsloot (within 1 hour)</li>
-                            <li>Cancel subscription immediately if desired</li>
+                            <li>Buy SoFi Plus ($10)</li>
+                            <li>Get $30 on Gemsloot (1 hour)</li>
+                            <li>Cancel subscription</li>
                         </ol>
                     </div>
-                    <div class="details-col">
+                    <div class="details-section">
                         <h4>💡 Why This Works</h4>
-                        <p><strong>Fastest money—$20 profit in under 5 minutes.</strong> Perfect for testing the system. Payout arrives within an hour. Best first offer to prove this works before doing larger offers.</p>
+                        <p><strong>Fastest money—$20 profit in 5 minutes.</strong> Perfect for testing the system. Best first offer.</p>
                     </div>
                 </div>
             </div>
@@ -1479,37 +1447,34 @@
 
         <div class="offer-card" onclick="toggleOffer(this)">
             <div class="offer-header">
-                <div class="offer-name-section">
-                    <span class="dropdown-arrow"></span>
-                    <div class="offer-name-content">
-                        <h3>Moomoo</h3>
-                        <span class="offer-hint">Click for instructions</span>
+                <div class="offer-top-row">
+                    <div class="offer-name-section">
+                        <span class="dropdown-arrow"></span>
+                        <span class="offer-name">Moomoo</span>
                     </div>
-                </div>
-                <div class="offer-meta-row">
                     <div class="offer-payout">$30</div>
+                </div>
+                <div class="offer-meta-row">
                     <div class="offer-time">&lt; 10 min</div>
+                    <div class="offer-description">Deposit $5, wait for settlement</div>
                 </div>
-                <div class="offer-description">Deposit $5, wait for settlement, get $30</div>
-                <div class="offer-action">
-                    <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-3479" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
-                </div>
+                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-3479" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
             </div>
             <div class="offer-details">
                 <div class="offer-details-content">
-                    <div class="details-col">
-                        <h4>📋 Step-by-Step Instructions</h4>
+                    <div class="details-section">
+                        <h4>📋 Instructions</h4>
                         <ol>
-                            <li>Register for Moomoo Brokerage</li>
-                            <li>Deposit $5 into account</li>
-                            <li>Wait 1-2 days for funds to settle</li>
+                            <li>Register for Moomoo</li>
+                            <li>Deposit $5</li>
+                            <li>Wait 1-2 days for settlement</li>
                             <li>Receive $30 on Gemsloot</li>
-                            <li>Withdraw initial $5 if desired</li>
+                            <li>Withdraw your $5</li>
                         </ol>
                     </div>
-                    <div class="details-col">
+                    <div class="details-section">
                         <h4>💡 Why This Works</h4>
-                        <p>$25 profit for depositing money that stays yours. Legitimate brokerage used by millions. Withdraw your $5 after getting bonus.</p>
+                        <p>$25 profit for depositing money that stays yours. Legitimate brokerage. Withdraw $5 after bonus.</p>
                     </div>
                 </div>
             </div>
@@ -1517,36 +1482,33 @@
 
         <div class="offer-card" onclick="toggleOffer(this)">
             <div class="offer-header">
-                <div class="offer-name-section">
-                    <span class="dropdown-arrow"></span>
-                    <div class="offer-name-content">
-                        <h3>WeBull</h3>
-                        <span class="offer-hint">Click for instructions</span>
+                <div class="offer-top-row">
+                    <div class="offer-name-section">
+                        <span class="dropdown-arrow"></span>
+                        <span class="offer-name">WeBull</span>
                     </div>
+                    <div class="offer-payout">$25</div>
                 </div>
                 <div class="offer-meta-row">
-                    <div class="offer-payout">$25</div>
                     <div class="offer-time">&lt; 15 min</div>
+                    <div class="offer-description">Deposit $5, make one trade</div>
                 </div>
-                <div class="offer-description">Deposit $5, make one simple trade</div>
-                <div class="offer-action">
-                    <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-362" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
-                </div>
+                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-362" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
             </div>
             <div class="offer-details">
                 <div class="offer-details-content">
-                    <div class="details-col">
-                        <h4>📋 Step-by-Step Instructions</h4>
+                    <div class="details-section">
+                        <h4>📋 Instructions</h4>
                         <ol>
-                            <li>Sign up for WeBull and verify</li>
+                            <li>Sign up and verify</li>
                             <li>Deposit $5</li>
-                            <li>Make one trade (buy then sell any stock)</li>
+                            <li>Make one trade (buy then sell)</li>
                             <li>Receive $25 on Gemsloot</li>
                         </ol>
                     </div>
-                    <div class="details-col">
+                    <div class="details-section">
                         <h4>💡 Why This Works</h4>
-                        <p>The "trade" is just buying and immediately selling any stock with your $5. Takes 15 minutes including verification. Legitimate brokerage platform.</p>
+                        <p>The "trade" is just buying and selling any stock with your $5. Takes 15 minutes. Legitimate platform.</p>
                     </div>
                 </div>
             </div>
@@ -1555,7 +1517,7 @@
         <div class="total-summary">
             <h3>Total Earnings Potential</h3>
             <div class="total-amount">$805</div>
-            <div class="total-time">≈ 1 hour 15 minutes active work</div>
+            <div class="total-time">≈ 1 hour 15 minutes</div>
         </div>
 
         <div class="social-proof-section">
@@ -1602,55 +1564,55 @@
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        Yes, completely legal. These are official promotional offers from regulated financial institutions. You're doing exactly what they want—trying their service. Nothing about this violates any laws or terms of service.
+                        Yes, completely legal. These are official promotional offers from regulated financial institutions. You're doing exactly what they want.
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">
-                    <span>How long does it take to get paid?</span>
+                    <span>How long to get paid?</span>
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        Most bonuses credit within 24-48 hours after completing requirements. First-time Gemsloot withdrawals are manually reviewed (usually within 24 hours). After that, crypto withdrawals are instant and PayPal typically takes a few hours.
+                        Most bonuses credit within 24-48 hours. First Gemsloot withdrawal is reviewed (24hrs). After that, crypto is instant and PayPal takes a few hours.
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">
-                    <span>Do I need to keep the accounts open?</span>
+                    <span>Do I keep accounts open?</span>
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        It depends on the offer. Some (like HSBC) require 30 days. Others (like SoFi Plus) can be cancelled immediately. Each offer has specific requirements detailed in the instructions. Always check the fine print before closing accounts.
+                        Depends on the offer. Some (like HSBC) require 30 days. Others (like SoFi) can be cancelled immediately. Check each offer's requirements.
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">
-                    <span>What if I don't have direct deposit?</span>
+                    <span>What if no direct deposit?</span>
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        Start with offers that don't require it: SoFi Plus ($20 profit, 5 min), Moomoo ($25 profit), or WeBull ($20 profit). These require only small deposits or subscriptions. If you do have direct deposit from gig work (Uber, DoorDash, etc.), that counts.
+                        Start with offers that don't need it: SoFi Plus ($20), Moomoo ($25), or WeBull ($20). Gig work (Uber, DoorDash) counts as direct deposit.
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" onclick="toggleFaq(this)">
                 <div class="faq-question">
-                    <span>Will this affect my credit score?</span>
+                    <span>Will this affect credit?</span>
                     <span class="faq-icon">+</span>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        Opening checking or savings accounts typically does not affect your credit score. Brokerage accounts also don't impact credit. Some offers may do a soft inquiry (doesn't affect score) or hard inquiry (minimal temporary impact). This is disclosed during signup.
+                        Opening checking/savings accounts typically doesn't affect credit. Brokerage accounts also don't. Some may do soft inquiries (no impact) or hard inquiries (minimal temporary impact).
                     </div>
                 </div>
             </div>
@@ -1660,48 +1622,33 @@
 
         <div class="info-note">
             <h3>Gemsloot Payout Info</h3>
-            <p><strong>Minimums:</strong> $0.50 for crypto, $3 for PayPal</p>
-            <p><strong>First withdrawal:</strong> Manually reviewed (usually within 24 hours) for security. This is standard for new accounts.</p>
-            <p><strong>After that:</strong> Crypto payouts are typically instant, PayPal within a few hours</p>
-            <p><strong>Success rate:</strong> 94% of our community members successfully withdraw their first payment within 48 hours</p>
-        </div>
-
-        <h2>Finding More Opportunities</h2>
-
-        <p>These 6 offers are the best we've found, but Gemsloot adds new ones weekly. Our team continuously monitors for new high-value opportunities and shares them in our Discord and Reddit communities.</p>
-
-        <div class="key-points">
-            <h3>What Makes a Good Offer</h3>
-            <ul>
-                <li><strong>High payout relative to effort</strong> – $50+ for under 30 minutes is our benchmark</li>
-                <li><strong>Clear, simple requirements</strong> – Avoid offers with confusing terms or multiple hoops</li>
-                <li><strong>Stacking potential</strong> – Best offers can be combined (same direct deposit for multiple bonuses)</li>
-                <li><strong>Quick payout</strong> – Bonuses that credit within days, not months</li>
-                <li><strong>Low or no upfront cost</strong> – The less you need to invest, the better</li>
-            </ul>
+            <p><strong>Minimums:</strong> $0.50 crypto, $3 PayPal</p>
+            <p><strong>First withdrawal:</strong> Reviewed within 24 hours for security</p>
+            <p><strong>After that:</strong> Crypto instant, PayPal within hours</p>
+            <p><strong>Success rate:</strong> 94% withdraw within 48 hours</p>
         </div>
 
         <h2>Important Considerations</h2>
 
-        <p><strong>This is completely legal.</strong> These are official promotional offers from regulated financial institutions. You're doing exactly what they want you to do—trying their service.</p>
+        <p><strong>This is completely legal.</strong> These are official promotional offers from regulated institutions.</p>
 
-        <p><strong>Stay organized.</strong> Track which offers you've completed, when you can close accounts without penalty, and expected payout dates. Set calendar reminders for account closures to avoid fees.</p>
+        <p><strong>Stay organized.</strong> Track completions, close dates, and expected payouts. Set reminders to avoid fees.</p>
 
-        <p><strong>Verify current terms.</strong> Offers change. Always check company websites for the latest requirements before starting. What we document here reflects current offers, but companies can modify terms.</p>
+        <p><strong>Verify current terms.</strong> Offers change. Always check company websites for latest requirements.</p>
 
-        <p><strong>Don't abuse the system.</strong> Complete each offer once according to the terms. Multiple accounts using the same identity or false information will lead to bonus clawbacks and permanent bans.</p>
+        <p><strong>Don't abuse the system.</strong> Complete each offer once. Multiple accounts lead to bonus clawbacks and bans.</p>
 
-        <p><strong>Be patient with first payouts.</strong> New accounts often require manual review for the first withdrawal. This is normal security practice and usually clears within 24 hours.</p>
+        <p><strong>Be patient with first payouts.</strong> Manual review is normal for new accounts and clears within 24 hours.</p>
     </article>
 
     <footer>
         <div class="footer-content">
             <div class="disclaimer">
                 <div class="disclaimer-title">Required Legal Disclosures</div>
-                <p><strong>Affiliate Disclosure:</strong> This site contains affiliate links. We earn commissions at no extra cost to you when you sign up through our links. We only recommend services we've personally researched and believe provide genuine value to our community.</p>
-                <p><strong>Earnings Disclaimer:</strong> The amounts mentioned ($800+, specific offers, community totals) represent potential earnings based on current offers and reported results. Individual earnings are not guaranteed and vary significantly based on eligibility, effort, timing, geographic location, and offer terms. All third-party offers are subject to change without notice. Past performance does not guarantee future results.</p>
-                <p><strong>Not Financial Advice:</strong> This is educational content only and should not be construed as financial, legal, investment, or professional advice. Information provided is based on our research and community experiences. You should independently verify all offer terms directly with the respective companies and consult with qualified professionals before making any financial decisions.</p>
-                <p><strong>Your Responsibility:</strong> By using the strategies outlined on this website, you acknowledge and accept full responsibility for your actions, decisions, and any resulting outcomes. We are not liable for any losses, damages, account closures, tax implications, or other issues arising from your use of these strategies or interactions with third-party services. You agree to comply with all applicable laws and the terms of service of any platforms you use.</p>
+                <p><strong>Affiliate Disclosure:</strong> This site contains affiliate links. We earn commissions at no extra cost to you. We only recommend services we've researched.</p>
+                <p><strong>Earnings Disclaimer:</strong> Amounts mentioned represent potential earnings based on current offers. Individual earnings not guaranteed and vary by eligibility, effort, timing, location, and offer terms. Offers subject to change.</p>
+                <p><strong>Not Financial Advice:</strong> Educational content only. Not financial, legal, or professional advice. Verify all terms and consult professionals before decisions.</p>
+                <p><strong>Your Responsibility:</strong> You accept full responsibility for actions and outcomes. We're not liable for losses, damages, closures, or issues from strategy use or third-party services.</p>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Side Hustle Gold. All rights reserved.</p>
@@ -1713,7 +1660,7 @@
         <div class="mobile-sticky-cta-content">
             <div class="mobile-sticky-cta-text">
                 <strong>Ready to earn $800?</strong>
-                <span>1,200+ people already started</span>
+                <span>1,200+ already started</span>
             </div>
             <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="mobile-sticky-cta-button">Start Now</a>
         </div>
@@ -1726,19 +1673,9 @@
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (winScroll / height) * 100;
             document.getElementById('progressBar').style.width = scrolled + '%';
-        });
+        }, { passive: true });
 
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile sticky CTA - triggers at 15% scroll
+        // Mobile sticky CTA - triggers at 10% scroll
         let mobileStickyShown = false;
         const mobileSticky = document.getElementById('mobileStickyBtn');
         
@@ -1746,10 +1683,10 @@
             const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
             
             if (window.innerWidth <= 768) {
-                if (scrollPercentage > 15 && !mobileStickyShown) {
+                if (scrollPercentage > 10 && !mobileStickyShown) {
                     mobileSticky.classList.add('visible');
                     mobileStickyShown = true;
-                } else if (scrollPercentage <= 15 && mobileStickyShown) {
+                } else if (scrollPercentage <= 10 && mobileStickyShown) {
                     mobileSticky.classList.remove('visible');
                     mobileStickyShown = false;
                 }
@@ -1770,12 +1707,11 @@
                 if (window.innerWidth <= 768) {
                     setTimeout(() => {
                         const cardTop = card.getBoundingClientRect().top + window.pageYOffset;
-                        const offset = 70;
                         window.scrollTo({
-                            top: cardTop - offset,
+                            top: cardTop - 80,
                             behavior: 'smooth'
                         });
-                    }, 150);
+                    }, 100);
                 }
             }
         }
@@ -1815,6 +1751,19 @@
                 e.stopPropagation();
             });
         });
+
+        // Touch feedback
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.offer-button, .main-cta-button, .mobile-sticky-cta-button').forEach(button => {
+                button.addEventListener('touchstart', function() {
+                    this.style.opacity = '0.8';
+                }, { passive: true });
+                
+                button.addEventListener('touchend', function() {
+                    this.style.opacity = '1';
+                }, { passive: true });
+            });
+        }
     </script>
 </body>
 </html>
