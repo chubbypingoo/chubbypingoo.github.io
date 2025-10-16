@@ -1387,256 +1387,303 @@
             }
 
             h1 {
-                font-size: 2rem;
-                line-height: 1.2;
-                margin-bottom: 1rem;
+                font-size: 1.75rem;
+                line-height: 1.15;
+                margin-bottom: 0.75rem;
             }
 
             .subtitle {
-                font-size: 1.05rem;
-                line-height: 1.5;
-                margin-bottom: 2rem;
+                font-size: 1rem;
+                line-height: 1.4;
+                margin-bottom: 1.5rem;
             }
 
             h2 {
-                font-size: 1.5rem;
-                margin: 2.5rem 0 1rem;
+                font-size: 1.4rem;
+                margin: 2rem 0 1rem;
             }
 
             h2::after {
                 width: 40px;
                 height: 3px;
+                margin-top: 0.5rem;
             }
 
             h3 {
-                font-size: 1.25rem;
+                font-size: 1.2rem;
             }
 
             p {
-                font-size: 1rem;
-                line-height: 1.6;
+                font-size: 0.95rem;
+                line-height: 1.55;
+                margin-bottom: 1rem;
             }
 
             article {
-                padding: 1.5rem 1rem 3rem;
+                padding: 1.25rem 1rem 3rem;
             }
 
-            /* Mobile Header */
+            /* Mobile Header - Compact */
             header {
-                padding: 1rem 1rem;
+                padding: 0.85rem 1rem;
             }
 
             header.scrolled {
-                padding: 0.75rem 1rem;
+                padding: 0.65rem 1rem;
             }
 
             .site-title {
-                font-size: 1rem;
+                font-size: 0.95rem;
             }
 
             .presented-by {
-                font-size: 0.75rem;
+                font-size: 0.7rem;
             }
 
             .community-icon {
-                width: 22px;
-                height: 22px;
+                width: 20px;
+                height: 20px;
             }
 
-            /* Mobile Social Proof Badge */
+            /* Mobile Social Proof Badge - Smaller */
             .social-proof-badge {
-                font-size: 0.85rem;
-                padding: 0.5rem 1rem;
-                margin-bottom: 1.25rem;
+                font-size: 0.8rem;
+                padding: 0.45rem 0.85rem;
+                margin-bottom: 1rem;
             }
 
-            /* Mobile Stats Bar */
+            .social-proof-badge::after {
+                width: 18px;
+                height: 18px;
+                font-size: 0.7rem;
+            }
+
+            /* Mobile Stats Bar - More Compact */
             .stats-bar {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                margin: 2rem 0;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+                margin: 1.5rem 0;
             }
 
             .stat-item {
-                padding: 1.5rem 1rem;
+                padding: 1rem 0.75rem;
+                border-radius: 10px;
             }
 
             .stat-number {
-                font-size: 2.25rem;
+                font-size: 1.85rem;
+                margin-bottom: 0.35rem;
             }
 
             .stat-label {
-                font-size: 0.85rem;
+                font-size: 0.75rem;
+                line-height: 1.3;
             }
 
-            /* Mobile Intro Section */
+            /* Mobile Intro Section - More Compact */
             .intro-section {
-                padding: 1.5rem;
-                margin: 2rem 0;
-                border-radius: 12px;
+                padding: 1.25rem;
+                margin: 1.5rem 0;
+                border-radius: 10px;
             }
 
             .intro-section p {
-                font-size: 0.95rem;
+                font-size: 0.9rem;
+                margin-bottom: 0.85rem;
+                line-height: 1.5;
+            }
+
+            .intro-section p:last-child {
+                margin-bottom: 0;
             }
 
             /* Mobile CTA - CRITICAL FOR CONVERSION */
             .early-cta {
-                padding: 1.5rem;
-                margin: 2rem 0;
-                border-radius: 16px;
+                padding: 1.25rem 1rem;
+                margin: 1.5rem 0;
+                border-radius: 12px;
             }
 
             .early-cta-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-                margin-bottom: 1.25rem;
+                flex-direction: row;
+                text-align: left;
+                gap: 0.75rem;
+                margin-bottom: 1rem;
+                align-items: center;
             }
 
             .early-cta-logo {
-                width: 56px;
-                height: 56px;
+                width: 48px;
+                height: 48px;
+                border-radius: 10px;
             }
 
             .early-cta-text h3 {
-                font-size: 1.35rem;
-                margin-bottom: 0.5rem;
+                font-size: 1.15rem;
+                margin-bottom: 0.25rem;
+                line-height: 1.2;
             }
 
             .early-cta-text p {
-                font-size: 0.95rem;
-                line-height: 1.5;
+                font-size: 0.85rem;
+                line-height: 1.4;
+                opacity: 0.9;
             }
 
+            /* Compact social proof */
             .early-cta-social {
-                padding: 1rem;
-                font-size: 0.9rem;
-                margin: 1rem 0;
+                padding: 0.65rem 0.85rem;
+                font-size: 0.8rem;
+                margin: 0.75rem 0;
+                border-radius: 6px;
             }
 
+            /* Horizontal mini stats */
             .early-cta-features {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                padding: 1.25rem;
-                margin: 1.25rem 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 0.5rem;
+                padding: 0.75rem;
+                margin: 0.75rem 0;
+                border-radius: 8px;
+            }
+
+            .early-cta-feature {
+                flex: 1;
+                min-width: 0;
             }
 
             .early-cta-feature-value {
-                font-size: 1.75rem;
+                font-size: 1.35rem;
+                margin-bottom: 0.15rem;
+                line-height: 1;
             }
 
             .early-cta-feature-label {
-                font-size: 0.85rem;
+                font-size: 0.7rem;
+                line-height: 1.2;
             }
 
             /* Mobile CTA Button - HUGE AND TAPPABLE */
             .early-cta-button {
-                padding: 1.25rem 2rem;
-                font-size: 1.15rem;
-                border-radius: 12px;
+                padding: 1rem 1.5rem;
+                font-size: 1.1rem;
+                border-radius: 10px;
                 font-weight: 800;
-                /* Ensure button is above everything */
                 position: relative;
                 z-index: 10;
             }
 
+            /* Compact code section */
             .early-cta-code {
-                flex-direction: column;
-                gap: 0.75rem;
-                margin-top: 1.25rem;
+                flex-direction: row;
+                gap: 0.5rem;
+                margin-top: 0.85rem;
+                font-size: 0.85rem;
             }
 
             .code-box {
-                padding: 0.75rem 1.25rem;
-                width: 100%;
-                justify-content: center;
+                padding: 0.5rem 0.85rem;
+                flex: 1;
+                border-radius: 6px;
             }
 
             .code-box code {
-                font-size: 1.25rem;
+                font-size: 1rem;
             }
 
             .copy-button {
-                padding: 0.5rem 1rem;
-                font-size: 0.9rem;
+                padding: 0.5rem 0.85rem;
+                font-size: 0.8rem;
             }
 
-            /* Mobile How It Works */
+            /* Mobile How It Works - More Compact */
             .how-it-works {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                margin: 2rem 0;
-            }
-
-            .how-step {
-                padding: 1.5rem 1.25rem;
-            }
-
-            .how-step-number {
-                width: 48px;
-                height: 48px;
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-            }
-
-            .how-step h4 {
-                font-size: 1rem;
-                margin-bottom: 0.5rem;
-            }
-
-            .how-step p {
-                font-size: 0.9rem;
-            }
-
-            /* Mobile Key Points */
-            .key-points {
-                padding: 1.5rem;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
                 margin: 1.5rem 0;
             }
 
+            .how-step {
+                padding: 1rem 0.85rem;
+                border-radius: 10px;
+            }
+
+            .how-step-number {
+                width: 40px;
+                height: 40px;
+                font-size: 1.25rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .how-step h4 {
+                font-size: 0.9rem;
+                margin-bottom: 0.35rem;
+            }
+
+            .how-step p {
+                font-size: 0.8rem;
+                line-height: 1.4;
+                margin: 0;
+            }
+
+            /* Mobile Key Points - More Compact */
+            .key-points {
+                padding: 1.25rem;
+                margin: 1.25rem 0;
+                border-radius: 10px;
+            }
+
             .key-points h3 {
-                font-size: 1.1rem;
-                margin-bottom: 1rem;
+                font-size: 1rem;
+                margin-bottom: 0.75rem;
             }
 
             .key-points ul {
-                margin: 1rem 0 0 1.25rem;
+                margin: 0.75rem 0 0 1.15rem;
             }
 
             .key-points li {
-                font-size: 0.95rem;
-                margin-bottom: 0.75rem;
-                line-height: 1.6;
+                font-size: 0.875rem;
+                margin-bottom: 0.65rem;
+                line-height: 1.5;
             }
 
-            /* Mobile Offers Intro */
+            /* Mobile Offers Intro - More Compact */
             .offers-intro {
-                padding: 1.5rem;
-                margin-bottom: 1.5rem;
+                padding: 1.25rem;
+                margin-bottom: 1.25rem;
+                border-radius: 10px;
             }
 
             .offers-intro p {
-                font-size: 0.95rem;
+                font-size: 0.875rem;
+                margin-bottom: 0.65rem;
+                line-height: 1.5;
             }
 
-            /* MOBILE OFFER CARDS - COMPLETELY REDESIGNED */
+            .offers-intro p:last-child {
+                margin-bottom: 0;
+            }
+
+            /* MOBILE OFFER CARDS - COMPACT */
             .offer-card {
-                margin-bottom: 1.25rem;
-                border-radius: 12px;
+                margin-bottom: 1rem;
+                border-radius: 10px;
             }
 
             .offer-header {
                 grid-template-columns: 1fr;
-                gap: 0.75rem;
-                padding: 1.25rem;
+                gap: 0.65rem;
+                padding: 1rem;
                 background: white;
             }
 
             .offer-name-section {
-                padding-bottom: 0.75rem;
+                padding-bottom: 0.65rem;
                 border-bottom: 1px solid #e5e7eb;
-                gap: 0.75rem;
+                gap: 0.65rem;
             }
 
             .dropdown-arrow {
@@ -1644,118 +1691,80 @@
             }
 
             .offer-name-content h3 {
-                font-size: 1.25rem;
-                line-height: 1.3;
+                font-size: 1.15rem;
+                line-height: 1.25;
             }
 
             .offer-hint {
                 font-size: 0.75rem;
             }
 
-            /* Mobile Offer Meta Row */
+            /* Mobile Offer Meta Row - Inline */
             .offer-payout {
                 display: inline-block;
-                font-size: 2rem;
-                margin-right: 1rem;
+                font-size: 1.75rem;
+                margin-right: 0.85rem;
             }
 
             .offer-time {
                 display: inline-block;
-                font-size: 0.85rem;
-                padding: 0.35rem 0.75rem;
+                font-size: 0.8rem;
+                padding: 0.3rem 0.65rem;
             }
 
             .offer-description {
-                font-size: 0.9rem;
-                line-height: 1.5;
-                margin: 0.75rem 0;
+                font-size: 0.875rem;
+                line-height: 1.4;
+                margin: 0.65rem 0;
                 color: #4b5563;
             }
 
-            /* Mobile Offer Button - CRITICAL */
+            /* Mobile Offer Button */
             .offer-action {
                 text-align: left;
-                margin-top: 0.75rem;
-                /* Prevent accidental taps on surrounding areas */
+                margin-top: 0.65rem;
                 padding: 0.25rem 0;
             }
 
             .offer-button {
                 display: block;
                 width: 100%;
-                padding: 1rem;
-                font-size: 1rem;
+                padding: 0.9rem;
+                font-size: 0.95rem;
                 font-weight: 700;
-                border-radius: 10px;
-                /* Ensure proper tap target size */
+                border-radius: 8px;
                 min-height: 48px;
-                /* Prevent text selection on tap */
                 -webkit-tap-highlight-color: rgba(99, 102, 241, 0.2);
                 user-select: none;
-                /* Add subtle pulse to draw attention */
                 animation: none;
-            }
-
-            /* Make "Click for instructions" more prominent on mobile */
-            .offer-hint {
-                font-size: 0.8rem;
-                color: #6366f1;
-                font-weight: 600;
-                display: flex;
-                align-items: center;
-                gap: 0.25rem;
-            }
-
-            .offer-hint::after {
-                content: "👇";
-                font-size: 0.9rem;
-                display: inline-block;
-                animation: bounce 2s ease-in-out infinite;
-            }
-
-            @keyframes bounce {
-                0%, 100% {
-                    transform: translateY(0);
-                }
-                50% {
-                    transform: translateY(-4px);
-                }
-            }
-
-            /* Improve tap target for dropdown */
-            .offer-name-section {
-                padding: 1rem;
-                margin: -1rem;
-                margin-bottom: 0;
-                padding-bottom: 1rem;
             }
 
             /* Mobile Offer Details */
             .offer-details-content {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 1.5rem 1.25rem;
+                gap: 1.25rem;
+                padding: 1.25rem 1rem;
             }
 
             .details-col h4 {
-                font-size: 1rem;
-                margin-bottom: 1rem;
+                font-size: 0.95rem;
+                margin-bottom: 0.75rem;
             }
 
             .details-col ol {
-                padding-left: 1.15rem;
+                padding-left: 1.1rem;
             }
 
             .details-col li {
-                font-size: 0.9rem;
-                margin-bottom: 0.65rem;
-                line-height: 1.6;
+                font-size: 0.85rem;
+                margin-bottom: 0.55rem;
+                line-height: 1.5;
             }
 
             .details-col p {
-                font-size: 0.9rem;
-                line-height: 1.6;
-                margin-bottom: 0.75rem;
+                font-size: 0.85rem;
+                line-height: 1.55;
+                margin-bottom: 0.65rem;
             }
 
             /* Mobile Total Summary */
