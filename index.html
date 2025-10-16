@@ -332,28 +332,11 @@
             font-size: 0.975rem;
             transition: all 0.2s;
             box-shadow: 0 3px 10px rgba(16, 185, 129, 0.35);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button::after {
-            content: '→';
-            position: absolute;
-            right: 1.5rem;
-            opacity: 0;
-            transform: translateX(-10px);
-            transition: all 0.2s;
         }
 
         .cta-button:hover {
             transform: translateY(-1px);
             box-shadow: 0 5px 15px rgba(16, 185, 129, 0.45);
-            padding-right: 2.5rem;
-        }
-
-        .cta-button:hover::after {
-            opacity: 1;
-            transform: translateX(0);
         }
 
         .cta-button:active {
@@ -525,7 +508,7 @@
         .offer-header::before {
             content: 'Click to expand';
             position: absolute;
-            right: 1.15rem;
+            right: 140px;
             top: 50%;
             transform: translateY(-50%);
             font-size: 0.7rem;
@@ -867,6 +850,51 @@
             font-size: 0.825rem;
         }
 
+        .disclaimer-toggle {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 1.25rem auto;
+            display: block;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .disclaimer-toggle:hover {
+            background: #374151;
+            transform: translateY(-1px);
+        }
+
+        .disclaimer-toggle:active {
+            transform: translateY(0);
+        }
+
+        .full-disclaimer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .full-disclaimer.visible {
+            max-height: 2000px;
+        }
+
+        .full-disclaimer p {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+        }
+
+        .full-disclaimer.visible p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Mobile Sticky CTA */
         .mobile-cta {
             display: none;
@@ -1091,12 +1119,7 @@
             }
 
             .cta-button:hover {
-                padding-right: 1.25rem;
                 transform: none;
-            }
-
-            .cta-button::after {
-                display: none;
             }
 
             .cta-button:active {
@@ -1123,7 +1146,7 @@
 
             .offer-header::before {
                 content: 'Tap to expand';
-                right: 1rem;
+                right: 90px;
                 font-size: 0.65rem;
             }
 
@@ -1273,6 +1296,17 @@
                 font-size: 0.875rem;
                 margin-bottom: 0.55rem;
             }
+
+            .disclaimer-toggle {
+                padding: 0.65rem 1.25rem;
+                font-size: 0.8rem;
+                margin: 1rem auto;
+            }
+
+            .full-disclaimer p {
+                font-size: 0.8rem;
+                line-height: 1.6;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1304,7 +1338,7 @@
     <article>
         <span class="badge">
             <span class="live-dot"></span>
-            1,200+ People Earning
+            1,200+ People Signed Up
         </span>
         
         <h1>Earn $800 in One Hour Through Bonus Arbitrage</h1>
@@ -1333,7 +1367,7 @@
         <div class="callout">
             <p>You're about to learn a strategy that sounds too good to be true, but is completely legitimate. It's called <strong>bonus arbitrage</strong>, and it's essentially exploiting companies' marketing budgets to pocket cash rewards that far exceed any effort or initial cost.</p>
             <p>This isn't a "get rich quick" scheme. Companies spend billions on customer acquisition every year. They'd rather pay you $100-$500 directly than spend that money on ads. You're simply taking advantage of their official promotional offers.</p>
-            <p><strong>The numbers are real:</strong> Over 1,200 people in our community have successfully completed these offers. The average person earns $800+ in their first hour.</p>
+            <p><strong>Join over 1,200 people</strong> from our community who have signed up to start earning through these verified offers. Total earnings potential: $805 across all offers listed below.</p>
         </div>
 
         <div class="cta-card">
@@ -1341,13 +1375,13 @@
                 <img src="https://i.imgur.com/dnrNOx3.jpeg" alt="Gemsloot" class="cta-logo">
                 <div class="cta-header-text">
                     <h3>Get Started on Gemsloot</h3>
-                    <p>All offers below pay through Gemsloot. Register to get a free lootbox worth up to $250.</p>
+                    <p>The best platform for bonus arbitrage. All offers below pay through Gemsloot, and you'll receive a free lootbox worth up to $250 when you sign up.</p>
                 </div>
             </div>
 
             <div class="cta-body">
                 <div class="cta-trust">
-                    <strong>1,200+ people</strong> from our community are earning through this platform
+                    <strong>1,200+ people</strong> from our community have signed up through this platform
                 </div>
 
                 <div class="cta-stats">
@@ -1365,7 +1399,7 @@
                     </div>
                 </div>
 
-                <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="cta-button">Register Free & Get Bonus →</a>
+                <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="cta-button">Sign Up Free</a>
                 
                 <div class="cta-note">
                     Use code: <code>SHG</code>
@@ -1403,10 +1437,10 @@
         <div class="key-points">
             <h3>The Core Strategy</h3>
             <ul>
-                <li><strong>Find high-value signup bonuses</strong> — Banks and fintech companies offer $50-$500 for opening accounts</li>
-                <li><strong>Complete minimal requirements</strong> — Direct deposit setup, small deposits, or 30-day account holds</li>
-                <li><strong>Collect your bonus</strong> — Get paid through tracking platforms that handle everything</li>
-                <li><strong>Move on or cancel</strong> — Most offers allow account closure after bonuses without penalty</li>
+                <li><strong>Find high-value signup bonuses</strong> – Banks and fintech companies offer $50-$500 for opening accounts</li>
+                <li><strong>Complete minimal requirements</strong> – Direct deposit setup, small deposits, or 30-day account holds</li>
+                <li><strong>Collect your bonus</strong> – Get paid through tracking platforms that handle everything</li>
+                <li><strong>Move on or cancel</strong> – Most offers allow account closure after bonuses without penalty</li>
             </ul>
         </div>
 
@@ -1424,7 +1458,7 @@
 
         <div class="callout">
             <p><strong>We spent hundreds of hours finding these.</strong> Each offer has exceptional ROI—high payout for minimal effort. Click any offer to see complete instructions.</p>
-            <p><strong>Where to start:</strong> Chime ($480, 15 min) if you have direct deposit, or SoFi Plus ($20 profit, 5 min) for instant proof.</p>
+            <p><strong>Where to start:</strong> If you have direct deposit access, start with Chime ($480, 15 min). Otherwise, try SoFi Plus ($20 profit, 5 min) for instant proof this works.</p>
         </div>
 
         <div class="offer">
@@ -1619,20 +1653,20 @@
         </div>
 
         <div class="social-proof">
-            <h3>Join 1,200+ People Already Earning</h3>
-            <p>Our community members have successfully completed thousands of offers. Here's what they're seeing:</p>
+            <h3>Join 1,200+ People Who Have Signed Up</h3>
+            <p>Our community members are actively working through these offers. Here's what the platform shows:</p>
             <div class="social-stats">
                 <div class="social-stat">
-                    <div class="social-stat-number">$32,000+</div>
-                    <div class="social-stat-label">Total Community Earnings</div>
+                    <div class="social-stat-number">1,200+</div>
+                    <div class="social-stat-label">Community Signups</div>
                 </div>
                 <div class="social-stat">
-                    <div class="social-stat-number">94%</div>
-                    <div class="social-stat-label">Success Rate</div>
+                    <div class="social-stat-number">$805</div>
+                    <div class="social-stat-label">Total Potential Earnings</div>
                 </div>
                 <div class="social-stat">
                     <div class="social-stat-number">24-48hrs</div>
-                    <div class="social-stat-label">Average Payout Time</div>
+                    <div class="social-stat-label">Typical Payout Time</div>
                 </div>
             </div>
         </div>
@@ -1707,7 +1741,6 @@
             <p><strong>Minimums:</strong> $0.50 for crypto, $3 for PayPal</p>
             <p><strong>First withdrawal:</strong> Manually reviewed (usually within 24 hours) for security.</p>
             <p><strong>After that:</strong> Crypto payouts are instant, PayPal within a few hours</p>
-            <p><strong>Success rate:</strong> 94% of community members successfully withdraw their first payment within 48 hours</p>
         </div>
 
         <h2>Important Considerations</h2>
@@ -1729,6 +1762,21 @@
                 <p><strong>Earnings Disclaimer:</strong> Amounts mentioned represent potential earnings based on current offers. Individual results vary based on eligibility, effort, timing, and location. Offers subject to change.</p>
                 <p><strong>Not Financial Advice:</strong> This is educational content only. Independently verify all offer terms and consult professionals before making financial decisions.</p>
                 <p><strong>Your Responsibility:</strong> You accept full responsibility for your actions and outcomes. We are not liable for losses, damages, or issues arising from use of these strategies.</p>
+                
+                <button class="disclaimer-toggle" onclick="toggleFullDisclaimer()">View Full Legal Disclaimer</button>
+                
+                <div class="full-disclaimer" id="fullDisclaimer">
+                    <h4 style="margin-top: 1.5rem;">Complete Legal Disclosure</h4>
+                    <p><strong>No Guarantees:</strong> Past performance does not guarantee future results. The offers and bonuses mentioned are subject to change without notice. Companies may modify, suspend, or terminate promotional offers at any time.</p>
+                    <p><strong>Eligibility Requirements:</strong> Not all offers are available in all locations. You must meet each company's eligibility requirements, which may include age, residency, credit checks, and employment verification.</p>
+                    <p><strong>Tax Implications:</strong> Bonuses and rewards may be considered taxable income. Consult a tax professional regarding your specific situation and reporting requirements.</p>
+                    <p><strong>Account Terms:</strong> You are responsible for reading and complying with each company's terms of service. Violation of terms may result in bonus forfeiture, account closure, or legal action.</p>
+                    <p><strong>Risk Disclosure:</strong> Opening multiple financial accounts may impact your credit score, banking relationships, and financial standing. Consider the potential consequences before proceeding.</p>
+                    <p><strong>Third-Party Platforms:</strong> Gemsloot and other tracking platforms are independent third parties. We are not responsible for their policies, practices, payment processing, or any issues that arise from using their services.</p>
+                    <p><strong>Information Accuracy:</strong> While we strive for accuracy, information may be outdated or incorrect. Always verify current offer terms directly with the financial institution before participating.</p>
+                    <p><strong>No Professional Relationship:</strong> Nothing on this site creates an attorney-client, financial advisor-client, or any other professional relationship. Seek professional advice for your specific circumstances.</p>
+                </div>
+
                 <p style="text-align: center; margin-top: 1.75rem; color: #9ca3af;">© 2025 Side Hustle Gold. All rights reserved.</p>
             </div>
         </div>
@@ -1790,6 +1838,20 @@
                 item.classList.add('active');
             } else {
                 item.classList.remove('active');
+            }
+        }
+
+        // Toggle Full Disclaimer
+        function toggleFullDisclaimer() {
+            const disclaimer = document.getElementById('fullDisclaimer');
+            const button = document.querySelector('.disclaimer-toggle');
+            
+            if (disclaimer.classList.contains('visible')) {
+                disclaimer.classList.remove('visible');
+                button.textContent = 'View Full Legal Disclaimer';
+            } else {
+                disclaimer.classList.add('visible');
+                button.textContent = 'Hide Full Legal Disclaimer';
             }
         }
 
