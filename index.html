@@ -14,7 +14,7 @@
             background-color: #f3f4f6; /* gray-100 */
         }
         .tab-active {
-            background-color: #10b981; /* emerald-500 */
+            background-color: #2563eb; /* blue-600 */
             color: #ffffff;
         }
         .cta-button {
@@ -22,7 +22,7 @@
         }
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2), 0 4px 6px -2px rgba(16, 185, 129, 0.1);
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2), 0 4px 6px -2px rgba(37, 99, 235, 0.1);
         }
         .fade-in {
             animation: fadeIn 0.5s ease-in-out;
@@ -37,23 +37,25 @@
 
     <div id="app" class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
         
-        <!-- Header -->
-        <header class="text-center my-8 md:my-12">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight">
-                The <span class="text-emerald-500">Ultimate</span> Sweeps Farming Guide
-            </h1>
-            <p class="mt-4 text-lg text-gray-600">Presented by Side Hustle Gold</p>
-        </header>
+        <!-- Header & Navigation -->
+        <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-6 mb-10">
+            <header class="text-center sm:text-left">
+                <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">
+                    The <span class="text-blue-600">Ultimate</span> Sweeps Farming Guide
+                </h1>
+                <p class="mt-1 text-base text-gray-600">Presented by Side Hustle Gold</p>
+            </header>
 
-        <!-- Navigation Tabs -->
-        <nav class="flex justify-center items-center bg-white/80 rounded-xl p-2 max-w-md mx-auto mb-10 sticky top-4 z-10 backdrop-blur-sm shadow-sm border border-gray-200">
-            <button id="daily-tab" class="w-1/2 py-3 px-4 rounded-lg font-bold text-sm md:text-base text-gray-600 transition-colors duration-300">
-                Daily Bonus Farming
-            </button>
-            <button id="washing-tab" class="w-1/2 py-3 px-4 rounded-lg font-bold text-sm md:text-base text-gray-600 transition-colors duration-300">
-                Promo Washing Strategy
-            </button>
-        </nav>
+            <nav class="flex-shrink-0 flex justify-center items-center bg-white/80 rounded-xl p-2 max-w-md mx-auto sm:mx-0 sticky top-4 z-10 backdrop-blur-sm shadow-sm border border-gray-200">
+                <button id="daily-tab" class="w-1/2 sm:w-auto py-3 px-6 rounded-lg font-bold text-sm md:text-base text-gray-600 transition-colors duration-300">
+                    Daily Bonuses
+                </button>
+                <button id="washing-tab" class="w-1/2 sm:w-auto py-3 px-6 rounded-lg font-bold text-sm md:text-base text-gray-600 transition-colors duration-300">
+                    Promo Washing
+                </button>
+            </nav>
+        </div>
+
 
         <!-- Main Content -->
         <main>
@@ -64,15 +66,15 @@
                     <p class="mb-4 text-gray-600">This guide is designed for the aspiring lazy hustler. We've vetted every site for 1) Easy sign-up, 2) Fast verification, and 3) Quick daily collection. The goal is to spend less than 10 minutes a day to build a reliable extra income stream.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
                         <div class="bg-gray-50 border border-gray-200 p-4 rounded-lg">
-                            <span class="text-emerald-500 font-bold text-lg block">Step 1: Sign Up</span>
+                            <span class="text-blue-600 font-bold text-lg block">Step 1: Sign Up</span>
                             <p class="text-gray-600 mt-1">Use the links below to sign up for all sites. (<span class="font-semibold text-gray-800">~30 min one-time setup</span>)</p>
                         </div>
                         <div class="bg-gray-50 border border-gray-200 p-4 rounded-lg">
-                            <span class="text-emerald-500 font-bold text-lg block">Step 2: Collect Daily</span>
+                            <span class="text-blue-600 font-bold text-lg block">Step 2: Collect Daily</span>
                              <p class="text-gray-600 mt-1">Log in daily to claim your free bonus on each site. (<span class="font-semibold text-gray-800">&lt;10 min per day</span>)</p>
                         </div>
                          <div class="bg-gray-50 border border-gray-200 p-4 rounded-lg">
-                            <span class="text-emerald-500 font-bold text-lg block">Step 3: Wash & Redeem</span>
+                            <span class="text-blue-600 font-bold text-lg block">Step 3: Wash & Redeem</span>
                             <p class="text-gray-600 mt-1">Once you hit the minimum, "wash" your coins by playing a high-RTP game, then redeem for cash.</p>
                         </div>
                     </div>
@@ -80,7 +82,7 @@
 
                 <div class="text-center mb-8">
                      <h3 class="text-3xl font-bold text-gray-900">Daily Bonus Collection List</h3>
-                     <p class="text-gray-600 mt-2">Potential Monthly Earnings: <span class="font-bold text-green-600 text-lg">$407+</span></p>
+                     <p class="text-gray-600 mt-2">Potential Monthly Earnings: <span class="font-bold text-blue-600 text-lg">$407+</span></p>
                 </div>
 
                 <div id="daily-bonus-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -92,13 +94,13 @@
             <section id="washing-content" class="hidden fade-in">
                 <div class="bg-white rounded-xl p-6 md:p-8 mb-8 border border-gray-200 shadow-sm">
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">"Washing" Promos & Sales for Higher Profits</h2>
-                    <p class="mb-4 text-gray-600">To significantly boost your earnings to <span class="font-bold text-green-600">$1,500+ a month</span>, you can leverage the special promotional packages these sites offer. The strategy is to buy discounted Sweeps Coins (SC) and "wash" them by meeting the playthrough requirement on high Return-to-Player (RTP) games.</p>
+                    <p class="mb-4 text-gray-600">To significantly boost your earnings to <span class="font-bold text-blue-600">$1,500+ a month</span>, you can leverage the special promotional packages these sites offer. The strategy is to buy discounted Sweeps Coins (SC) and "wash" them by meeting the playthrough requirement on high Return-to-Player (RTP) games.</p>
                      <p class="text-gray-600">A 97% RTP game means for every $100 played, you should theoretically get back $97. By buying $100 of SC for only $50, you can see how profit is generated. Follow the guide below for the most profitable offers.</p>
                 </div>
                 
                 <div class="text-center mb-8">
                      <h3 class="text-3xl font-bold text-gray-900">Top Welcome Offers to Wash</h3>
-                     <p class="text-gray-600 mt-2">Potential Immediate Profit: <span class="font-bold text-green-600 text-lg">$650+</span> just from welcome bonuses!</p>
+                     <p class="text-gray-600 mt-2">Potential Immediate Profit: <span class="font-bold text-blue-600 text-lg">$650+</span> just from welcome bonuses!</p>
                 </div>
                 
                 <div id="promo-washing-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -122,49 +124,53 @@
     <script>
         // --- DATA ---
         const casinos = [
-            { name: "Legendz", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30a42c36d1428856200f", daily: "$1.00", minRedeem: "$100", washGame: "Legendz Plinko (low risk, 16 rows)", welcome: { totalProfit: "100", description: "This is literally free money.", steps: [{ id: 1, cost: "$100", value: "200 SC", profit: "100" }] } },
-            { name: "Jackpota", link: "https://www.jackpota.com/?r=188778916", daily: "$0.35", minRedeem: "$75", washGame: "UPlinko (low risk, 16 rows)", welcome: { totalProfit: "71", description: "Easy money, do not skip this 4-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" }, { id: 4, cost: "$45", value: "56 SC", profit: "11" } ] } },
-            { name: "McLuck", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30972c36d14288561fcd", daily: "$0.30", minRedeem: "$75", washGame: "Gravity Blackjack (99.46% RTP)", welcome: { totalProfit: "60", description: "Easy money, do not skip this 3-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" } ] } },
-            { name: "PlayFame", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30a22c36d14288561ff9", daily: "$0.30", minRedeem: "$75", washGame: "Gravity Blackjack (99.46% RTP)", welcome: { totalProfit: "60", description: "Easy money, do not skip this 3-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" } ] } },
-            { name: "SpinBlitz", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc309e2c36d14288561fe3", daily: "$0.30", minRedeem: "$75", washGame: "Gravity Blackjack (99.46% RTP)", welcome: { totalProfit: "55", description: "3-part bonus with free spins (est. profit).", steps: [ { id: 1, cost: "$10", value: "10 SC + 30 spins", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" } ] } },
-            { name: "Crown Coins", link: "https://crowncoinscasino.com/?utm_campaign=84efb4ce-42c9-4636-9946-7d9c39c5e8b2&utm_source=friends", daily: "$1.30", minRedeem: "$50", washGame: "Turbo Mines (2 mines, 1 square)", welcome: { totalProfit: "41", description: "High value welcome offer.", steps: [{ id: 1, cost: "$23.99", value: "65 SC", profit: "41" }] } },
-            { name: "Real Prize", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30932c36d14288561fb7", daily: "$1.50", minRedeem: "$100", washGame: "Gravity Plinko (low risk)", welcome: { totalProfit: "35", description: "Simple 1-to-2 value offer.", steps: [{ id: 1, cost: "$35", value: "70 SC", profit: "35" }] } },
-            { name: "Pulsz", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30aa2c36d1428856203b", daily: "$1.00", minRedeem: "$100", washGame: "Multihand Blackjack (99.38% RTP)", welcome: { totalProfit: "15", description: "Great starter offer.", steps: [{ id: 1, cost: "$10", value: "25 SC", profit: "15" }] } },
-            { name: "Modo", link: "https://modo.us/?referralCode=V62FT4", daily: "$1.00", minRedeem: "$100", washGame: "Blackjack (Basic Strategy)", welcome: { totalProfit: "90", description: "One of the largest profit bonuses.", steps: [{ id: 1, cost: "$210", value: "300 SC", profit: "90" }] } },
-            { name: "Pulsz Bingo", link: "http://www.pulszbingo.com/?invited_by=qgtnds", daily: "$1.00", minRedeem: "$100", washGame: "Epic Joker (97% RTP)", welcome: { totalProfit: "40", description: "Solid 1-to-2 value.", steps: [{ id: 1, cost: "$40", value: "80 SC", profit: "40" }] } },
-            { name: "LoneStar", link: "https://lonestarcasino.com/refer/551699", daily: "$1.50", minRedeem: "$100", washGame: "Dragons Awakening (96.96% RTP)", welcome: { totalProfit: "30", description: "Strong offer over 100% value.", steps: [{ id: 1, cost: "$20", value: "50 SC", profit: "30" }] } },
-            { name: "Wow Vegas", link: "https://www.wowvegas.com/?raf=8279094", daily: "$0.00", minRedeem: "$50", washGame: "Gravity Blackjack (99.46% RTP)", welcome: { totalProfit: "20", description: "Focus on promos, daily bonus is rare.", steps: [{ id: 1, cost: "$10", value: "30 SC", profit: "20" }] } },
-            { name: "Luckyhands", link: "https://luckyhands.com/sign-up?code=969a5492-2ebd-42a2-b713-cb4e9476e9c1", daily: "$0.30", minRedeem: "$50", washGame: "Plinko (low risk, 16 rows)", welcome: { totalProfit: "5", description: "Smaller, but still profitable.", steps: [{ id: 1, cost: "$15", value: "20 SC", profit: "5" }] } },
-            { name: "Stake.us", link: "http://stake.us/?c=cwdlJNCB", daily: "$1.00", minRedeem: "$45", washGame: "N/A - Instantly withdrawable!", welcome: null },
-            { name: "Chumba", link: "https://login.chumbacasino.com/register", daily: "$1.00", minRedeem: "$100", washGame: "Blackjack (Basic Strategy)", welcome: { totalProfit: "20", description: "A classic and reliable offer.", steps: [{ id: 1, cost: "$10", value: "30 SC", profit: "20" }] } },
-            { name: "SpinPals", link: "https://www.spinpals.com/?referralcode=e94d9b6c-2e8d-49ae-9023-01d288c50c63", daily: "$0.50", minRedeem: "$100", washGame: "Speed Crash (1.1x setting)", welcome: { totalProfit: "15", description: "Includes a wheel spin.", steps: [{ id: 1, cost: "$10", value: "25 SC", profit: "15" }] } },
-            { name: "Global Poker", link: "https://play.globalpoker.com/", daily: "$0.50", minRedeem: "$100", washGame: "Blackjack (Basic Strategy)", welcome: null },
-            { name: "Moozi", link: "https://moozi.com/signup?referral_code=4460521292", daily: "$0.30", minRedeem: "$100", washGame: "Adrenaline Rush XCrash (1.1x auto cashout)", welcome: null },
+            { name: "Legendz", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30a42c36d1428856200f", daily: "$1.00", minRedeem: "$100", washGames: ["Legendz Plinko (low risk, 16 rows)"], welcome: { totalProfit: "100", description: "This is literally free money.", steps: [{ id: 1, cost: "$100", value: "200 SC", profit: "100" }] } },
+            { name: "Jackpota", link: "https://www.jackpota.com/?r=188778916", daily: "$0.35", minRedeem: "$75", washGames: ["UPlinko (low risk, 16 rows)"], welcome: { totalProfit: "71", description: "Easy money, do not skip this 4-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" }, { id: 4, cost: "$45", value: "56 SC", profit: "11" } ] } },
+            { name: "McLuck", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30972c36d14288561fcd", daily: "$0.30", minRedeem: "$75", washGames: ["Gravity Blackjack (99.46% RTP)", "Gravity Plinko (low risk)", "Gravity Roulette (Red+Odd)"], welcome: { totalProfit: "60", description: "Easy money, do not skip this 3-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" } ] } },
+            { name: "PlayFame", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30a22c36d14288561ff9", daily: "$0.30", minRedeem: "$75", washGames: ["Gravity Blackjack (99.46% RTP)", "Gravity Plinko (low risk)", "Gravity Roulette (Red+Odd)"], welcome: { totalProfit: "60", description: "Easy money, do not skip this 3-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" } ] } },
+            { name: "SpinBlitz", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc309e2c36d14288561fe3", daily: "$0.30", minRedeem: "$75", washGames: ["Gravity Blackjack (99.46% RTP)", "Gravity Plinko (low risk)", "Gravity Roulette (Red+Odd)"], welcome: { totalProfit: "55", description: "3-part bonus with free spins (est. profit).", steps: [ { id: 1, cost: "$10", value: "10 SC + 30 spins", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" } ] } },
+            { name: "Crown Coins", link: "https://crowncoinscasino.com/?utm_campaign=84efb4ce-42c9-4636-9946-7d9c39c5e8b2&utm_source=friends", daily: "$1.30", minRedeem: "$50", washGames: ["Turbo Mines (2 mines, 1 square)", "Epic Joker (97% RTP)"], welcome: { totalProfit: "41", description: "High value welcome offer.", steps: [{ id: 1, cost: "$23.99", value: "65 SC", profit: "41" }] } },
+            { name: "Real Prize", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30932c36d14288561fb7", daily: "$1.50", minRedeem: "$100", washGames: ["Gravity Plinko (low risk)"], welcome: { totalProfit: "35", description: "Simple 1-to-2 value offer.", steps: [{ id: 1, cost: "$35", value: "70 SC", profit: "35" }] } },
+            { name: "Pulsz", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30aa2c36d1428856203b", daily: "$1.00", minRedeem: "$100", washGames: ["Multihand Blackjack (99.38%)", "Epic Joker (97% RTP)"], welcome: { totalProfit: "15", description: "Great starter offer.", steps: [{ id: 1, cost: "$10", value: "25 SC", profit: "15" }] } },
+            { name: "Modo", link: "https://modo.us/?referralCode=V62FT4", daily: "$1.00", minRedeem: "$100", washGames: ["Blackjack (Basic Strategy)", "Epic Joker (97% RTP)"], welcome: { totalProfit: "90", description: "One of the largest profit bonuses.", steps: [{ id: 1, cost: "$210", value: "300 SC", profit: "90" }] } },
+            { name: "Pulsz Bingo", link: "http://www.pulszbingo.com/?invited_by=qgtnds", daily: "$1.00", minRedeem: "$100", washGames: ["Epic Joker (97% RTP)", "Blackjack (Basic Strategy)"], welcome: { totalProfit: "40", description: "Solid 1-to-2 value.", steps: [{ id: 1, cost: "$40", value: "80 SC", profit: "40" }] } },
+            { name: "LoneStar", link: "https://lonestarcasino.com/refer/551699", daily: "$1.50", minRedeem: "$100", washGames: ["Dragons Awakening (96.96% RTP)"], welcome: { totalProfit: "30", description: "Strong offer over 100% value.", steps: [{ id: 1, cost: "$20", value: "50 SC", profit: "30" }] } },
+            { name: "Wow Vegas", link: "https://www.wowvegas.com/?raf=8279094", daily: "$0.00", minRedeem: "$50", washGames: ["Gravity Blackjack (99.46%)", "Mystery Garden (97% RTP)", "Auto Roulette (Red+Odd)"], welcome: { totalProfit: "20", description: "Focus on promos, daily bonus is rare.", steps: [{ id: 1, cost: "$10", value: "30 SC", profit: "20" }] } },
+            { name: "Luckyhands", link: "https://luckyhands.com/sign-up?code=969a5492-2ebd-42a2-b713-cb4e9476e9c1", daily: "$0.30", minRedeem: "$50", washGames: ["Plinko (low risk, 16 rows)", "Epic Joker (97% RTP)"], welcome: { totalProfit: "5", description: "Smaller, but still profitable.", steps: [{ id: 1, cost: "$15", value: "20 SC", profit: "5" }] } },
+            { name: "Stake.us", link: "http://stake.us/?c=cwdlJNCB", daily: "$1.00", minRedeem: "$45", washGames: ["N/A - Instantly withdrawable!"], welcome: null },
+            { name: "Chumba", link: "https://login.chumbacasino.com/register", daily: "$1.00", minRedeem: "$100", washGames: ["Blackjack (Basic Strategy)", "Starspell (96.17% RTP)"], welcome: { totalProfit: "20", description: "A classic and reliable offer.", steps: [{ id: 1, cost: "$10", value: "30 SC", profit: "20" }] } },
+            { name: "SpinPals", link: "https://www.spinpals.com/?referralcode=e94d9b6c-2e8d-49ae-9023-01d288c50c63", daily: "$0.50", minRedeem: "$100", washGames: ["Plinko Dare 2 Win", "Speed Crash (1.1x setting)"], welcome: { totalProfit: "15", description: "Includes a wheel spin.", steps: [{ id: 1, cost: "$10", value: "25 SC", profit: "15" }] } },
+            { name: "Global Poker", link: "https://play.globalpoker.com/", daily: "$0.50", minRedeem: "$100", washGames: ["Blackjack (Basic Strategy)"], welcome: null },
+            { name: "Moozi", link: "https://moozi.com/signup?referral_code=4460521292", daily: "$0.30", minRedeem: "$100", washGames: ["Adrenaline Rush XCrash (1.1x)"], welcome: null },
         ];
 
         // --- RENDER FUNCTIONS ---
         const dailyContainer = document.getElementById('daily-bonus-container');
         const promoContainer = document.getElementById('promo-washing-container');
+        
+        const washGamesHTML = (games) => {
+            return games.map(game => `<div class="bg-gray-100 text-gray-700 text-xs font-semibold px-2 py-1 rounded-full">${game}</div>`).join('');
+        };
 
         const createDailyCard = (casino) => {
             return `
                 <div class="bg-white rounded-xl flex flex-col p-5 border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300">
                     <h4 class="text-xl font-bold text-gray-900">${casino.name}</h4>
-                    <div class="flex-grow mt-4 space-y-3 text-sm">
-                        <div class="flex justify-between">
-                            <span class="text-gray-500">Avg. Daily Bonus:</span>
-                            <span class="font-semibold text-green-600">${casino.daily}</span>
+                    <div class="flex-grow mt-4 space-y-4 text-sm">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>Avg. Daily Bonus:</span>
+                            <span class="font-semibold text-blue-600">${casino.daily}</span>
                         </div>
-                        <div class="flex justify-between">
-                            <span class="text-gray-500">Min. Redemption:</span>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-500 flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>Min. Redemption:</span>
                             <span class="font-semibold text-gray-900">${casino.minRedeem}</span>
                         </div>
-                         <div class="flex justify-between text-left">
-                            <span class="text-gray-500 shrink-0 mr-2">Best Wash Game:</span>
-                            <span class="font-semibold text-gray-900 text-right">${casino.washGame}</span>
+                         <div class="space-y-2">
+                            <span class="text-gray-500 text-sm font-medium flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Best Wash Games:</span>
+                            <div class="flex flex-wrap gap-2">${washGamesHTML(casino.washGames)}</div>
                         </div>
                     </div>
-                    <a href="${casino.link}" target="_blank" rel="noopener noreferrer" class="cta-button mt-6 w-full bg-emerald-500 text-white font-bold py-3 px-4 rounded-lg text-center block hover:bg-emerald-600">
+                    <a href="${casino.link}" target="_blank" rel="noopener noreferrer" class="cta-button mt-6 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg text-center block hover:bg-blue-700">
                         Claim Bonus & Sign Up
                     </a>
                 </div>
@@ -178,7 +184,7 @@
                 <li class="flex justify-between items-center text-xs p-2 rounded-md ${casino.welcome.steps.length > 1 ? 'bg-gray-100' : ''}">
                     <span class="font-semibold text-gray-700">${casino.welcome.steps.length > 1 ? `Step ${step.id}:` : 'Offer:'}</span>
                     <span class="text-gray-600 text-right">Spend ${step.cost} for ${step.value}</span>
-                    <span class="font-bold text-green-600 w-16 text-right">(+$${step.profit})</span>
+                    <span class="font-bold text-blue-600 w-16 text-right">(+$${step.profit})</span>
                 </li>
             `).join('');
 
@@ -188,18 +194,18 @@
                     <div class="flex-grow mt-4 space-y-3 text-sm">
                        <div class="bg-gray-50 rounded-lg p-3 text-center border border-gray-200">
                             <span class="text-gray-500 block uppercase tracking-wider text-xs font-bold">Total Potential Profit</span>
-                            <span class="font-extrabold text-green-500 text-4xl block my-1">+$${casino.welcome.totalProfit}</span>
+                            <span class="font-extrabold text-blue-500 text-4xl block my-1">+$${casino.welcome.totalProfit}</span>
                             <p class="text-gray-500 text-xs">${casino.welcome.description}</p>
                        </div>
                        <ul class="space-y-1 pt-2">
                         ${bonusStepsHTML}
                        </ul>
-                        <div class="flex justify-between pt-2">
-                            <span class="text-gray-500 font-medium">Best Wash Game:</span>
-                            <span class="font-semibold text-gray-900 text-right">${casino.washGame}</span>
+                        <div class="space-y-2 pt-2">
+                             <span class="text-gray-500 text-sm font-medium flex items-center"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Best Wash Games:</span>
+                             <div class="flex flex-wrap gap-2">${washGamesHTML(casino.washGames)}</div>
                         </div>
                     </div>
-                    <a href="${casino.link}" target="_blank" rel="noopener noreferrer" class="cta-button mt-6 w-full bg-emerald-500 text-white font-bold py-3 px-4 rounded-lg text-center block hover:bg-emerald-600">
+                    <a href="${casino.link}" target="_blank" rel="noopener noreferrer" class="cta-button mt-6 w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg text-center block hover:bg-blue-700">
                         Claim Welcome Offer
                     </a>
                 </div>
