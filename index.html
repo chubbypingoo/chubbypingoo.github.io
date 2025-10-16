@@ -138,6 +138,76 @@
             margin-bottom: 0;
         }
 
+        /* Early CTA */
+        .early-cta {
+            background: linear-gradient(135deg, #111827 0%, #374151 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            color: white;
+        }
+
+        .early-cta-content {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .early-cta-logo {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .early-cta-text h3 {
+            color: white;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.5rem;
+        }
+
+        .early-cta-text p {
+            margin: 0;
+            opacity: 0.95;
+            font-size: 1.05rem;
+            color: white;
+        }
+
+        .early-cta-button {
+            display: block;
+            background: white;
+            color: #111827;
+            padding: 1.15rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: all 0.2s;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .early-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .early-cta-code {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .early-cta-code code {
+            background: rgba(255,255,255,0.2);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 700;
+            color: white;
+        }
+
         /* Key Points Box */
         .key-points {
             background: #fefce8;
@@ -161,147 +231,18 @@
             color: #374151;
         }
 
-        /* Early CTA Box */
-        .platform-box-early {
-            background: linear-gradient(135deg, #111827 0%, #374151 100%);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2.5rem 0;
-            color: white;
-        }
-
-        .platform-content {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .platform-logo-inline {
-            width: 64px;
-            height: 64px;
-            border-radius: 12px;
-            flex-shrink: 0;
-        }
-
-        .platform-text h3 {
-            color: white;
-            margin: 0 0 0.5rem 0;
-            font-size: 1.5rem;
-        }
-
-        .platform-text p {
-            margin: 0;
-            opacity: 0.95;
-            font-size: 1.05rem;
-        }
-
-        .cta-button-prominent {
-            display: block;
-            background: white;
-            color: #111827;
-            padding: 1.15rem 2rem;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.15rem;
-            transition: all 0.2s;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .cta-button-prominent:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-
-        .referral-note {
-            margin-top: 1rem;
-            text-align: center;
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        .referral-note code {
-            background: rgba(255,255,255,0.2);
-            padding: 0.25rem 0.6rem;
-            border-radius: 4px;
-            font-weight: 700;
-            color: white;
-        }
-
-        /* Platform Box (legacy - now lower) */
-        .platform-box {
-            background: #ffffff;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2.5rem 0;
-            text-align: center;
-        }
-
-        .platform-logo {
-            width: 56px;
-            height: 56px;
-            border-radius: 10px;
-            margin: 0 auto 1rem;
-            display: block;
-        }
-
-        .platform-box h3 {
-            margin: 0 0 0.75rem 0;
-            font-size: 1.5rem;
-        }
-
-        .platform-box p {
-            margin-bottom: 1.5rem;
-            color: #4b5563;
-        }
-
-        .platform-link {
-            display: inline-block;
-            background: #111827;
-            color: white;
-            padding: 0.875rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.2s;
-        }
-
-        .platform-link:hover {
-            background: #374151;
-            transform: translateY(-1px);
-        }
-
-        .referral-code {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: #6b7280;
-        }
-
-        .referral-code code {
-            background: #f3f4f6;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-            color: #111827;
-        }
-
         /* Offers Table */
         .offers-table-container {
             margin: 2.5rem 0;
             overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         .offers-table {
             width: 100%;
             border-collapse: collapse;
             background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
         .offers-table thead {
@@ -329,6 +270,10 @@
             background-color: #f9fafb;
         }
 
+        .offers-table tbody tr.offer-row:last-of-type {
+            border-bottom: none;
+        }
+
         .offers-table td {
             padding: 1.25rem;
             vertical-align: middle;
@@ -336,7 +281,6 @@
 
         .offer-name-cell {
             font-size: 1.05rem;
-            position: relative;
         }
 
         .offer-name-cell strong {
@@ -352,8 +296,8 @@
             display: inline-block;
             width: 0;
             height: 0;
-            border-left: 6px solid transparent;
-            border-right: 6px solid transparent;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
             border-top: 6px solid #6b7280;
             transition: transform 0.3s ease;
             flex-shrink: 0;
@@ -363,7 +307,7 @@
             transform: rotate(180deg);
         }
 
-        .expand-indicator {
+        .expand-hint {
             font-size: 0.85rem;
             color: #6b7280;
             font-weight: 500;
@@ -411,33 +355,33 @@
             transform: translateY(-1px);
         }
 
-        /* Details Row */
+        /* Details Row - HIDDEN BY DEFAULT */
         .details-row {
+            display: none;
             background: #f8fafc;
-            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .details-row.active {
+            display: table-row;
         }
 
         .details-row td {
             padding: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-        }
-
-        .details-row.active td {
-            max-height: 800px;
-            padding: 0;
+            border-bottom: 1px solid #e5e7eb;
         }
 
         .details-content {
-            padding: 1.5rem 2rem;
+            padding: 2rem;
             opacity: 0;
+            max-height: 0;
+            overflow: hidden;
             transform: translateY(-10px);
-            transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+            transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
         }
 
         .details-row.active .details-content {
             opacity: 1;
+            max-height: 2000px;
             transform: translateY(0);
         }
 
@@ -467,10 +411,14 @@
         }
 
         .details-col p {
-            margin: 0;
+            margin: 0 0 0.75rem 0;
             font-size: 0.95rem;
             line-height: 1.7;
             color: #374151;
+        }
+
+        .details-col p:last-child {
+            margin-bottom: 0;
         }
 
         /* Total Summary */
@@ -502,7 +450,7 @@
             opacity: 0.9;
         }
 
-        /* Withdrawal Info */
+        /* Info Note */
         .info-note {
             background: #f9fafb;
             border-radius: 12px;
@@ -514,6 +462,14 @@
         .info-note h3 {
             margin-top: 0;
             font-size: 1.25rem;
+        }
+
+        .info-note p {
+            margin-bottom: 1rem;
+        }
+
+        .info-note p:last-child {
+            margin-bottom: 0;
         }
 
         /* Footer */
@@ -572,30 +528,30 @@
             }
 
             /* Early CTA Mobile */
-            .platform-content {
+            .early-cta-content {
                 flex-direction: column;
                 text-align: center;
             }
 
-            .platform-logo-inline {
+            .early-cta-logo {
                 width: 56px;
                 height: 56px;
             }
 
-            .platform-text h3 {
+            .early-cta-text h3 {
                 font-size: 1.25rem;
             }
 
-            .platform-text p {
+            .early-cta-text p {
                 font-size: 1rem;
             }
 
-            .cta-button-prominent {
+            .early-cta-button {
                 padding: 1rem 1.5rem;
                 font-size: 1.05rem;
             }
 
-            /* Mobile Table Adjustments */
+            /* Mobile Table */
             .offers-table thead {
                 display: none;
             }
@@ -614,6 +570,10 @@
                 padding: 1rem;
             }
 
+            .offers-table tbody tr.offer-row:last-of-type {
+                border-bottom: 1px solid #e5e7eb;
+            }
+
             .offers-table td {
                 padding: 0.5rem 0;
                 border: none;
@@ -626,12 +586,8 @@
             }
 
             .offer-name-cell strong {
-                margin-bottom: 0.25rem;
                 font-size: 1.25rem;
-            }
-
-            .expand-indicator {
-                font-size: 0.8rem;
+                margin-bottom: 0.25rem;
             }
 
             .payout-cell {
@@ -661,16 +617,6 @@
                 width: 100%;
                 text-align: center;
                 padding: 0.75rem;
-            }
-
-            .details-row {
-                border: none;
-                margin-top: -1rem;
-                margin-bottom: 1rem;
-            }
-
-            .details-content {
-                padding: 1rem;
             }
 
             .details-grid {
@@ -720,26 +666,57 @@
         <p class="subtitle">A complete guide to bonus arbitrage—the strategy that turns corporate customer acquisition spending into immediate personal profit.</p>
 
         <div class="intro-section">
-            <p>Companies spend billions on customer acquisition every year. They'd rather pay you $100-$500 directly than spend that money on Facebook ads. <strong>Bonus arbitrage</strong> is simply taking advantage of their official promotional offers—completely legal, fully legitimate.</p>
-            <p><strong>The strategy is simple:</strong> Sign up for financial services that offer cash bonuses, complete minimal requirements (like setting up direct deposit or making a small deposit), collect your bonus, then move on. One hour of work = $800+.</p>
+            <p>You're about to learn a strategy that sounds too good to be true, but is completely legitimate and has worked for thousands of people. It's called <strong>bonus arbitrage</strong>, and it's essentially exploiting companies' careless marketing budgets to pocket cash rewards that far exceed any effort or initial cost.</p>
+            <p>This isn't a "get rich quick" scheme or some sketchy loophole. Companies spend billions on customer acquisition every year. They'd rather pay you $100-$500 directly than spend that money on Facebook ads or billboards. You're simply taking advantage of their official promotional offers before they change or disappear.</p>
+            <p>The best part? This takes about an hour of active work, requires no special skills, and you can start making money today.</p>
         </div>
 
         <!-- EARLY CTA -->
-        <div class="platform-box-early">
-            <div class="platform-content">
-                <img src="https://i.imgur.com/dnrNOx3.jpeg" alt="Gemsloot" class="platform-logo-inline">
-                <div class="platform-text">
-                    <h3>Start on Gemsloot</h3>
+        <div class="early-cta">
+            <div class="early-cta-content">
+                <img src="https://i.imgur.com/dnrNOx3.jpeg" alt="Gemsloot" class="early-cta-logo">
+                <div class="early-cta-text">
+                    <h3>Get Started on Gemsloot</h3>
                     <p>All the offers below are tracked through Gemsloot—they handle payouts and verification. Sign up now to get a free lootbox (up to $250 value).</p>
                 </div>
             </div>
-            <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="cta-button-prominent">Register Free & Get Bonus →</a>
-            <div class="referral-note">Use code: <code>SHG</code></div>
+            <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="early-cta-button">Register Free & Get Bonus →</a>
+            <div class="early-cta-code">Use code: <code>SHG</code></div>
         </div>
 
-        <h2>The 6 Best Offers Right Now</h2>
+        <h2>What is Bonus Arbitrage?</h2>
+        
+        <p>Bonus arbitrage is a straightforward concept: companies offer cash rewards for new signups that are larger than the cost of trying their product or service. Sometimes they even pay you just for signing up, hoping you'll stick around as a long-term customer.</p>
 
-        <p>Our team spent countless hours identifying these opportunities. Everything you need is below—just click any offer to see instructions, then click "Start" to begin.</p>
+        <p>Here's the strategy in practice:</p>
+
+        <div class="key-points">
+            <h3>The Core Strategy</h3>
+            <ul>
+                <li><strong>Find high-value signup bonuses</strong> — Banks, brokerages, and fintech companies regularly offer $50-$500 just for opening accounts</li>
+                <li><strong>Complete minimal requirements</strong> — Usually just setting up direct deposit, making a small deposit, or keeping an account open for 30 days</li>
+                <li><strong>Collect your bonus</strong> — Get paid through tracking platforms that aggregate these offers and handle payouts</li>
+                <li><strong>Move on or cancel</strong> — Most offers allow you to close accounts after receiving bonuses without penalty</li>
+            </ul>
+        </div>
+
+        <p>The key insight most people miss: <strong>these aren't "deals" or "discounts"—they're pure profit opportunities</strong>. When a bank pays you $480 to redirect one paycheck to their checking account, that's free money for 15 minutes of your time. When a brokerage pays you $30 for depositing $5, that's a 500% return in days.</p>
+
+        <h2>Why This Works (And Won't Stop Working)</h2>
+
+        <p>This isn't a loophole that will close. These are official, legal promotional offers from regulated financial companies. Here's why they exist:</p>
+
+        <p><strong>Customer acquisition costs are astronomical.</strong> Banks and fintech companies spend $200-$500 to acquire each new customer through traditional marketing. It's actually cheaper for them to pay you directly and hope you become a long-term user.</p>
+
+        <p><strong>They're betting on retention.</strong> Most people who sign up will forget to cancel, keep using the service, or generate revenue through other means (transaction fees, interest, etc.). But if you're disciplined, you can take the bonus and walk away.</p>
+
+        <p><strong>Competition drives offers higher.</strong> As new fintech companies launch and compete with traditional banks, signup bonuses keep increasing. This creates a perfect environment for bonus arbitrage.</p>
+
+        <h2>The Best Offers Right Now</h2>
+
+        <p>Our team spent countless hours identifying the highest-value signup bonuses with the lowest barriers to entry. Below are the 6 best opportunities—click any row to see detailed step-by-step instructions.</p>
+
+        <p><strong>Quick recommendation:</strong> Start with Chime ($480 for 15 minutes) if you have direct deposit access, or SoFi Plus ($20 profit in under 5 minutes) if you want instant proof this works.</p>
 
         <!-- Offers Table -->
         <div class="offers-table-container">
@@ -760,7 +737,7 @@
                                 <span class="dropdown-arrow"></span>
                                 Chime
                             </strong>
-                            <span class="expand-indicator">Click for instructions</span>
+                            <span class="expand-hint">Click for instructions</span>
                         </td>
                         <td class="payout-cell">$480</td>
                         <td class="time-cell">&lt; 15 min</td>
@@ -774,18 +751,18 @@
                             <div class="details-content">
                                 <div class="details-grid">
                                     <div class="details-col">
-                                        <h4>📋 Instructions</h4>
+                                        <h4>📋 Step-by-Step Instructions</h4>
                                         <ol>
-                                            <li>Sign up for Chime account</li>
+                                            <li>Sign up for Chime account (5 minutes)</li>
                                             <li>Set up direct deposit of $200+ from employer</li>
                                             <li>Wait for deposit to hit (next payday)</li>
                                             <li>Receive $480 on Gemsloot</li>
                                         </ol>
                                     </div>
                                     <div class="details-col">
-                                        <h4>💡 Key Points</h4>
-                                        <p>This is the highest payout for minimal effort. Works with gig jobs like Uber/DoorDash. You can switch your direct deposit back immediately after. No monthly fees.</p>
-                                        <p><strong>Pro tip:</strong> Use this same direct deposit for HSBC and Current offers to stack bonuses.</p>
+                                        <h4>💡 Why This Works</h4>
+                                        <p>This is the highest payout for minimal effort. Works with gig jobs like Uber/DoorDash. You can switch your direct deposit back immediately after. No monthly fees or minimum balance requirements.</p>
+                                        <p><strong>Pro tip:</strong> Use this same direct deposit for HSBC and Current offers to stack bonuses from a single paycheck redirect.</p>
                                     </div>
                                 </div>
                             </div>
@@ -798,7 +775,7 @@
                                 <span class="dropdown-arrow"></span>
                                 HSBC
                             </strong>
-                            <span class="expand-indicator">Click for instructions</span>
+                            <span class="expand-hint">Click for instructions</span>
                         </td>
                         <td class="payout-cell">$150</td>
                         <td class="time-cell">&lt; 15 min</td>
@@ -812,18 +789,19 @@
                             <div class="details-content">
                                 <div class="details-grid">
                                     <div class="details-col">
-                                        <h4>📋 Instructions</h4>
+                                        <h4>📋 Step-by-Step Instructions</h4>
                                         <ol>
                                             <li>Sign up for HSBC Premier Checking</li>
                                             <li>Make a direct deposit (avoids $50 fee)</li>
                                             <li>Keep account open for 30 days</li>
                                             <li>Receive $150 on Gemsloot</li>
-                                            <li>Close account if desired</li>
+                                            <li>Close account after 30 days if desired</li>
                                         </ol>
                                     </div>
                                     <div class="details-col">
-                                        <h4>💡 Key Points</h4>
-                                        <p>Set a calendar reminder to close after 30 days. Without direct deposit, you'll pay $50 fee (still $100 profit). Can use same direct deposit as Chime offer.</p>
+                                        <h4>💡 Why This Works</h4>
+                                        <p>Free money for keeping an account open for a month. Set a calendar reminder to close after 30 days. Without direct deposit, you'll pay $50 fee (still $100 profit).</p>
+                                        <p><strong>Pro tip:</strong> Can use the same direct deposit as Chime offer to maximize efficiency.</p>
                                     </div>
                                 </div>
                             </div>
@@ -836,7 +814,7 @@
                                 <span class="dropdown-arrow"></span>
                                 Current
                             </strong>
-                            <span class="expand-indicator">Click for instructions</span>
+                            <span class="expand-hint">Click for instructions</span>
                         </td>
                         <td class="payout-cell">$90</td>
                         <td class="time-cell">&lt; 15 min</td>
@@ -850,7 +828,7 @@
                             <div class="details-content">
                                 <div class="details-grid">
                                     <div class="details-col">
-                                        <h4>📋 Instructions</h4>
+                                        <h4>📋 Step-by-Step Instructions</h4>
                                         <ol>
                                             <li>Register for Current</li>
                                             <li>Verify your account</li>
@@ -860,8 +838,8 @@
                                         </ol>
                                     </div>
                                     <div class="details-col">
-                                        <h4>💡 Key Points</h4>
-                                        <p>Mobile banking app with no monthly fees. Stacks well with Chime and HSBC. Can use same direct deposit.</p>
+                                        <h4>💡 Why This Works</h4>
+                                        <p>Mobile banking app with no monthly fees. Stacks well with Chime and HSBC—all three can use the same direct deposit setup.</p>
                                     </div>
                                 </div>
                             </div>
@@ -874,7 +852,7 @@
                                 <span class="dropdown-arrow"></span>
                                 SoFi Plus
                             </strong>
-                            <span class="expand-indicator">Click for instructions</span>
+                            <span class="expand-hint">Click for instructions</span>
                         </td>
                         <td class="payout-cell">$30</td>
                         <td class="time-cell">&lt; 5 min</td>
@@ -888,17 +866,17 @@
                             <div class="details-content">
                                 <div class="details-grid">
                                     <div class="details-col">
-                                        <h4>📋 Instructions</h4>
+                                        <h4>📋 Step-by-Step Instructions</h4>
                                         <ol>
                                             <li>Sign up for SoFi</li>
                                             <li>Purchase SoFi Plus subscription ($10)</li>
                                             <li>Receive $30 on Gemsloot (within 1 hour)</li>
-                                            <li>Cancel subscription if desired</li>
+                                            <li>Cancel subscription immediately if desired</li>
                                         </ol>
                                     </div>
                                     <div class="details-col">
-                                        <h4>💡 Key Points</h4>
-                                        <p><strong>Fastest money—instant $20 profit.</strong> Perfect for testing the system. Payout usually arrives within an hour. Great first offer to prove this actually works.</p>
+                                        <h4>💡 Why This Works</h4>
+                                        <p><strong>Fastest money—instant $20 profit in under 5 minutes.</strong> Perfect for testing the system. Payout usually arrives within an hour. Great first offer to prove this actually works before committing to larger offers.</p>
                                     </div>
                                 </div>
                             </div>
@@ -911,7 +889,7 @@
                                 <span class="dropdown-arrow"></span>
                                 Moomoo
                             </strong>
-                            <span class="expand-indicator">Click for instructions</span>
+                            <span class="expand-hint">Click for instructions</span>
                         </td>
                         <td class="payout-cell">$30</td>
                         <td class="time-cell">&lt; 10 min</td>
@@ -925,7 +903,7 @@
                             <div class="details-content">
                                 <div class="details-grid">
                                     <div class="details-col">
-                                        <h4>📋 Instructions</h4>
+                                        <h4>📋 Step-by-Step Instructions</h4>
                                         <ol>
                                             <li>Register for Moomoo Brokerage</li>
                                             <li>Deposit $5 into account</li>
@@ -935,8 +913,8 @@
                                         </ol>
                                     </div>
                                     <div class="details-col">
-                                        <h4>💡 Key Points</h4>
-                                        <p>$25 profit for depositing money that's still yours. Legitimate brokerage used by millions. Your $5 stays accessible.</p>
+                                        <h4>💡 Why This Works</h4>
+                                        <p>$25 profit for depositing money that's still yours. Legitimate brokerage used by millions. Your $5 deposit remains accessible—withdraw it after getting the bonus.</p>
                                     </div>
                                 </div>
                             </div>
@@ -949,7 +927,7 @@
                                 <span class="dropdown-arrow"></span>
                                 WeBull
                             </strong>
-                            <span class="expand-indicator">Click for instructions</span>
+                            <span class="expand-hint">Click for instructions</span>
                         </td>
                         <td class="payout-cell">$25</td>
                         <td class="time-cell">&lt; 15 min</td>
@@ -963,7 +941,7 @@
                             <div class="details-content">
                                 <div class="details-grid">
                                     <div class="details-col">
-                                        <h4>📋 Instructions</h4>
+                                        <h4>📋 Step-by-Step Instructions</h4>
                                         <ol>
                                             <li>Sign up for WeBull and verify</li>
                                             <li>Deposit $5</li>
@@ -972,8 +950,8 @@
                                         </ol>
                                     </div>
                                     <div class="details-col">
-                                        <h4>💡 Key Points</h4>
-                                        <p>The "trade" is just buying and immediately selling any stock with your $5. Takes 15 minutes total including verification.</p>
+                                        <h4>💡 Why This Works</h4>
+                                        <p>The "trade" requirement is just buying and immediately selling any stock with your $5. Takes 15 minutes total including verification. Another legitimate brokerage platform.</p>
                                     </div>
                                 </div>
                             </div>
@@ -993,7 +971,22 @@
 
         <div class="info-note">
             <h3>Gemsloot Withdrawal Information</h3>
-            <p>Minimum cashouts are <strong>$0.50 for Crypto</strong> and <strong>$3 for PayPal</strong>. First-time withdrawals are manually reviewed (usually within 24 hours). After that, crypto payouts are typically instant and PayPal is usually within a few hours.</p>
+            <p>Minimum cashouts are <strong>$0.50 for Crypto</strong> and <strong>$3 for PayPal</strong>. Gemsloot is based in the EU, so withdrawals are generally processed manually for new accounts, but usually within 24 hours.</p>
+            <p>After your first few cashouts, <strong>Crypto payouts are typically instant</strong>, while <strong>PayPal</strong> is usually <strong>within a few hours</strong>, if not quicker.</p>
+        </div>
+
+        <h2>Finding More Opportunities</h2>
+
+        <p>The offers listed above are the highest-value opportunities our team has identified, but they're not exhaustive. Gemsloot regularly adds new offers, and companies frequently change their promotional bonuses.</p>
+
+        <div class="key-points">
+            <h3>Ongoing Strategy</h3>
+            <ul>
+                <li><strong>Check Gemsloot's "Earn" page regularly</strong> — New high-value offers appear weekly as companies launch promotions</li>
+                <li><strong>Look for similar patterns</strong> — The best offers require minimal effort relative to payout</li>
+                <li><strong>Join our community</strong> — We share new opportunities in our Discord and Reddit when we find them</li>
+                <li><strong>Stack offers strategically</strong> — Many direct deposit offers can be satisfied with the same paycheck</li>
+            </ul>
         </div>
 
         <h2>Important Considerations</h2>
@@ -1002,7 +995,9 @@
 
         <p><strong>Be organized.</strong> Keep track of which offers you've completed, when you can close accounts without penalty, and when to expect payouts. Set calendar reminders for account closures if needed.</p>
 
-        <p><strong>Read the fine print.</strong> Always verify current terms on each company's website. Promotional offers can change.</p>
+        <p><strong>Read the fine print.</strong> Always verify current terms on each company's website. Promotional offers can change, and you want to ensure you're meeting all requirements to receive your bonus.</p>
+
+        <p><strong>Don't abuse the system.</strong> Complete each offer once according to the terms. Attempting to game the system with multiple accounts or false information can result in bonus clawbacks and account closures.</p>
     </article>
 
     <footer>
@@ -1023,18 +1018,18 @@
     <script>
         function toggleDetails(rowElement, offerId) {
             const detailsRow = document.getElementById(offerId + '-details');
-            const allOfferRows = document.querySelectorAll('.offer-row');
-            const allDetailsRows = document.querySelectorAll('.details-row');
-            
-            // Check if currently expanded
-            const isExpanded = rowElement.classList.contains('expanded');
+            const isCurrentlyExpanded = rowElement.classList.contains('expanded');
             
             // Close all rows
-            allOfferRows.forEach(row => row.classList.remove('expanded'));
-            allDetailsRows.forEach(row => row.classList.remove('active'));
+            document.querySelectorAll('.offer-row').forEach(row => {
+                row.classList.remove('expanded');
+            });
+            document.querySelectorAll('.details-row').forEach(row => {
+                row.classList.remove('active');
+            });
             
-            // If wasn't expanded, open it
-            if (!isExpanded) {
+            // If this row wasn't expanded, open it
+            if (!isCurrentlyExpanded) {
                 rowElement.classList.add('expanded');
                 detailsRow.classList.add('active');
             }
