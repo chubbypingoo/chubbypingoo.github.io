@@ -198,9 +198,22 @@
             return `${n}th`;
         }
 
-        const createCasinoRow = (casino) => {
+        const createCasinoRow = (casino, index) => {
             let welcomeBonusHTML = '';
+            let proTipHTML = '';
+
             if (casino.welcome) {
+                if (index === 0) { // Only add pro tip to the first item
+                     proTipHTML = `
+                        <div class="mt-3 bg-amber-100 border-l-4 border-amber-400 text-amber-800 p-2 rounded-r-lg text-xs flex items-start gap-2">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <p><span class="font-bold">Pro Tip:</span> The REAL money is made by purchasing and "washing" these welcome offers.</p>
+                        </div>
+                    `;
+                }
+
                 const bonusStepsHTML = casino.welcome.steps.map(step => `
                     <li class="flex justify-between items-center text-xs p-2 rounded-md bg-gray-100">
                         <span class="font-semibold text-gray-700">${casino.welcome.steps.length > 1 ? `${getOrdinal(step.id)} Offer:` : 'Offer:'}</span>
@@ -216,6 +229,7 @@
                         <ul class="space-y-1.5">
                             ${bonusStepsHTML}
                         </ul>
+                        ${proTipHTML}
                     </div>
                 `;
             } else {
@@ -308,7 +322,7 @@
         // --- INITIALIZATION & EVENT LISTENERS ---
         document.addEventListener('DOMContentLoaded', () => {
             // Populate content
-            casinoContainer.innerHTML = casinos.map(c => createCasinoRow(c)).join('');
+            casinoContainer.innerHTML = casinos.map((c, index) => createCasinoRow(c, index)).join('');
             renderTotals();
 
             // Guide toggle logic
@@ -364,6 +378,5 @@
     </script>
 </body>
 </html>
-"
-I have a final edit. I really like this now, but lets make the title of the website not "The Ultimate Sweeps Farming Guide" and instead it should be a picture. A logo. I made this in canva real quick can we use this?
+
 
