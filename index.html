@@ -59,133 +59,181 @@
 <body class="bg-gray-100 text-gray-800">
 
     <div id="app" class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
-        
-        <!-- Header -->
-        <header class="text-center mb-10">
-            <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
-                The <span class="gradient-text font-black">Ultimate</span> Sweeps Farming Guide
-            </h1>
-            <p class="mt-2 text-lg text-gray-600">Presented by Side Hustle Gold</p>
-        </header>
 
-        <!-- Main Content -->
-        <main>
-             <!-- FTC Disclosure Banner -->
-            <div id="ftc-banner" class="bg-indigo-100 border-l-4 border-indigo-500 text-indigo-700 p-4 mb-8 rounded-r-lg flex justify-between items-center gap-4 transition-opacity duration-300">
-                <p class="flex items-center text-sm">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                    </svg>
-                    <strong>Affiliate Disclosure:</strong> To support our work, this guide contains affiliate links. We may earn a commission if you sign up through our links, at no cost to you.
-                </p>
-                <button id="close-ftc-banner" class="text-indigo-500 hover:text-indigo-700 font-bold text-2xl leading-none flex-shrink-0">&times;</button>
-            </div>
+        <!-- Main Page Content -->
+        <div id="main-page">
+            <!-- Header -->
+            <header class="text-center mb-10">
+                <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
+                    The <span class="gradient-text font-black">Ultimate</span> Sweeps Farming Guide
+                </h1>
+                <p class="mt-2 text-lg text-gray-600">Presented by Side Hustle Gold</p>
+            </header>
 
-            <!-- Combined Guide Section -->
-            <div class="bg-white rounded-xl p-6 md:p-8 mb-8 border border-gray-200 shadow-sm text-gray-600">
-                <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6">
-                    <h2 id="guide-title" class="text-2xl font-bold text-gray-900">The Ultimate Guide for Busy People</h2>
-                    <div class="flex-shrink-0 flex self-start sm:self-center items-center bg-gray-200 rounded-xl p-1">
-                        <button id="daily-guide-btn" class="py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
-                           Daily Bonus
-                        </button>
-                        <button id="washing-guide-btn" class="py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
-                           Promo Washing
-                        </button>
+            <!-- Main Content -->
+            <main>
+                <!-- FTC Disclosure Banner -->
+                <div id="ftc-banner" class="bg-indigo-100 border-l-4 border-indigo-500 text-indigo-700 p-4 mb-8 rounded-r-lg flex justify-between items-center gap-4 transition-opacity duration-300">
+                    <p class="flex items-center text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        <strong>Affiliate Disclosure:</strong> To support our work, this guide contains affiliate links. We may earn a commission if you sign up through our links, at no cost to you.
+                    </p>
+                    <button id="close-ftc-banner" class="text-indigo-500 hover:text-indigo-700 font-bold text-2xl leading-none flex-shrink-0">&times;</button>
+                </div>
+
+                <!-- Combined Guide Section -->
+                <div class="bg-white rounded-xl p-6 md:p-8 mb-8 border border-gray-200 shadow-sm text-gray-600">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6">
+                        <h2 id="guide-title" class="text-2xl font-bold text-gray-900">The Ultimate Guide for Busy People</h2>
+                        <div class="flex-shrink-0 flex self-start sm:self-center items-center bg-gray-200 rounded-xl p-1">
+                            <button id="daily-guide-btn" class="py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
+                               Daily Bonus
+                            </button>
+                            <button id="washing-guide-btn" class="py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
+                               Promo Washing
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Daily Bonus Guide Text -->
+                    <div id="daily-guide-content">
+                        <p>This is the ultimate guide for the aspiring lazy hustler who wants to realistically make almost <span class="font-bold text-gray-800">$400+ a month</span> consistently by putting in less than 10 minutes of effort each night.</p>
+                         <p class="mt-4"><span class="font-bold gradient-text">ALL links listed here have been vetted</span> for: 1. Easy and painless sign-up. 2. Easy and painless verification. 3. Easy and painless daily collection.</p>
+                        <h3 class="text-lg font-bold text-gray-900 pt-4 mt-4">Easy Instructions for ~$407/month:</h3>
+                        <ul class="space-y-4 text-sm mt-4">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">1</span>
+                                <div><span class="font-semibold text-gray-800">Sign-up & Verify:</span> Use the links below to create and verify your accounts on all the websites. This is a one-time setup that takes 1-2 hours.</div>
+                            </li>
+                            <li class="flex items-start">
+                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">2</span>
+                                <div><span class="font-semibold text-gray-800">Collect Daily Bonus:</span> Every day, log into each website and click the daily bonus button to collect your reward. That's it.</div>
+                            </li>
+                            <li class="flex items-start">
+                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">3</span>
+                                <div><span class="font-semibold text-gray-800">Wash Your Coins:</span> Once you meet the redemption requirement, you must "wash" your Sweeps Coins (SC) by playing them at least once. Use the recommended high-RTP game for each site.</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">4</span>
+                                <div><span class="font-semibold text-gray-800">Redeem Your Profit:</span> Once washed, redeem the funds to your bank account. You can expect to retain ~90% of your earnings after washing, which is still FREE MONEY.</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Promo Washing Guide Text -->
+                    <div id="washing-guide-content" class="hidden">
+                        <p>To significantly boost your earnings, you can "wash" promotional packages. Many sites offer discounted Sweeps Coins (e.g., pay $40 to receive $80 in SC). By playing through this bonus amount, you can redeem the majority of it for a substantial profit.</p>
+                        <h3 class="font-bold text-lg text-gray-900 pt-4 mt-4">The 6 Steps to "Washing" Promos:</h3>
+                         <ul class="space-y-4 text-sm mt-4">
+                            <li class="flex items-start">
+                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">1</span>
+                                <div><span class="font-semibold text-gray-800">Choose an Offer:</span> Any offer with a discount of 15% or more is generally worth washing.</div>
+                            </li>
+                             <li class="flex items-start">
+                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">2</span>
+                                <div><span class="font-semibold text-gray-800">Purchase The Offer:</span> Buy the discounted package to get your bonus SC.</div>
+                            </li>
+                             <li class="flex items-start">
+                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">3</span>
+                                <div><span class="font-semibold text-gray-800">Play Through The SC (The "Wash"):</span> Before redeeming, you must play the SC at least once. Use the recommended high-RTP (Return-to-Player) game to minimize loss.</div>
+                            </li>
+                             <li class="flex items-start">
+                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">4</span>
+                                <div><span class="font-semibold text-gray-800">Understand What You Keep:</span> In theory, you should keep ~95% of what you wash. Due to luck, it might be 85% or you might even win extra.</div>
+                            </li>
+                            <li class="flex items-start">
+                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">5</span>
+                                <div><span class="font-semibold text-gray-800">Calculate Your Profit:</span> If you keep 90% of $80 SC, that's $72. Since it only cost you $40, you've made a <span class="font-bold text-green-600">$32 profit</span>.</div>
+                            </li>
+                             <li class="flex items-start">
+                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">6</span>
+                                <div><span class="font-semibold text-gray-800">Rinse and Repeat:</span> Use this method with other promotional offers as they appear to earn upwards of $1,500+ per month.</div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Daily Bonus Guide Text -->
-                <div id="daily-guide-content">
-                    <p>This is the ultimate guide for the aspiring lazy hustler who wants to realistically make almost <span class="font-bold text-gray-800">$400+ a month</span> consistently by putting in less than 10 minutes of effort each night.</p>
-                     <p class="mt-4"><span class="font-bold gradient-text">ALL links listed here have been vetted</span> for: 1. Easy and painless sign-up. 2. Easy and painless verification. 3. Easy and painless daily collection.</p>
-                    <h3 class="text-lg font-bold text-gray-900 pt-4 mt-4">Easy Instructions for ~$407/month:</h3>
-                    <ul class="space-y-4 text-sm mt-4">
-                        <li class="flex items-start">
-                            <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">1</span>
-                            <div><span class="font-semibold text-gray-800">Sign-up & Verify:</span> Use the links below to create and verify your accounts on all the websites. This is a one-time setup that takes 1-2 hours.</div>
-                        </li>
-                        <li class="flex items-start">
-                             <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">2</span>
-                            <div><span class="font-semibold text-gray-800">Collect Daily Bonus:</span> Every day, log into each website and click the daily bonus button to collect your reward. That's it.</div>
-                        </li>
-                        <li class="flex items-start">
-                             <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">3</span>
-                            <div><span class="font-semibold text-gray-800">Wash Your Coins:</span> Once you meet the redemption requirement, you must "wash" your Sweeps Coins (SC) by playing them at least once. Use the recommended high-RTP game for each site.</div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">4</span>
-                            <div><span class="font-semibold text-gray-800">Redeem Your Profit:</span> Once washed, redeem the funds to your bank account. You can expect to retain ~90% of your earnings after washing, which is still FREE MONEY.</div>
-                        </li>
-                    </ul>
+                <div class="relative my-8">
+                  <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                    <div class="w-full border-t border-gray-200"></div>
+                  </div>
+                  <div class="relative flex justify-center">
+                    <span class="bg-gray-100 px-4 text-sm font-semibold text-gray-600 uppercase tracking-wider">Vetted List of Sweeps Sites</span>
+                  </div>
                 </div>
 
-                <!-- Promo Washing Guide Text -->
-                <div id="washing-guide-content" class="hidden">
-                    <p>To significantly boost your earnings, you can "wash" promotional packages. Many sites offer discounted Sweeps Coins (e.g., pay $40 to receive $80 in SC). By playing through this bonus amount, you can redeem the majority of it for a substantial profit.</p>
-                    <h3 class="font-bold text-lg text-gray-900 pt-4 mt-4">The 6 Steps to "Washing" Promos:</h3>
-                     <ul class="space-y-4 text-sm mt-4">
-                        <li class="flex items-start">
-                             <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">1</span>
-                            <div><span class="font-semibold text-gray-800">Choose an Offer:</span> Any offer with a discount of 15% or more is generally worth washing.</div>
-                        </li>
-                         <li class="flex items-start">
-                             <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">2</span>
-                            <div><span class="font-semibold text-gray-800">Purchase The Offer:</span> Buy the discounted package to get your bonus SC.</div>
-                        </li>
-                         <li class="flex items-start">
-                             <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">3</span>
-                            <div><span class="font-semibold text-gray-800">Play Through The SC (The "Wash"):</span> Before redeeming, you must play the SC at least once. Use the recommended high-RTP (Return-to-Player) game to minimize loss.</div>
-                        </li>
-                         <li class="flex items-start">
-                             <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">4</span>
-                            <div><span class="font-semibold text-gray-800">Understand What You Keep:</span> In theory, you should keep ~95% of what you wash. Due to luck, it might be 85% or you might even win extra.</div>
-                        </li>
-                        <li class="flex items-start">
-                             <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">5</span>
-                            <div><span class="font-semibold text-gray-800">Calculate Your Profit:</span> If you keep 90% of $80 SC, that's $72. Since it only cost you $40, you've made a <span class="font-bold text-green-600">$32 profit</span>.</div>
-                        </li>
-                         <li class="flex items-start">
-                             <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">6</span>
-                            <div><span class="font-semibold text-gray-800">Rinse and Repeat:</span> Use this method with other promotional offers as they appear to earn upwards of $1,500+ per month.</div>
-                        </li>
-                    </ul>
+                <div class="space-y-4" id="casino-list-container">
+                    <!-- Casino rows will be injected here by JavaScript -->
+                </div>
+
+                <div id="totals-container" class="mt-8">
+                     <!-- Totals will be injected here -->
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="text-center mt-12 pt-8 border-t border-gray-200">
+                <div class="max-w-4xl mx-auto text-xs text-gray-500">
+                    <p class="font-bold mb-2 text-gray-600">FTC Disclosure</p>
+                    <p class="mb-4">To support this guide, we may earn a commission if you sign up using our affiliate links, at no extra cost to you. We only recommend sites we have personally vetted.</p>
+                    <p class="font-bold mb-2 text-gray-600">Disclaimer & Responsible Gaming</p>
+                    <p>This guide is for informational and entertainment purposes only and is not financial advice. All earnings are estimates and not guaranteed. Sweeps casinos involve risk. Please play responsibly and within your means. If you have a gambling problem, please seek help by calling 1-800-GAMBLER. You must be of legal age (21+ in most areas) to participate.</p>
+                    <div class="mt-6">
+                        <button id="show-disclaimer-btn" class="inline-block bg-white text-gray-700 font-semibold py-3 px-6 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors shadow-sm">
+                            Read Full Disclaimer
+                        </button>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Disclaimer Page Content -->
+        <div id="disclaimer-page" class="hidden fade-in">
+             <div class="bg-white rounded-xl p-6 md:p-10 border border-gray-200 shadow-sm text-gray-700">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">
+                       <span class="gradient-text">Disclaimer</span> & Terms
+                    </h1>
+                    <button id="back-to-main-btn" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-5 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors shadow-sm">
+                        &larr; Back to Guide
+                    </button>
+                </div>
+
+                <div class="prose max-w-none text-gray-600">
+                    <p class="lead">Last Updated: October 15, 2025</p>
+                    
+                    <h2 class="text-xl font-bold text-gray-800 mt-6">1. General Information</h2>
+                    <p>The content provided on this website, "The Ultimate Sweeps Farming Guide," is for informational and entertainment purposes only. The information presented is not and should not be considered as financial, legal, or professional advice. All strategies, tips, and estimates are based on personal experience and research, but you should use this information at your own risk.</p>
+
+                    <h2 class="text-xl font-bold text-gray-800 mt-6">2. No Guarantee of Earnings</h2>
+                    <p>Any figures or earnings estimates mentioned (e.g., "$400+ a month," profit calculations) are for illustrative purposes only. We make no guarantee, express or implied, that you will achieve similar results. Your actual earnings, if any, will vary and depend on numerous factors including, but not limited to, your individual effort, the specific promotions available, your luck, and your adherence to the terms and conditions of the third-party websites.</p>
+
+                    <h2 class="text-xl font-bold text-gray-800 mt-6">3. Affiliate Disclosure</h2>
+                    <p>This website participates in affiliate marketing. This means we may earn a commission if you click on our links and sign up for services on third-party websites. This comes at no additional cost to you. We only recommend platforms and services that we have personally vetted and believe can provide value. However, our affiliate relationships do not influence the information we provide.</p>
+
+                    <h2 class="text-xl font-bold text-gray-800 mt-6">4. Responsible Gaming</h2>
+                    <p>The activities described involve social casinos and sweepstakes, which carry inherent financial risks. Please play responsibly and only with funds you can afford to lose. If you believe you may have a gambling problem, please seek help immediately. Resources are available, and you can call the National Problem Gambling Helpline at <strong>1-800-GAMBLER</strong>.</p>
+                    <p>You must be of legal age in your jurisdiction to participate in these activities (typically 21 years or older in the United States). It is your responsibility to ensure you are complying with all local, state, and federal laws.</p>
+                    
+                    <h2 class="text-xl font-bold text-gray-800 mt-6">5. Limitation of Liability</h2>
+                    <p>In no event shall the owners of this website be liable for any direct, indirect, incidental, special, or consequential damages or losses that may result from the use of, or inability to use, the information on this site. This includes, but is not limited to, financial losses, account suspensions from third-party sites, or any other damages.</p>
+                    
+                    <h2 class="text-xl font-bold text-gray-800 mt-6">6. Third-Party Websites</h2>
+                    <p>We provide links to third-party websites for your convenience. We have no control over the content, terms of service, or privacy policies of these external sites. We are not responsible for their practices, and we encourage you to read their terms and policies before engaging with them.</p>
+
+                    <h2 class="text-xl font-bold text-gray-800 mt-6">7. Changes to This Disclaimer</h2>
+                    <p>We reserve the right to modify this disclaimer at any time. We recommend you review this page periodically for any changes. Your continued use of the site after any modifications constitutes your acceptance of the new terms.</p>
+                </div>
+
+                <div class="text-center mt-8">
+                     <button id="back-to-main-btn-2" class="inline-block bg-white text-gray-700 font-semibold py-3 px-6 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors shadow-sm">
+                        I Understand, Return to Guide
+                    </button>
                 </div>
             </div>
-
-            <div class="relative my-8">
-              <div class="absolute inset-0 flex items-center" aria-hidden="true">
-                <div class="w-full border-t border-gray-200"></div>
-              </div>
-              <div class="relative flex justify-center">
-                <span class="bg-gray-100 px-4 text-sm font-semibold text-gray-600 uppercase tracking-wider">Vetted List of Sweeps Sites</span>
-              </div>
-            </div>
-
-            <div class="space-y-4" id="casino-list-container">
-                <!-- Casino rows will be injected here by JavaScript -->
-            </div>
-
-            <div id="totals-container" class="mt-8">
-                 <!-- Totals will be injected here -->
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer class="text-center mt-12 pt-8 border-t border-gray-200">
-            <div class="max-w-4xl mx-auto text-xs text-gray-500">
-                <p class="font-bold mb-2 text-gray-600">FTC Disclosure</p>
-                <p class="mb-4">To support this guide, we may earn a commission if you sign up using our affiliate links, at no extra cost to you. We only recommend sites we have personally vetted.</p>
-                <p class="font-bold mb-2 text-gray-600">Disclaimer & Responsible Gaming</p>
-                <p>This guide is for informational and entertainment purposes only and is not financial advice. All earnings are estimates and not guaranteed. Sweeps casinos involve risk. Please play responsibly and within your means. If you have a gambling problem, please seek help by calling 1-800-GAMBLER. You must be of legal age (21+ in most areas) to participate.</p>
-                <div class="mt-6">
-                    <a href="disclaimer.html" class="inline-block bg-white text-gray-700 font-semibold py-3 px-6 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors shadow-sm">
-                        Read Full Disclaimer
-                    </a>
-                </div>
-            </div>
-        </footer>
-
+        </div>
     </div>
 
     <script>
@@ -370,6 +418,30 @@
             casinoContainer.innerHTML = casinos.map((c, index) => createCasinoRow(c, index)).join('');
             renderTotals();
 
+            // --- PAGE TOGGLE LOGIC ---
+            const mainPage = document.getElementById('main-page');
+            const disclaimerPage = document.getElementById('disclaimer-page');
+            const showDisclaimerBtn = document.getElementById('show-disclaimer-btn');
+            const backToMainBtn = document.getElementById('back-to-main-btn');
+            const backToMainBtn2 = document.getElementById('back-to-main-btn-2');
+
+            function showDisclaimer() {
+                mainPage.classList.add('hidden');
+                disclaimerPage.classList.remove('hidden');
+                window.scrollTo(0, 0); // Scroll to top
+            }
+
+            function showMain() {
+                disclaimerPage.classList.add('hidden');
+                mainPage.classList.remove('hidden');
+                window.scrollTo(0, 0); // Scroll to top
+            }
+
+            showDisclaimerBtn.addEventListener('click', showDisclaimer);
+            backToMainBtn.addEventListener('click', showMain);
+            backToMainBtn2.addEventListener('click', showMain);
+
+
             // Guide toggle logic
             const dailyBtn = document.getElementById('daily-guide-btn');
             const washingBtn = document.getElementById('washing-guide-btn');
@@ -417,4 +489,3 @@
     </script>
 </body>
 </html>
-
