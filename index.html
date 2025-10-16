@@ -24,7 +24,7 @@
             text-fill-color: transparent;
         }
         .guide-toggle-active {
-            background-image: linear-gradient(to right, #6d28d9, #2563eb);
+            background-color: #374151; /* gray-700 */
             color: #ffffff !important;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
@@ -72,24 +72,24 @@
             </div>
 
             <!-- Combined Guide Section -->
-            <div class="bg-white rounded-xl p-6 md:p-8 mb-8 border border-gray-200 shadow-sm space-y-4 text-gray-600">
-                <div class="flex justify-center mb-6">
-                    <div class="flex-shrink-0 flex justify-center items-center bg-gray-200 rounded-xl p-1">
-                        <button id="daily-guide-btn" class="w-1/2 sm:w-auto py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
-                           Daily Bonus Guide
+            <div class="bg-white rounded-xl p-6 md:p-8 mb-8 border border-gray-200 shadow-sm text-gray-600">
+                <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6">
+                    <h2 id="guide-title" class="text-2xl font-bold text-gray-900">The Ultimate Guide for Busy People</h2>
+                    <div class="flex-shrink-0 flex self-start sm:self-center items-center bg-gray-200 rounded-xl p-1">
+                        <button id="daily-guide-btn" class="py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
+                           Daily Bonus
                         </button>
-                        <button id="washing-guide-btn" class="w-1/2 sm:w-auto py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
-                           Promo Washing Guide
+                        <button id="washing-guide-btn" class="py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
+                           Promo Washing
                         </button>
                     </div>
                 </div>
 
                 <!-- Daily Bonus Guide Text -->
                 <div id="daily-guide-content">
-                    <h2 class="text-2xl font-bold text-gray-900">The Ultimate Guide for Busy People</h2>
                     <p>This is the ultimate guide for the aspiring lazy hustler who wants to realistically make almost <span class="font-bold text-gray-800">$400+ a month</span> consistently by putting in less than 10 minutes of effort each night.</p>
-                     <p><span class="font-bold gradient-text">ALL links listed here have been vetted</span> for: 1. Easy and painless sign-up. 2. Easy and painless verification. 3. Easy and painless daily collection.</p>
-                    <h3 class="text-lg font-bold text-gray-900 pt-2">Easy Instructions for ~$407/month:</h3>
+                     <p class="mt-4"><span class="font-bold gradient-text">ALL links listed here have been vetted</span> for: 1. Easy and painless sign-up. 2. Easy and painless verification. 3. Easy and painless daily collection.</p>
+                    <h3 class="text-lg font-bold text-gray-900 pt-4 mt-4">Easy Instructions for ~$407/month:</h3>
                     <ul class="space-y-4 text-sm mt-4">
                         <li class="flex items-start">
                             <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">1</span>
@@ -112,9 +112,8 @@
 
                 <!-- Promo Washing Guide Text -->
                 <div id="washing-guide-content" class="hidden">
-                    <h2 class="text-2xl font-bold text-gray-900">Your Simple Guide to Bonus "Washing" for ~$1,500+/month</h2>
                     <p>To significantly boost your earnings, you can "wash" promotional packages. Many sites offer discounted Sweeps Coins (e.g., pay $40 to receive $80 in SC). By playing through this bonus amount, you can redeem the majority of it for a substantial profit.</p>
-                    <h3 class="font-bold text-lg text-gray-900 pt-2">The 6 Steps to "Washing" Promos:</h3>
+                    <h3 class="font-bold text-lg text-gray-900 pt-4 mt-4">The 6 Steps to "Washing" Promos:</h3>
                      <ul class="space-y-4 text-sm mt-4">
                         <li class="flex items-start">
                              <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">1</span>
@@ -317,9 +316,11 @@
             const washingBtn = document.getElementById('washing-guide-btn');
             const dailyContent = document.getElementById('daily-guide-content');
             const washingContent = document.getElementById('washing-guide-content');
+            const guideTitle = document.getElementById('guide-title');
             
             function setActiveGuide(guideName) {
                 if (guideName === 'daily') {
+                    guideTitle.textContent = 'The Ultimate Guide for Busy People';
                     dailyBtn.classList.add('guide-toggle-active');
                     dailyBtn.classList.remove('text-gray-700');
                     washingBtn.classList.remove('guide-toggle-active');
@@ -327,6 +328,7 @@
                     dailyContent.classList.remove('hidden');
                     washingContent.classList.add('hidden');
                 } else {
+                    guideTitle.textContent = 'Your Simple Guide to Promo Washing';
                     washingBtn.classList.add('guide-toggle-active');
                     washingBtn.classList.remove('text-gray-700');
                     dailyBtn.classList.remove('guide-toggle-active');
@@ -362,4 +364,6 @@
     </script>
 </body>
 </html>
+"
+I have a final edit. I really like this now, but lets make the title of the website not "The Ultimate Sweeps Farming Guide" and instead it should be a picture. A logo. I made this in canva real quick can we use this?
 
