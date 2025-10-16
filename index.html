@@ -44,6 +44,16 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .glow-border {
+          border-width: 2px;
+          border-color: #6d28d9;
+          animation: glowing 2.5s infinite ease-in-out;
+        }
+        @keyframes glowing {
+            0% { box-shadow: 0 0 5px rgba(109, 40, 217, 0.4); }
+            50% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.7); }
+            100% { box-shadow: 0 0 5px rgba(109, 40, 217, 0.4); }
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -143,6 +153,15 @@
                 </div>
             </div>
 
+            <div class="relative my-8">
+              <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                <div class="w-full border-t border-gray-200"></div>
+              </div>
+              <div class="relative flex justify-center">
+                <span class="bg-gray-100 px-4 text-sm font-semibold text-gray-600 uppercase tracking-wider">Vetted List of Sweeps Sites</span>
+              </div>
+            </div>
+
             <div class="space-y-4" id="casino-list-container">
                 <!-- Casino rows will be injected here by JavaScript -->
             </div>
@@ -159,6 +178,11 @@
                 <p class="mb-4">To support this guide, we may earn a commission if you sign up using our affiliate links, at no extra cost to you. We only recommend sites we have personally vetted.</p>
                 <p class="font-bold mb-2 text-gray-600">Disclaimer & Responsible Gaming</p>
                 <p>This guide is for informational and entertainment purposes only and is not financial advice. All earnings are estimates and not guaranteed. Sweeps casinos involve risk. Please play responsibly and within your means. If you have a gambling problem, please seek help by calling 1-800-GAMBLER. You must be of legal age (21+ in most areas) to participate.</p>
+                <div class="mt-6">
+                    <a href="disclaimer.html" class="inline-block bg-white text-gray-700 font-semibold py-3 px-6 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors shadow-sm">
+                        Read Full Disclaimer
+                    </a>
+                </div>
             </div>
         </footer>
 
@@ -167,7 +191,7 @@
     <script>
         // --- DATA ---
         const casinos = [
-            { name: "Legendz", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30a42c36d1428856200f", daily: "$1.00", minRedeem: "$100", washGames: ["Legendz Plinko (low risk, 16 rows)"], welcome: { totalProfit: "100", description: "This is literally free money.", steps: [{ id: 1, cost: "$100", value: "200 SC", profit: "100" }] } },
+            { name: "Legendz", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30a42c36d1428856200f", daily: "~$1.00", dailyNote: "Generous daily wheel spin unlocked for 10 days after making a purchase", minRedeem: "$100", washGames: ["Legendz Plinko (low risk, 16 rows)"], welcome: { totalProfit: "100", description: "This is literally free money.", steps: [{ id: 1, cost: "$100", value: "200 SC", profit: "100" }] } },
             { name: "Jackpota", link: "https://www.jackpota.com/?r=188778916", daily: "$0.35", minRedeem: "$75", washGames: ["UPlinko (low risk, 16 rows)"], welcome: { totalProfit: "71", description: "Easy money, do not skip this 4-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" }, { id: 4, cost: "$45", value: "56 SC", profit: "11" } ] } },
             { name: "McLuck", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30972c36d14288561fcd", daily: "$0.30", minRedeem: "$75", washGames: ["Gravity Blackjack (99.46% RTP)", "Gravity Plinko (low risk)", "Gravity Roulette (Red+Odd)"], welcome: { totalProfit: "60", description: "Easy money, do not skip this 3-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" } ] } },
             { name: "PlayFame", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30a22c36d14288561ff9", daily: "$0.30", minRedeem: "$75", washGames: ["Gravity Blackjack (99.46% RTP)", "Gravity Plinko (low risk)", "Gravity Roulette (Red+Odd)"], welcome: { totalProfit: "60", description: "Easy money, do not skip this 3-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" } ] } },
@@ -182,7 +206,7 @@
             { name: "Luckyhands", link: "https://luckyhands.com/sign-up?code=969a5492-2ebd-42a2-b713-cb4e9476e9c1", daily: "$0.30", minRedeem: "$50", washGames: ["Plinko (low risk, 16 rows)", "Epic Joker (97% RTP)"], welcome: { totalProfit: "5", description: "Smaller, but still profitable.", steps: [{ id: 1, cost: "$15", value: "20 SC", profit: "5" }] } },
             { name: "Stake.us", link: "http://stake.us/?c=cwdlJNCB", daily: "$1.00", minRedeem: "$45", washGames: ["N/A - Instantly withdrawable!"], welcome: null },
             { name: "Chumba", link: "https://login.chumbacasino.com/register", daily: "$1.00", minRedeem: "$100", washGames: ["Blackjack (Basic Strategy)", "Starspell (96.17% RTP)"], welcome: { totalProfit: "20", description: "A classic and reliable offer.", steps: [{ id: 1, cost: "$10", value: "30 SC", profit: "20" }] } },
-            { name: "SpinPals", link: "https://www.spinpals.com/?referralcode=e94d9b6c-2e8d-4an-9023-01d288c50c63", daily: "$0.50", minRedeem: "$100", washGames: ["Plinko Dare 2 Win", "Speed Crash (1.1x setting)"], welcome: { totalProfit: "15", description: "Includes a wheel spin.", steps: [{ id: 1, cost: "$10", value: "25 SC", profit: "15" }] } },
+            { name: "SpinPals", link: "https://www.spinpals.com/?referralcode=e94d9b6c-2e8d-49ae-9023-01d288c50c63", daily: "$0.50", minRedeem: "$100", washGames: ["Plinko Dare 2 Win", "Speed Crash (1.1x setting)"], welcome: { totalProfit: "15", description: "Includes a wheel spin.", steps: [{ id: 1, cost: "$10", value: "25 SC", profit: "15" }] } },
             { name: "Global Poker", link: "https://play.globalpoker.com/", daily: "$0.50", minRedeem: "$100", washGames: ["Blackjack (Basic Strategy)"], welcome: null },
             { name: "Moozi", link: "https://moozi.com/signup?referral_code=4460521292", daily: "$0.30", minRedeem: "$100", washGames: ["Adrenaline Rush XCrash (1.1x)"], welcome: null },
         ];
@@ -199,8 +223,25 @@
         }
 
         const createCasinoRow = (casino, index) => {
+            const featuredCasinos = ["Legendz", "McLuck", "PlayFame", "SpinBlitz", "Jackpota"];
+            const isFeatured = featuredCasinos.includes(casino.name);
             let welcomeBonusHTML = '';
             let proTipHTML = '';
+            let badgeHTML = '';
+
+            if(isFeatured) {
+                badgeHTML = `
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#A78BFA;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z" fill="url(#grad1)"/>
+                    </svg>
+                `;
+            }
 
             if (casino.welcome) {
                 if (index === 0) { // Only add pro tip to the first item
@@ -239,13 +280,16 @@
             const washGamesHTML = casino.washGames.map(game => `<li class="text-gray-600">${game}</li>`).join('');
 
             return `
-                <div class="bg-white rounded-xl p-5 border border-gray-200 shadow-sm">
+                <div class="bg-white rounded-xl p-5 border shadow-sm ${isFeatured ? 'glow-border' : 'border-gray-200'}">
                     <div class="flex flex-col lg:flex-row lg:items-start gap-4">
                         <!-- Left Side: Name & CTA (Most Important) -->
                         <div class="w-full lg:w-1/4 flex flex-col items-start space-y-3">
-                            <a href="${casino.link}" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                                <h3 class="text-2xl font-bold text-gray-900">${casino.name}</h3>
-                            </a>
+                            <div class="flex items-center gap-2">
+                                <a href="${casino.link}" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                                    <h3 class="text-2xl font-bold text-gray-900">${casino.name}</h3>
+                                </a>
+                                ${badgeHTML}
+                            </div>
                              <a href="${casino.link}" target="_blank" rel="noopener noreferrer" class="cta-button w-full sm:w-auto gradient-bg text-white font-bold py-2 px-5 rounded-lg text-center block">
                                 Sign Up & Claim
                             </a>
@@ -261,7 +305,8 @@
                                         <span class="text-gray-500">Daily:</span>
                                         <span class="font-semibold gradient-text">${casino.daily}</span>
                                     </div>
-                                    <div class="flex justify-between">
+                                    ${casino.dailyNote ? `<div class="text-xs text-gray-500 italic">${casino.dailyNote}</div>` : ''}
+                                    <div class="flex justify-between pt-1">
                                         <span class="text-gray-500">Redemption Minimum:</span>
                                         <span class="font-semibold text-gray-900">${casino.minRedeem}</span>
                                     </div>
@@ -280,7 +325,7 @@
         };
 
         const renderTotals = () => {
-            const dailyTotal = casinos.reduce((acc, c) => acc + parseFloat(c.daily.replace('$', '')), 0);
+            const dailyTotal = casinos.reduce((acc, c) => acc + parseFloat(c.daily.replace('~', '').replace('$', '')), 0);
             const monthlyTotal = dailyTotal * 31;
             const yearlyTotal = monthlyTotal * 12;
             const welcomeTotal = casinos.filter(c => c.welcome).reduce((acc, c) => acc + parseFloat(c.welcome.totalProfit), 0);
@@ -333,23 +378,17 @@
             const guideTitle = document.getElementById('guide-title');
             
             function setActiveGuide(guideName) {
-                if (guideName === 'daily') {
-                    guideTitle.textContent = 'The Ultimate Guide for Busy People';
-                    dailyBtn.classList.add('guide-toggle-active');
-                    dailyBtn.classList.remove('text-gray-700');
-                    washingBtn.classList.remove('guide-toggle-active');
-                    washingBtn.classList.add('text-gray-700');
-                    dailyContent.classList.remove('hidden');
-                    washingContent.classList.add('hidden');
-                } else {
-                    guideTitle.textContent = 'Your Simple Guide to Promo Washing';
-                    washingBtn.classList.add('guide-toggle-active');
-                    washingBtn.classList.remove('text-gray-700');
-                    dailyBtn.classList.remove('guide-toggle-active');
-                    dailyBtn.classList.add('text-gray-700');
-                    washingContent.classList.remove('hidden');
-                    dailyContent.classList.add('hidden');
-                }
+                const isDaily = guideName === 'daily';
+
+                guideTitle.textContent = isDaily ? 'The Ultimate Guide for Busy People' : 'Your Simple Guide to Promo Washing';
+
+                dailyBtn.classList.toggle('guide-toggle-active', isDaily);
+                dailyBtn.classList.toggle('text-gray-700', !isDaily);
+                washingBtn.classList.toggle('guide-toggle-active', !isDaily);
+                washingBtn.classList.toggle('text-gray-700', isDaily);
+
+                dailyContent.classList.toggle('hidden', !isDaily);
+                washingContent.classList.toggle('hidden', isDaily);
             }
             
             dailyBtn.addEventListener('click', () => setActiveGuide('daily'));
@@ -378,5 +417,4 @@
     </script>
 </body>
 </html>
-
 
