@@ -23,9 +23,10 @@
             background-clip: text;
             text-fill-color: transparent;
         }
-        .tab-active {
+        .guide-toggle-active {
             background-image: linear-gradient(to right, #6d28d9, #2563eb);
             color: #ffffff !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
         .cta-button {
             transition: all 0.2s ease-in-out;
@@ -49,25 +50,13 @@
 
     <div id="app" class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
         
-        <!-- Header & Navigation -->
-        <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-6 mb-10">
-            <header class="text-center sm:text-left">
-                <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">
-                    The <span class="gradient-text font-black">Ultimate</span> Sweeps Farming Guide
-                </h1>
-                <p class="mt-1 text-base text-gray-600">Presented by Side Hustle Gold</p>
-            </header>
-
-            <nav class="flex-shrink-0 flex justify-center items-center bg-white/80 rounded-xl p-2 max-w-md mx-auto sm:mx-0 sticky top-4 z-10 backdrop-blur-sm shadow-sm border border-gray-200">
-                <button id="daily-tab" class="w-1/2 sm:w-auto py-3 px-6 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
-                    Daily Bonuses
-                </button>
-                <button id="washing-tab" class="w-1/2 sm:w-auto py-3 px-6 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
-                    Promo Washing
-                </button>
-            </nav>
-        </div>
-
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
+                The <span class="gradient-text font-black">Ultimate</span> Sweeps Farming Guide
+            </h1>
+            <p class="mt-2 text-lg text-gray-600">Presented by Side Hustle Gold</p>
+        </header>
 
         <!-- Main Content -->
         <main>
@@ -82,13 +71,24 @@
                 <button id="close-ftc-banner" class="text-indigo-500 hover:text-indigo-700 font-bold text-2xl leading-none flex-shrink-0">&times;</button>
             </div>
 
+            <!-- Combined Guide Section -->
+            <div class="bg-white rounded-xl p-6 md:p-8 mb-8 border border-gray-200 shadow-sm space-y-4 text-gray-600">
+                <div class="flex justify-center mb-6">
+                    <div class="flex-shrink-0 flex justify-center items-center bg-gray-200 rounded-xl p-1">
+                        <button id="daily-guide-btn" class="w-1/2 sm:w-auto py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
+                           Daily Bonus Guide
+                        </button>
+                        <button id="washing-guide-btn" class="w-1/2 sm:w-auto py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
+                           Promo Washing Guide
+                        </button>
+                    </div>
+                </div>
 
-            <!-- Page 1: Daily Bonus Guide -->
-            <section id="daily-content" class="fade-in">
-                <div class="bg-white rounded-xl p-6 md:p-8 mb-8 border border-gray-200 shadow-sm space-y-4 text-gray-600">
+                <!-- Daily Bonus Guide Text -->
+                <div id="daily-guide-content">
                     <h2 class="text-2xl font-bold text-gray-900">The Ultimate Guide for Busy People</h2>
-                    <p>There are a lot of sweepstakes casino side-hustle guides out there, but many are overly complicated. This is the ultimate guide for the aspiring lazy hustler who wants to realistically make almost <span class="font-bold text-gray-800">$400+ a month</span> consistently by putting in less than 10 minutes of effort each night.</p>
-                    <p><span class="font-bold gradient-text">ALL links listed here have been vetted</span> for: 1. Easy and painless sign-up. 2. Easy and painless verification. 3. Easy and painless daily collection.</p>
+                    <p>This is the ultimate guide for the aspiring lazy hustler who wants to realistically make almost <span class="font-bold text-gray-800">$400+ a month</span> consistently by putting in less than 10 minutes of effort each night.</p>
+                     <p><span class="font-bold gradient-text">ALL links listed here have been vetted</span> for: 1. Easy and painless sign-up. 2. Easy and painless verification. 3. Easy and painless daily collection.</p>
                     <h3 class="text-lg font-bold text-gray-900 pt-2">Easy Instructions for ~$407/month:</h3>
                     <ul class="space-y-4 text-sm mt-4">
                         <li class="flex items-start">
@@ -110,22 +110,12 @@
                     </ul>
                 </div>
 
-                <div class="space-y-4" id="daily-bonus-container">
-                    <!-- Daily Bonus casino rows will be injected here by JavaScript -->
-                </div>
-
-                <div id="daily-totals-container" class="mt-8">
-                     <!-- Daily totals will be injected here -->
-                </div>
-            </section>
-
-            <!-- Page 2: Promo Washing Strategy -->
-            <section id="washing-content" class="hidden fade-in">
-                 <div class="bg-white rounded-xl p-6 md:p-8 mb-8 border border-gray-200 shadow-sm space-y-4 text-gray-600">
+                <!-- Promo Washing Guide Text -->
+                <div id="washing-guide-content" class="hidden">
                     <h2 class="text-2xl font-bold text-gray-900">Your Simple Guide to Bonus "Washing" for ~$1,500+/month</h2>
-                    <p>If you want to make more money, you can "wash" promotional packages to significantly increase your earnings. Many sites offer discounted Sweeps Coins (e.g., pay $40 to receive $80 in SC). By playing through this bonus amount, you can redeem the majority of it for a substantial profit.</p>
+                    <p>To significantly boost your earnings, you can "wash" promotional packages. Many sites offer discounted Sweeps Coins (e.g., pay $40 to receive $80 in SC). By playing through this bonus amount, you can redeem the majority of it for a substantial profit.</p>
                     <h3 class="font-bold text-lg text-gray-900 pt-2">The 6 Steps to "Washing" Promos:</h3>
-                    <ul class="space-y-4 text-sm mt-4">
+                     <ul class="space-y-4 text-sm mt-4">
                         <li class="flex items-start">
                              <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">1</span>
                             <div><span class="font-semibold text-gray-800">Choose an Offer:</span> Any offer with a discount of 15% or more is generally worth washing.</div>
@@ -136,7 +126,7 @@
                         </li>
                          <li class="flex items-start">
                              <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">3</span>
-                            <div><span class="font-semibold text-gray-800">Play Through The SC (The "Wash"):</span> Before redeeming, you must play the SC at least once. Use the recommended high-RTP (Return-to-Player) game to minimize loss. The higher the RTP, the better. Blackjack with "Basic Strategy" is ~99.5%, while most high-RTP slots are 95-97%.</div>
+                            <div><span class="font-semibold text-gray-800">Play Through The SC (The "Wash"):</span> Before redeeming, you must play the SC at least once. Use the recommended high-RTP (Return-to-Player) game to minimize loss.</div>
                         </li>
                          <li class="flex items-start">
                              <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">4</span>
@@ -144,7 +134,7 @@
                         </li>
                         <li class="flex items-start">
                              <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">5</span>
-                            <div><span class="font-semibold text-gray-800">Calculate Your Profit:</span> If you keep 90% of $80 SC, that's $72. Since it only cost you $40, you've made a <span class="font-bold text-green-600">$32 profit</span> in under 30 minutes.</div>
+                            <div><span class="font-semibold text-gray-800">Calculate Your Profit:</span> If you keep 90% of $80 SC, that's $72. Since it only cost you $40, you've made a <span class="font-bold text-green-600">$32 profit</span>.</div>
                         </li>
                          <li class="flex items-start">
                              <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">6</span>
@@ -152,15 +142,15 @@
                         </li>
                     </ul>
                 </div>
-                
-                <div class="space-y-4" id="promo-washing-container">
-                    <!-- Promo Washing casino rows will be injected here -->
-                </div>
+            </div>
 
-                <div id="promo-totals-container" class="mt-8">
-                     <!-- Promo totals will be injected here -->
-                </div>
-            </section>
+            <div class="space-y-4" id="casino-list-container">
+                <!-- Casino rows will be injected here by JavaScript -->
+            </div>
+
+            <div id="totals-container" class="mt-8">
+                 <!-- Totals will be injected here -->
+            </div>
         </main>
 
         <!-- Footer -->
@@ -199,10 +189,8 @@
         ];
 
         // --- RENDER FUNCTIONS ---
-        const dailyContainer = document.getElementById('daily-bonus-container');
-        const promoContainer = document.getElementById('promo-washing-container');
-        const dailyTotalsContainer = document.getElementById('daily-totals-container');
-        const promoTotalsContainer = document.getElementById('promo-totals-container');
+        const casinoContainer = document.getElementById('casino-list-container');
+        const totalsContainer = document.getElementById('totals-container');
         
         function getOrdinal(n) {
             if (n === 1) return '1st';
@@ -211,7 +199,7 @@
             return `${n}th`;
         }
 
-        const createCasinoRow = (casino, isPromoPage) => {
+        const createCasinoRow = (casino) => {
             let welcomeBonusHTML = '';
             if (casino.welcome) {
                 const bonusStepsHTML = casino.welcome.steps.map(step => `
@@ -231,8 +219,6 @@
                         </ul>
                     </div>
                 `;
-            } else if (isPromoPage) {
-                return ''; // Don't show casinos without welcome offers on the promo page
             } else {
                  welcomeBonusHTML = `<div class="w-full lg:w-2/5 flex items-center justify-center"><p class="text-center text-sm text-gray-500 bg-gray-50 p-3 rounded-lg">No special welcome offer.</p></div>`;
             }
@@ -248,7 +234,7 @@
                                 <h3 class="text-2xl font-bold text-gray-900">${casino.name}</h3>
                             </a>
                              <a href="${casino.link}" target="_blank" rel="noopener noreferrer" class="cta-button w-full sm:w-auto gradient-bg text-white font-bold py-2 px-5 rounded-lg text-center block">
-                                ${isPromoPage ? 'Claim Offer' : 'Sign Up & Claim'}
+                                Sign Up & Claim
                             </a>
                         </div>
 
@@ -288,7 +274,7 @@
             
             const formatCurrency = (amount) => `$${amount.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
 
-            const dailyTotalsHTML = `
+            const totalsHTML = `
                 <div class="bg-white rounded-xl p-6 md:p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row gap-8">
                     <div class="w-full md:w-1/3 space-y-3">
                         <div class="p-4 bg-gray-50 rounded-lg">
@@ -316,55 +302,45 @@
                     </div>
                 </div>
             `;
-            
-            const promoTotalsHTML = `
-                 <div class="bg-white rounded-xl p-6 md:p-8 border border-gray-200 shadow-sm text-center">
-                     <p class="text-gray-600 text-lg">Total Immediate Profit from All Welcome Offers</p>
-                     <p class="font-black text-6xl gradient-text my-2">${formatCurrency(welcomeTotal)}</p>
-                     <p class="text-gray-500">This is your potential profit after washing all the welcome bonuses listed above.</p>
-                 </div>
-            `;
 
-            dailyTotalsContainer.innerHTML = dailyTotalsHTML;
-            promoTotalsContainer.innerHTML = promoTotalsHTML;
+            totalsContainer.innerHTML = totalsHTML;
         };
 
         // --- INITIALIZATION & EVENT LISTENERS ---
         document.addEventListener('DOMContentLoaded', () => {
             // Populate content
-            dailyContainer.innerHTML = casinos.map(c => createCasinoRow(c, false)).join('');
-            promoContainer.innerHTML = casinos.map(c => createCasinoRow(c, true)).join('');
+            casinoContainer.innerHTML = casinos.map(c => createCasinoRow(c)).join('');
             renderTotals();
 
-            // Tab switching logic
-            const dailyTab = document.getElementById('daily-tab');
-            const washingTab = document.getElementById('washing-tab');
-            const dailyContent = document.getElementById('daily-content');
-            const washingContent = document.getElementById('washing-content');
+            // Guide toggle logic
+            const dailyBtn = document.getElementById('daily-guide-btn');
+            const washingBtn = document.getElementById('washing-guide-btn');
+            const dailyContent = document.getElementById('daily-guide-content');
+            const washingContent = document.getElementById('washing-guide-content');
             
-            function setActiveTab(tabName) {
-                if (tabName === 'daily') {
-                    dailyTab.classList.add('tab-active');
-                    dailyTab.classList.remove('text-gray-700');
-                    washingTab.classList.remove('tab-active');
-                    washingTab.classList.add('text-gray-700');
+            function setActiveGuide(guideName) {
+                if (guideName === 'daily') {
+                    dailyBtn.classList.add('guide-toggle-active');
+                    dailyBtn.classList.remove('text-gray-700');
+                    washingBtn.classList.remove('guide-toggle-active');
+                    washingBtn.classList.add('text-gray-700');
                     dailyContent.classList.remove('hidden');
                     washingContent.classList.add('hidden');
                 } else {
-                    washingTab.classList.add('tab-active');
-                    washingTab.classList.remove('text-gray-700');
-                    dailyTab.classList.remove('tab-active');
-                    dailyTab.classList.add('text-gray-700');
+                    washingBtn.classList.add('guide-toggle-active');
+                    washingBtn.classList.remove('text-gray-700');
+                    dailyBtn.classList.remove('guide-toggle-active');
+                    dailyBtn.classList.add('text-gray-700');
                     washingContent.classList.remove('hidden');
                     dailyContent.classList.add('hidden');
                 }
             }
             
-            dailyTab.addEventListener('click', () => setActiveTab('daily'));
-            washingTab.addEventListener('click', () => setActiveTab('washing'));
+            dailyBtn.addEventListener('click', () => setActiveGuide('daily'));
+            washingBtn.addEventListener('click', () => setActiveGuide('washing'));
 
-            // Set initial active tab
-            setActiveTab('daily');
+            // Set initial active guide
+            setActiveGuide('daily');
 
             // FTC Banner logic
             const ftcBanner = document.getElementById('ftc-banner');
