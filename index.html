@@ -3,493 +3,964 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate Sweeps Farming Guide</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <title>The Bonus Arbitrage Strategy - Complete Guide</title>
+    <meta name="description" content="A comprehensive guide to bonus arbitrage: how to earn $800+ by exploiting companies' customer acquisition budgets.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* gray-100 */
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
         }
-        .gradient-bg {
-            background-image: linear-gradient(to right, #6d28d9, #2563eb);
+
+        /* Header */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1.25rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95);
         }
-        .gradient-text {
-            background: linear-gradient(to right, #6d28d9, #2563eb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .guide-toggle-active {
-            background-color: #374151; /* gray-700 */
-            color: #ffffff !important;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+        .site-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1a1a;
         }
-        .cta-button {
-            transition: all 0.2s ease-in-out;
+
+        .presented-by {
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .community-links {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .community-link {
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+
+        .community-link:hover {
+            opacity: 1;
+        }
+
+        .community-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Article Container */
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        .subtitle {
+            font-size: 1.35rem;
+            color: #4b5563;
+            margin-bottom: 2.5rem;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.85rem;
+            font-weight: 700;
+            margin: 3rem 0 1.25rem;
+            color: #111827;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin: 2rem 0 0.75rem;
+            color: #111827;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            color: #374151;
+            font-size: 1.05rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .intro-section p {
+            margin-bottom: 1rem;
+        }
+
+        .intro-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Key Points Box */
+        .key-points {
+            background: #fefce8;
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin: 2rem 0;
+            border-left: 4px solid #eab308;
+        }
+
+        .key-points h3 {
+            margin-top: 0;
+            font-size: 1.15rem;
+        }
+
+        .key-points ul {
+            margin: 1rem 0 0 1.5rem;
+        }
+
+        .key-points li {
+            margin-bottom: 0.75rem;
+            color: #374151;
+        }
+
+        /* Platform Box */
+        .platform-box {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            text-align: center;
+        }
+
+        .platform-logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            margin: 0 auto 1rem;
+            display: block;
+        }
+
+        .platform-box h3 {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.5rem;
+        }
+
+        .platform-box p {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+        }
+
+        .platform-link {
+            display: inline-block;
+            background: #111827;
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .platform-link:hover {
+            background: #374151;
+            transform: translateY(-1px);
+        }
+
+        .referral-code {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .referral-code code {
+            background: #f3f4f6;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        /* Offers Table */
+        .offers-table-container {
+            margin: 2.5rem 0;
+            overflow-x: auto;
+        }
+
+        .offers-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .offers-table thead {
+            background: #f9fafb;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .offers-table th {
+            padding: 1rem 1.25rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #374151;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .offers-table tbody tr.offer-row {
+            border-bottom: 1px solid #e5e7eb;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .offers-table tbody tr.offer-row:hover {
+            background-color: #f9fafb;
+        }
+
+        .offers-table td {
+            padding: 1.25rem;
+            vertical-align: middle;
+        }
+
+        .offer-name-cell {
+            font-size: 1.05rem;
+        }
+
+        .offer-name-cell strong {
+            display: block;
+            color: #111827;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .expand-indicator {
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .payout-cell {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #059669;
             white-space: nowrap;
         }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(76, 29, 149, 0.2), 0 4px 6px -2px rgba(76, 29, 149, 0.1);
-            filter: brightness(1.1);
+
+        .time-cell {
+            color: #1e40af;
+            font-weight: 600;
+            font-size: 0.95rem;
+            white-space: nowrap;
         }
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
+
+        .description-cell {
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+
+        .action-cell {
+            text-align: right;
         }
-        .glow-border {
-          border-width: 2px;
-          border-color: #6d28d9;
-          animation: glowing 2.5s infinite ease-in-out;
+
+        .table-button {
+            display: inline-block;
+            background: #111827;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            white-space: nowrap;
         }
-        @keyframes glowing {
-            0% { box-shadow: 0 0 5px rgba(109, 40, 217, 0.4); }
-            50% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.7); }
-            100% { box-shadow: 0 0 5px rgba(109, 40, 217, 0.4); }
+
+        .table-button:hover {
+            background: #374151;
+            transform: translateY(-1px);
+        }
+
+        /* Details Row */
+        .details-row {
+            display: none;
+            background: #f8fafc;
+        }
+
+        .details-row.active {
+            display: table-row;
+        }
+
+        .details-content {
+            padding: 1.5rem 2rem;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .details-col h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #111827;
+            margin: 0 0 0.75rem 0;
+        }
+
+        .details-col ol {
+            margin: 0;
+            padding-left: 1.25rem;
+            color: #374151;
+        }
+
+        .details-col li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .details-col p {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #374151;
+        }
+
+        /* Total Summary */
+        .total-summary {
+            background: linear-gradient(135deg, #111827 0%, #374151 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .total-summary h3 {
+            color: white;
+            margin: 0 0 1rem 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .total-amount {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .total-time {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Withdrawal Info */
+        .info-note {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin: 2.5rem 0;
+            border-left: 4px solid #6b7280;
+        }
+
+        .info-note h3 {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+            padding: 3rem 1.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #6b7280;
+        }
+
+        .disclaimer-title {
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .disclaimer p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.15rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            /* Mobile Table Adjustments */
+            .offers-table thead {
+                display: none;
+            }
+
+            .offers-table,
+            .offers-table tbody,
+            .offers-table tr,
+            .offers-table td {
+                display: block;
+            }
+
+            .offers-table tbody tr.offer-row {
+                margin-bottom: 1rem;
+                border: 1px solid #e5e7eb;
+                border-radius: 8px;
+                padding: 1rem;
+            }
+
+            .offers-table td {
+                padding: 0.5rem 0;
+                border: none;
+            }
+
+            .offer-name-cell {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.75rem;
+                padding-bottom: 0.75rem;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .offer-name-cell strong {
+                margin-bottom: 0;
+                font-size: 1.25rem;
+            }
+
+            .expand-indicator {
+                font-size: 0.8rem;
+            }
+
+            .payout-cell {
+                display: inline-block;
+                margin-right: 1rem;
+            }
+
+            .time-cell {
+                display: inline-block;
+            }
+
+            .time-cell::before {
+                content: "Time: ";
+                color: #6b7280;
+                font-weight: 500;
+            }
+
+            .description-cell {
+                margin: 0.5rem 0 0.75rem 0;
+            }
+
+            .action-cell {
+                text-align: left;
+            }
+
+            .table-button {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 0.75rem;
+            }
+
+            .details-row {
+                border: none;
+                margin-top: -1rem;
+                margin-bottom: 1rem;
+            }
+
+            .details-content {
+                padding: 1rem;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .total-amount {
+                font-size: 3rem;
+            }
+
+            .community-links {
+                gap: 0.5rem;
+            }
+
+            .community-icon {
+                width: 20px;
+                height: 20px;
+            }
+
+            article {
+                padding: 2rem 1.25rem 3rem;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-
-    <div id="app" class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
-
-        <!-- Main Page Content -->
-        <div id="main-page">
-            <!-- Header -->
-            <header class="text-center mb-10">
-                <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
-                    The <span class="gradient-text font-black">Ultimate</span> Sweeps Farming Guide
-                </h1>
-                <p class="mt-2 text-lg text-gray-600">Presented by Side Hustle Gold</p>
-            </header>
-
-            <!-- Main Content -->
-            <main>
-                <!-- FTC Disclosure Banner -->
-                <div id="ftc-banner" class="bg-indigo-100 border-l-4 border-indigo-500 text-indigo-700 p-4 mb-8 rounded-r-lg flex justify-between items-center gap-4 transition-opacity duration-300">
-                    <p class="flex items-center text-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                        </svg>
-                        <span>
-                            <strong>Affiliate Disclosure:</strong> To support our work, this guide contains affiliate links. We may earn a commission if you sign up through our links, at no cost to you.
-                        </span>
-                    </p>
-                    <button id="close-ftc-banner" class="text-indigo-500 hover:text-indigo-700 font-bold text-2xl leading-none flex-shrink-0">&times;</button>
-                </div>
-
-                <!-- Combined Guide Section -->
-                <div class="bg-white rounded-xl p-6 md:p-8 mb-8 border border-gray-200 shadow-sm text-gray-600">
-                    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-6">
-                        <h2 id="guide-title" class="text-2xl font-bold text-gray-900">The Ultimate Guide for Busy People</h2>
-                        <div class="flex-shrink-0 flex self-start sm:self-center items-center bg-gray-200 rounded-xl p-1">
-                            <button id="daily-guide-btn" class="py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
-                               Daily Bonus
-                            </button>
-                            <button id="washing-guide-btn" class="py-2 px-5 rounded-lg font-bold text-sm md:text-base text-gray-700 transition-colors duration-300">
-                               Promo Washing
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Daily Bonus Guide Text -->
-                    <div id="daily-guide-content">
-                        <p>This is the ultimate guide for the aspiring lazy hustler who wants to realistically make almost <span class="font-bold text-gray-800">$400+ a month</span> consistently by putting in less than 10 minutes of effort each night.</p>
-                         <p class="mt-4"><span class="font-bold gradient-text">All links listed here have been vetted</span> for: 1. Easy and painless sign-up. 2. Easy and painless verification. 3. Easy and painless daily collection.</p>
-                        <h3 class="text-lg font-bold text-gray-900 pt-4 mt-4">Easy Instructions for ~$407/month:</h3>
-                        <ul class="space-y-4 text-sm mt-4">
-                            <li class="flex items-start">
-                                <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">1</span>
-                                <div><span class="font-semibold text-gray-800">Sign-up & Verify:</span> Use the links below to create and verify your accounts on all the websites. This is a one-time setup that takes 1-2 hours.</div>
-                            </li>
-                            <li class="flex items-start">
-                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">2</span>
-                                <div><span class="font-semibold text-gray-800">Collect Daily Bonus:</span> Every day, log into each website and click the daily bonus button to collect your reward. That's it.</div>
-                            </li>
-                            <li class="flex items-start">
-                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">3</span>
-                                <div><span class="font-semibold text-gray-800">Wash Your Coins:</span> Once you meet the redemption requirement, you must "wash" your Sweeps Coins (SC) by playing them at least once. Use the recommended high-RTP game for each site.</div>
-                            </li>
-                            <li class="flex items-start">
-                                <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">4</span>
-                                <div><span class="font-semibold text-gray-800">Redeem Your Profit:</span> Once washed, redeem the funds to your bank account. You can expect to retain ~90% of your earnings after washing, which is still free money.</div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Promo Washing Guide Text -->
-                    <div id="washing-guide-content" class="hidden">
-                        <p>To significantly boost your earnings, you can "wash" promotional packages. Many sites offer discounted Sweeps Coins (e.g., pay $40 to receive $80 in SC). By playing through this bonus amount, you can redeem the majority of it for a substantial profit.</p>
-                        <h3 class="font-bold text-lg text-gray-900 pt-4 mt-4">The 6 Steps to "Washing" Promos:</h3>
-                         <ul class="space-y-4 text-sm mt-4">
-                            <li class="flex items-start">
-                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">1</span>
-                                <div><span class="font-semibold text-gray-800">Choose an Offer:</span> Any offer with a discount of 15% or more is generally worth washing.</div>
-                            </li>
-                             <li class="flex items-start">
-                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">2</span>
-                                <div><span class="font-semibold text-gray-800">Purchase The Offer:</span> Buy the discounted package to get your bonus SC.</div>
-                            </li>
-                             <li class="flex items-start">
-                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">3</span>
-                                <div><span class="font-semibold text-gray-800">Play Through The SC (The "Wash"):</span> Before redeeming, you must play the SC at least once. Use the recommended high-RTP (Return-to-Player) game to minimize loss.</div>
-                            </li>
-                             <li class="flex items-start">
-                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">4</span>
-                                <div><span class="font-semibold text-gray-800">Understand What You Keep:</span> In theory, you should keep ~95% of what you wash. Due to luck, it might be 85% or you might even win extra.</div>
-                            </li>
-                            <li class="flex items-start">
-                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">5</span>
-                                <div><span class="font-semibold text-gray-800">Calculate Your Profit:</span> If you keep 90% of $80 SC, that's $72. Since it only cost you $40, you've made a <span class="font-bold text-green-600">$32 profit</span>.</div>
-                            </li>
-                             <li class="flex items-start">
-                                 <span class="flex-shrink-0 w-8 h-8 gradient-bg text-white rounded-full flex items-center justify-center font-bold mr-4">6</span>
-                                <div><span class="font-semibold text-gray-800">Rinse and Repeat:</span> Use this method with other promotional offers as they appear to earn upwards of $1,500+ per month.</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="relative my-8">
-                  <div class="absolute inset-0 flex items-center" aria-hidden="true">
-                    <div class="w-full border-t border-gray-200"></div>
-                  </div>
-                  <div class="relative flex justify-center">
-                    <span class="bg-gray-100 px-4 text-sm font-semibold text-gray-600 uppercase tracking-wider">Vetted List of Sweeps Sites</span>
-                  </div>
-                </div>
-
-                <div class="space-y-4" id="casino-list-container">
-                    <!-- Casino rows will be injected here by JavaScript -->
-                </div>
-
-                <div id="totals-container" class="mt-8">
-                     <!-- Totals will be injected here -->
-                </div>
-            </main>
-
-            <!-- Footer -->
-            <footer class="text-center mt-12 pt-8 border-t border-gray-200">
-                <div class="max-w-4xl mx-auto text-xs text-gray-500">
-                    <p class="font-bold mb-2 text-gray-600">FTC Disclosure</p>
-                    <p class="mb-4">To support this guide, we may earn a commission if you sign up using our affiliate links, at no extra cost to you. We only recommend sites we have personally vetted.</p>
-                    <p class="font-bold mb-2 text-gray-600">Disclaimer & Responsible Gaming</p>
-                    <p>This guide is for informational and entertainment purposes only and is not financial advice. All earnings are estimates and not guaranteed. Sweeps casinos involve risk. Please play responsibly and within your means. If you have a gambling problem, please seek help by calling 1-800-GAMBLER. You must be of legal age (21+ in most areas) to participate.</p>
-                    <div class="mt-6">
-                        <button id="show-disclaimer-btn" class="inline-block bg-white text-gray-700 font-semibold py-3 px-6 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors shadow-sm">
-                            Read Full Disclaimer
-                        </button>
-                    </div>
-                </div>
-            </footer>
-        </div>
-
-        <!-- Disclaimer Page Content -->
-        <div id="disclaimer-page" class="hidden fade-in">
-             <div class="bg-white rounded-xl p-6 md:p-10 border border-gray-200 shadow-sm text-gray-700">
-                <div class="flex justify-between items-center mb-6">
-                    <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">
-                       <span class="gradient-text">Disclaimer</span> & Terms
-                    </h1>
-                    <button id="back-to-main-btn" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-5 rounded-lg border border-gray-300 hover:bg-gray-300 transition-colors shadow-sm">
-                        &larr; Back to Guide
-                    </button>
-                </div>
-
-                <div class="prose max-w-none text-gray-600">
-                    <p class="lead">Last Updated: October 15, 2025</p>
-                    
-                    <h2 class="text-xl font-bold text-gray-800 mt-6">1. General Information</h2>
-                    <p>The content provided on this website, "The Ultimate Sweeps Farming Guide," is for informational and entertainment purposes only. The information presented is not and should not be considered as financial, legal, or professional advice. All strategies, tips, and estimates are based on personal experience and research, but you should use this information at your own risk.</p>
-
-                    <h2 class="text-xl font-bold text-gray-800 mt-6">2. No Guarantee of Earnings</h2>
-                    <p>Any figures or earnings estimates mentioned (e.g., "$400+ a month," profit calculations) are for illustrative purposes only. We make no guarantee, express or implied, that you will achieve similar results. Your actual earnings, if any, will vary and depend on numerous factors including, but not limited to, your individual effort, the specific promotions available, your luck, and your adherence to the terms and conditions of the third-party websites.</p>
-
-                    <h2 class="text-xl font-bold text-gray-800 mt-6">3. Affiliate Disclosure</h2>
-                    <p>This website participates in affiliate marketing. This means we may earn a commission if you click on our links and sign up for services on third-party websites. This comes at no additional cost to you. We only recommend platforms and services that we have personally vetted and believe can provide value. However, our affiliate relationships do not influence the information we provide.</p>
-
-                    <h2 class="text-xl font-bold text-gray-800 mt-6">4. Responsible Gaming</h2>
-                    <p>The activities described involve social casinos and sweepstakes, which carry inherent financial risks. Please play responsibly and only with funds you can afford to lose. If you believe you may have a gambling problem, please seek help immediately. Resources are available, and you can call the National Problem Gambling Helpline at <strong>1-800-GAMBLER</strong>.</p>
-                    <p>You must be of legal age in your jurisdiction to participate in these activities (typically 21 years or older in the United States). It is your responsibility to ensure you are complying with all local, state, and federal laws.</p>
-                    
-                    <h2 class="text-xl font-bold text-gray-800 mt-6">5. Limitation of Liability</h2>
-                    <p>In no event shall the owners of this website be liable for any direct, indirect, incidental, special, or consequential damages or losses that may result from the use of, or inability to use, the information on this site. This includes, but is not limited to, financial losses, account suspensions from third-party sites, or any other damages.</p>
-                    
-                    <h2 class="text-xl font-bold text-gray-800 mt-6">6. Third-Party Websites</h2>
-                    <p>We provide links to third-party websites for your convenience. We have no control over the content, terms of service, or privacy policies of these external sites. We are not responsible for their practices, and we encourage you to read their terms and policies before engaging with them.</p>
-
-                    <h2 class="text-xl font-bold text-gray-800 mt-6">7. Changes to This Disclaimer</h2>
-                    <p>We reserve the right to modify this disclaimer at any time. We recommend you review this page periodically for any changes. Your continued use of the site after any modifications constitutes your acceptance of the new terms.</p>
-                </div>
-
-                <div class="text-center mt-8">
-                     <button id="back-to-main-btn-2" class="inline-block bg-white text-gray-700 font-semibold py-3 px-6 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors shadow-sm">
-                        I Understand, Return to Guide
-                    </button>
-                </div>
+<body>
+    <header>
+        <div class="header-content">
+            <div>
+                <div class="site-title">The Bonus Arbitrage Strategy</div>
+                <div class="presented-by">presented by Side Hustle Gold</div>
+            </div>
+            <div class="community-links">
+                <a href="https://discord.gg/your-discord" target="_blank" rel="noopener" class="community-link">
+                    <img src="https://i.imgur.com/utPTm4M.png" alt="Discord" class="community-icon">
+                </a>
+                <a href="https://reddit.com/r/your-subreddit" target="_blank" rel="noopener" class="community-link">
+                    <img src="https://i.imgur.com/pvsQyO5.png" alt="Reddit" class="community-icon">
+                </a>
             </div>
         </div>
-    </div>
+    </header>
 
-    <script>
-        // --- DATA ---
-        const casinos = [
-            { name: "Legendz", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30a42c36d1428856200f", daily: "~$1.00", dailyNote: "Generous daily wheel spin unlocked for 10 days after making a purchase", minRedeem: "$100", washGames: ["Legendz Plinko (low risk, 16 rows)"], welcome: { totalProfit: "100", description: "This is literally free money.", steps: [{ id: 1, cost: "$100", value: "200 SC", profit: "100" }] } },
-            { name: "Jackpota", link: "https://www.jackpota.com/?r=188778916", daily: "$0.35", minRedeem: "$75", washGames: ["UPlinko (low risk, 16 rows)"], welcome: { totalProfit: "71", description: "Easy money, do not skip this 4-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" }, { id: 4, cost: "$45", value: "56 SC", profit: "11" } ] } },
-            { name: "McLuck", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30972c36d14288561fcd", daily: "$0.30", minRedeem: "$75", washGames: ["Gravity Blackjack (99.46% RTP)", "Gravity Plinko (low risk)", "Gravity Roulette (Red+Odd)"], welcome: { totalProfit: "60", description: "Easy money, do not skip this 3-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" } ] } },
-            { name: "PlayFame", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30a22c36d14288561ff9", daily: "$0.30", minRedeem: "$75", washGames: ["Gravity Blackjack (99.46% RTP)", "Gravity Plinko (low risk)", "Gravity Roulette (Red+Odd)"], welcome: { totalProfit: "60", description: "Easy money, do not skip this 3-part bonus.", steps: [ { id: 1, cost: "$10", value: "25 SC", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" } ] } },
-            { name: "SpinBlitz", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc309e2c36d14288561fe3", daily: "$0.30", minRedeem: "$75", washGames: ["Gravity Blackjack (99.46% RTP)", "Gravity Plinko (low risk)", "Gravity Roulette (Red+Odd)"], welcome: { totalProfit: "55", description: "3-part bonus with free spins (est. profit).", steps: [ { id: 1, cost: "$10", value: "10 SC + 30 spins", profit: "15" }, { id: 2, cost: "$20", value: "40 SC", profit: "20" }, { id: 3, cost: "$75", value: "100 SC", profit: "25" } ] } },
-            { name: "Crown Coins", link: "https://crowncoinscasino.com/?utm_campaign=84efb4ce-42c9-4636-9946-7d9c39c5e8b2&utm_source=friends", daily: "$1.30", minRedeem: "$50", washGames: ["Turbo Mines (2 mines, 1 square)", "Epic Joker (97% RTP)"], welcome: { totalProfit: "41", description: "High value welcome offer.", steps: [{ id: 1, cost: "$23.99", value: "65 SC", profit: "41" }] } },
-            { name: "Real Prize", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30932c36d14288561fb7", daily: "$1.50", minRedeem: "$100", washGames: ["Gravity Plinko (low risk)"], welcome: { totalProfit: "35", description: "Simple 1-to-2 value offer.", steps: [{ id: 1, cost: "$35", value: "70 SC", profit: "35" }] } },
-            { name: "Pulsz", link: "https://tracker.gemified.io/r/8gAMYu7DruEN/68cc30aa2c36d1428856203b", daily: "$1.00", minRedeem: "$100", washGames: ["Multihand Blackjack (99.38%)", "Epic Joker (97% RTP)"], welcome: { totalProfit: "15", description: "Great starter offer.", steps: [{ id: 1, cost: "$10", value: "25 SC", profit: "15" }] } },
-            { name: "Modo", link: "https://modo.us/?referralCode=V62FT4", daily: "$1.00", minRedeem: "$100", washGames: ["Blackjack (Basic Strategy)", "Epic Joker (97% RTP)"], welcome: { totalProfit: "90", description: "One of the largest profit bonuses.", steps: [{ id: 1, cost: "$210", value: "300 SC", profit: "90" }] } },
-            { name: "Pulsz Bingo", link: "http://www.pulszbingo.com/?invited_by=qgtnds", daily: "$1.00", minRedeem: "$100", washGames: ["Epic Joker (97% RTP)", "Blackjack (Basic Strategy)"], welcome: { totalProfit: "40", description: "Solid 1-to-2 value.", steps: [{ id: 1, cost: "$40", value: "80 SC", profit: "40" }] } },
-            { name: "LoneStar", link: "https://lonestarcasino.com/refer/551699", daily: "$1.50", minRedeem: "$100", washGames: ["Dragons Awakening (96.96% RTP)"], welcome: { totalProfit: "30", description: "Strong offer over 100% value.", steps: [{ id: 1, cost: "$20", value: "50 SC", profit: "30" }] } },
-            { name: "Wow Vegas", link: "https://www.wowvegas.com/?raf=8279094", daily: "$0.00", minRedeem: "$50", washGames: ["Gravity Blackjack (99.46%)", "Mystery Garden (97% RTP)", "Auto Roulette (Red+Odd)"], welcome: { totalProfit: "20", description: "Focus on promos, daily bonus is rare.", steps: [{ id: 1, cost: "$10", value: "30 SC", profit: "20" }] } },
-            { name: "Luckyhands", link: "https://luckyhands.com/sign-up?code=969a5492-2ebd-42a2-b713-cb4e9476e9c1", daily: "$0.30", minRedeem: "$50", washGames: ["Plinko (low risk, 16 rows)", "Epic Joker (97% RTP)"], welcome: { totalProfit: "5", description: "Smaller, but still profitable.", steps: [{ id: 1, cost: "$15", value: "20 SC", profit: "5" }] } },
-            { name: "Stake.us", link: "http://stake.us/?c=cwdlJNCB", daily: "$1.00", minRedeem: "$45", washGames: ["N/A - Instantly withdrawable!"], welcome: null },
-            { name: "Chumba", link: "https://login.chumbacasino.com/register", daily: "$1.00", minRedeem: "$100", washGames: ["Blackjack (Basic Strategy)", "Starspell (96.17% RTP)"], welcome: { totalProfit: "20", description: "A classic and reliable offer.", steps: [{ id: 1, cost: "$10", value: "30 SC", profit: "20" }] } },
-            { name: "SpinPals", link: "https://www.spinpals.com/?referralcode=e94d9b6c-2e8d-49ae-9023-01d288c50c63", daily: "$0.50", minRedeem: "$100", washGames: ["Plinko Dare 2 Win", "Speed Crash (1.1x setting)"], welcome: { totalProfit: "15", description: "Includes a wheel spin.", steps: [{ id: 1, cost: "$10", value: "25 SC", profit: "15" }] } },
-            { name: "Global Poker", link: "https://play.globalpoker.com/", daily: "$0.50", minRedeem: "$100", washGames: ["Blackjack (Basic Strategy)"], welcome: null },
-            { name: "Moozi", link: "https://moozi.com/signup?referral_code=4460521292", daily: "$0.30", minRedeem: "$100", washGames: ["Adrenaline Rush XCrash (1.1x)"], welcome: null },
-        ];
+    <article>
+        <h1>How to Earn $800 in One Hour by Exploiting Company Marketing Budgets</h1>
+        <p class="subtitle">A complete guide to bonus arbitrage—the strategy that turns corporate customer acquisition spending into immediate personal profit.</p>
 
-        // --- RENDER FUNCTIONS ---
-        const casinoContainer = document.getElementById('casino-list-container');
-        const totalsContainer = document.getElementById('totals-container');
+        <div class="intro-section">
+            <p>You're about to learn a strategy that sounds too good to be true, but is completely legitimate and has worked for thousands of people. It's called <strong>bonus arbitrage</strong>, and it's essentially exploiting companies' careless marketing budgets to pocket cash rewards that far exceed any effort or initial cost.</p>
+            <p>This isn't a "get rich quick" scheme or some sketchy loophole. Companies spend billions on customer acquisition every year. They'd rather pay you $100-$500 directly than spend that money on Facebook ads or billboards. You're simply taking advantage of their official promotional offers before they change or disappear.</p>
+            <p>The best part? This takes about an hour of active work, requires no special skills, and you can start making money today.</p>
+        </div>
+
+        <h2>What is Bonus Arbitrage?</h2>
         
-        function getOrdinal(n) {
-            if (n === 1) return '1st';
-            if (n === 2) return '2nd';
-            if (n === 3) return '3rd';
-            return `${n}th`;
-        }
+        <p>Bonus arbitrage is a straightforward concept: companies offer cash rewards for new signups that are larger than the cost of trying their product or service. Sometimes they even pay you just for signing up, hoping you'll stick around as a long-term customer.</p>
 
-        const createCasinoRow = (casino, index) => {
-            const featuredCasinos = ["Legendz", "McLuck", "PlayFame", "SpinBlitz", "Jackpota"];
-            const isFeatured = featuredCasinos.includes(casino.name);
-            let welcomeBonusHTML = '';
-            let proTipHTML = '';
-            let badgeHTML = '';
+        <p>Here's the strategy in practice:</p>
 
-            if(isFeatured) {
-                badgeHTML = `
-                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#A78BFA;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z" fill="url(#grad1)"/>
-                    </svg>
-                `;
-            }
+        <div class="key-points">
+            <h3>The Core Strategy</h3>
+            <ul>
+                <li><strong>Find high-value signup bonuses</strong> — Banks, brokerages, and fintech companies regularly offer $50-$500 just for opening accounts</li>
+                <li><strong>Complete minimal requirements</strong> — Usually just setting up direct deposit, making a small deposit, or keeping an account open for 30 days</li>
+                <li><strong>Collect your bonus</strong> — Get paid through tracking platforms that aggregate these offers and handle payouts</li>
+                <li><strong>Move on or cancel</strong> — Most offers allow you to close accounts after receiving bonuses without penalty</li>
+            </ul>
+        </div>
 
-            if (casino.welcome) {
-                if (index === 0) { // Only add pro tip to the first item
-                     proTipHTML = `
-                        <div class="mt-3 bg-amber-100 border-l-4 border-amber-400 text-amber-800 p-2 rounded-r-lg text-xs flex items-start gap-2">
-                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
-                            <p><span class="font-bold">Pro Tip:</span> The REAL money is made by purchasing and "washing" these welcome offers.</p>
-                        </div>
-                    `;
-                }
+        <p>The key insight most people miss: <strong>these aren't "deals" or "discounts"—they're pure profit opportunities</strong>. When a bank pays you $480 to redirect one paycheck to their checking account, that's free money for 15 minutes of your time. When a brokerage pays you $30 for depositing $5, that's a 500% return in days.</p>
 
-                const bonusStepsHTML = casino.welcome.steps.map(step => `
-                    <li class="flex justify-between items-center text-xs p-2 rounded-md bg-gray-100">
-                        <span class="font-semibold text-gray-700">${casino.welcome.steps.length > 1 ? `${getOrdinal(step.id)} Offer:` : 'Offer:'}</span>
-                        <span class="text-gray-600 text-right">Spend ${step.cost} for ${step.value}</span>
-                        <span class="font-bold text-green-600 w-16 text-right">(+$${step.profit})</span>
-                    </li>
-                `).join('');
+        <h2>Why This Works (And Won't Stop Working)</h2>
 
-                welcomeBonusHTML = `
-                    <div class="w-full lg:w-2/5">
-                        <h4 class="font-bold text-gray-800">Welcome Offer: <span class="gradient-text font-black">+$${casino.welcome.totalProfit}</span></h4>
-                        <p class="text-xs text-gray-500 italic mt-1 mb-2">${casino.welcome.description}</p>
-                        <ul class="space-y-1.5">
-                            ${bonusStepsHTML}
-                        </ul>
-                        ${proTipHTML}
-                    </div>
-                `;
-            } else {
-                 welcomeBonusHTML = `<div class="w-full lg:w-2/5 flex items-center justify-center"><p class="text-center text-sm text-gray-500 bg-gray-50 p-3 rounded-lg">No special welcome offer.</p></div>`;
-            }
-            
-            const washGamesHTML = casino.washGames.map(game => `<li class="text-gray-600">${game}</li>`).join('');
+        <p>This isn't a loophole that will close. These are official, legal promotional offers from regulated financial companies. Here's why they exist:</p>
 
-            return `
-                <div class="bg-white rounded-xl p-5 border shadow-sm ${isFeatured ? 'glow-border' : 'border-gray-200'}">
-                    <div class="flex flex-col lg:flex-row lg:items-start gap-4">
-                        <!-- Left Side: Name & CTA (Most Important) -->
-                        <div class="w-full lg:w-1/4 flex flex-col items-start space-y-3">
-                            <div class="flex items-center gap-2">
-                                <a href="${casino.link}" target="_blank" rel="noopener noreferrer" class="hover:underline">
-                                    <h3 class="text-2xl font-bold text-gray-900">${casino.name}</h3>
-                                </a>
-                                ${badgeHTML}
-                            </div>
-                             <a href="${casino.link}" target="_blank" rel="noopener noreferrer" class="cta-button w-full sm:w-auto gradient-bg text-white font-bold py-2 px-5 rounded-lg text-center block">
-                                Sign Up & Claim
-                            </a>
-                        </div>
+        <p><strong>Customer acquisition costs are astronomical.</strong> Banks and fintech companies spend $200-$500 to acquire each new customer through traditional marketing. It's actually cheaper for them to pay you directly and hope you become a long-term user.</p>
 
-                        <!-- Right Side: Details -->
-                        <div class="w-full lg:w-3/4 flex flex-col md:flex-row gap-4">
-                            ${welcomeBonusHTML}
-                            <div class="w-full md:w-1/2 lg:w-1/5">
-                                <h5 class="font-semibold text-gray-800 mb-2">Key Info</h5>
-                                <div class="space-y-2 text-sm">
-                                    <div class="flex justify-between">
-                                        <span class="text-gray-500">Daily:</span>
-                                        <span class="font-semibold gradient-text">${casino.daily}</span>
+        <p><strong>They're betting on retention.</strong> Most people who sign up will forget to cancel, keep using the service, or generate revenue through other means (transaction fees, interest, etc.). But if you're disciplined, you can take the bonus and walk away.</p>
+
+        <p><strong>Competition drives offers higher.</strong> As new fintech companies launch and compete with traditional banks, signup bonuses keep increasing. This creates a perfect environment for bonus arbitrage.</p>
+
+        <h2>The Platform: Gemsloot</h2>
+
+        <p>While you could hunt for these offers individually across dozens of websites, there's a much more efficient approach. Gemsloot is a platform that aggregates all these bonus opportunities in one place and handles the tracking and payouts for you.</p>
+
+        <div class="platform-box">
+            <img src="https://i.imgur.com/dnrNOx3.jpeg" alt="Gemsloot" class="platform-logo">
+            <h3>Get Started on Gemsloot</h3>
+            <p>Sign up using our link to receive a free lootbox with a chance to win up to $250</p>
+            <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="platform-link">Register on Gemsloot</a>
+            <div class="referral-code">Use code: <code>SHG</code></div>
+        </div>
+
+        <p>Once you're registered on Gemsloot, you can browse their "Earn" section to find all available offers. I've identified the best ones below—the offers with the highest payout relative to time and effort required.</p>
+
+        <h2>The Best Bonus Arbitrage Opportunities Right Now</h2>
+
+        <p>Our team spent countless hours identifying the highest-value signup bonuses with the lowest barriers to entry. Below is everything you need—payouts, time required, and step-by-step instructions all in one place.</p>
+
+        <p><strong>Quick recommendation:</strong> Start with Chime ($480 for 15 minutes) if you have direct deposit access, or SoFi Plus ($20 profit in under 5 minutes) if you want instant proof this works.</p>
+
+        <!-- Offers Table -->
+        <div class="offers-table-container">
+            <table class="offers-table">
+                <thead>
+                    <tr>
+                        <th>Offer</th>
+                        <th>Payout</th>
+                        <th>Time</th>
+                        <th>What You Do</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="offer-row" onclick="toggleDetails('chime')">
+                        <td class="offer-name-cell">
+                            <strong>Chime</strong>
+                            <span class="expand-indicator">+ Details</span>
+                        </td>
+                        <td class="payout-cell">$480</td>
+                        <td class="time-cell">&lt; 15 min</td>
+                        <td class="description-cell">Set up direct deposit from employer</td>
+                        <td class="action-cell">
+                            <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-2879" target="_blank" rel="noopener" class="table-button" onclick="event.stopPropagation()">Start →</a>
+                        </td>
+                    </tr>
+                    <tr class="details-row" id="chime-details">
+                        <td colspan="5">
+                            <div class="details-content">
+                                <div class="details-grid">
+                                    <div class="details-col">
+                                        <h4>📋 Instructions</h4>
+                                        <ol>
+                                            <li>Sign up for Chime account</li>
+                                            <li>Set up direct deposit of $200+ from employer</li>
+                                            <li>Wait for deposit to hit (next payday)</li>
+                                            <li>Receive $480 on Gemsloot</li>
+                                        </ol>
                                     </div>
-                                    ${casino.dailyNote ? `<div class="text-xs text-gray-500 italic">${casino.dailyNote}</div>` : ''}
-                                    <div class="flex justify-between pt-1">
-                                        <span class="text-gray-500">Redemption Minimum:</span>
-                                        <span class="font-semibold text-gray-900">${casino.minRedeem}</span>
+                                    <div class="details-col">
+                                        <h4>💡 Key Points</h4>
+                                        <p>This is the highest payout for minimal effort. Works with gig jobs like Uber/DoorDash. You can switch your direct deposit back immediately after. No monthly fees.</p>
+                                        <p><strong>Pro tip:</strong> Use this same direct deposit for HSBC and Current offers to stack bonuses.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="w-full md:w-1/2 lg:w-2/5">
-                                <h5 class="font-semibold text-gray-800 mb-2">Best Washing Method</h5>
-                                <ul class="list-disc list-inside space-y-1 text-xs">
-                                   ${washGamesHTML}
-                                </ul>
+                        </td>
+                    </tr>
+
+                    <tr class="offer-row" onclick="toggleDetails('hsbc')">
+                        <td class="offer-name-cell">
+                            <strong>HSBC</strong>
+                            <span class="expand-indicator">+ Details</span>
+                        </td>
+                        <td class="payout-cell">$150</td>
+                        <td class="time-cell">&lt; 15 min</td>
+                        <td class="description-cell">Open checking account, keep open 30 days</td>
+                        <td class="action-cell">
+                            <a href="https://gemsloot.com/earn?&modal=offer_2&name=Gemsloot__as-3284" target="_blank" rel="noopener" class="table-button" onclick="event.stopPropagation()">Start →</a>
+                        </td>
+                    </tr>
+                    <tr class="details-row" id="hsbc-details">
+                        <td colspan="5">
+                            <div class="details-content">
+                                <div class="details-grid">
+                                    <div class="details-col">
+                                        <h4>📋 Instructions</h4>
+                                        <ol>
+                                            <li>Sign up for HSBC Premier Checking</li>
+                                            <li>Make a direct deposit (avoids $50 fee)</li>
+                                            <li>Keep account open for 30 days</li>
+                                            <li>Receive $150 on Gemsloot</li>
+                                            <li>Close account if desired</li>
+                                        </ol>
+                                    </div>
+                                    <div class="details-col">
+                                        <h4>💡 Key Points</h4>
+                                        <p>Set a calendar reminder to close after 30 days. Without direct deposit, you'll pay $50 fee (still $100 profit). Can use same direct deposit as Chime offer.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-        };
+                        </td>
+                    </tr>
 
-        const renderTotals = () => {
-            const dailyTotal = casinos.reduce((acc, c) => acc + parseFloat(c.daily.replace('~', '').replace('$', '')), 0);
-            const monthlyTotal = dailyTotal * 31;
-            const yearlyTotal = monthlyTotal * 12;
-            const welcomeTotal = casinos.filter(c => c.welcome).reduce((acc, c) => acc + parseFloat(c.welcome.totalProfit), 0);
+                    <tr class="offer-row" onclick="toggleDetails('current')">
+                        <td class="offer-name-cell">
+                            <strong>Current</strong>
+                            <span class="expand-indicator">+ Details</span>
+                        </td>
+                        <td class="payout-cell">$90</td>
+                        <td class="time-cell">&lt; 15 min</td>
+                        <td class="description-cell">Connect eligible direct deposit</td>
+                        <td class="action-cell">
+                            <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-78" target="_blank" rel="noopener" class="table-button" onclick="event.stopPropagation()">Start →</a>
+                        </td>
+                    </tr>
+                    <tr class="details-row" id="current-details">
+                        <td colspan="5">
+                            <div class="details-content">
+                                <div class="details-grid">
+                                    <div class="details-col">
+                                        <h4>📋 Instructions</h4>
+                                        <ol>
+                                            <li>Register for Current</li>
+                                            <li>Verify your account</li>
+                                            <li>Connect direct deposit from employer</li>
+                                            <li>Wait for deposit to process</li>
+                                            <li>Receive $90 on Gemsloot</li>
+                                        </ol>
+                                    </div>
+                                    <div class="details-col">
+                                        <h4>💡 Key Points</h4>
+                                        <p>Mobile banking app with no monthly fees. Stacks well with Chime and HSBC. Can use same direct deposit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="offer-row" onclick="toggleDetails('sofi')">
+                        <td class="offer-name-cell">
+                            <strong>SoFi Plus</strong>
+                            <span class="expand-indicator">+ Details</span>
+                        </td>
+                        <td class="payout-cell">$30</td>
+                        <td class="time-cell">&lt; 5 min</td>
+                        <td class="description-cell">Subscribe for $10, get $30 back (+$20 profit)</td>
+                        <td class="action-cell">
+                            <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-3232" target="_blank" rel="noopener" class="table-button" onclick="event.stopPropagation()">Start →</a>
+                        </td>
+                    </tr>
+                    <tr class="details-row" id="sofi-details">
+                        <td colspan="5">
+                            <div class="details-content">
+                                <div class="details-grid">
+                                    <div class="details-col">
+                                        <h4>📋 Instructions</h4>
+                                        <ol>
+                                            <li>Sign up for SoFi</li>
+                                            <li>Purchase SoFi Plus subscription ($10)</li>
+                                            <li>Receive $30 on Gemsloot (within 1 hour)</li>
+                                            <li>Cancel subscription if desired</li>
+                                        </ol>
+                                    </div>
+                                    <div class="details-col">
+                                        <h4>💡 Key Points</h4>
+                                        <p><strong>Fastest money—instant $20 profit.</strong> Perfect for testing the system. Payout usually arrives within an hour. Great first offer to prove this actually works.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="offer-row" onclick="toggleDetails('moomoo')">
+                        <td class="offer-name-cell">
+                            <strong>Moomoo</strong>
+                            <span class="expand-indicator">+ Details</span>
+                        </td>
+                        <td class="payout-cell">$30</td>
+                        <td class="time-cell">&lt; 10 min</td>
+                        <td class="description-cell">Deposit $5, wait for settlement, get $30</td>
+                        <td class="action-cell">
+                            <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-3479" target="_blank" rel="noopener" class="table-button" onclick="event.stopPropagation()">Start →</a>
+                        </td>
+                    </tr>
+                    <tr class="details-row" id="moomoo-details">
+                        <td colspan="5">
+                            <div class="details-content">
+                                <div class="details-grid">
+                                    <div class="details-col">
+                                        <h4>📋 Instructions</h4>
+                                        <ol>
+                                            <li>Register for Moomoo Brokerage</li>
+                                            <li>Deposit $5 into account</li>
+                                            <li>Wait 1-2 days for funds to settle</li>
+                                            <li>Receive $30 on Gemsloot</li>
+                                            <li>Withdraw initial $5 if desired</li>
+                                        </ol>
+                                    </div>
+                                    <div class="details-col">
+                                        <h4>💡 Key Points</h4>
+                                        <p>$25 profit for depositing money that's still yours. Legitimate brokerage used by millions. Your $5 stays accessible.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr class="offer-row" onclick="toggleDetails('webull')">
+                        <td class="offer-name-cell">
+                            <strong>WeBull</strong>
+                            <span class="expand-indicator">+ Details</span>
+                        </td>
+                        <td class="payout-cell">$25</td>
+                        <td class="time-cell">&lt; 15 min</td>
+                        <td class="description-cell">Deposit $5, make one simple trade</td>
+                        <td class="action-cell">
+                            <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-362" target="_blank" rel="noopener" class="table-button" onclick="event.stopPropagation()">Start →</a>
+                        </td>
+                    </tr>
+                    <tr class="details-row" id="webull-details">
+                        <td colspan="5">
+                            <div class="details-content">
+                                <div class="details-grid">
+                                    <div class="details-col">
+                                        <h4>📋 Instructions</h4>
+                                        <ol>
+                                            <li>Sign up for WeBull and verify</li>
+                                            <li>Deposit $5</li>
+                                            <li>Make one trade (buy then sell any stock)</li>
+                                            <li>Receive $25 on Gemsloot</li>
+                                        </ol>
+                                    </div>
+                                    <div class="details-col">
+                                        <h4>💡 Key Points</h4>
+                                        <p>The "trade" is just buying and immediately selling any stock with your $5. Takes 15 minutes total including verification.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="total-summary">
+            <h3>Total Earnings Potential</h3>
+            <div class="total-amount">$805</div>
+            <div class="total-time">Approximately 1 hour 15 minutes of active work</div>
+        </div>
+
+        <h2>How to Withdraw Your Earnings</h2>
+
+        <div class="info-note">
+            <h3>Gemsloot Withdrawal Information</h3>
+            <p>Minimum cashouts are <strong>$0.50 for Crypto</strong> and <strong>$3 for PayPal</strong>. Gemsloot is based in the EU, so withdrawals are generally processed manually for new accounts, but usually within 24 hours.</p>
+            <p>After your first few cashouts, <strong>Crypto payouts are typically instant</strong>, while <strong>PayPal</strong> is usually <strong>within a few hours</strong>, if not quicker.</p>
+            <p>The manual review for first-time withdrawals is a standard security measure. Don't be concerned—thousands of users withdraw successfully every day.</p>
+        </div>
+
+        <h2>Finding More Opportunities</h2>
+
+        <p>The offers listed above are the highest-value opportunities our team has identified, but they're not exhaustive. Gemsloot regularly adds new offers, and companies frequently change their promotional bonuses.</p>
+
+        <p>To find additional opportunities:</p>
+
+        <div class="key-points">
+            <h3>Ongoing Strategy</h3>
+            <ul>
+                <li><strong>Check Gemsloot's "Earn" page regularly</strong> — New high-value offers appear weekly as companies launch promotions</li>
+                <li><strong>Look for similar patterns</strong> — The best offers require minimal effort relative to payout (like the ones above)</li>
+                <li><strong>Join our community</strong> — We share new opportunities in our Discord and Reddit when we find them</li>
+                <li><strong>Stack offers strategically</strong> — Many direct deposit offers can be satisfied with the same paycheck by setting up split deposits</li>
+            </ul>
+        </div>
+
+        <h2>Important Considerations</h2>
+
+        <p><strong>This strategy is completely legal.</strong> You're taking advantage of official promotional offers from regulated financial institutions. There's nothing unethical about accepting bonuses that companies are explicitly offering to attract new customers.</p>
+
+        <p><strong>Be organized.</strong> Keep track of which offers you've completed, when you can close accounts without penalty, and when to expect payouts. Set calendar reminders for account closures if needed.</p>
+
+        <p><strong>Read the fine print.</strong> While we've summarized the key requirements, always verify the current terms on each company's website. Promotional offers can change, and you want to ensure you're meeting all requirements to receive your bonus.</p>
+
+        <p><strong>Don't abuse the system.</strong> Complete each offer once according to the terms. Attempting to game the system with multiple accounts or false information can result in bonus clawbacks and account closures.</p>
+
+        <h2>Why We're Sharing This</h2>
+
+        <p>You might wonder why we're giving away this strategy for free. The answer is simple: we benefit when you use our referral links to sign up for Gemsloot, but that doesn't cost you anything extra—you get the same bonuses regardless.</p>
+
+        <p>Our goal with Side Hustle Gold is to build a community around legitimate money-making strategies that actually work. Bonus arbitrage is one of the most accessible and profitable strategies we've found, with a clear risk-reward profile that makes sense for almost anyone.</p>
+
+        <p>The more people who succeed with this strategy, the stronger our community becomes. That's why we've invested significant time into identifying and documenting these opportunities.</p>
+
+        <div class="platform-box" style="margin-top: 3rem;">
+            <h3>Ready to Start?</h3>
+            <p>Everything you need is right here. The offers above represent about $800 in earnings for roughly an hour of your time.</p>
+            <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="platform-link">Get Started on Gemsloot</a>
+            <div class="referral-code">Use code: <code>SHG</code> for your free lootbox</div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="disclaimer">
+                <div class="disclaimer-title">Legal Disclosures</div>
+                <p><strong>Affiliate Disclosure:</strong> This website contains affiliate links. We may earn a commission at no extra cost to you if you sign up through our links. We only recommend services we've personally researched and believe provide genuine value.</p>
+                <p><strong>Earnings Disclaimer:</strong> The earnings figures mentioned ($800+, specific offer amounts) represent potential earnings based on current promotional offers. These are not guarantees of income. Individual results vary based on eligibility, effort, timing, and offer terms. All third-party offers are subject to terms and conditions that may change without notice.</p>
+                <p><strong>Not Financial Advice:</strong> The information on this website is for educational purposes only. This is not financial, legal, or professional advice. You should verify all offer terms directly with the respective companies and consult appropriate professionals before making financial decisions.</p>
+                <p><strong>Risk Acknowledgment:</strong> By using these strategies, you acknowledge sole responsibility for your actions and any consequences. We are not liable for losses, damages, or issues arising from your use of these strategies or third-party services.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Side Hustle Gold. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDetails(offerId) {
+            const detailsRow = document.getElementById(offerId + '-details');
+            const allDetailsRows = document.querySelectorAll('.details-row');
             
-            const formatCurrency = (amount) => `$${amount.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
-
-            const totalsHTML = `
-                <div class="bg-white rounded-xl p-6 md:p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row gap-8">
-                    <div class="w-full md:w-1/3 space-y-3">
-                        <div class="p-4 bg-gray-50 rounded-lg">
-                            <p class="text-gray-500">Avg. Daily Total</p>
-                            <p class="text-2xl font-bold text-gray-900">${formatCurrency(dailyTotal)}</p>
-                        </div>
-                         <div class="p-4 bg-gray-50 rounded-lg">
-                            <p class="text-gray-500">Avg. Monthly Total</p>
-                            <p class="text-2xl font-bold text-gray-900">${formatCurrency(monthlyTotal)}</p>
-                        </div>
-                         <div class="p-4 gradient-bg text-white rounded-lg">
-                            <p class="text-purple-200">Avg. Yearly Total</p>
-                            <p class="text-2xl font-bold">${formatCurrency(yearlyTotal)}</p>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-2/3 space-y-3 text-gray-600 text-sm">
-                         <div class="p-4 bg-gray-50 rounded-lg">
-                            <p class="font-bold text-lg text-gray-800">Immediate Profit Opportunity</p>
-                            <p>Washing all welcome bonuses will make you an <span class="font-bold gradient-text">immediate ${formatCurrency(welcomeTotal)} profit</span>.</p>
-                         </div>
-                         <div class="p-4 bg-gray-50 rounded-lg">
-                             <p class="font-bold text-lg text-gray-800">Advanced Strategy Earnings</p>
-                             <p>On average, if you wash the majority of promotions each month, some users make <span class="font-bold gradient-text">~$1,500 - $2,500+ per month</span>.</p>
-                         </div>
-                    </div>
-                </div>
-            `;
-
-            totalsContainer.innerHTML = totalsHTML;
-        };
-
-        // --- INITIALIZATION & EVENT LISTENERS ---
-        document.addEventListener('DOMContentLoaded', () => {
-            // Populate content
-            casinoContainer.innerHTML = casinos.map((c, index) => createCasinoRow(c, index)).join('');
-            renderTotals();
-
-            // --- PAGE TOGGLE LOGIC ---
-            const mainPage = document.getElementById('main-page');
-            const disclaimerPage = document.getElementById('disclaimer-page');
-            const showDisclaimerBtn = document.getElementById('show-disclaimer-btn');
-            const backToMainBtn = document.getElementById('back-to-main-btn');
-            const backToMainBtn2 = document.getElementById('back-to-main-btn-2');
-
-            function showDisclaimer() {
-                mainPage.classList.add('hidden');
-                disclaimerPage.classList.remove('hidden');
-                window.scrollTo(0, 0); // Scroll to top
-            }
-
-            function showMain() {
-                disclaimerPage.classList.add('hidden');
-                mainPage.classList.remove('hidden');
-                window.scrollTo(0, 0); // Scroll to top
-            }
-
-            showDisclaimerBtn.addEventListener('click', showDisclaimer);
-            backToMainBtn.addEventListener('click', showMain);
-            backToMainBtn2.addEventListener('click', showMain);
-
-
-            // Guide toggle logic
-            const dailyBtn = document.getElementById('daily-guide-btn');
-            const washingBtn = document.getElementById('washing-guide-btn');
-            const dailyContent = document.getElementById('daily-guide-content');
-            const washingContent = document.getElementById('washing-guide-content');
-            const guideTitle = document.getElementById('guide-title');
-            
-            function setActiveGuide(guideName) {
-                const isDaily = guideName === 'daily';
-
-                guideTitle.textContent = isDaily ? 'The Ultimate Guide for Busy People' : 'Your Simple Guide to Promo Washing';
-
-                dailyBtn.classList.toggle('guide-toggle-active', isDaily);
-                dailyBtn.classList.toggle('text-gray-700', !isDaily);
-                washingBtn.classList.toggle('guide-toggle-active', !isDaily);
-                washingBtn.classList.toggle('text-gray-700', isDaily);
-
-                dailyContent.classList.toggle('hidden', !isDaily);
-                washingContent.classList.toggle('hidden', isDaily);
-            }
-            
-            dailyBtn.addEventListener('click', () => setActiveGuide('daily'));
-            washingBtn.addEventListener('click', () => setActiveGuide('washing'));
-
-            // Set initial active guide
-            setActiveGuide('daily');
-
-            // FTC Banner logic
-            const ftcBanner = document.getElementById('ftc-banner');
-            const closeBtn = document.getElementById('close-ftc-banner');
-
-            if (sessionStorage.getItem('ftcBannerClosed')) {
-                ftcBanner.style.display = 'none';
-            }
-
-            closeBtn.addEventListener('click', () => {
-                ftcBanner.style.opacity = '0';
-                setTimeout(() => {
-                    ftcBanner.style.display = 'none';
-                }, 300);
-                sessionStorage.setItem('ftcBannerClosed', 'true');
+            // Close all other details
+            allDetailsRows.forEach(row => {
+                if (row !== detailsRow) {
+                    row.classList.remove('active');
+                }
             });
-        });
-
+            
+            // Toggle current details
+            detailsRow.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
-
-
