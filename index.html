@@ -188,7 +188,7 @@
         /* Stats Grid */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 0;
             margin: 2rem 0;
             padding: 1.75rem 0;
@@ -242,144 +242,165 @@
             margin-bottom: 0;
         }
 
-        /* CTA Card - Redesigned */
+        /* WOW CTA Card */
         .cta-card {
-            background: #ffffff;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            border-radius: 16px;
             margin: 2.5rem 0;
             overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+            position: relative;
         }
 
-        .cta-header {
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .cta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.02em;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-badge-icon {
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 1rem;
-            padding: 1.5rem 1.75rem;
-            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
-            border-bottom: 1px solid #e5e7eb;
+            justify-content: center;
+            font-size: 0.65rem;
         }
 
-        .cta-logo {
-            width: 56px;
-            height: 56px;
-            border-radius: 10px;
-            flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .cta-header-text h3 {
-            margin: 0;
-            font-size: 1.35rem;
-            color: #1a1a1a;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-        }
-
-        .cta-header-text p {
-            margin: 0.35rem 0 0 0;
-            color: #6b7280;
-            font-size: 0.875rem;
-            line-height: 1.4;
-        }
-
-        .cta-body {
-            padding: 1.75rem;
-            background: #ffffff;
-        }
-
-        .cta-trust {
-            background: #f0fdf4;
-            border: 1px solid #10b981;
-            padding: 0.85rem 1rem;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 0.875rem;
-            color: #047857;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-
-        .cta-trust strong {
-            color: #047857;
-            font-weight: 700;
-        }
-
-        .cta-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-stat {
-            text-align: center;
-            padding: 1rem;
-            background: #f9fafb;
-            border-radius: 8px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .cta-stat-number {
-            font-size: 1.65rem;
+        .cta-headline {
+            font-size: 2rem;
             font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 0.2rem;
-            line-height: 1;
+            color: white;
+            line-height: 1.2;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
         }
 
-        .cta-stat-label {
-            font-size: 0.775rem;
-            color: #6b7280;
+        .cta-subheadline {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.95);
+            line-height: 1.5;
+            margin-bottom: 2rem;
             font-weight: 500;
+        }
+
+        .cta-trust-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-trust-line svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
+        }
+
+        .cta-button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
         }
 
         .cta-button {
-            display: block;
-            background: #10b981;
-            color: white;
-            text-align: center;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
+            display: inline-block;
+            background: white;
+            color: #059669;
+            padding: 1.1rem 3rem;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.2s;
-            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
+            font-size: 1.05rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(16, 185, 129, 0.1);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-button:hover::before {
+            width: 300px;
+            height: 300px;
         }
 
         .cta-button:hover {
-            background: #059669;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
         }
 
         .cta-button:active {
             transform: translateY(0);
         }
 
+        .cta-button span {
+            position: relative;
+            z-index: 1;
+        }
+
         .cta-note {
-            margin-top: 1rem;
-            text-align: center;
-            font-size: 0.825rem;
-            color: #6b7280;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.85);
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 0.5rem;
         }
 
         .cta-note code {
-            background: #f3f4f6;
-            padding: 0.25rem 0.65rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.25rem 0.6rem;
             border-radius: 4px;
             font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
-            color: #1a1a1a;
+            color: white;
             font-weight: 700;
             font-size: 0.85rem;
             letter-spacing: 0.05em;
-            border: 1px solid #d1d5db;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         /* Steps Grid */
@@ -671,7 +692,7 @@
             margin-bottom: 0;
         }
 
-        /* Summary Box - Smaller */
+        /* Summary Box */
         .summary-box {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             color: white;
@@ -873,25 +894,105 @@
             transform: translateY(0);
         }
 
-        .full-disclaimer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            animation: fadeIn 0.2s ease;
         }
 
-        .full-disclaimer.visible {
-            max-height: 2000px;
+        .modal-overlay.visible {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
         }
 
-        .full-disclaimer p {
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        .full-disclaimer.visible p {
-            opacity: 1;
-            transform: translateY(0);
+        .modal {
+            background: white;
+            border-radius: 12px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.3s ease;
+            position: relative;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #6b7280;
+            cursor: pointer;
+            padding: 0.25rem;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #1a1a1a;
+        }
+
+        .modal-content {
+            padding: 1.5rem;
+        }
+
+        .modal-content h4 {
+            font-size: 0.95rem;
+            color: #1a1a1a;
+            margin: 1.25rem 0 0.75rem 0;
+        }
+
+        .modal-content h4:first-child {
+            margin-top: 0;
+        }
+
+        .modal-content p {
+            font-size: 0.875rem;
+            line-height: 1.65;
+            color: #6b7280;
+            margin-bottom: 0.85rem;
         }
 
         /* Mobile Sticky CTA */
@@ -1002,26 +1103,19 @@
             }
 
             .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
                 gap: 0;
                 padding: 1.5rem 0;
             }
 
             .stat {
                 padding: 0.75rem 1rem;
-            }
-
-            .stat:nth-child(odd) {
-                border-right: 1px solid #f3f4f6;
-            }
-
-            .stat:nth-child(3),
-            .stat:nth-child(4) {
-                border-top: 1px solid #f3f4f6;
+                border-right: none;
+                border-bottom: 1px solid #f3f4f6;
             }
 
             .stat:last-child {
-                border-right: none;
+                border-bottom: none;
             }
 
             .stat-number {
@@ -1065,69 +1159,27 @@
                 font-size: 0.8rem;
             }
 
-            /* Compact mobile CTA */
-            .cta-header {
-                padding: 1.25rem;
+            /* Mobile CTA */
+            .cta-content {
+                padding: 2rem 1.5rem;
             }
 
-            .cta-logo {
-                width: 48px;
-                height: 48px;
+            .cta-headline {
+                font-size: 1.5rem;
             }
 
-            .cta-header-text h3 {
-                font-size: 1.15rem;
-            }
-
-            .cta-header-text p {
-                font-size: 0.8rem;
-                margin-top: 0.25rem;
-            }
-
-            .cta-body {
-                padding: 1.25rem;
-            }
-
-            .cta-trust {
-                padding: 0.75rem;
-                font-size: 0.8rem;
-                margin-bottom: 1.25rem;
-            }
-
-            .cta-stats {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 0.75rem;
-                margin-bottom: 1.25rem;
-            }
-
-            .cta-stat {
-                padding: 0.75rem 0.5rem;
-            }
-
-            .cta-stat-number {
-                font-size: 1.35rem;
-            }
-
-            .cta-stat-label {
-                font-size: 0.7rem;
+            .cta-subheadline {
+                font-size: 0.95rem;
+                margin-bottom: 1.5rem;
             }
 
             .cta-button {
-                padding: 0.9rem 1.25rem;
-                font-size: 0.925rem;
-            }
-
-            .cta-button:hover {
-                transform: none;
-            }
-
-            .cta-button:active {
-                transform: scale(0.98);
+                padding: 1rem 2rem;
+                font-size: 0.95rem;
             }
 
             .cta-note {
-                margin-top: 0.85rem;
-                font-size: 0.75rem;
+                font-size: 0.8rem;
             }
 
             /* Compact mobile offers */
@@ -1292,9 +1344,21 @@
                 margin: 1rem auto;
             }
 
-            .full-disclaimer p {
-                font-size: 0.8rem;
-                line-height: 1.6;
+            .modal {
+                max-height: 90vh;
+                margin: 0;
+            }
+
+            .modal-header {
+                padding: 1.25rem;
+            }
+
+            .modal-content {
+                padding: 1.25rem;
+            }
+
+            .modal-content p {
+                font-size: 0.825rem;
             }
         }
 
@@ -1309,6 +1373,10 @@
 
             .offer-amount {
                 font-size: 1.3rem;
+            }
+
+            .cta-headline {
+                font-size: 1.35rem;
             }
         }
     </style>
@@ -1330,7 +1398,7 @@
     <article>
         <span class="badge">
             <span class="live-dot"></span>
-            1,200+ People Signed Up
+            1,200+ Doing Bonus Arbitrage
         </span>
         
         <h1>Earn $800 in One Hour Through Bonus Arbitrage</h1>
@@ -1340,7 +1408,7 @@
         <div class="stats-grid">
             <div class="stat">
                 <div class="stat-number">$805</div>
-                <div class="stat-label">Total Available</div>
+                <div class="stat-label">Potential Earnings</div>
             </div>
             <div class="stat">
                 <div class="stat-number">~1hr</div>
@@ -1348,11 +1416,7 @@
             </div>
             <div class="stat">
                 <div class="stat-number">1,200+</div>
-                <div class="stat-label">Active Users</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">6</div>
-                <div class="stat-label">Best Offers</div>
+                <div class="stat-label">Users</div>
             </div>
         </div>
 
@@ -1363,38 +1427,27 @@
         </div>
 
         <div class="cta-card">
-            <div class="cta-header">
-                <img src="https://i.imgur.com/dnrNOx3.jpeg" alt="Gemsloot" class="cta-logo">
-                <div class="cta-header-text">
-                    <h3>Get Started on Gemsloot</h3>
-                    <p>The best platform for bonus arbitrage. All offers below pay through Gemsloot, and you'll receive a free lootbox worth up to $250 when you sign up.</p>
+            <div class="cta-content">
+                <div class="cta-badge">
+                    <span class="cta-badge-icon">⭐</span>
+                    #1 Platform for Bonus Arbitrage
                 </div>
-            </div>
-
-            <div class="cta-body">
-                <div class="cta-trust">
-                    <strong>1,200+ people</strong> from our community have signed up through this platform
-                </div>
-
-                <div class="cta-stats">
-                    <div class="cta-stat">
-                        <div class="cta-stat-number">$805</div>
-                        <div class="cta-stat-label">Potential</div>
-                    </div>
-                    <div class="cta-stat">
-                        <div class="cta-stat-number">~1hr</div>
-                        <div class="cta-stat-label">Time</div>
-                    </div>
-                    <div class="cta-stat">
-                        <div class="cta-stat-number">6</div>
-                        <div class="cta-stat-label">Offers</div>
-                    </div>
-                </div>
-
-                <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="cta-button">Sign Up Free</a>
                 
-                <div class="cta-note">
-                    Use code: <code>SHG</code>
+                <h2 class="cta-headline">Start Earning on Gemsloot</h2>
+                <p class="cta-subheadline">The only platform you need to track all your bonuses, get paid fast, and maximize your earnings. Join 1,200+ people already earning.</p>
+                
+                <div class="cta-trust-line">
+                    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm5.707 7.707l-6 6a1 1 0 01-1.414 0l-3-3a1 1 0 011.414-1.414L9 11.586l5.293-5.293a1 1 0 011.414 1.414z"/></svg>
+                    <span>Free to join • Instant tracking • Fast payouts</span>
+                </div>
+                
+                <div class="cta-button-wrapper">
+                    <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="cta-button">
+                        <span>Get Started Free</span>
+                    </a>
+                    <div class="cta-note">
+                        Use code: <code>SHG</code> for bonus lootbox
+                    </div>
                 </div>
             </div>
         </div>
@@ -1464,7 +1517,7 @@
                     <div class="offer-time">&lt; 15 min</div>
                     <div class="offer-amount">$480</div>
                 </div>
-                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-2879" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
+                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-2879" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Open Offer</a>
             </div>
             <div class="offer-details">
                 <div class="offer-content">
@@ -1497,7 +1550,7 @@
                     <div class="offer-time">&lt; 15 min</div>
                     <div class="offer-amount">$150</div>
                 </div>
-                <a href="https://gemsloot.com/earn?&modal=offer_2&name=Gemsloot__as-3284" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
+                <a href="https://gemsloot.com/earn?&modal=offer_2&name=Gemsloot__as-3284" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Open Offer</a>
             </div>
             <div class="offer-details">
                 <div class="offer-content">
@@ -1531,7 +1584,7 @@
                     <div class="offer-time">&lt; 15 min</div>
                     <div class="offer-amount">$90</div>
                 </div>
-                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-78" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
+                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-78" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Open Offer</a>
             </div>
             <div class="offer-details">
                 <div class="offer-content">
@@ -1564,7 +1617,7 @@
                     <div class="offer-time">&lt; 5 min</div>
                     <div class="offer-amount">$30</div>
                 </div>
-                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-3232" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
+                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-3232" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Open Offer</a>
             </div>
             <div class="offer-details">
                 <div class="offer-content">
@@ -1596,7 +1649,7 @@
                     <div class="offer-time">&lt; 10 min</div>
                     <div class="offer-amount">$30</div>
                 </div>
-                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-3479" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
+                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-3479" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Open Offer</a>
             </div>
             <div class="offer-details">
                 <div class="offer-content">
@@ -1629,7 +1682,7 @@
                     <div class="offer-time">&lt; 15 min</div>
                     <div class="offer-amount">$25</div>
                 </div>
-                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-362" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Start →</a>
+                <a href="https://gemsloot.com/earn/all?&modal=offer_2&name=Gemsloot__as-362" target="_blank" rel="noopener" class="offer-button" onclick="event.stopPropagation()">Open Offer</a>
             </div>
             <div class="offer-details">
                 <div class="offer-content">
@@ -1693,7 +1746,7 @@
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        Most bonuses credit to your Gemsloot account within a few days after completing requirements. First-time Gemsloot withdrawals are manually reviewed (usually within 24 hours). After that, crypto withdrawals are instant and PayPal takes a few hours.
+                        Most bonuses credit to your Gemsloot account within a few days after completing requirements. First-time Gemsloot withdrawals are manually reviewed (usually within 24 hours). After that, crypto withdrawals are typically instant and PayPal takes a few hours.
                     </div>
                 </div>
             </div>
@@ -1740,7 +1793,8 @@
         <div class="callout">
             <p><strong>Minimums:</strong> $0.50 for crypto, $3 for PayPal</p>
             <p><strong>First withdrawal:</strong> Manually reviewed (usually within 24 hours) for security.</p>
-            <p><strong>After that:</strong> Crypto payouts are instant, PayPal within a few hours</p>
+            <p><strong>Speed:</strong> Crypto payouts are typically instant, PayPal within a few hours. Larger withdrawal amounts may take additional time for verification.</p>
+            <p><strong>Note:</strong> The Gemsloot team is based in the EU and operates during EU business hours. Support responses and manual reviews follow this schedule.</p>
         </div>
 
         <h2>Important Considerations</h2>
@@ -1763,24 +1817,46 @@
                 <p><strong>Not Financial Advice:</strong> This is educational content only. Independently verify all offer terms and consult professionals before making financial decisions.</p>
                 <p><strong>Your Responsibility:</strong> You accept full responsibility for your actions and outcomes. We are not liable for losses, damages, or issues arising from use of these strategies.</p>
                 
-                <button class="disclaimer-toggle" onclick="toggleFullDisclaimer()">View Full Legal Disclaimer</button>
-                
-                <div class="full-disclaimer" id="fullDisclaimer">
-                    <h4 style="margin-top: 1.5rem;">Complete Legal Disclosure</h4>
-                    <p><strong>No Guarantees:</strong> Past performance does not guarantee future results. The offers and bonuses mentioned are subject to change without notice. Companies may modify, suspend, or terminate promotional offers at any time.</p>
-                    <p><strong>Eligibility Requirements:</strong> Not all offers are available in all locations. You must meet each company's eligibility requirements, which may include age, residency, credit checks, and employment verification.</p>
-                    <p><strong>Tax Implications:</strong> Bonuses and rewards may be considered taxable income. Consult a tax professional regarding your specific situation and reporting requirements.</p>
-                    <p><strong>Account Terms:</strong> You are responsible for reading and complying with each company's terms of service. Violation of terms may result in bonus forfeiture, account closure, or legal action.</p>
-                    <p><strong>Risk Disclosure:</strong> Opening multiple financial accounts may impact your credit score, banking relationships, and financial standing. Consider the potential consequences before proceeding.</p>
-                    <p><strong>Third-Party Platforms:</strong> Gemsloot and other tracking platforms are independent third parties. We are not responsible for their policies, practices, payment processing, or any issues that arise from using their services.</p>
-                    <p><strong>Information Accuracy:</strong> While we strive for accuracy, information may be outdated or incorrect. Always verify current offer terms directly with the financial institution before participating.</p>
-                    <p><strong>No Professional Relationship:</strong> Nothing on this site creates an attorney-client, financial advisor-client, or any other professional relationship. Seek professional advice for your specific circumstances.</p>
-                </div>
+                <button class="disclaimer-toggle" onclick="openDisclaimerModal()">View Full Legal Disclaimer</button>
 
                 <p style="text-align: center; margin-top: 1.75rem; color: #9ca3af;">© 2025 Side Hustle Gold. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <div class="modal-overlay" id="disclaimerModal" onclick="closeDisclaimerModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3>Complete Legal Disclosure</h3>
+                <button class="modal-close" onclick="closeDisclaimerModal()">&times;</button>
+            </div>
+            <div class="modal-content">
+                <h4>No Guarantees</h4>
+                <p>Past performance does not guarantee future results. The offers and bonuses mentioned are subject to change without notice. Companies may modify, suspend, or terminate promotional offers at any time.</p>
+                
+                <h4>Eligibility Requirements</h4>
+                <p>Not all offers are available in all locations. You must meet each company's eligibility requirements, which may include age, residency, credit checks, and employment verification.</p>
+                
+                <h4>Tax Implications</h4>
+                <p>Bonuses and rewards may be considered taxable income. Consult a tax professional regarding your specific situation and reporting requirements.</p>
+                
+                <h4>Account Terms</h4>
+                <p>You are responsible for reading and complying with each company's terms of service. Violation of terms may result in bonus forfeiture, account closure, or legal action.</p>
+                
+                <h4>Risk Disclosure</h4>
+                <p>Opening multiple financial accounts may impact your credit score, banking relationships, and financial standing. Consider the potential consequences before proceeding.</p>
+                
+                <h4>Third-Party Platforms</h4>
+                <p>Gemsloot and other tracking platforms are independent third parties. We are not responsible for their policies, practices, payment processing, or any issues that arise from using their services.</p>
+                
+                <h4>Information Accuracy</h4>
+                <p>While we strive for accuracy, information may be outdated or incorrect. Always verify current offer terms directly with the financial institution before participating.</p>
+                
+                <h4>No Professional Relationship</h4>
+                <p>Nothing on this site creates an attorney-client, financial advisor-client, or any other professional relationship. Seek professional advice for your specific circumstances.</p>
+            </div>
+        </div>
+    </div>
 
     <div class="mobile-cta" id="mobileCta">
         <div class="mobile-cta-content">
@@ -1841,19 +1917,25 @@
             }
         }
 
-        // Toggle Full Disclaimer
-        function toggleFullDisclaimer() {
-            const disclaimer = document.getElementById('fullDisclaimer');
-            const button = document.querySelector('.disclaimer-toggle');
-            
-            if (disclaimer.classList.contains('visible')) {
-                disclaimer.classList.remove('visible');
-                button.textContent = 'View Full Legal Disclaimer';
-            } else {
-                disclaimer.classList.add('visible');
-                button.textContent = 'Hide Full Legal Disclaimer';
+        // Disclaimer Modal
+        function openDisclaimerModal() {
+            document.getElementById('disclaimerModal').classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDisclaimerModal(event) {
+            if (!event || event.target.id === 'disclaimerModal') {
+                document.getElementById('disclaimerModal').classList.remove('visible');
+                document.body.style.overflow = '';
             }
         }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeDisclaimerModal();
+            }
+        });
 
         // Prevent button clicks from toggling
         document.querySelectorAll('.offer-button').forEach(btn => {
