@@ -313,10 +313,6 @@
             gap: 0.35rem;
         }
 
-        .cta-feature-icon {
-            font-size: 1.35rem;
-        }
-
         .cta-feature-value {
             font-size: 1rem;
             color: white;
@@ -364,9 +360,36 @@
             transform: translateX(3px);
         }
 
-        .cta-note {
+        .cta-copy-button {
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: rgba(255, 255, 255, 0.85);
+            padding: 0.65rem 1.25rem;
+            border-radius: 8px;
             font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.6);
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .cta-copy-button:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: rgba(16, 185, 129, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .cta-copy-button:active {
+            transform: translateY(0);
+        }
+
+        .cta-copy-button strong {
+            color: #10b981;
+            font-weight: 800;
+        }
+
+        .cta-copy-button.copied {
+            background: rgba(16, 185, 129, 0.3);
+            border-color: rgba(16, 185, 129, 0.6);
         }
 
         .cta-note code {
@@ -614,32 +637,41 @@
         .summary-box {
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             color: white;
-            text-align: center;
-            padding: 2rem;
-            border-radius: 16px;
-            margin: 2rem 0;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
         }
 
-        .summary-box h3 {
-            color: rgba(255, 255, 255, 0.8);
-            margin: 0 0 0.75rem 0;
+        .summary-label {
             font-size: 0.9375rem;
-            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
         }
 
         .summary-amount {
-            font-size: 3rem;
+            font-size: 2.25rem;
             font-weight: 900;
-            margin-bottom: 0.35rem;
             background: linear-gradient(135deg, #10b981, #059669);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        .summary-divider {
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 1.5rem;
+            font-weight: 300;
         }
 
         .summary-time {
             font-size: 0.9375rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 500;
         }
 
         .social-proof {
@@ -854,82 +886,478 @@
             margin-bottom: 0.75rem;
         }
 
+        /* Mobile Sticky CTA */
+        .mobile-cta-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            padding: 0.875rem 1rem;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            border-top: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .mobile-cta-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .mobile-cta-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .mobile-cta-title {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.2;
+        }
+
+        .mobile-cta-subtitle {
+            font-size: 0.6875rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .mobile-cta-button {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+            transition: transform 0.2s;
+        }
+
+        .mobile-cta-button:active {
+            transform: scale(0.97);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-cta-bar {
+                display: block;
+            }
+
+            article {
+                padding-bottom: 5rem;
+            }
+        }
+
         @media (max-width: 768px) {
             article {
-                padding: 2rem 1.25rem;
+                padding: 1.5rem 1rem;
+            }
+
+            .badge {
+                font-size: 0.6875rem;
+                padding: 0.3rem 0.75rem;
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 1.75rem;
+                margin-bottom: 0.5rem;
+                line-height: 1.15;
+            }
+
+            .lead {
+                font-size: 1rem;
+                margin-bottom: 1rem;
             }
 
             .stats-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(3, 1fr);
                 gap: 0;
+                padding: 1rem 0;
+                margin: 1rem 0;
             }
 
             .stat {
-                border-right: none;
-                border-bottom: 1px solid #f0f0f0;
-                padding: 0.75rem;
+                border-right: 1px solid #f0f0f0;
+                border-bottom: none;
+                padding: 0.5rem;
             }
 
             .stat:last-child {
-                border-bottom: none;
+                border-right: none;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+                margin-bottom: 0.15rem;
+            }
+
+            .stat-label {
+                font-size: 0.6875rem;
+            }
+
+            .callout {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+
+            .callout p {
+                font-size: 0.9375rem;
+                margin-bottom: 0.65rem;
             }
 
             .cta-content {
                 grid-template-columns: 1fr;
-                padding: 2rem 1.5rem;
-                gap: 1.5rem;
+                padding: 1.5rem 1.25rem;
+                gap: 1.25rem;
             }
 
             .cta-logo-section {
                 flex-direction: row;
                 justify-content: center;
+                gap: 0.75rem;
+            }
+
+            .cta-logo-wrapper {
+                width: 70px;
+                height: 70px;
+                border-radius: 14px;
+            }
+
+            .cta-verified {
+                font-size: 0.625rem;
+                padding: 0.25rem 0.5rem;
+            }
+
+            .cta-eyebrow {
+                font-size: 0.6875rem;
             }
 
             .cta-headline {
-                font-size: 1.75rem;
+                font-size: 1.5rem;
+                margin: 0.15rem 0 0.35rem 0;
+            }
+
+            .cta-subheadline {
+                font-size: 0.9375rem;
             }
 
             .cta-features {
                 grid-template-columns: 1fr;
-                gap: 1rem;
+                gap: 0.75rem;
+                padding: 1rem 0;
+            }
+
+            .cta-feature-value {
+                font-size: 0.9375rem;
+            }
+
+            .cta-feature-label {
+                font-size: 0.6875rem;
             }
 
             .cta-action-row {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.75rem;
                 align-items: stretch;
             }
 
             .cta-button {
                 width: 100%;
                 justify-content: center;
+                padding: 0.875rem 1.75rem;
+                font-size: 0.9375rem;
+            }
+
+            .cta-copy-button {
+                width: 100%;
+                text-align: center;
+                padding: 0.6rem 1rem;
+                font-size: 0.8125rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+                margin: 2rem 0 0.5rem 0;
+            }
+
+            h3 {
+                font-size: 1.125rem;
+                margin: 1.25rem 0 0.5rem 0;
+            }
+
+            p {
+                font-size: 0.9375rem;
+                margin-bottom: 0.875rem;
             }
 
             .steps-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+                margin: 1rem 0;
+            }
+
+            .step {
+                padding: 1rem 0.65rem;
+            }
+
+            .step-number {
+                width: 30px;
+                height: 30px;
+                font-size: 0.8125rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .step h4 {
+                font-size: 0.8125rem;
+                margin-bottom: 0.25rem;
+            }
+
+            .step p {
+                font-size: 0.75rem;
+                line-height: 1.35;
+            }
+
+            .key-points {
+                padding: 1rem;
+                margin: 1rem 0;
+            }
+
+            .key-points h3 {
+                font-size: 1rem;
+                margin-top: 0;
+            }
+
+            .key-points ul {
+                margin: 0.5rem 0 0 1rem;
+            }
+
+            .key-points li {
+                font-size: 0.875rem;
+                margin-bottom: 0.4rem;
+            }
+
+            .offer {
+                margin-bottom: 0.75rem;
             }
 
             .offer-header {
-                grid-template-columns: 26px 1fr auto;
+                grid-template-columns: 28px 1fr;
+                gap: 0.75rem;
+                padding: 1rem;
+            }
+
+            .offer-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 0.65rem;
+                grid-row: 1;
+            }
+
+            .offer-name {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .offer-name h4 {
+                font-size: 1.0625rem;
+                margin-bottom: 0.2rem;
+            }
+
+            .offer-name p {
+                font-size: 0.8125rem;
+                margin: 0;
+                color: #8b8b8b;
             }
 
             .offer-meta {
-                flex-direction: column;
-                align-items: flex-end;
-                gap: 0.5rem;
+                grid-column: 1 / -1;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0.75rem;
+                padding-top: 0.75rem;
+                margin-top: 0.5rem;
+                border-top: 1px solid #f0f0f0;
+            }
+
+            .offer-time {
+                font-size: 0.75rem;
+                padding: 0.35rem 0.75rem;
+            }
+
+            .offer-amount {
+                font-size: 1.75rem;
+                margin: 0 auto 0 0;
+            }
+
+            .offer-button {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.875rem;
+                white-space: nowrap;
+                flex-shrink: 0;
             }
 
             .offer-content {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 1rem;
+                padding: 1rem;
+                padding-top: 1rem;
+            }
+
+            .offer-content h5 {
+                font-size: 0.8125rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .offer-content ol {
+                padding-left: 1rem;
+            }
+
+            .offer-content li {
+                font-size: 0.8125rem;
+                margin-bottom: 0.4rem;
+                line-height: 1.4;
+            }
+
+            .offer-content p {
+                font-size: 0.8125rem;
+                margin-bottom: 0.4rem;
+                line-height: 1.4;
+            }
+
+            .summary-box {
+                flex-direction: column;
+                gap: 0.4rem;
+                text-align: center;
+                padding: 0.875rem 1rem;
+                margin: 1rem 0;
+            }
+
+            .summary-label {
+                font-size: 0.8125rem;
+            }
+
+            .summary-amount {
+                font-size: 1.875rem;
+            }
+
+            .summary-divider {
+                display: none;
+            }
+
+            .summary-time {
+                font-size: 0.8125rem;
+            }
+
+            .social-proof {
+                padding: 1rem;
+                margin: 1.5rem 0;
+            }
+
+            .social-proof h3 {
+                font-size: 1.125rem;
+            }
+
+            .social-proof p {
+                font-size: 0.875rem;
             }
 
             .social-stats {
                 grid-template-columns: 1fr;
+                gap: 0.75rem;
+                margin-top: 0.75rem;
+            }
+
+            .social-stat {
+                padding: 0.875rem;
+            }
+
+            .social-stat-number {
+                font-size: 1.25rem;
+            }
+
+            .social-stat-label {
+                font-size: 0.75rem;
+            }
+
+            .faq {
+                margin: 1.5rem 0;
+            }
+
+            .faq-item {
+                margin-bottom: 0.65rem;
+            }
+
+            .faq-question {
+                padding: 0.875rem 1rem;
+                font-size: 0.875rem;
+            }
+
+            .faq-icon {
+                font-size: 1rem;
+                margin-left: 0.5rem;
+            }
+
+            .faq-answer-content {
+                padding: 0 1rem 0.875rem;
+                font-size: 0.8125rem;
+            }
+
+            footer {
+                padding: 1.5rem 1rem 1rem;
+                margin-top: 2rem;
+            }
+
+            .disclaimer {
+                font-size: 0.75rem;
+            }
+
+            .disclaimer h4 {
+                font-size: 0.875rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .disclaimer p {
+                margin-bottom: 0.65rem;
+            }
+
+            .disclaimer-toggle {
+                padding: 0.65rem 1.25rem;
+                font-size: 0.75rem;
+                margin: 0.75rem auto;
+            }
+
+            .modal {
+                margin: 1rem;
+            }
+
+            .modal-header {
+                padding: 1rem;
+            }
+
+            .modal-header h3 {
+                font-size: 1.125rem;
+            }
+
+            .modal-content {
+                padding: 1rem;
+            }
+
+            .modal-content h4 {
+                font-size: 0.875rem;
+                margin: 1rem 0 0.5rem 0;
+            }
+
+            .modal-content p {
+                font-size: 0.8125rem;
+                margin-bottom: 0.65rem;
             }
         }
     </style>
@@ -990,24 +1418,21 @@
                 
                 <div class="cta-main">
                     <div>
-                        <div class="cta-eyebrow">The #1 Bonus Arbitrage Platform</div>
-                        <h2 class="cta-headline">Track Every Dollar with Gemsloot</h2>
-                        <p class="cta-subheadline">The only platform built specifically for bonus arbitrage. Automatically tracks your offers, handles payouts, and maximizes your earnings. Trusted by 1,200+ members.</p>
+                        <div class="cta-eyebrow">Best Platform for Bonus Arbitrage</div>
+                        <h2 class="cta-headline">Start Earning with Gemsloot</h2>
+                        <p class="cta-subheadline">The platform we recommend for tracking all your bonus offers. Handles payouts seamlessly and connects with all the offers below. Join 1,200+ members already using it.</p>
                     </div>
                     
                     <div class="cta-features">
                         <div class="cta-feature">
-                            <div class="cta-feature-icon">⚡</div>
-                            <div class="cta-feature-value">Automatic Tracking</div>
-                            <div class="cta-feature-label">Never miss a bonus</div>
+                            <div class="cta-feature-value">Super Easy to Use</div>
+                            <div class="cta-feature-label">No setup or monthly fees</div>
                         </div>
                         <div class="cta-feature">
-                            <div class="cta-feature-icon">💰</div>
-                            <div class="cta-feature-value">Multiple Payouts</div>
-                            <div class="cta-feature-label">Crypto & PayPal</div>
+                            <div class="cta-feature-value">Fast Payouts</div>
+                            <div class="cta-feature-label">Crypto & PayPal supported</div>
                         </div>
                         <div class="cta-feature">
-                            <div class="cta-feature-icon">🎁</div>
                             <div class="cta-feature-value">Bonus Lootbox</div>
                             <div class="cta-feature-label">Up to $250 value</div>
                         </div>
@@ -1018,9 +1443,9 @@
                             <span>Start Earning Now</span>
                             <span class="cta-button-arrow">→</span>
                         </a>
-                        <div class="cta-note">
-                            Use code <code>SHG</code> for bonus
-                        </div>
+                        <button class="cta-copy-button" onclick="copyCode()">
+                            <span id="copyText">Use code <strong>SHG</strong> for bonus</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1278,9 +1703,10 @@
         </div>
 
         <div class="summary-box">
-            <h3>Total Earnings Potential</h3>
-            <div class="summary-amount">$805</div>
-            <div class="summary-time">≈ 1 hour 15 minutes active work</div>
+            <span class="summary-label">Total Earnings Potential:</span>
+            <span class="summary-amount">$805</span>
+            <span class="summary-divider">|</span>
+            <span class="summary-time">≈ 1 hour 15 minutes active work</span>
         </div>
 
         <div class="social-proof">
@@ -1432,6 +1858,17 @@
         </div>
     </div>
 
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta-bar">
+        <div class="mobile-cta-content">
+            <div class="mobile-cta-text">
+                <div class="mobile-cta-title">Start Earning $805</div>
+                <div class="mobile-cta-subtitle">Join 1,200+ members on Gemsloot</div>
+            </div>
+            <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="mobile-cta-button">Get Started</a>
+        </div>
+    </div>
+
     <script>
         function toggleOffer(header) {
             const offer = header.parentElement;
@@ -1481,6 +1918,46 @@
         document.querySelectorAll('.offer-button').forEach(btn => {
             btn.addEventListener('click', e => e.stopPropagation());
         });
+
+        // Copy promo code
+        function copyCode() {
+            const code = 'SHG';
+            const copyText = document.getElementById('copyText');
+            const button = copyText.parentElement;
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(code).then(() => {
+                // Show copied message
+                const originalHTML = copyText.innerHTML;
+                copyText.innerHTML = '<strong>Copied!</strong>';
+                button.classList.add('copied');
+                
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    copyText.innerHTML = originalHTML;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = code;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    const originalHTML = copyText.innerHTML;
+                    copyText.innerHTML = '<strong>Copied!</strong>';
+                    button.classList.add('copied');
+                    setTimeout(() => {
+                        copyText.innerHTML = originalHTML;
+                        button.classList.remove('copied');
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy:', err);
+                }
+                document.body.removeChild(textArea);
+            });
+        }
     </script>
 </body>
 </html>
