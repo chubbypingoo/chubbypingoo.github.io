@@ -24,30 +24,22 @@
             color: #0a0a0a;
             background: #ffffff;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Header - Apple-inspired minimalism */
         header {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: saturate(180%) blur(20px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-            padding: 1rem 0;
+            padding: 0.9rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        header.scrolled {
-            padding: 0.7rem 0;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
         }
 
         .header-content {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -68,16 +60,14 @@
         }
 
         .logo-name {
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: #000;
-            letter-spacing: -0.02em;
         }
 
         .header-links {
             display: flex;
-            gap: 2rem;
-            align-items: center;
+            gap: 1.5rem;
         }
 
         .header-links a {
@@ -85,24 +75,17 @@
             text-decoration: none;
             font-size: 0.875rem;
             font-weight: 500;
-            transition: all 0.2s;
-            position: relative;
+            transition: color 0.2s;
         }
 
         .header-links a:hover {
             color: #10b981;
         }
 
-        /* Hero Section */
         article {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 3rem 2rem 6rem;
-        }
-
-        .hero-section {
-            padding: 4rem 0 3rem;
-            position: relative;
+            padding: 2.5rem 1.5rem 4rem;
         }
 
         .badge {
@@ -111,14 +94,12 @@
             gap: 0.5rem;
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
-            padding: 0.4rem 1rem;
+            padding: 0.35rem 0.9rem;
             border-radius: 100px;
             font-size: 0.75rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.02em;
+            margin-bottom: 1rem;
             box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
-            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .live-dot {
@@ -130,50 +111,31 @@
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.5; transform: scale(0.9); }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 1.25rem;
-            letter-spacing: -0.04em;
-            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s backwards;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.03em;
         }
 
         .lead {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: #525252;
             line-height: 1.6;
-            margin-bottom: 2.5rem;
-            max-width: 800px;
-            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s backwards;
+            margin-bottom: 1.5rem;
         }
 
-        /* Stats - Nvidia-inspired performance metrics */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin: 3rem 0;
-            padding: 2.5rem 0;
+            gap: 0;
+            margin: 1.5rem 0;
+            padding: 1.5rem 0;
             border-top: 1px solid #e5e5e5;
             border-bottom: 1px solid #e5e5e5;
         }
@@ -181,58 +143,44 @@
         .stat {
             text-align: center;
             padding: 0 1rem;
-            position: relative;
-            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
+            border-right: 1px solid #f0f0f0;
         }
 
-        .stat::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 1px;
-            height: 60%;
-            background: linear-gradient(to bottom, transparent, #e5e5e5, transparent);
-        }
-
-        .stat:last-child::after {
-            display: none;
+        .stat:last-child {
+            border-right: none;
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 900;
             color: #000;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.03em;
+            margin-bottom: 0.25rem;
         }
 
         .stat-label {
-            font-size: 0.875rem;
+            font-size: 0.8125rem;
             color: #737373;
             font-weight: 500;
         }
 
         h2 {
-            font-size: 2.25rem;
+            font-size: 1.875rem;
             font-weight: 800;
             line-height: 1.2;
-            margin: 4rem 0 1.5rem 0;
-            letter-spacing: -0.03em;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin: 2rem 0 1rem 0;
+            margin: 2.5rem 0 0.75rem 0;
             letter-spacing: -0.02em;
         }
 
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
         p {
-            margin-bottom: 1.25rem;
-            font-size: 1.0625rem;
-            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.65;
             color: #404040;
         }
 
@@ -241,16 +189,31 @@
             color: #000;
         }
 
-        /* Premium CTA - Team-optimized */
+        .callout {
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+            border-left: 4px solid #000;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .callout p {
+            margin-bottom: 0.75rem;
+        }
+
+        .callout p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Premium CTA */
         .cta-card {
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            border-radius: 24px;
-            margin: 3rem 0;
+            border-radius: 20px;
+            margin: 2rem 0;
             overflow: hidden;
-            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
             position: relative;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .cta-card::before {
@@ -258,29 +221,18 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 600px;
-            height: 600px;
+            width: 500px;
+            height: 500px;
             background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
             pointer-events: none;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(-30px, -30px) scale(1.05); }
-        }
-
-        .cta-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.24);
         }
 
         .cta-content {
             position: relative;
-            padding: 3.5rem;
+            padding: 2.5rem;
             display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 3rem;
+            grid-template-columns: 90px 1fr;
+            gap: 2rem;
             align-items: center;
         }
 
@@ -288,22 +240,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1rem;
+            gap: 0.65rem;
         }
 
         .cta-logo-wrapper {
-            width: 100px;
-            height: 100px;
-            border-radius: 22px;
+            width: 90px;
+            height: 90px;
+            border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 12px 32px rgba(16, 185, 129, 0.4);
-            border: 2px solid rgba(16, 185, 129, 0.6);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .cta-card:hover .cta-logo-wrapper {
-            transform: scale(1.05);
-            box-shadow: 0 16px 40px rgba(16, 185, 129, 0.5);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+            border: 2px solid rgba(16, 185, 129, 0.5);
         }
 
         .cta-logo-wrapper img {
@@ -313,54 +259,50 @@
         }
 
         .cta-verified {
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #10b981;
             font-weight: 700;
             background: rgba(16, 185, 129, 0.12);
-            padding: 0.35rem 0.75rem;
-            border-radius: 6px;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
 
         .cta-main {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 1.25rem;
         }
 
         .cta-eyebrow {
-            font-size: 0.8125rem;
+            font-size: 0.75rem;
             color: #10b981;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.12em;
         }
 
         .cta-headline {
-            font-size: 2.75rem;
+            font-size: 2.25rem;
             font-weight: 900;
             color: white;
             line-height: 1.1;
-            letter-spacing: -0.03em;
-            margin: 0.5rem 0 1rem 0;
+            letter-spacing: -0.02em;
+            margin: 0.25rem 0 0.5rem 0;
         }
 
         .cta-subheadline {
-            font-size: 1.125rem;
+            font-size: 1rem;
             color: rgba(255, 255, 255, 0.75);
-            line-height: 1.6;
-            font-weight: 400;
+            line-height: 1.5;
             margin: 0;
         }
 
         .cta-features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            padding: 2rem 0;
+            gap: 1.25rem;
+            padding: 1.25rem 0;
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
@@ -368,131 +310,146 @@
         .cta-feature {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 0.35rem;
         }
 
         .cta-feature-icon {
-            font-size: 1.5rem;
-            margin-bottom: 0.25rem;
+            font-size: 1.35rem;
         }
 
         .cta-feature-value {
-            font-size: 1.125rem;
+            font-size: 1rem;
             color: white;
             font-weight: 700;
             line-height: 1.3;
         }
 
         .cta-feature-label {
-            font-size: 0.8125rem;
+            font-size: 0.75rem;
             color: rgba(255, 255, 255, 0.5);
-            font-weight: 500;
         }
 
         .cta-action-row {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .cta-button {
             display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.65rem;
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
-            padding: 1.125rem 2.75rem;
-            border-radius: 14px;
+            padding: 1rem 2.25rem;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1.0625rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-            transition: left 0.6s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
+            font-size: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(16, 185, 129, 0.5);
-        }
-
-        .cta-button:active {
-            transform: translateY(0);
-        }
-
-        .cta-button-text {
-            position: relative;
-            z-index: 1;
+            box-shadow: 0 10px 28px rgba(16, 185, 129, 0.5);
         }
 
         .cta-button-arrow {
-            position: relative;
-            z-index: 1;
-            font-size: 1.25rem;
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1.15rem;
+            transition: transform 0.3s;
         }
 
         .cta-button:hover .cta-button-arrow {
-            transform: translateX(4px);
+            transform: translateX(3px);
         }
 
         .cta-note {
-            font-size: 0.9375rem;
+            font-size: 0.875rem;
             color: rgba(255, 255, 255, 0.6);
         }
 
         .cta-note code {
             background: rgba(16, 185, 129, 0.2);
-            padding: 0.35rem 0.75rem;
-            border-radius: 6px;
+            padding: 0.3rem 0.65rem;
+            border-radius: 5px;
             color: #10b981;
             font-weight: 800;
             border: 1px solid rgba(16, 185, 129, 0.3);
-            font-family: 'SF Mono', 'Monaco', monospace;
         }
 
-        /* Callout - Cisco-inspired trust */
-        .callout {
-            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
-            border-left: 4px solid #000;
-            padding: 2rem;
-            margin: 2.5rem 0;
-            border-radius: 0 12px 12px 0;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
 
-        .callout p {
-            margin-bottom: 1rem;
+        .step {
+            text-align: center;
+            padding: 1.25rem 0.85rem;
+            background: #fafafa;
+            border-radius: 8px;
+            border: 1px solid #f0f0f0;
         }
 
-        .callout p:last-child {
-            margin-bottom: 0;
+        .step-number {
+            width: 34px;
+            height: 34px;
+            background: #000;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.65rem;
+            font-weight: 800;
+            font-size: 0.9rem;
         }
 
-        /* Offers - Enhanced interaction */
+        .step h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+
+        .step p {
+            font-size: 0.8125rem;
+            color: #737373;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .key-points {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-points h3 {
+            margin-top: 0;
+            font-size: 1.125rem;
+        }
+
+        .key-points ul {
+            margin: 0.75rem 0 0 1.25rem;
+        }
+
+        .key-points li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+        }
+
         .offer {
             background: white;
             border: 2px solid #e5e5e5;
-            border-radius: 16px;
-            margin-bottom: 1.5rem;
+            border-radius: 14px;
+            margin-bottom: 1rem;
             overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s;
             position: relative;
         }
 
@@ -503,15 +460,14 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(135deg, #10b981, #059669);
+            background: #10b981;
             transform: scaleY(0);
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.3s;
         }
 
         .offer:hover {
             border-color: #10b981;
-            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
-            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.1);
         }
 
         .offer:hover::before {
@@ -520,7 +476,7 @@
 
         .offer.active {
             border-color: #10b981;
-            box-shadow: 0 12px 32px rgba(16, 185, 129, 0.18);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
         }
 
         .offer.active::before {
@@ -528,14 +484,12 @@
         }
 
         .offer-header {
-            padding: 1.5rem;
+            padding: 1.25rem;
             cursor: pointer;
             display: grid;
-            grid-template-columns: 32px 1fr auto auto;
-            gap: 1.25rem;
+            grid-template-columns: 28px 1fr auto auto;
+            gap: 1rem;
             align-items: center;
-            background: white;
-            transition: background 0.2s;
         }
 
         .offer-header:hover {
@@ -543,17 +497,16 @@
         }
 
         .offer-icon {
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #737373;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            flex-shrink: 0;
             background: #f5f5f5;
-            border-radius: 8px;
+            border-radius: 6px;
+            transition: all 0.3s;
         }
 
         .offer-icon::before {
@@ -567,177 +520,368 @@
         }
 
         .offer-name h4 {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             font-weight: 800;
-            margin: 0 0 0.25rem 0;
-            line-height: 1.2;
-            letter-spacing: -0.01em;
+            margin: 0 0 0.2rem 0;
         }
 
         .offer-name p {
-            font-size: 0.875rem;
+            font-size: 0.8125rem;
             color: #737373;
             margin: 0;
-            line-height: 1.4;
         }
 
         .offer-meta {
             display: flex;
             align-items: center;
-            gap: 1.25rem;
+            gap: 1rem;
         }
 
         .offer-time {
-            font-size: 0.8125rem;
+            font-size: 0.75rem;
             color: #737373;
             font-weight: 600;
-            padding: 0.4rem 0.85rem;
+            padding: 0.35rem 0.75rem;
             background: #f5f5f5;
-            border-radius: 8px;
+            border-radius: 6px;
         }
 
         .offer-amount {
-            font-size: 1.875rem;
+            font-size: 1.75rem;
             font-weight: 900;
             color: #10b981;
-            letter-spacing: -0.02em;
         }
 
         .offer-button {
             background: #000;
             color: white;
-            padding: 0.75rem 1.75rem;
-            border-radius: 12px;
+            padding: 0.7rem 1.5rem;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.9375rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            font-size: 0.875rem;
+            transition: all 0.3s;
         }
 
         .offer-button:hover {
             background: #1a1a1a;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-1px);
         }
 
         .offer-details {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: max-height 0.4s;
         }
 
         .offer.active .offer-details {
-            max-height: 1000px;
+            max-height: 800px;
         }
 
         .offer-content {
-            padding: 0 1.5rem 1.5rem 1.5rem;
+            padding: 0 1.25rem 1.25rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
+            gap: 2rem;
             border-top: 1px solid #f0f0f0;
-            padding-top: 1.5rem;
-            margin-top: 1rem;
-            opacity: 0;
-            transform: translateY(-12px);
-            transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
-        }
-
-        .offer.active .offer-content {
-            opacity: 1;
-            transform: translateY(0);
+            padding-top: 1.25rem;
+            margin-top: 0.5rem;
         }
 
         .offer-content h5 {
-            font-size: 0.9375rem;
+            font-size: 0.875rem;
             font-weight: 800;
-            margin-bottom: 1rem;
-            color: #000;
+            margin-bottom: 0.75rem;
         }
 
         .offer-content ol {
             margin: 0;
-            padding-left: 1.25rem;
+            padding-left: 1.15rem;
         }
 
         .offer-content li {
-            margin-bottom: 0.75rem;
-            font-size: 0.9375rem;
-            line-height: 1.6;
-            color: #404040;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
         }
 
         .offer-content p {
-            font-size: 0.9375rem;
-            line-height: 1.6;
-            color: #404040;
-            margin-bottom: 0.75rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            margin-bottom: 0.5rem;
         }
 
         .summary-box {
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             color: white;
             text-align: center;
-            padding: 2.5rem;
-            border-radius: 20px;
-            margin: 4rem 0;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.2);
         }
 
         .summary-box h3 {
             color: rgba(255, 255, 255, 0.8);
-            margin: 0 0 1rem 0;
-            font-size: 1rem;
+            margin: 0 0 0.75rem 0;
+            font-size: 0.9375rem;
             font-weight: 600;
         }
 
         .summary-amount {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: 900;
-            margin-bottom: 0.5rem;
-            line-height: 1;
+            margin-bottom: 0.35rem;
             background: linear-gradient(135deg, #10b981, #059669);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: -0.04em;
         }
 
         .summary-time {
-            font-size: 1rem;
+            font-size: 0.9375rem;
             color: rgba(255, 255, 255, 0.7);
         }
 
-        /* Mobile responsive */
+        .social-proof {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .social-proof h3 {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        .social-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-stat {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .social-stat-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #10b981;
+            margin-bottom: 0.25rem;
+        }
+
+        .social-stat-label {
+            font-size: 0.8125rem;
+            color: #737373;
+        }
+
+        .faq {
+            margin: 2rem 0;
+        }
+
+        .faq-item {
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            font-size: 0.9375rem;
+            background: white;
+        }
+
+        .faq-question:hover {
+            background: #fafafa;
+        }
+
+        .faq-icon {
+            font-size: 1.125rem;
+            color: #737373;
+            transition: transform 0.25s;
+            margin-left: 0.75rem;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            color: #10b981;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.25rem 1rem;
+            color: #737373;
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #fafafa;
+            border-top: 1px solid #e5e5e5;
+            padding: 2rem 1.5rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .disclaimer {
+            font-size: 0.8125rem;
+            line-height: 1.6;
+            color: #737373;
+        }
+
+        .disclaimer h4 {
+            font-size: 0.9375rem;
+            color: #000;
+            margin-bottom: 0.75rem;
+        }
+
+        .disclaimer p {
+            margin-bottom: 0.75rem;
+        }
+
+        .disclaimer-toggle {
+            background: #000;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin: 1rem auto;
+            display: block;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .disclaimer-toggle:hover {
+            background: #1a1a1a;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2000;
+        }
+
+        .modal-overlay.visible {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal {
+            background: white;
+            border-radius: 12px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            background: white;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #737373;
+            cursor: pointer;
+        }
+
+        .modal-close:hover {
+            color: #000;
+        }
+
+        .modal-content {
+            padding: 1.5rem;
+        }
+
+        .modal-content h4 {
+            font-size: 0.9375rem;
+            margin: 1.25rem 0 0.75rem 0;
+        }
+
+        .modal-content h4:first-child {
+            margin-top: 0;
+        }
+
+        .modal-content p {
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+
         @media (max-width: 768px) {
             article {
                 padding: 2rem 1.25rem;
             }
 
             h1 {
-                font-size: 2.25rem;
-            }
-
-            .lead {
-                font-size: 1.0625rem;
+                font-size: 2rem;
             }
 
             .stats-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 2rem 0;
+                gap: 0;
             }
 
-            .stat::after {
-                display: none;
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid #f0f0f0;
+                padding: 0.75rem;
+            }
+
+            .stat:last-child {
+                border-bottom: none;
             }
 
             .cta-content {
                 grid-template-columns: 1fr;
-                padding: 2.5rem 1.75rem;
-                gap: 2rem;
+                padding: 2rem 1.5rem;
+                gap: 1.5rem;
             }
 
             .cta-logo-section {
@@ -745,23 +889,18 @@
                 justify-content: center;
             }
 
-            .cta-logo-wrapper {
-                width: 80px;
-                height: 80px;
-            }
-
             .cta-headline {
-                font-size: 2rem;
+                font-size: 1.75rem;
             }
 
             .cta-features {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 1rem;
             }
 
             .cta-action-row {
                 flex-direction: column;
-                gap: 1.25rem;
+                gap: 1rem;
                 align-items: stretch;
             }
 
@@ -770,30 +909,33 @@
                 justify-content: center;
             }
 
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .offer-header {
-                grid-template-columns: 28px 1fr auto;
-                padding: 1.25rem;
+                grid-template-columns: 26px 1fr auto;
             }
 
             .offer-meta {
                 flex-direction: column;
                 align-items: flex-end;
-                gap: 0.75rem;
+                gap: 0.5rem;
             }
 
             .offer-content {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
 
-            .summary-amount {
-                font-size: 2.75rem;
+            .social-stats {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <header id="header">
+    <header>
         <div class="header-content">
             <div class="logo">
                 <div class="logo-presented">Presented By</div>
@@ -807,16 +949,14 @@
     </header>
 
     <article>
-        <div class="hero-section">
-            <span class="badge">
-                <span class="live-dot"></span>
-                1,200+ Doing Bonus Arbitrage
-            </span>
-            
-            <h1>Earn $805 in One Hour Through Bonus Arbitrage</h1>
-            
-            <p class="lead">A strategic guide to exploiting company marketing budgets for immediate cash. Used by over 1,200 people to stack signup bonuses from banks and fintech companies.</p>
-        </div>
+        <span class="badge">
+            <span class="live-dot"></span>
+            1,200+ Doing Bonus Arbitrage
+        </span>
+        
+        <h1>Earn $805 in One Hour Through Bonus Arbitrage</h1>
+        
+        <p class="lead">A strategic guide to exploiting company marketing budgets for immediate cash. Used by over 1,200 people to stack signup bonuses from banks and fintech companies.</p>
 
         <div class="stats-grid">
             <div class="stat">
@@ -845,9 +985,7 @@
                     <div class="cta-logo-wrapper">
                         <img src="https://i.imgur.com/dnrNOx3.jpeg" alt="Gemsloot">
                     </div>
-                    <div class="cta-verified">
-                        ✓ Verified
-                    </div>
+                    <div class="cta-verified">✓ Verified</div>
                 </div>
                 
                 <div class="cta-main">
@@ -877,7 +1015,7 @@
                     
                     <div class="cta-action-row">
                         <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="cta-button">
-                            <span class="cta-button-text">Start Earning Now</span>
+                            <span>Start Earning Now</span>
                             <span class="cta-button-arrow">→</span>
                         </a>
                         <div class="cta-note">
@@ -892,7 +1030,48 @@
         
         <p>Bonus arbitrage is straightforward: companies offer cash rewards for new signups that exceed the cost of trying their product. Sometimes they pay you just for signing up, hoping you'll become a long-term customer.</p>
 
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Find Offers</h4>
+                <p>High-value signup bonuses from legitimate companies</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Complete Tasks</h4>
+                <p>Simple requirements like deposits or account setup</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Get Paid</h4>
+                <p>Bonuses tracked and paid through Gemsloot</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>Cash Out</h4>
+                <p>Withdraw via PayPal or crypto</p>
+            </div>
+        </div>
+
+        <div class="key-points">
+            <h3>The Core Strategy</h3>
+            <ul>
+                <li><strong>Find high-value signup bonuses</strong> – Banks and fintech companies offer $50-$500 for opening accounts</li>
+                <li><strong>Complete minimal requirements</strong> – Direct deposit setup, small deposits, or 30-day account holds</li>
+                <li><strong>Collect your bonus</strong> – Get paid through tracking platforms that handle everything</li>
+                <li><strong>Move on or cancel</strong> – Most offers allow account closure after bonuses without penalty</li>
+            </ul>
+        </div>
+
         <p>The key insight: <strong>these aren't "deals"—they're pure profit opportunities</strong>. When a bank pays you $480 to redirect one paycheck, that's free money for 15 minutes of work. When a brokerage pays you $30 for depositing $5, that's a 500% return in days.</p>
+
+        <h2>Why This Works</h2>
+
+        <p><strong>Customer acquisition costs are astronomical.</strong> Banks and fintech companies spend $200-$500 per customer through traditional marketing. It's cheaper to pay you directly.</p>
+
+        <p><strong>They're betting on retention.</strong> Most people forget to cancel or generate revenue through fees and interest. But if you're disciplined, you take the bonus and leave.</p>
+
+        <p><strong>Competition drives offers higher.</strong> As new companies launch, signup bonuses increase. This creates perfect arbitrage opportunities.</p>
 
         <h2 id="offers">The 6 Best Offers Right Now</h2>
 
@@ -1103,20 +1282,157 @@
             <div class="summary-amount">$805</div>
             <div class="summary-time">≈ 1 hour 15 minutes active work</div>
         </div>
+
+        <div class="social-proof">
+            <h3>Join 1,200+ People Who Have Signed Up</h3>
+            <p>Our community members are actively working through these offers.</p>
+            <div class="social-stats">
+                <div class="social-stat">
+                    <div class="social-stat-number">1,200+</div>
+                    <div class="social-stat-label">Community Signups</div>
+                </div>
+                <div class="social-stat">
+                    <div class="social-stat-number">$805</div>
+                    <div class="social-stat-label">Total Potential Earnings</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="faq">Frequently Asked Questions</h2>
+        
+        <div class="faq">
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Is this actually legal?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes. These are official promotional offers from regulated financial institutions. You're doing exactly what they want—trying their service. Nothing about this violates laws or terms of service.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>How long does it take to get paid?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Most bonuses credit to your Gemsloot account within a few days after completing requirements. First-time Gemsloot withdrawals are manually reviewed (usually within 24 hours). After that, crypto withdrawals are typically instant and PayPal takes a few hours.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Do I need to keep the accounts open?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        It depends on the offer. Some (like HSBC) require 30 days. Others (like SoFi Plus) can be cancelled immediately. Each offer has specific requirements detailed in the instructions.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>What if I don't have direct deposit?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Start with offers that don't require it: SoFi Plus ($20 profit, 5 min), Moomoo ($25 profit), or WeBull ($20 profit). These require only small deposits or subscriptions.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>Will this affect my credit score?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Opening checking or savings accounts typically does not affect your credit score. Brokerage accounts also don't impact credit. Some offers may do a soft inquiry (doesn't affect score) or hard inquiry (minimal temporary impact).
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Withdrawing Your Money</h2>
+
+        <div class="callout">
+            <p><strong>Minimums:</strong> $0.50 for crypto, $3 for PayPal</p>
+            <p><strong>First withdrawal:</strong> Manually reviewed (usually within 24 hours) for security.</p>
+            <p><strong>Speed:</strong> Crypto payouts are typically instant, PayPal within a few hours. Larger withdrawal amounts may take additional time for verification.</p>
+            <p><strong>Note:</strong> The Gemsloot team is based in the EU and operates during EU business hours. Support responses and manual reviews follow this schedule.</p>
+        </div>
+
+        <h2>Important Considerations</h2>
+
+        <p><strong>This is legitimate.</strong> These are official promotional offers from regulated financial institutions.</p>
+
+        <p><strong>Stay organized.</strong> Track which offers you've completed, when you can close accounts, and expected payout dates. Set calendar reminders.</p>
+
+        <p><strong>Verify current terms.</strong> Offers change. Always check company websites for the latest requirements. What we document reflects current offers, but companies can modify terms.</p>
+
+        <p><strong>Don't abuse the system.</strong> Complete each offer once according to terms. Multiple accounts using the same identity will lead to bonus clawbacks and bans.</p>
     </article>
 
-    <script>
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        }, { passive: true });
+    <footer>
+        <div class="footer-content">
+            <div class="disclaimer">
+                <h4>Required Legal Disclosures</h4>
+                <p><strong>Affiliate Disclosure:</strong> This site contains affiliate links. We earn commissions at no extra cost to you when you sign up through our links.</p>
+                <p><strong>Earnings Disclaimer:</strong> Amounts mentioned represent potential earnings based on current offers. Individual results vary based on eligibility, effort, timing, and location. Offers subject to change.</p>
+                <p><strong>Not Financial Advice:</strong> This is educational content only. Independently verify all offer terms and consult professionals before making financial decisions.</p>
+                <p><strong>Your Responsibility:</strong> You accept full responsibility for your actions and outcomes. We are not liable for losses, damages, or issues arising from use of these strategies.</p>
+                
+                <button class="disclaimer-toggle" onclick="openDisclaimerModal()">View Full Legal Disclaimer</button>
 
-        // Toggle offers with smooth animation
+                <p style="text-align: center; margin-top: 1.5rem; color: #9ca3af;">© 2025 Side Hustle Gold. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="disclaimerModal" onclick="closeDisclaimerModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3>Complete Legal Disclosure</h3>
+                <button class="modal-close" onclick="closeDisclaimerModal()">&times;</button>
+            </div>
+            <div class="modal-content">
+                <h4>No Guarantees</h4>
+                <p>Past performance does not guarantee future results. The offers and bonuses mentioned are subject to change without notice. Companies may modify, suspend, or terminate promotional offers at any time.</p>
+                
+                <h4>Eligibility Requirements</h4>
+                <p>Not all offers are available in all locations. You must meet each company's eligibility requirements, which may include age, residency, credit checks, and employment verification.</p>
+                
+                <h4>Tax Implications</h4>
+                <p>Bonuses and rewards may be considered taxable income. Consult a tax professional regarding your specific situation and reporting requirements.</p>
+                
+                <h4>Account Terms</h4>
+                <p>You are responsible for reading and complying with each company's terms of service. Violation of terms may result in bonus forfeiture, account closure, or legal action.</p>
+                
+                <h4>Risk Disclosure</h4>
+                <p>Opening multiple financial accounts may impact your credit score, banking relationships, and financial standing. Consider the potential consequences before proceeding.</p>
+                
+                <h4>Third-Party Platforms</h4>
+                <p>Gemsloot and other tracking platforms are independent third parties. We are not responsible for their policies, practices, payment processing, or any issues that arise from using their services.</p>
+                
+                <h4>Information Accuracy</h4>
+                <p>While we strive for accuracy, information may be outdated or incorrect. Always verify current offer terms directly with the financial institution before participating.</p>
+                
+                <h4>No Professional Relationship</h4>
+                <p>Nothing on this site creates an attorney-client, financial advisor-client, or any other professional relationship. Seek professional advice for your specific circumstances.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
         function toggleOffer(header) {
             const offer = header.parentElement;
             const wasActive = offer.classList.contains('active');
@@ -1132,48 +1448,39 @@
             }
         }
 
-        // Prevent button clicks from toggling
+        function toggleFaq(item) {
+            const wasActive = item.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(i => {
+                if (i !== item) i.classList.remove('active');
+            });
+            
+            if (!wasActive) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        }
+
+        function openDisclaimerModal() {
+            document.getElementById('disclaimerModal').classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDisclaimerModal(event) {
+            if (!event || event.target.id === 'disclaimerModal') {
+                document.getElementById('disclaimerModal').classList.remove('visible');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeDisclaimerModal();
+        });
+
         document.querySelectorAll('.offer-button').forEach(btn => {
             btn.addEventListener('click', e => e.stopPropagation());
         });
-
-        // Enhanced touch feedback
-        if ('ontouchstart' in window) {
-            const addTouchFeedback = (selector) => {
-                document.querySelectorAll(selector).forEach(el => {
-                    el.addEventListener('touchstart', function() {
-                        this.style.transition = 'transform 0.1s cubic-bezier(0.4, 0, 0.2, 1)';
-                        this.style.transform = 'scale(0.98)';
-                    }, { passive: true });
-                    
-                    el.addEventListener('touchend', function() {
-                        this.style.transform = 'scale(1)';
-                    }, { passive: true });
-                });
-            };
-
-            addTouchFeedback('.offer-button');
-            addTouchFeedback('.cta-button');
-        }
-
-        // Intersection Observer for fade-in animations
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.offer, .callout').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-                observer.observe(el);
-            });
-        }
     </script>
 </body>
 </html>
