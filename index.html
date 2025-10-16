@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The viewport meta tag has been intentionally removed to enable pinch-to-zoom on mobile as requested -->
     <title>The Ultimate Sweepstakes Farming Guide by Side Hustle Gold</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -11,8 +11,8 @@
             font-family: 'Inter', sans-serif;
             background-color: #f7f8fc;
         }
-        .shg-brand {
-            font-weight: 800;
+        .shg-brand-sub {
+            font-weight: 700;
             background: linear-gradient(to right, #8a2be2, #c77dff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -35,12 +35,13 @@
             color: #312e81;
         }
         .signup-btn {
-            background: linear-gradient(to right, #16a34a, #15803d);
+            background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
             color: white;
-            padding: 0.75rem 1.5rem;
+            padding: 0.75rem 1.25rem;
             border-radius: 0.5rem;
             text-align: center;
             font-weight: 700;
+            line-height: 1;
             transition: all 0.2s ease-in-out;
             display: flex;
             align-items: center;
@@ -50,10 +51,37 @@
         }
         .signup-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgb(22 163 74 / 25%), 0 4px 6px -4px rgb(22 163 74 / 25%);
+            box-shadow: 0 10px 15px -3px rgb(22 163 74 / 30%), 0 4px 6px -4px rgb(22 163 74 / 30%);
         }
-        .pro-tip-cta {
-             background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+        .table-container {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            background-color: white;
+        }
+        table {
+            min-width: 1200px;
+        }
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: #475569;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+        th, td {
+            white-space: nowrap;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        tbody tr:hover {
+            background-color: #fcfcff;
         }
     </style>
 </head>
@@ -63,13 +91,13 @@
     <header class="bg-white/95 backdrop-blur-md sticky top-0 z-20 border-b border-slate-200">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-20">
-                <a href="https://www.sidehustlegold.org/" target="_blank" class="transition-transform duration-200 hover:scale-105">
-                    <span class="shg-brand text-2xl font-extrabold block">Side Hustle Gold</span>
-                    <span class="text-xs font-semibold text-slate-500 hidden sm:block">presents The Ultimate Sweepstakes Farming Guide</span>
+                <a href="#" id="home-link" class="cursor-pointer group">
+                    <h1 class="text-xl sm:text-2xl font-extrabold text-slate-900">The Ultimate Sweeps Farming Guide</h1>
+                    <span class="text-xs font-semibold text-slate-500 block">Presented by <span class="shg-brand-sub group-hover:underline">Side Hustle Gold</span></span>
                 </a>
                 <nav class="flex items-center space-x-1 sm:space-x-2">
-                    <a id="nav-daily" class="nav-link active text-xs sm:text-base">Daily Method</a>
-                    <a id="nav-washing" class="nav-link text-xs sm:text-base">Washing Strategy</a>
+                    <a id="nav-daily" class="nav-link active text-xs sm:text-base">Daily Bonus Method</a>
+                    <a id="nav-washing" class="nav-link text-xs sm:text-base">Washing Promos & Sales</a>
                 </nav>
             </div>
         </div>
@@ -84,69 +112,66 @@
     
         <!-- Page 1: Daily Bonus List (Homepage) -->
         <div id="page-daily">
-            <!-- Hero Section -->
-            <section class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-3">The Daily Bonus Method</h1>
-                <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">Your 10-minute daily plan to consistently earn ~$400/month in cash with minimal effort.</p>
-            </section>
-
-             <!-- Intro Guide Content -->
-            <section class="max-w-4xl mx-auto bg-white rounded-lg p-6 md:p-8 mb-12 border border-slate-200">
-                 <h2 class="text-2xl font-bold text-slate-800 mb-4">Easy Instructions for Busy People</h2>
-                 <ol class="list-decimal list-inside space-y-3 text-slate-600">
-                    <li><span class="font-semibold text-slate-800">One-Time Setup:</span> Sign up for the websites below (<span class="italic">30 min</span>) and verify yourself (<span class="italic">~2 hours</span>). This initial grind is the "hardest" part.</li>
-                    <li><span class="font-semibold text-slate-800">Daily Collection:</span> Every night, log into each site and click the daily bonus button. That's it.</li>
-                    <li><span class="font-semibold text-slate-800">"Wash" Your Coins:</span> Once you meet the minimum redemption, you must "wash" your Sweeps Coins (SC) by playing them at least once. Use the high-RTP games listed.</li>
-                    <li><span class="font-semibold text-slate-800">Redeem to Your Bank:</span> Once washed, redeem your SC for cash. You will likely lose ~10% during the wash, but this is normal and is still free money.</li>
-                </ol>
-            </section>
-            
-            <!-- Pro Tip CTA -->
-            <section id="pro-tip-cta-daily" class="pro-tip-cta rounded-lg p-6 md:p-8 my-12 max-w-4xl mx-auto text-white text-center cursor-pointer transform hover:scale-105 transition-transform duration-300">
-                <h2 class="text-2xl font-bold">Ready for the ~$1,500+/Month Strategy?</h2>
-                <p class="mt-2 mb-4">Daily bonuses are your foundation. The real money comes from the <span class="font-bold">Washing Promos & Sales Strategy</span>. This is where you can 10x your earnings.</p>
-                <span class="inline-block bg-white text-indigo-700 font-semibold py-2 px-5 rounded-md shadow-lg">Learn the Washing Strategy &rarr;</span>
-            </section>
-
-            <!-- Main Casino "Card" List -->
-            <div id="daily-bonus-card-list" class="space-y-6">
-                <!-- Casino cards will be dynamically inserted here -->
+             <!-- Main Casino Table -->
+            <div class="table-container shadow-md">
+                 <div class="p-6 border-b border-slate-200 bg-slate-50 rounded-t-lg">
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">The Ultimate Guide for Busy People</h2>
+                    <p class="text-slate-600 max-w-4xl text-sm">
+                        This is the definitive guide for anyone wanting to make almost **$400+ a month consistently** with less than 10 minutes of effort each night. ALL links listed here have been vetted for: **1. Easy and painless sign-up. 2. Easy and painless verification. 3. Easy and painless daily collection.** The real money (**~$1,500+/month**) comes from the <a href="#" id="cta-link-1" class="font-bold text-indigo-600 hover:underline">Washing Promos & Sales Strategy</a>.
+                    </p>
+                    <h3 class="text-lg font-bold text-slate-700 mt-4 mb-2">Easy Instructions to Get Started:</h3>
+                    <ol class="list-decimal list-inside text-sm text-slate-600 grid grid-cols-1 md:grid-cols-2 gap-x-6">
+                        <li>**One-Time Setup:** Sign up for the websites below (~30 min) and verify yourself (~2 hours).</li>
+                        <li>**Daily Collection:** Every night, log into each site and click the daily bonus button.</li>
+                        <li>**"Wash" Your Coins:** When you hit the minimum, play your SC 1x on the recommended games.</li>
+                        <li>**Redeem to Your Bank:** Once washed, redeem your SC for cash. It's that simple.</li>
+                    </ol>
+                </div>
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th class="text-center">Sign Up</th>
+                            <th>Avg. Daily SC</th>
+                            <th>Notes</th>
+                            <th class="bg-indigo-50 text-indigo-800">Welcome Offer (For Washing)</th>
+                            <th>Best Wash Game</th>
+                            <th>Min. Redeem</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daily-bonus-table-body">
+                        <!-- Data populated by script -->
+                    </tbody>
+                </table>
             </div>
         </div>
 
         <!-- Page 2: Washing Strategy -->
         <div id="page-washing" style="display: none;">
             <!-- Hero Section -->
-            <section class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-3">The ~$1,500+/Month Washing Strategy</h1>
+            <section class="text-center mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-3">Washing Promos & Sales (~$1,500+/Month)</h1>
                 <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">This is how you turn a side hustle into a serious income stream: buy discounted promos and cash out the difference as pure profit.</p>
             </section>
 
-            <!-- Washing Explanation -->
-            <section class="max-w-4xl mx-auto bg-white rounded-lg p-6 md:p-8 mb-12 border border-slate-200">
-                 <h2 class="text-2xl font-bold text-slate-800 mb-4">What is "Promo Washing"? It's Literally Free Money.</h2>
-                 <p class="mb-4 text-slate-700">You'll notice many sites offer welcome packages and promotional sales with discounted Sweeps Coins (SC). For example: pay $40 to receive $80 in SC. By purchasing these offers and "washing" them, you are capturing that discounted difference as pure profit.</p>
-                 <p class="text-slate-700">If you want to make more money—<strong class="text-slate-900">upwards of $1,500+ per month on average</strong>—this is the method. It's really easy.</p>
-                
-                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200"><h3 class="font-bold text-slate-800 mb-2">1. Choose an Offer</h3><p class="text-sm text-slate-600">Target offers with discounts of 15%+. The welcome bonuses below are the most profitable place to start.</p></div>
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200"><h3 class="font-bold text-slate-800 mb-2">2. Purchase the Offer</h3><p class="text-sm text-slate-600">You'll receive the discounted SC. For example, you get $80 in SC for only $40.</p></div>
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200"><h3 class="font-bold text-slate-800 mb-2">3. Play Through (Wash)</h3><p class="text-sm text-slate-600">Sites require you play the SC 1x before redeeming. Use the recommended High-RTP games.</p></div>
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200"><h3 class="font-bold text-slate-800 mb-2">4. Understand RTP</h3><p class="text-sm text-slate-600">RTP (Return-to-Player) is key. Blackjack with Basic Strategy is ~99.5%, making it the best washing tool.</p></div>
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200"><h3 class="font-bold text-slate-800 mb-2">5. Calculate Your Profit</h3><p class="text-sm text-slate-600">If you keep 90% of $80 SC, that's $72. Since it cost you $40, you made a <strong class="text-green-700">$32 profit</strong> in ~30 mins.</p></div>
-                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200"><h3 class="font-bold text-slate-800 mb-2">6. Rinse and Repeat</h3><p class="text-sm text-slate-600">Consistently wash promos to earn upwards of $1,500+ per month.</p></div>
-                </div>
-            </section>
-            
-            <!-- Washing Promos "Card" List -->
-            <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
-                <div class="p-6 border-b border-slate-200">
+            <!-- Washing Promos Table -->
+            <div class="table-container shadow-md">
+                <div class="p-6 border-b border-slate-200 bg-slate-50 rounded-t-lg">
                     <h3 class="text-xl font-bold text-slate-800">Best Welcome Bonuses to Wash for Immediate Profit</h3>
                     <p class="text-slate-600 mt-1">Completing these offers will net an <span class="font-bold text-green-700">instant ~$617 profit</span> (<span class="italic">~$555 after a 90% wash retention</span>). I've personally made over <span class="font-bold text-blue-600">$5,800</span> from these sites.</p>
                 </div>
-                <div id="washing-promo-card-list" class="divide-y divide-slate-200">
-                    <!-- Washing cards will be dynamically inserted here -->
-                </div>
+                <table class="w-full text-sm">
+                     <thead>
+                        <tr>
+                            <th>Name & Sign Up</th>
+                            <th class="bg-indigo-50 text-indigo-800">Initial Welcome Offer & Profit</th>
+                            <th>Highest-RTP Game (Best Wash Method)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="washing-promo-table-body">
+                        <!-- Data populated by script -->
+                    </tbody>
+                </table>
             </div>
         </div>
         
@@ -203,7 +228,8 @@
         const navWashing = document.getElementById('nav-washing');
         const pageDaily = document.getElementById('page-daily');
         const pageWashing = document.getElementById('page-washing');
-        const proTipCta = document.getElementById('pro-tip-cta-daily');
+        const homeLink = document.getElementById('home-link');
+        const ctaLink1 = document.getElementById('cta-link-1');
 
         function showPage(pageToShow) {
             pageDaily.style.display = 'none';
@@ -223,90 +249,54 @@
 
         navDaily.addEventListener('click', () => showPage('daily'));
         navWashing.addEventListener('click', () => showPage('washing'));
-        proTipCta.addEventListener('click', () => showPage('washing'));
+        homeLink.addEventListener('click', (e) => {
+             e.preventDefault();
+             showPage('daily');
+        });
+        ctaLink1.addEventListener('click', (e) => {
+            e.preventDefault();
+            showPage('washing');
+        });
 
-        // --- CARD POPULATION ---
-        function populateDailyBonusCards() {
-            const cardList = document.getElementById('daily-bonus-card-list');
-            cardList.innerHTML = '';
+        // --- POPULATION SCRIPTS ---
+        function populateDailyBonusTable() {
+            const tableBody = document.getElementById('daily-bonus-table-body');
+            tableBody.innerHTML = '';
             dailyBonusData.forEach(casino => {
-                const card = document.createElement('div');
-                card.className = 'bg-white rounded-lg border border-slate-200 overflow-hidden';
-                card.innerHTML = `
-                    <div class="p-4 grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
-                        <!-- Left Column: Brand & CTA -->
-                        <div class="md:col-span-1 flex flex-col items-start justify-between h-full">
-                            <h3 class="text-xl font-bold text-slate-800">${casino.name}</h3>
-                            <p class="text-sm text-slate-500 mt-1">Avg. Daily Bonus: <span class="font-bold text-green-600">${casino.avgDaily}</span></p>
-                            <a href="${casino.signup}" class="signup-btn w-full mt-4" target="_blank" rel="noopener noreferrer">
-                                Sign Up & Claim Bonus
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                            </a>
-                        </div>
-                        <!-- Right Column: Details -->
-                        <div class="md:col-span-2 text-sm space-y-3 pt-2">
-                             <div class="flex">
-                                <strong class="w-28 text-slate-500 flex-shrink-0">Notes:</strong>
-                                <span class="text-slate-700">${casino.notes}</span>
-                            </div>
-                             <div class="flex">
-                                <strong class="w-28 text-slate-500 flex-shrink-0">Wash Games:</strong>
-                                <span class="text-slate-700">${casino.games}</span>
-                            </div>
-                              <div class="flex">
-                                <strong class="w-28 text-slate-500 flex-shrink-0">Min. Redeem:</strong>
-                                <span class="text-slate-700">${casino.redemption}</span>
-                            </div>
-                        </div>
-                    </div>
-                    ${casino.bonus ? `
-                    <div class="bg-indigo-50 border-t border-indigo-200 p-4">
-                        <h4 class="font-bold text-indigo-800 flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            Welcome Offer to Wash
-                        </h4>
-                        <div class="text-xs text-indigo-700 mt-2 pl-7">${casino.bonus}</div>
-                    </div>
-                    ` : ''}
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="font-semibold text-slate-900">${casino.name}</td>
+                    <td class="text-center"><a href="${casino.signup}" class="signup-btn" target="_blank" rel="noopener noreferrer">Sign Up</a></td>
+                    <td class="font-medium text-center">${casino.avgDaily}</td>
+                    <td class="!whitespace-normal text-slate-600">${casino.notes}</td>
+                    <td class="!whitespace-normal text-xs bg-indigo-50 text-indigo-700">${casino.bonus || 'N/A'}</td>
+                    <td class="!whitespace-normal text-slate-600">${casino.games}</td>
+                    <td class="text-center">${casino.redemption}</td>
                 `;
-                cardList.appendChild(card);
+                tableBody.appendChild(row);
             });
         }
         
-        function populateWashingPromoCards() {
-            const cardList = document.getElementById('washing-promo-card-list');
-            cardList.innerHTML = '';
+        function populateWashingPromoTable() {
+            const tableBody = document.getElementById('washing-promo-table-body');
+            tableBody.innerHTML = '';
             washingPromoData.forEach(promo => {
-                const card = document.createElement('div');
-                card.className = 'p-4 grid grid-cols-1 md:grid-cols-3 gap-4 items-start';
-                card.innerHTML = `
-                    <div class="md:col-span-1">
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">${promo.name}</h3>
-                        <a href="${promo.signup}" class="signup-btn w-full" target="_blank" rel="noopener noreferrer">
-                           Go to Offer
-                           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-                        </a>
-                    </div>
-                    <div class="md:col-span-2 text-sm space-y-3">
-                         <div>
-                            <strong class="block text-slate-500">Initial Welcome Offer & Profit:</strong>
-                            <span class="text-slate-700">${promo.offer}</span>
-                        </div>
-                         <div>
-                            <strong class="block text-slate-500">Highest-RTP Game (Best Wash Method):</strong>
-                            <span class="text-slate-700">${promo.games}</span>
-                        </div>
-                    </div>
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                     <td class="font-semibold text-slate-900">${promo.name}</td>
+                    <td class="!whitespace-normal bg-indigo-50 text-indigo-700">${promo.offer}</td>
+                    <td class="!whitespace-normal text-slate-600">${promo.games}</td>
+                    <td class="text-center"><a href="${promo.signup}" class="signup-btn" target="_blank" rel="noopener noreferrer">Sign Up</a></td>
                 `;
-                cardList.appendChild(card);
+                tableBody.appendChild(row);
             });
         }
 
         // Initial population
         document.addEventListener('DOMContentLoaded', () => {
-            populateDailyBonusCards();
-            populateWashingPromoCards();
-            showPage('daily'); // Default to daily page
+            populateDailyBonusTable();
+            populateWashingPromoTable();
+            showPage('daily');
         });
     </script>
 </body>
