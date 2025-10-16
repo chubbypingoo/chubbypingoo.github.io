@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Bonus Arbitrage Strategy: A Complete Guide</title>
+    <title>Bonus Arbitrage Strategy | Earn $805 in 1 Hour</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -19,29 +19,35 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
+            color: #0a0a0a;
             background: #ffffff;
             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Header */
+        /* Header - Apple-inspired minimalism */
         header {
-            background: #ffffff;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 0.85rem 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 1rem 0;
             position: sticky;
             top: 0;
-            z-index: 100;
-            backdrop-filter: blur(8px);
-            background: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        header.scrolled {
+            padding: 0.7rem 0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
         }
 
         .header-content {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 1.25rem;
+            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -54,74 +60,65 @@
         }
 
         .logo-presented {
-            font-size: 0.65rem;
-            font-weight: 500;
-            color: #9ca3af;
+            font-size: 0.625rem;
+            font-weight: 600;
+            color: #8b8b8b;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.12em;
         }
 
         .logo-name {
-            font-size: 0.95rem;
+            font-size: 1.05rem;
             font-weight: 700;
-            color: #1a1a1a;
+            color: #000;
+            letter-spacing: -0.02em;
         }
 
         .header-links {
             display: flex;
-            gap: 1.25rem;
+            gap: 2rem;
             align-items: center;
         }
 
         .header-links a {
-            color: #6b7280;
+            color: #1d1d1f;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.875rem;
             font-weight: 500;
-            transition: color 0.2s;
+            transition: all 0.2s;
             position: relative;
         }
 
-        .header-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #10b981;
-            transform: scaleX(0);
-            transition: transform 0.2s;
-        }
-
         .header-links a:hover {
-            color: #1a1a1a;
+            color: #10b981;
         }
 
-        .header-links a:hover::after {
-            transform: scaleX(1);
-        }
-
-        /* Main Content */
+        /* Hero Section */
         article {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 2.5rem 1.25rem 5rem;
+            padding: 3rem 2rem 6rem;
         }
 
-        /* Badge */
+        .hero-section {
+            padding: 4rem 0 3rem;
+            position: relative;
+        }
+
         .badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: #10b981;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
-            padding: 0.3rem 0.75rem;
-            border-radius: 20px;
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
             font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
             letter-spacing: 0.02em;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .live-dot {
@@ -129,809 +126,15 @@
             height: 8px;
             background: #fff;
             border-radius: 50%;
-            animation: livePulse 2s ease-in-out infinite;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
 
-        @keyframes livePulse {
-            0%, 100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.4;
-                transform: scale(0.85);
-            }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.9); }
         }
 
-        /* Typography */
-        h1 {
-            font-size: 2.75rem;
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 0.85rem;
-            letter-spacing: -0.025em;
-        }
-
-        .lead {
-            font-size: 1.2rem;
-            color: #4b5563;
-            line-height: 1.5;
-            margin-bottom: 1.75rem;
-        }
-
-        h2 {
-            font-size: 1.85rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 3rem 0 1rem 0;
-            letter-spacing: -0.02em;
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin: 1.75rem 0 0.65rem 0;
-        }
-
-        p {
-            margin-bottom: 1.15rem;
-            font-size: 1.025rem;
-            line-height: 1.65;
-            color: #374151;
-        }
-
-        strong {
-            font-weight: 600;
-            color: #1a1a1a;
-        }
-
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0;
-            margin: 2rem 0;
-            padding: 1.75rem 0;
-            border-top: 1px solid #e5e7eb;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .stat {
-            text-align: center;
-            padding: 0 1.25rem;
-            border-right: 1px solid #f3f4f6;
-        }
-
-        .stat:last-child {
-            border-right: none;
-        }
-
-        .stat-number {
-            font-size: 1.85rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 0.2rem;
-        }
-
-        .stat-label {
-            font-size: 0.825rem;
-            color: #6b7280;
-            font-weight: 500;
-        }
-
-        /* Callout Box */
-        .callout {
-            background: #f9fafb;
-            border-left: 3px solid #1a1a1a;
-            padding: 1.5rem;
-            margin: 1.75rem 0;
-            border-radius: 0 4px 4px 0;
-            transition: all 0.2s;
-        }
-
-        .callout:hover {
-            background: #f5f6f7;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        }
-
-        .callout p {
-            margin-bottom: 0.75rem;
-        }
-
-        .callout p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* WOW CTA Card */
-        .cta-card {
-            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
-            border-radius: 16px;
-            margin: 2.5rem 0;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
-            position: relative;
-        }
-
-        .cta-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .cta-content {
-            position: relative;
-            padding: 2.5rem 2rem;
-            text-align: center;
-        }
-
-        .cta-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 0.4rem 0.9rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 1.25rem;
-            letter-spacing: 0.02em;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .cta-badge-icon {
-            width: 16px;
-            height: 16px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.65rem;
-        }
-
-        .cta-headline {
-            font-size: 2rem;
-            font-weight: 800;
-            color: white;
-            line-height: 1.2;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.02em;
-        }
-
-        .cta-subheadline {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.95);
-            line-height: 1.5;
-            margin-bottom: 2rem;
-            font-weight: 500;
-        }
-
-        .cta-trust-line {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .cta-trust-line svg {
-            width: 18px;
-            height: 18px;
-            fill: white;
-        }
-
-        .cta-button-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #059669;
-            padding: 1.1rem 3rem;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.05rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(16, 185, 129, 0.1);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .cta-button:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-button:active {
-            transform: translateY(0);
-        }
-
-        .cta-button span {
-            position: relative;
-            z-index: 1;
-        }
-
-        .cta-note {
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.85);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .cta-note code {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.25rem 0.6rem;
-            border-radius: 4px;
-            font-family: 'SF Mono', 'Monaco', 'Consolas', monospace;
-            color: white;
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 0.05em;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        /* Steps Grid */
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.25rem;
-            margin: 2rem 0;
-        }
-
-        .step {
-            text-align: center;
-            padding: 1.35rem 1rem;
-            background: #f9fafb;
-            border-radius: 6px;
-            transition: all 0.2s;
-            border: 1px solid transparent;
-        }
-
-        .step:hover {
-            background: white;
-            border-color: #e5e7eb;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-        }
-
-        .step-number {
-            width: 36px;
-            height: 36px;
-            background: #1a1a1a;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 0.85rem;
-            font-weight: 700;
-            font-size: 0.95rem;
-            transition: transform 0.2s;
-        }
-
-        .step:hover .step-number {
-            transform: scale(1.1);
-        }
-
-        .step h4 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 0.4rem;
-        }
-
-        .step p {
-            font-size: 0.85rem;
-            color: #6b7280;
-            margin: 0;
-            line-height: 1.4;
-        }
-
-        /* Key Points */
-        .key-points {
-            background: #fffbeb;
-            border-left: 3px solid #f59e0b;
-            padding: 1.5rem;
-            margin: 1.75rem 0;
-            border-radius: 0 4px 4px 0;
-            transition: all 0.2s;
-        }
-
-        .key-points:hover {
-            background: #fef9e6;
-            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.08);
-        }
-
-        .key-points h3 {
-            margin-top: 0;
-            font-size: 1.1rem;
-        }
-
-        .key-points ul {
-            margin: 0.85rem 0 0 1.35rem;
-        }
-
-        .key-points li {
-            margin-bottom: 0.65rem;
-            font-size: 0.95rem;
-            color: #374151;
-        }
-
-        /* Offer Card */
-        .offer {
-            background: white;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            margin-bottom: 1.25rem;
-            overflow: hidden;
-            transition: all 0.2s;
-            position: relative;
-        }
-
-        .offer::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: #10b981;
-            transform: scaleY(0);
-            transition: transform 0.2s;
-        }
-
-        .offer:hover::after {
-            transform: scaleY(1);
-        }
-
-        .offer:hover {
-            border-color: #d1d5db;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        }
-
-        .offer.active {
-            border-color: #10b981;
-            box-shadow: 0 3px 12px rgba(16, 185, 129, 0.15);
-        }
-
-        .offer.active::after {
-            transform: scaleY(1);
-        }
-
-        .offer-header {
-            padding: 1.15rem;
-            cursor: pointer;
-            display: grid;
-            grid-template-columns: 24px 1fr auto auto;
-            gap: 0.95rem;
-            align-items: center;
-            background: white;
-            transition: background 0.15s;
-            position: relative;
-        }
-
-        .offer-header:hover {
-            background: #fafafa;
-        }
-
-        .offer-header:active {
-            background: #f5f5f5;
-        }
-
-        .offer-icon {
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.65rem;
-            color: #6b7280;
-            transition: all 0.25s;
-            flex-shrink: 0;
-        }
-
-        .offer-icon::before {
-            content: '▶';
-        }
-
-        .offer.active .offer-icon {
-            color: #10b981;
-            transform: rotate(90deg);
-        }
-
-        .offer-name h4 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin: 0 0 0.15rem 0;
-            line-height: 1.2;
-        }
-
-        .offer-name p {
-            font-size: 0.8rem;
-            color: #6b7280;
-            margin: 0;
-            line-height: 1.3;
-        }
-
-        .offer-meta {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .offer-time {
-            font-size: 0.75rem;
-            color: #6b7280;
-            font-weight: 500;
-            white-space: nowrap;
-            padding: 0.3rem 0.65rem;
-            background: #f3f4f6;
-            border-radius: 4px;
-        }
-
-        .offer-amount {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: #10b981;
-            white-space: nowrap;
-            text-shadow: 0 1px 2px rgba(16, 185, 129, 0.2);
-        }
-
-        .offer-button {
-            background: #1a1a1a;
-            color: white;
-            padding: 0.6rem 1.35rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            white-space: nowrap;
-            transition: all 0.2s;
-        }
-
-        .offer-button:hover {
-            background: #374151;
-            transform: translateY(-1px);
-        }
-
-        .offer-button:active {
-            transform: translateY(0);
-        }
-
-        .offer-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .offer.active .offer-details {
-            max-height: 800px;
-        }
-
-        .offer-content {
-            padding: 0 1.15rem 1.15rem 1.15rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            border-top: 1px solid #f3f4f6;
-            padding-top: 1.15rem;
-            margin-top: 0.5rem;
-            opacity: 0;
-            transform: translateY(-8px);
-            transition: opacity 0.25s ease 0.08s, transform 0.25s ease 0.08s;
-        }
-
-        .offer.active .offer-content {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .offer-content h5 {
-            font-size: 0.875rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: #1a1a1a;
-        }
-
-        .offer-content ol {
-            margin: 0;
-            padding-left: 1.15rem;
-        }
-
-        .offer-content li {
-            margin-bottom: 0.6rem;
-            font-size: 0.875rem;
-            line-height: 1.5;
-            color: #374151;
-        }
-
-        .offer-content li:last-child {
-            margin-bottom: 0;
-        }
-
-        .offer-content p {
-            font-size: 0.875rem;
-            line-height: 1.5;
-            color: #374151;
-            margin-bottom: 0.65rem;
-        }
-
-        .offer-content p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Summary Box */
-        .summary-box {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 2.5rem 0;
-            border: 1px solid #333;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-        }
-
-        .summary-box h3 {
-            color: white;
-            margin: 0 0 0.75rem 0;
-            font-size: 0.95rem;
-            font-weight: 600;
-            opacity: 0.8;
-        }
-
-        .summary-amount {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.25rem;
-            line-height: 1;
-            background: linear-gradient(135deg, #10b981, #059669);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .summary-time {
-            font-size: 0.875rem;
-            opacity: 0.7;
-        }
-
-        /* Social Proof */
-        .social-proof {
-            background: #f0fdf4;
-            border-left: 3px solid #10b981;
-            padding: 1.75rem;
-            margin: 2.5rem 0;
-            border-radius: 0 6px 6px 0;
-            transition: all 0.2s;
-        }
-
-        .social-proof:hover {
-            background: #ecfdf5;
-            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.08);
-        }
-
-        .social-proof h3 {
-            margin-top: 0;
-            font-size: 1.25rem;
-        }
-
-        .social-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.25rem;
-            margin-top: 1.35rem;
-        }
-
-        .social-stat {
-            text-align: center;
-            padding: 1.15rem;
-            background: white;
-            border-radius: 6px;
-            transition: all 0.2s;
-            border: 1px solid transparent;
-        }
-
-        .social-stat:hover {
-            border-color: #10b981;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
-        }
-
-        .social-stat-number {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: #10b981;
-            margin-bottom: 0.2rem;
-        }
-
-        .social-stat-label {
-            font-size: 0.8rem;
-            color: #6b7280;
-        }
-
-        /* FAQ */
-        .faq {
-            margin: 2.5rem 0;
-        }
-
-        .faq-item {
-            border: 1px solid #e5e7eb;
-            border-radius: 6px;
-            margin-bottom: 0.65rem;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 1.05rem 1.15rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            font-size: 0.95rem;
-            background: white;
-            transition: background 0.15s;
-        }
-
-        .faq-question:hover {
-            background: #f9fafb;
-        }
-
-        .faq-icon {
-            font-size: 1.15rem;
-            color: #6b7280;
-            transition: transform 0.25s;
-            flex-shrink: 0;
-            margin-left: 0.75rem;
-        }
-
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-            color: #10b981;
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 350px;
-        }
-
-        .faq-answer-content {
-            padding: 0 1.15rem 1.05rem;
-            color: #6b7280;
-            font-size: 0.875rem;
-            line-height: 1.55;
-        }
-
-        /* Footer */
-        footer {
-            background: #f9fafb;
-            border-top: 1px solid #e5e7eb;
-            padding: 2.5rem 1.25rem 1.75rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .disclaimer {
-            font-size: 0.825rem;
-            line-height: 1.65;
-            color: #6b7280;
-        }
-
-        .disclaimer h4 {
-            font-size: 0.95rem;
-            color: #1a1a1a;
-            margin-bottom: 0.85rem;
-        }
-
-        .disclaimer p {
-            margin-bottom: 0.85rem;
-            font-size: 0.825rem;
-        }
-
-        .disclaimer-toggle {
-            background: #1a1a1a;
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            cursor: pointer;
-            margin: 1.25rem auto;
-            display: block;
-            transition: all 0.2s;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .disclaimer-toggle:hover {
-            background: #374151;
-            transform: translateY(-1px);
-        }
-
-        .disclaimer-toggle:active {
-            transform: translateY(0);
-        }
-
-        /* Modal */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 1000;
-            animation: fadeIn 0.2s ease;
-        }
-
-        .modal-overlay.visible {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal {
-            background: white;
-            border-radius: 12px;
-            max-width: 700px;
-            width: 100%;
-            max-height: 80vh;
-            overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.3s ease;
-            position: relative;
-        }
-
-        @keyframes slideUp {
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(20px);
@@ -942,447 +145,655 @@
             }
         }
 
-        .modal-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid #e5e7eb;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            background: white;
-            z-index: 1;
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.04em;
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s backwards;
         }
 
-        .modal-header h3 {
-            margin: 0;
+        .lead {
             font-size: 1.25rem;
+            color: #525252;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s backwards;
         }
 
-        .modal-close {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #6b7280;
-            cursor: pointer;
-            padding: 0.25rem;
-            line-height: 1;
-            transition: color 0.2s;
+        /* Stats - Nvidia-inspired performance metrics */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+            padding: 2.5rem 0;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
         }
 
-        .modal-close:hover {
-            color: #1a1a1a;
+        .stat {
+            text-align: center;
+            padding: 0 1rem;
+            position: relative;
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
         }
 
-        .modal-content {
-            padding: 1.5rem;
-        }
-
-        .modal-content h4 {
-            font-size: 0.95rem;
-            color: #1a1a1a;
-            margin: 1.25rem 0 0.75rem 0;
-        }
-
-        .modal-content h4:first-child {
-            margin-top: 0;
-        }
-
-        .modal-content p {
-            font-size: 0.875rem;
-            line-height: 1.65;
-            color: #6b7280;
-            margin-bottom: 0.85rem;
-        }
-
-        /* Mobile Sticky CTA */
-        .mobile-cta {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            left: 0;
+        .stat::after {
+            content: '';
+            position: absolute;
             right: 0;
-            background: #1a1a1a;
-            padding: 0.85rem 1.15rem;
-            box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.15);
-            z-index: 999;
-            transform: translateY(100%);
-            transition: transform 0.3s;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60%;
+            background: linear-gradient(to bottom, transparent, #e5e5e5, transparent);
         }
 
-        .mobile-cta.visible {
+        .stat:last-child::after {
+            display: none;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #000;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: #737373;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin: 4rem 0 1.5rem 0;
+            letter-spacing: -0.03em;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem 0;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            margin-bottom: 1.25rem;
+            font-size: 1.0625rem;
+            line-height: 1.7;
+            color: #404040;
+        }
+
+        strong {
+            font-weight: 700;
+            color: #000;
+        }
+
+        /* Premium CTA - Team-optimized */
+        .cta-card {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            border-radius: 24px;
+            margin: 3rem 0;
+            overflow: hidden;
+            box-shadow: 0 32px 64px rgba(0, 0, 0, 0.18);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, -30px) scale(1.05); }
+        }
+
+        .cta-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.24);
+        }
+
+        .cta-content {
+            position: relative;
+            padding: 3.5rem;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .cta-logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cta-logo-wrapper {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 12px 32px rgba(16, 185, 129, 0.4);
+            border: 2px solid rgba(16, 185, 129, 0.6);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cta-card:hover .cta-logo-wrapper {
+            transform: scale(1.05);
+            box-shadow: 0 16px 40px rgba(16, 185, 129, 0.5);
+        }
+
+        .cta-logo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cta-verified {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            color: #10b981;
+            font-weight: 700;
+            background: rgba(16, 185, 129, 0.12);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .cta-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .cta-eyebrow {
+            font-size: 0.8125rem;
+            color: #10b981;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        .cta-headline {
+            font-size: 2.75rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin: 0.5rem 0 1rem 0;
+        }
+
+        .cta-subheadline {
+            font-size: 1.125rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .cta-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .cta-feature {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .cta-feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .cta-feature-value {
+            font-size: 1.125rem;
+            color: white;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .cta-feature-label {
+            font-size: 0.8125rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+        }
+
+        .cta-action-row {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 1.125rem 2.75rem;
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.0625rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+            transition: left 0.6s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(16, 185, 129, 0.5);
+        }
+
+        .cta-button:active {
             transform: translateY(0);
         }
 
-        .mobile-cta-content {
+        .cta-button-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button-arrow {
+            position: relative;
+            z-index: 1;
+            font-size: 1.25rem;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cta-button:hover .cta-button-arrow {
+            transform: translateX(4px);
+        }
+
+        .cta-note {
+            font-size: 0.9375rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .cta-note code {
+            background: rgba(16, 185, 129, 0.2);
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            color: #10b981;
+            font-weight: 800;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            font-family: 'SF Mono', 'Monaco', monospace;
+        }
+
+        /* Callout - Cisco-inspired trust */
+        .callout {
+            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+            border-left: 4px solid #000;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .callout p {
+            margin-bottom: 1rem;
+        }
+
+        .callout p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Offers - Enhanced interaction */
+        .offer {
+            background: white;
+            border: 2px solid #e5e5e5;
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .offer::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(135deg, #10b981, #059669);
+            transform: scaleY(0);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .offer:hover {
+            border-color: #10b981;
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .offer:hover::before {
+            transform: scaleY(1);
+        }
+
+        .offer.active {
+            border-color: #10b981;
+            box-shadow: 0 12px 32px rgba(16, 185, 129, 0.18);
+        }
+
+        .offer.active::before {
+            transform: scaleY(1);
+        }
+
+        .offer-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: 32px 1fr auto auto;
+            gap: 1.25rem;
+            align-items: center;
+            background: white;
+            transition: background 0.2s;
+        }
+
+        .offer-header:hover {
+            background: #fafafa;
+        }
+
+        .offer-icon {
+            width: 28px;
+            height: 28px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 0.85rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .mobile-cta-text {
-            color: white;
-            flex: 1;
-            min-width: 0;
-        }
-
-        .mobile-cta-text strong {
-            display: block;
-            font-size: 0.925rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 0.1rem;
-            line-height: 1.2;
-        }
-
-        .mobile-cta-text span {
+            justify-content: center;
             font-size: 0.75rem;
+            color: #737373;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            flex-shrink: 0;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .offer-icon::before {
+            content: '▶';
+        }
+
+        .offer.active .offer-icon {
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .offer-name h4 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            margin: 0 0 0.25rem 0;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        .offer-name p {
+            font-size: 0.875rem;
+            color: #737373;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .offer-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .offer-time {
+            font-size: 0.8125rem;
+            color: #737373;
+            font-weight: 600;
+            padding: 0.4rem 0.85rem;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .offer-amount {
+            font-size: 1.875rem;
+            font-weight: 900;
+            color: #10b981;
+            letter-spacing: -0.02em;
+        }
+
+        .offer-button {
+            background: #000;
+            color: white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9375rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .offer-button:hover {
+            background: #1a1a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .offer-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .offer.active .offer-details {
+            max-height: 1000px;
+        }
+
+        .offer-content {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 1.5rem;
+            margin-top: 1rem;
+            opacity: 0;
+            transform: translateY(-12px);
+            transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+        }
+
+        .offer.active .offer-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .offer-content h5 {
+            font-size: 0.9375rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        .offer-content ol {
+            margin: 0;
+            padding-left: 1.25rem;
+        }
+
+        .offer-content li {
+            margin-bottom: 0.75rem;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            color: #404040;
+        }
+
+        .offer-content p {
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            color: #404040;
+            margin-bottom: 0.75rem;
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin: 4rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.2);
+        }
+
+        .summary-box h3 {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0 0 1rem 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .summary-amount {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+            background: linear-gradient(135deg, #10b981, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.04em;
+        }
+
+        .summary-time {
+            font-size: 1rem;
             color: rgba(255, 255, 255, 0.7);
         }
 
-        .mobile-cta-button {
-            background: #10b981;
-            color: white;
-            padding: 0.75rem 1.35rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.85rem;
-            white-space: nowrap;
-            flex-shrink: 0;
-            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-            animation: ctaPulse 2s infinite;
-        }
-
-        @keyframes ctaPulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-            }
-        }
-
-        /* Responsive */
+        /* Mobile responsive */
         @media (max-width: 768px) {
-            .header-links a::after {
-                display: none;
-            }
-
             article {
-                padding: 2rem 1.15rem 100px;
+                padding: 2rem 1.25rem;
             }
 
             h1 {
-                font-size: 2rem;
-                margin-bottom: 0.75rem;
+                font-size: 2.25rem;
             }
 
             .lead {
-                font-size: 1.05rem;
-                margin-bottom: 1.5rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-                margin: 2.25rem 0 0.85rem 0;
-            }
-
-            h3 {
-                font-size: 1.15rem;
-            }
-
-            p {
-                font-size: 0.95rem;
+                font-size: 1.0625rem;
             }
 
             .stats-grid {
                 grid-template-columns: 1fr;
-                gap: 0;
-                padding: 1.5rem 0;
+                gap: 1.5rem;
+                padding: 2rem 0;
             }
 
-            .stat {
-                padding: 0.75rem 1rem;
-                border-right: none;
-                border-bottom: 1px solid #f3f4f6;
-            }
-
-            .stat:last-child {
-                border-bottom: none;
-            }
-
-            .stat-number {
-                font-size: 1.65rem;
-            }
-
-            .stat-label {
-                font-size: 0.775rem;
-            }
-
-            .steps-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.95rem;
-            }
-
-            .step {
-                padding: 1.15rem 0.85rem;
-            }
-
-            .step:hover {
-                transform: none;
-                box-shadow: none;
-            }
-
-            .step-number {
-                width: 32px;
-                height: 32px;
-                font-size: 0.875rem;
-                margin-bottom: 0.65rem;
-            }
-
-            .step:hover .step-number {
-                transform: none;
-            }
-
-            .step h4 {
-                font-size: 0.875rem;
-            }
-
-            .step p {
-                font-size: 0.8rem;
-            }
-
-            /* Mobile CTA */
-            .cta-content {
-                padding: 2rem 1.5rem;
-            }
-
-            .cta-headline {
-                font-size: 1.5rem;
-            }
-
-            .cta-subheadline {
-                font-size: 0.95rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .cta-button {
-                padding: 1rem 2rem;
-                font-size: 0.95rem;
-            }
-
-            .cta-note {
-                font-size: 0.8rem;
-            }
-
-            /* Compact mobile offers */
-            .offer {
-                margin-bottom: 1rem;
-            }
-
-            .offer::after {
+            .stat::after {
                 display: none;
             }
 
-            .offer:hover::after {
-                transform: none;
+            .cta-content {
+                grid-template-columns: 1fr;
+                padding: 2.5rem 1.75rem;
+                gap: 2rem;
+            }
+
+            .cta-logo-section {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .cta-logo-wrapper {
+                width: 80px;
+                height: 80px;
+            }
+
+            .cta-headline {
+                font-size: 2rem;
+            }
+
+            .cta-features {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .cta-action-row {
+                flex-direction: column;
+                gap: 1.25rem;
+                align-items: stretch;
+            }
+
+            .cta-button {
+                width: 100%;
+                justify-content: center;
             }
 
             .offer-header {
-                grid-template-columns: 20px 1fr auto;
-                gap: 0.75rem;
-                padding: 1rem;
-            }
-
-            .offer-icon {
-                width: 18px;
-                height: 18px;
-                font-size: 0.6rem;
-            }
-
-            .offer-name h4 {
-                font-size: 1.05rem;
-            }
-
-            .offer-name p {
-                font-size: 0.75rem;
+                grid-template-columns: 28px 1fr auto;
+                padding: 1.25rem;
             }
 
             .offer-meta {
                 flex-direction: column;
                 align-items: flex-end;
-                gap: 0.5rem;
-            }
-
-            .offer-amount {
-                font-size: 1.45rem;
-            }
-
-            .offer-time {
-                font-size: 0.7rem;
-                padding: 0.25rem 0.55rem;
-            }
-
-            .offer-button {
-                padding: 0.5rem 1rem;
-                font-size: 0.8rem;
-                grid-column: 3;
-                grid-row: 2;
-                margin-top: 0.35rem;
+                gap: 0.75rem;
             }
 
             .offer-content {
                 grid-template-columns: 1fr;
-                gap: 1.35rem;
-                padding: 1rem;
-            }
-
-            .offer-content h5 {
-                font-size: 0.825rem;
-                margin-bottom: 0.65rem;
-            }
-
-            .offer-content li,
-            .offer-content p {
-                font-size: 0.825rem;
-            }
-
-            /* Compact summary */
-            .summary-box {
-                padding: 1.25rem;
-                margin: 2rem 0;
-            }
-
-            .summary-box h3 {
-                font-size: 0.875rem;
-                margin-bottom: 0.65rem;
+                gap: 2rem;
             }
 
             .summary-amount {
-                font-size: 2rem;
-            }
-
-            .summary-time {
-                font-size: 0.8rem;
-            }
-
-            .social-stats {
-                grid-template-columns: 1fr;
-                gap: 0.85rem;
-                margin-top: 1.15rem;
-            }
-
-            .social-stat {
-                padding: 0.95rem;
-            }
-
-            .social-stat:hover {
-                transform: none;
-                border-color: transparent;
-                box-shadow: none;
-            }
-
-            .social-stat-number {
-                font-size: 1.5rem;
-            }
-
-            .social-stat-label {
-                font-size: 0.775rem;
-            }
-
-            .faq-question {
-                padding: 0.95rem 1rem;
-                font-size: 0.9rem;
-            }
-
-            .faq-icon {
-                font-size: 1.05rem;
-                margin-left: 0.65rem;
-            }
-
-            .faq-answer-content {
-                padding: 0 1rem 0.95rem;
-                font-size: 0.825rem;
-            }
-
-            .mobile-cta {
-                display: block;
-            }
-
-            .callout,
-            .key-points {
-                padding: 1.25rem;
-                margin: 1.5rem 0;
-            }
-
-            .callout:hover,
-            .key-points:hover,
-            .social-proof:hover {
-                box-shadow: none;
-                transform: none;
-            }
-
-            .key-points ul {
-                margin: 0.75rem 0 0 1.15rem;
-            }
-
-            .key-points li {
-                font-size: 0.875rem;
-                margin-bottom: 0.55rem;
-            }
-
-            .disclaimer-toggle {
-                padding: 0.65rem 1.25rem;
-                font-size: 0.8rem;
-                margin: 1rem auto;
-            }
-
-            .modal {
-                max-height: 90vh;
-                margin: 0;
-            }
-
-            .modal-header {
-                padding: 1.25rem;
-            }
-
-            .modal-content {
-                padding: 1.25rem;
-            }
-
-            .modal-content p {
-                font-size: 0.825rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.75rem;
-            }
-
-            .summary-amount {
-                font-size: 1.85rem;
-            }
-
-            .offer-amount {
-                font-size: 1.3rem;
-            }
-
-            .cta-headline {
-                font-size: 1.35rem;
+                font-size: 2.75rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="header-content">
             <div class="logo">
                 <div class="logo-presented">Presented By</div>
@@ -1396,14 +807,16 @@
     </header>
 
     <article>
-        <span class="badge">
-            <span class="live-dot"></span>
-            1,200+ Doing Bonus Arbitrage
-        </span>
-        
-        <h1>Earn $800 in One Hour Through Bonus Arbitrage</h1>
-        
-        <p class="lead">A strategic guide to exploiting company marketing budgets for immediate cash. Used by over 1,200 people to stack signup bonuses from banks and fintech companies.</p>
+        <div class="hero-section">
+            <span class="badge">
+                <span class="live-dot"></span>
+                1,200+ Doing Bonus Arbitrage
+            </span>
+            
+            <h1>Earn $805 in One Hour Through Bonus Arbitrage</h1>
+            
+            <p class="lead">A strategic guide to exploiting company marketing budgets for immediate cash. Used by over 1,200 people to stack signup bonuses from banks and fintech companies.</p>
+        </div>
 
         <div class="stats-grid">
             <div class="stat">
@@ -1423,30 +836,53 @@
         <div class="callout">
             <p>You're about to learn a strategy that sounds too good to be true, but is legitimate. It's called <strong>bonus arbitrage</strong>, and it's essentially exploiting companies' marketing budgets to pocket cash rewards that far exceed any effort or initial cost.</p>
             <p>This isn't a "get rich quick" scheme. Companies spend billions on customer acquisition every year. They'd rather pay you $100-$500 directly than spend that money on ads. You're simply taking advantage of their official promotional offers.</p>
-            <p><strong>Join over 1,200 people</strong> from our community who have signed up to start earning through these verified offers. Total earnings potential: $805 across all offers listed below.</p>
+            <p><strong>Join over 1,200 people</strong> from our community who have signed up to start earning through these verified offers.</p>
         </div>
 
         <div class="cta-card">
             <div class="cta-content">
-                <div class="cta-badge">
-                    <span class="cta-badge-icon">⭐</span>
-                    #1 Platform for Bonus Arbitrage
+                <div class="cta-logo-section">
+                    <div class="cta-logo-wrapper">
+                        <img src="https://i.imgur.com/dnrNOx3.jpeg" alt="Gemsloot">
+                    </div>
+                    <div class="cta-verified">
+                        ✓ Verified
+                    </div>
                 </div>
                 
-                <h2 class="cta-headline">Start Earning on Gemsloot</h2>
-                <p class="cta-subheadline">The only platform you need to track all your bonuses, get paid fast, and maximize your earnings. Join 1,200+ people already earning.</p>
-                
-                <div class="cta-trust-line">
-                    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm5.707 7.707l-6 6a1 1 0 01-1.414 0l-3-3a1 1 0 011.414-1.414L9 11.586l5.293-5.293a1 1 0 011.414 1.414z"/></svg>
-                    <span>Free to join • Instant tracking • Fast payouts</span>
-                </div>
-                
-                <div class="cta-button-wrapper">
-                    <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="cta-button">
-                        <span>Get Started Free</span>
-                    </a>
-                    <div class="cta-note">
-                        Use code: <code>SHG</code> for bonus lootbox
+                <div class="cta-main">
+                    <div>
+                        <div class="cta-eyebrow">The #1 Bonus Arbitrage Platform</div>
+                        <h2 class="cta-headline">Track Every Dollar with Gemsloot</h2>
+                        <p class="cta-subheadline">The only platform built specifically for bonus arbitrage. Automatically tracks your offers, handles payouts, and maximizes your earnings. Trusted by 1,200+ members.</p>
+                    </div>
+                    
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <div class="cta-feature-icon">⚡</div>
+                            <div class="cta-feature-value">Automatic Tracking</div>
+                            <div class="cta-feature-label">Never miss a bonus</div>
+                        </div>
+                        <div class="cta-feature">
+                            <div class="cta-feature-icon">💰</div>
+                            <div class="cta-feature-value">Multiple Payouts</div>
+                            <div class="cta-feature-label">Crypto & PayPal</div>
+                        </div>
+                        <div class="cta-feature">
+                            <div class="cta-feature-icon">🎁</div>
+                            <div class="cta-feature-value">Bonus Lootbox</div>
+                            <div class="cta-feature-label">Up to $250 value</div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-action-row">
+                        <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="cta-button">
+                            <span class="cta-button-text">Start Earning Now</span>
+                            <span class="cta-button-arrow">→</span>
+                        </a>
+                        <div class="cta-note">
+                            Use code <code>SHG</code> for bonus
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1456,48 +892,7 @@
         
         <p>Bonus arbitrage is straightforward: companies offer cash rewards for new signups that exceed the cost of trying their product. Sometimes they pay you just for signing up, hoping you'll become a long-term customer.</p>
 
-        <div class="steps-grid">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h4>Find Offers</h4>
-                <p>High-value signup bonuses from legitimate companies</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h4>Complete Tasks</h4>
-                <p>Simple requirements like deposits or account setup</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h4>Get Paid</h4>
-                <p>Bonuses tracked and paid through Gemsloot</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h4>Cash Out</h4>
-                <p>Withdraw via PayPal or crypto</p>
-            </div>
-        </div>
-
-        <div class="key-points">
-            <h3>The Core Strategy</h3>
-            <ul>
-                <li><strong>Find high-value signup bonuses</strong> – Banks and fintech companies offer $50-$500 for opening accounts</li>
-                <li><strong>Complete minimal requirements</strong> – Direct deposit setup, small deposits, or 30-day account holds</li>
-                <li><strong>Collect your bonus</strong> – Get paid through tracking platforms that handle everything</li>
-                <li><strong>Move on or cancel</strong> – Most offers allow account closure after bonuses without penalty</li>
-            </ul>
-        </div>
-
         <p>The key insight: <strong>these aren't "deals"—they're pure profit opportunities</strong>. When a bank pays you $480 to redirect one paycheck, that's free money for 15 minutes of work. When a brokerage pays you $30 for depositing $5, that's a 500% return in days.</p>
-
-        <h2>Why This Works</h2>
-
-        <p><strong>Customer acquisition costs are astronomical.</strong> Banks and fintech companies spend $200-$500 per customer through traditional marketing. It's cheaper to pay you directly.</p>
-
-        <p><strong>They're betting on retention.</strong> Most people forget to cancel or generate revenue through fees and interest. But if you're disciplined, you take the bonus and leave.</p>
-
-        <p><strong>Competition drives offers higher.</strong> As new companies launch, signup bonuses increase. This creates perfect arbitrage opportunities.</p>
 
         <h2 id="offers">The 6 Best Offers Right Now</h2>
 
@@ -1708,185 +1103,20 @@
             <div class="summary-amount">$805</div>
             <div class="summary-time">≈ 1 hour 15 minutes active work</div>
         </div>
-
-        <div class="social-proof">
-            <h3>Join 1,200+ People Who Have Signed Up</h3>
-            <p>Our community members are actively working through these offers.</p>
-            <div class="social-stats">
-                <div class="social-stat">
-                    <div class="social-stat-number">1,200+</div>
-                    <div class="social-stat-label">Community Signups</div>
-                </div>
-                <div class="social-stat">
-                    <div class="social-stat-number">$805</div>
-                    <div class="social-stat-label">Total Potential Earnings</div>
-                </div>
-            </div>
-        </div>
-
-        <h2 id="faq">Frequently Asked Questions</h2>
-        
-        <div class="faq">
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    <span>Is this actually legal?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Yes. These are official promotional offers from regulated financial institutions. You're doing exactly what they want—trying their service. Nothing about this violates laws or terms of service.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    <span>How long does it take to get paid?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Most bonuses credit to your Gemsloot account within a few days after completing requirements. First-time Gemsloot withdrawals are manually reviewed (usually within 24 hours). After that, crypto withdrawals are typically instant and PayPal takes a few hours.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    <span>Do I need to keep the accounts open?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        It depends on the offer. Some (like HSBC) require 30 days. Others (like SoFi Plus) can be cancelled immediately. Each offer has specific requirements detailed in the instructions.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    <span>What if I don't have direct deposit?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Start with offers that don't require it: SoFi Plus ($20 profit, 5 min), Moomoo ($25 profit), or WeBull ($20 profit). These require only small deposits or subscriptions.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    <span>Will this affect my credit score?</span>
-                    <span class="faq-icon">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Opening checking or savings accounts typically does not affect your credit score. Brokerage accounts also don't impact credit. Some offers may do a soft inquiry (doesn't affect score) or hard inquiry (minimal temporary impact).
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2>Withdrawing Your Money</h2>
-
-        <div class="callout">
-            <p><strong>Minimums:</strong> $0.50 for crypto, $3 for PayPal</p>
-            <p><strong>First withdrawal:</strong> Manually reviewed (usually within 24 hours) for security.</p>
-            <p><strong>Speed:</strong> Crypto payouts are typically instant, PayPal within a few hours. Larger withdrawal amounts may take additional time for verification.</p>
-            <p><strong>Note:</strong> The Gemsloot team is based in the EU and operates during EU business hours. Support responses and manual reviews follow this schedule.</p>
-        </div>
-
-        <h2>Important Considerations</h2>
-
-        <p><strong>This is legitimate.</strong> These are official promotional offers from regulated financial institutions.</p>
-
-        <p><strong>Stay organized.</strong> Track which offers you've completed, when you can close accounts, and expected payout dates. Set calendar reminders.</p>
-
-        <p><strong>Verify current terms.</strong> Offers change. Always check company websites for the latest requirements. What we document reflects current offers, but companies can modify terms.</p>
-
-        <p><strong>Don't abuse the system.</strong> Complete each offer once according to terms. Multiple accounts using the same identity will lead to bonus clawbacks and bans.</p>
     </article>
 
-    <footer>
-        <div class="footer-content">
-            <div class="disclaimer">
-                <h4>Required Legal Disclosures</h4>
-                <p><strong>Affiliate Disclosure:</strong> This site contains affiliate links. We earn commissions at no extra cost to you when you sign up through our links.</p>
-                <p><strong>Earnings Disclaimer:</strong> Amounts mentioned represent potential earnings based on current offers. Individual results vary based on eligibility, effort, timing, and location. Offers subject to change.</p>
-                <p><strong>Not Financial Advice:</strong> This is educational content only. Independently verify all offer terms and consult professionals before making financial decisions.</p>
-                <p><strong>Your Responsibility:</strong> You accept full responsibility for your actions and outcomes. We are not liable for losses, damages, or issues arising from use of these strategies.</p>
-                
-                <button class="disclaimer-toggle" onclick="openDisclaimerModal()">View Full Legal Disclaimer</button>
-
-                <p style="text-align: center; margin-top: 1.75rem; color: #9ca3af;">© 2025 Side Hustle Gold. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <div class="modal-overlay" id="disclaimerModal" onclick="closeDisclaimerModal(event)">
-        <div class="modal" onclick="event.stopPropagation()">
-            <div class="modal-header">
-                <h3>Complete Legal Disclosure</h3>
-                <button class="modal-close" onclick="closeDisclaimerModal()">&times;</button>
-            </div>
-            <div class="modal-content">
-                <h4>No Guarantees</h4>
-                <p>Past performance does not guarantee future results. The offers and bonuses mentioned are subject to change without notice. Companies may modify, suspend, or terminate promotional offers at any time.</p>
-                
-                <h4>Eligibility Requirements</h4>
-                <p>Not all offers are available in all locations. You must meet each company's eligibility requirements, which may include age, residency, credit checks, and employment verification.</p>
-                
-                <h4>Tax Implications</h4>
-                <p>Bonuses and rewards may be considered taxable income. Consult a tax professional regarding your specific situation and reporting requirements.</p>
-                
-                <h4>Account Terms</h4>
-                <p>You are responsible for reading and complying with each company's terms of service. Violation of terms may result in bonus forfeiture, account closure, or legal action.</p>
-                
-                <h4>Risk Disclosure</h4>
-                <p>Opening multiple financial accounts may impact your credit score, banking relationships, and financial standing. Consider the potential consequences before proceeding.</p>
-                
-                <h4>Third-Party Platforms</h4>
-                <p>Gemsloot and other tracking platforms are independent third parties. We are not responsible for their policies, practices, payment processing, or any issues that arise from using their services.</p>
-                
-                <h4>Information Accuracy</h4>
-                <p>While we strive for accuracy, information may be outdated or incorrect. Always verify current offer terms directly with the financial institution before participating.</p>
-                
-                <h4>No Professional Relationship</h4>
-                <p>Nothing on this site creates an attorney-client, financial advisor-client, or any other professional relationship. Seek professional advice for your specific circumstances.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="mobile-cta" id="mobileCta">
-        <div class="mobile-cta-content">
-            <div class="mobile-cta-text">
-                <strong>Ready to earn $800?</strong>
-                <span>1,200+ already started</span>
-            </div>
-            <a href="https://gemsloot.com/?aff=shg" target="_blank" rel="noopener" class="mobile-cta-button">Start Now</a>
-        </div>
-    </div>
-
     <script>
-        // Mobile CTA
-        let mobileCTAVisible = false;
+        // Header scroll effect
         window.addEventListener('scroll', () => {
-            const mobileCta = document.getElementById('mobileCta');
-            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            
-            if (window.innerWidth <= 768) {
-                if (scrollPercent > 10 && !mobileCTAVisible) {
-                    mobileCta.classList.add('visible');
-                    mobileCTAVisible = true;
-                } else if (scrollPercent <= 10 && mobileCTAVisible) {
-                    mobileCta.classList.remove('visible');
-                    mobileCTAVisible = false;
-                }
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
         }, { passive: true });
 
-        // Toggle offers
+        // Toggle offers with smooth animation
         function toggleOffer(header) {
             const offer = header.parentElement;
             const wasActive = offer.classList.contains('active');
@@ -1902,53 +1132,18 @@
             }
         }
 
-        // Toggle FAQ
-        function toggleFaq(item) {
-            const wasActive = item.classList.contains('active');
-            
-            document.querySelectorAll('.faq-item').forEach(i => {
-                if (i !== item) i.classList.remove('active');
-            });
-            
-            if (!wasActive) {
-                item.classList.add('active');
-            } else {
-                item.classList.remove('active');
-            }
-        }
-
-        // Disclaimer Modal
-        function openDisclaimerModal() {
-            document.getElementById('disclaimerModal').classList.add('visible');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeDisclaimerModal(event) {
-            if (!event || event.target.id === 'disclaimerModal') {
-                document.getElementById('disclaimerModal').classList.remove('visible');
-                document.body.style.overflow = '';
-            }
-        }
-
-        // Close modal on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeDisclaimerModal();
-            }
-        });
-
         // Prevent button clicks from toggling
         document.querySelectorAll('.offer-button').forEach(btn => {
             btn.addEventListener('click', e => e.stopPropagation());
         });
 
-        // Touch feedback
+        // Enhanced touch feedback
         if ('ontouchstart' in window) {
             const addTouchFeedback = (selector) => {
                 document.querySelectorAll(selector).forEach(el => {
                     el.addEventListener('touchstart', function() {
-                        this.style.transition = 'transform 0.1s';
-                        this.style.transform = 'scale(0.97)';
+                        this.style.transition = 'transform 0.1s cubic-bezier(0.4, 0, 0.2, 1)';
+                        this.style.transform = 'scale(0.98)';
                     }, { passive: true });
                     
                     el.addEventListener('touchend', function() {
@@ -1959,7 +1154,25 @@
 
             addTouchFeedback('.offer-button');
             addTouchFeedback('.cta-button');
-            addTouchFeedback('.mobile-cta-button');
+        }
+
+        // Intersection Observer for fade-in animations
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.offer, .callout').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                observer.observe(el);
+            });
         }
     </script>
 </body>
