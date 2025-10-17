@@ -244,6 +244,17 @@
             50% { opacity: 0.5; }
         }
 
+        @keyframes glow-pulse {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(16, 185, 129, 0.4), 0 0 40px rgba(16, 185, 129, 0.2);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 30px rgba(16, 185, 129, 0.6), 0 0 60px rgba(16, 185, 129, 0.3);
+                transform: scale(1.05);
+            }
+        }
+
         h1 {
             font-size: 3rem;
             font-weight: 900;
@@ -940,7 +951,7 @@
         }
 
         .faq-answer-content {
-            padding: 0 1.25rem 1rem;
+            padding: 1rem 1.25rem 1rem;
             color: #737373;
             font-size: 0.875rem;
             line-height: 1.6;
@@ -1811,7 +1822,8 @@
             }
 
             .social-proof > div:nth-child(2) > div:last-child > div:nth-child(2) {
-                font-size: 2rem !important;
+                font-size: 2.25rem !important;
+                animation: glow-pulse 2s ease-in-out infinite;
             }
 
             .social-proof > div:first-child > div:first-child {
@@ -1838,7 +1850,7 @@
             }
 
             .faq-answer-content {
-                padding: 0 1rem 0.875rem;
+                padding: 1rem 1rem 0.875rem;
                 font-size: 0.8125rem;
             }
 
@@ -2411,7 +2423,7 @@
                 
                 <div style="text-align: center;">
                     <div style="font-size: 0.6875rem; color: #737373; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Profit</div>
-                    <div style="font-size: 1.75rem; font-weight: 900; color: #10b981; line-height: 1; margin-bottom: 0.35rem;">$26</div>
+                    <div style="font-size: 2.5rem; font-weight: 900; color: #10b981; line-height: 1; margin-bottom: 0.35rem; background: linear-gradient(135deg, #10b981, #059669); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; padding: 0.5rem; border-radius: 12px; animation: glow-pulse 2s ease-in-out infinite;">$26</div>
                     <div style="display: inline-flex; align-items: center; gap: 0.25rem; background: white; padding: 0.25rem 0.6rem; border-radius: 100px; font-size: 0.6875rem; font-weight: 700; color: #10b981;">
                         <svg style="width: 12px; height: 12px;" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
