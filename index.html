@@ -1153,71 +1153,79 @@
             }
 
             .offer {
-                margin-bottom: 0.75rem;
-                border-radius: 12px;
+                margin-bottom: 0.65rem;
+                border-radius: 10px;
             }
 
             .offer-header {
                 display: flex;
-                flex-direction: column;
-                gap: 0;
-                padding: 0.875rem;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.65rem;
+                padding: 0.75rem 0.875rem;
             }
 
             .offer-top {
                 display: flex;
-                align-items: flex-start;
-                gap: 0.65rem;
-                margin-bottom: 0.65rem;
+                align-items: center;
+                gap: 0.5rem;
+                flex: 1;
+                min-width: 0;
             }
 
             .offer-icon {
-                width: 28px;
-                height: 28px;
-                font-size: 0.65rem;
+                width: 20px;
+                height: 20px;
+                font-size: 0.5rem;
                 flex-shrink: 0;
             }
 
             .offer-name {
                 flex: 1;
+                min-width: 0;
             }
 
             .offer-name h4 {
-                font-size: 1.0625rem;
-                margin-bottom: 0.15rem;
+                font-size: 0.9375rem;
+                margin: 0;
+                line-height: 1.2;
+                font-weight: 800;
             }
 
             .offer-name p {
-                font-size: 0.8125rem;
-                margin: 0;
-                color: #8b8b8b;
+                display: none;
             }
 
             .offer-meta {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                justify-content: space-between;
                 gap: 0.5rem;
-                padding: 0.65rem 0 0.75rem 0;
-                border-top: 1px solid #f0f0f0;
+                flex-shrink: 0;
             }
 
             .offer-time {
-                font-size: 0.75rem;
-                padding: 0.3rem 0.65rem;
+                display: none;
             }
 
             .offer-amount {
-                font-size: 1.5rem;
+                font-size: 1.375rem;
                 font-weight: 900;
+                color: #10b981;
+                margin: 0;
             }
 
             .offer-button {
-                padding: 0.65rem 1.25rem;
-                font-size: 0.8125rem;
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
                 white-space: nowrap;
-                border-radius: 8px;
+                border-radius: 7px;
+                flex-shrink: 0;
+            }
+
+            .offer-content {
+                padding: 0.875rem;
+                padding-top: 0.75rem;
             }
 
             .offer-content {
@@ -1987,31 +1995,36 @@
             });
         }
 
-        // Mobile CTA scroll behavior
-        let lastScrollTop = 0;
-        let scrollTimeout;
+        // Mobile CTA scroll behavior - Simple and effective
         const mobileCTA = document.querySelector('.mobile-cta-bar');
         
         if (mobileCTA && window.innerWidth <= 768) {
+            let lastScrollTop = 0;
+            let ticking = false;
+            
             window.addEventListener('scroll', () => {
-                clearTimeout(scrollTimeout);
-                
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                
-                // Hide when scrolling down, show when scrolling up
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    mobileCTA.classList.add('hidden');
-                } else {
-                    mobileCTA.classList.remove('hidden');
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        
+                        // Show CTA only after scrolling down past 300px
+                        // Hide when scrolling back to top or scrolling down fast
+                        if (scrollTop < 300) {
+                            mobileCTA.classList.add('hidden');
+                        } else if (scrollTop < lastScrollTop) {
+                            // Scrolling up - show CTA
+                            mobileCTA.classList.remove('hidden');
+                        } else if (scrollTop > lastScrollTop + 50) {
+                            // Scrolling down fast - hide CTA
+                            mobileCTA.classList.add('hidden');
+                        }
+                        
+                        lastScrollTop = scrollTop;
+                        ticking = false;
+                    });
+                    ticking = true;
                 }
-                
-                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-                
-                // Hide after 2 seconds of no scrolling
-                scrollTimeout = setTimeout(() => {
-                    mobileCTA.classList.add('hidden');
-                }, 2000);
-            }, false);
+            }, { passive: true });
         }
     </script>
 </body>
