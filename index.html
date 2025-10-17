@@ -26,7 +26,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Progress Bar */
         .progress-bar {
             position: fixed;
             top: 0;
@@ -38,7 +37,6 @@
             transition: width 0.1s ease;
         }
 
-        /* Back to Top Button */
         .back-to-top {
             position: fixed;
             bottom: 5rem;
@@ -75,7 +73,6 @@
             transform: translateY(-1px);
         }
 
-        /* FTC Affiliate Banner */
         .ftc-banner {
             background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
             border-bottom: 1px solid #fde68a;
@@ -352,7 +349,6 @@
             margin-bottom: 0;
         }
 
-        /* Premium CTA */
         .cta-card {
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             border-radius: 20px;
@@ -395,9 +391,10 @@
             height: 90px;
             border-radius: 18px;
             overflow: visible;
-            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
-            border: 2px solid rgba(16, 185, 129, 0.5);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.25);
+            border: 2px solid rgba(16, 185, 129, 0.3);
             position: relative;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
         }
 
         .cta-logo-wrapper img {
@@ -409,23 +406,23 @@
 
         .cta-logo-verified {
             position: absolute;
-            bottom: -10px;
-            right: -10px;
-            width: 32px;
-            height: 32px;
+            bottom: -8px;
+            right: -8px;
+            width: 26px;
+            height: 26px;
             background: #10b981;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 3px solid #0a0a0a;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
             z-index: 10;
         }
 
         .cta-logo-verified svg {
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
             color: white;
         }
 
@@ -555,119 +552,6 @@
         .cta-copy-button.copied {
             background: rgba(16, 185, 129, 0.3);
             border-color: rgba(16, 185, 129, 0.6);
-        }
-
-        .cta-note code {
-            background: rgba(16, 185, 129, 0.2);
-            padding: 0.3rem 0.65rem;
-            border-radius: 5px;
-            color: #10b981;
-            font-weight: 800;
-            border: 1px solid rgba(16, 185, 129, 0.3);
-        }
-
-        /* Trust Indicators */
-        .trust-indicators {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            margin: 2rem 0;
-            padding: 1.25rem;
-            background: #f9fafb;
-            border-radius: 12px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .trust-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.8125rem;
-            color: #6b7280;
-        }
-
-        .trust-icon {
-            width: 20px;
-            height: 20px;
-            color: #10b981;
-            flex-shrink: 0;
-        }
-
-        /* Quick Start Checklist */
-        .quick-start {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border: 2px solid #10b981;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .quick-start h3 {
-            font-size: 1.25rem;
-            font-weight: 800;
-            margin: 0 0 1rem 0;
-            color: #000;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .quick-start-icon {
-            width: 24px;
-            height: 24px;
-            color: #10b981;
-        }
-
-        .checklist {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .checklist-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem;
-            margin-bottom: 0.5rem;
-            background: white;
-            border-radius: 8px;
-            font-size: 0.9375rem;
-            transition: transform 0.2s;
-        }
-
-        .checklist-item:hover {
-            transform: translateX(4px);
-        }
-
-        .checklist-checkbox {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #10b981;
-            border-radius: 4px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #10b981;
-            font-weight: 900;
-            font-size: 0.75rem;
-        }
-
-        .checklist-text {
-            flex: 1;
-            line-height: 1.4;
-        }
-
-        .checklist-time {
-            font-size: 0.75rem;
-            color: #737373;
-            font-weight: 600;
-            padding: 0.25rem 0.6rem;
-            background: #f5f5f5;
-            border-radius: 4px;
-            flex-shrink: 0;
         }
 
         .steps-grid {
@@ -1266,94 +1150,111 @@
             margin-bottom: 0.75rem;
         }
 
-        /* Games Section */
         .games-section {
-            background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
-            border-radius: 16px;
-            padding: 2rem;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-radius: 20px;
+            padding: 2.5rem;
             margin: 3rem 0;
-            border: 1px solid #e5e5e5;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .games-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+            pointer-events: none;
         }
 
         .games-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+            text-align: center;
             margin-bottom: 2rem;
+            position: relative;
         }
 
         .games-logo {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.25);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            margin: 0 auto 1rem;
         }
 
         .games-header-text h3 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 800;
-            margin: 0 0 0.25rem 0;
+            margin: 0 0 0.5rem 0;
             color: #000;
         }
 
         .games-header-text p {
-            font-size: 0.875rem;
-            color: #737373;
+            font-size: 0.9375rem;
+            color: #525252;
             margin: 0;
         }
 
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
         }
 
         .game-card {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 16px;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
             transition: all 0.3s;
+            background: white;
+            border: 2px solid transparent;
+            padding: 1rem;
         }
 
         .game-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+            border-color: rgba(16, 185, 129, 0.4);
         }
 
-        .game-image {
-            width: 100%;
-            height: 100%;
+        .game-card-image {
+            width: 80px;
+            height: 80px;
             object-fit: cover;
+            border-radius: 12px;
+            flex-shrink: 0;
         }
 
-        .game-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+        .game-card-content {
+            flex: 1;
             display: flex;
-            align-items: flex-end;
-            padding: 1rem;
+            flex-direction: column;
+            gap: 0.25rem;
         }
 
-        .game-info h4 {
-            font-size: 0.875rem;
+        .game-card-title {
+            font-size: 0.9375rem;
             font-weight: 700;
-            color: white;
-            margin: 0 0 0.25rem 0;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            color: #000;
+            margin: 0;
+            line-height: 1.3;
         }
 
-        .game-payout {
-            font-size: 1.5rem;
+        .game-card-payout {
+            font-size: 1.75rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #10b981, #059669);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+            color: #10b981;
+            margin: 0;
+            line-height: 1;
         }
 
         .games-cta {
@@ -1364,20 +1265,21 @@
         .games-button {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            background: #000;
+            gap: 0.65rem;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
-            padding: 0.875rem 1.75rem;
-            border-radius: 10px;
+            padding: 1rem 2rem;
+            border-radius: 12px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9375rem;
+            font-weight: 800;
+            font-size: 1rem;
             transition: all 0.3s;
+            box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
         }
 
         .games-button:hover {
-            background: #1a1a1a;
             transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
         }
 
         .games-button-arrow {
@@ -1386,21 +1288,22 @@
         }
 
         .games-button:hover .games-button-arrow {
-            transform: translateX(3px);
+            transform: translateX(4px);
         }
 
         .games-disclaimer {
             text-align: center;
             font-size: 0.8125rem;
-            color: #737373;
-            line-height: 1.5;
+            color: #525252;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .games-disclaimer p {
             margin: 0;
         }
 
-        /* Mobile Sticky CTA */
         .mobile-cta-bar {
             display: none;
             position: fixed;
@@ -1472,9 +1375,7 @@
             article {
                 padding-bottom: 5rem;
             }
-        }
 
-        @media (max-width: 768px) {
             .ftc-banner {
                 padding: 0.5rem 2.5rem 0.5rem 1rem;
                 font-size: 0.75rem;
@@ -1484,8 +1385,42 @@
                 right: 0.5rem;
             }
 
+            .logo-presented {
+                font-size: 0.5625rem;
+            }
+
+            .logo-name {
+                font-size: 0.8125rem;
+            }
+
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .header-links {
+                gap: 0.75rem;
+                font-size: 0.8125rem;
+            }
+
+            .header-links a {
+                font-size: 0.8125rem;
+            }
+
             .header-social {
-                display: none;
+                display: flex;
+                margin-left: 0.5rem;
+                padding-left: 0.5rem;
+                gap: 0.35rem;
+            }
+
+            .header-social-link {
+                width: 28px;
+                height: 28px;
+            }
+
+            .header-social-link img {
+                width: 14px;
+                height: 14px;
             }
 
             article {
@@ -1570,12 +1505,18 @@
                 width: 70px;
                 height: 70px;
                 border-radius: 14px;
+                box-shadow: 0 6px 18px rgba(16, 185, 129, 0.25);
+                overflow: visible;
+            }
+
+            .cta-logo-wrapper img {
+                border-radius: 12px;
             }
 
             .cta-logo-verified {
-                width: 24px;
-                height: 24px;
-                border: 2px solid #0a0a0a;
+                width: 22px;
+                height: 22px;
+                border: 2px solid #fff;
                 bottom: -6px;
                 right: -6px;
             }
@@ -1839,11 +1780,6 @@
                 font-size: 0.8125rem;
             }
 
-            .earnings-disclaimer-banner {
-                font-size: 0.625rem;
-                margin: 0.5rem 0 1.5rem 0;
-            }
-
             .social-proof {
                 padding: 1rem;
                 margin: 1.5rem 0;
@@ -1896,6 +1832,63 @@
             .faq-answer-content {
                 padding: 0 1rem 0.875rem;
                 font-size: 0.8125rem;
+            }
+
+            .games-section {
+                padding: 1.5rem 1rem;
+                border-radius: 16px;
+            }
+
+            .games-header {
+                margin-bottom: 1.5rem;
+            }
+
+            .games-logo {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 0.75rem;
+            }
+
+            .games-header-text h3 {
+                font-size: 1.375rem;
+            }
+
+            .games-header-text p {
+                font-size: 0.875rem;
+            }
+
+            .games-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .game-card {
+                padding: 0.875rem;
+            }
+
+            .game-card-image {
+                width: 70px;
+                height: 70px;
+            }
+
+            .game-card-title {
+                font-size: 0.875rem;
+            }
+
+            .game-card-payout {
+                font-size: 1.5rem;
+            }
+
+            .games-button {
+                width: 100%;
+                justify-content: center;
+                padding: 0.875rem 1.5rem;
+                font-size: 0.9375rem;
+            }
+
+            .games-disclaimer {
+                font-size: 0.75rem;
             }
 
             footer {
@@ -1992,10 +1985,8 @@
     </style>
 </head>
 <body>
-    <!-- Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
 
-    <!-- FTC Affiliate Banner -->
     <div class="ftc-banner" id="ftcBanner">
         <strong>Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a commission when you sign up through our links. <a href="#" onclick="event.preventDefault(); openDisclaimerModal();">Learn more</a>
         <button class="ftc-banner-close" onclick="closeFtcBanner()" aria-label="Close banner">&times;</button>
@@ -2503,68 +2494,50 @@
 
             <div class="games-grid">
                 <a href="https://gemsloot.com/?aff=shg" class="game-card" target="_blank" rel="noopener">
-                    <img src="https://i.imgur.com/tTgovAD.jpeg" alt="Monopoly Go!" class="game-image">
-                    <div class="game-overlay">
-                        <div class="game-info">
-                            <h4>Monopoly Go!</h4>
-                            <div class="game-meta">Complete in-game milestones</div>
-                        </div>
-                        <div class="game-payout">$402.90</div>
+                    <img src="https://i.imgur.com/tTgovAD.jpeg" alt="Monopoly Go!" class="game-card-image">
+                    <div class="game-card-content">
+                        <h4 class="game-card-title">Monopoly Go!</h4>
+                        <div class="game-card-payout">$402.90</div>
                     </div>
                 </a>
 
                 <a href="https://gemsloot.com/?aff=shg" class="game-card" target="_blank" rel="noopener">
-                    <img src="https://i.imgur.com/OsmM8uK.jpeg" alt="Survivor Idle Run" class="game-image">
-                    <div class="game-overlay">
-                        <div class="game-info">
-                            <h4>Survivor Idle Run</h4>
-                            <div class="game-meta">Complete in-game milestones</div>
-                        </div>
-                        <div class="game-payout">$239.68</div>
+                    <img src="https://i.imgur.com/OsmM8uK.jpeg" alt="Survivor Idle Run" class="game-card-image">
+                    <div class="game-card-content">
+                        <h4 class="game-card-title">Survivor Idle Run</h4>
+                        <div class="game-card-payout">$239.68</div>
                     </div>
                 </a>
 
                 <a href="https://gemsloot.com/?aff=shg" class="game-card" target="_blank" rel="noopener">
-                    <img src="https://i.imgur.com/z1uQ8kw.jpeg" alt="Sea of Conquest" class="game-image">
-                    <div class="game-overlay">
-                        <div class="game-info">
-                            <h4>Sea of Conquest</h4>
-                            <div class="game-meta">Complete in-game milestones</div>
-                        </div>
-                        <div class="game-payout">$231.10</div>
+                    <img src="https://i.imgur.com/z1uQ8kw.jpeg" alt="Sea of Conquest" class="game-card-image">
+                    <div class="game-card-content">
+                        <h4 class="game-card-title">Sea of Conquest</h4>
+                        <div class="game-card-payout">$231.10</div>
                     </div>
                 </a>
 
                 <a href="https://gemsloot.com/?aff=shg" class="game-card" target="_blank" rel="noopener">
-                    <img src="https://i.imgur.com/ddLgHpQ.png" alt="Raid: Shadow Legends" class="game-image">
-                    <div class="game-overlay">
-                        <div class="game-info">
-                            <h4>Raid: Shadow Legends</h4>
-                            <div class="game-meta">Complete in-game milestones</div>
-                        </div>
-                        <div class="game-payout">$213.57</div>
+                    <img src="https://i.imgur.com/ddLgHpQ.png" alt="Raid: Shadow Legends" class="game-card-image">
+                    <div class="game-card-content">
+                        <h4 class="game-card-title">Raid: Shadow Legends</h4>
+                        <div class="game-card-payout">$213.57</div>
                     </div>
                 </a>
 
                 <a href="https://gemsloot.com/?aff=shg" class="game-card" target="_blank" rel="noopener">
-                    <img src="https://i.imgur.com/4o2bHcS.png" alt="Ruler of the Labyrinth" class="game-image">
-                    <div class="game-overlay">
-                        <div class="game-info">
-                            <h4>Ruler of the Labyrinth</h4>
-                            <div class="game-meta">Complete in-game milestones</div>
-                        </div>
-                        <div class="game-payout">$213.20</div>
+                    <img src="https://i.imgur.com/4o2bHcS.png" alt="Ruler of the Labyrinth" class="game-card-image">
+                    <div class="game-card-content">
+                        <h4 class="game-card-title">Ruler of the Labyrinth</h4>
+                        <div class="game-card-payout">$213.20</div>
                     </div>
                 </a>
 
                 <a href="https://gemsloot.com/?aff=shg" class="game-card" target="_blank" rel="noopener">
-                    <img src="https://i.imgur.com/uTLbmwW.png" alt="Queen's Blade" class="game-image">
-                    <div class="game-overlay">
-                        <div class="game-info">
-                            <h4>Queen's Blade</h4>
-                            <div class="game-meta">Complete in-game milestones</div>
-                        </div>
-                        <div class="game-payout">$138.30</div>
+                    <img src="https://i.imgur.com/uTLbmwW.png" alt="Queen's Blade" class="game-card-image">
+                    <div class="game-card-content">
+                        <h4 class="game-card-title">Queen's Blade</h4>
+                        <div class="game-card-payout">$138.30</div>
                     </div>
                 </a>
             </div>
@@ -2714,7 +2687,6 @@
         </div>
     </div>
 
-    <!-- Mobile Sticky CTA -->
     <div class="mobile-cta-bar">
         <div class="mobile-cta-content">
             <div class="mobile-cta-text">
@@ -2725,7 +2697,6 @@
         </div>
     </div>
 
-    <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
         ↑
     </button>
@@ -2786,12 +2757,6 @@
 
         function closeFtcBanner() {
             document.getElementById('ftcBanner').classList.add('hidden');
-            localStorage.setItem('ftcBannerClosed', 'true');
-        }
-
-        // Check if banner was previously closed
-        if (localStorage.getItem('ftcBannerClosed') === 'true') {
-            document.getElementById('ftcBanner').classList.add('hidden');
         }
 
         document.addEventListener('keydown', (e) => {
@@ -2805,26 +2770,21 @@
             btn.addEventListener('click', e => e.stopPropagation());
         });
 
-        // Copy promo code
         function copyCode() {
             const code = 'SHG';
             const copyText = document.getElementById('copyText');
             const button = copyText.parentElement;
             
-            // Copy to clipboard
             navigator.clipboard.writeText(code).then(() => {
-                // Show copied message
                 const originalHTML = copyText.innerHTML;
                 copyText.innerHTML = '<strong>Copied!</strong>';
                 button.classList.add('copied');
                 
-                // Reset after 2 seconds
                 setTimeout(() => {
                     copyText.innerHTML = originalHTML;
                     button.classList.remove('copied');
                 }, 2000);
             }).catch(err => {
-                // Fallback for older browsers
                 const textArea = document.createElement('textarea');
                 textArea.value = code;
                 document.body.appendChild(textArea);
@@ -2845,7 +2805,6 @@
             });
         }
 
-        // Header auto-hide on scroll
         let lastHeaderScroll = 0;
         const header = document.querySelector('header');
         
@@ -2858,17 +2817,14 @@
             }
             
             if (currentScroll > lastHeaderScroll && currentScroll > 100) {
-                // Scrolling down
                 header.classList.add('header-hidden');
             } else {
-                // Scrolling up
                 header.classList.remove('header-hidden');
             }
             
             lastHeaderScroll = currentScroll;
         });
 
-        // Progress bar
         function updateProgressBar() {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -2878,7 +2834,6 @@
 
         window.addEventListener('scroll', updateProgressBar);
 
-        // Back to top button
         const backToTopBtn = document.getElementById('backToTop');
         
         window.addEventListener('scroll', () => {
@@ -2896,7 +2851,6 @@
             });
         }
 
-        // Fix anchor link scrolling to account for sticky header
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -2904,7 +2858,7 @@
                 const targetElement = document.getElementById(targetId);
                 
                 if (targetElement) {
-                    const headerHeight = header.offsetHeight + 20; // Add some extra padding
+                    const headerHeight = header.offsetHeight + 20;
                     const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
                     
                     window.scrollTo({
@@ -2915,7 +2869,6 @@
             });
         });
 
-        // Mobile CTA scroll behavior - Simple and effective
         const mobileCTA = document.querySelector('.mobile-cta-bar');
         
         if (mobileCTA && window.innerWidth <= 768) {
@@ -2928,22 +2881,17 @@
                     window.requestAnimationFrame(() => {
                         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                         
-                        // Clear any existing timeout
                         clearTimeout(hideTimeout);
                         
-                        // Show CTA only after scrolling down past 300px
                         if (scrollTop < 300) {
                             mobileCTA.classList.add('hidden');
                         } else if (scrollTop < lastScrollTop) {
-                            // Scrolling up - show CTA
                             mobileCTA.classList.remove('hidden');
                             
-                            // Auto-hide after 3 seconds
                             hideTimeout = setTimeout(() => {
                                 mobileCTA.classList.add('hidden');
                             }, 3000);
                         } else if (scrollTop > lastScrollTop + 50) {
-                            // Scrolling down fast - hide CTA immediately
                             mobileCTA.classList.add('hidden');
                         }
                         
