@@ -26,6 +26,52 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* FTC Affiliate Banner */
+        .ftc-banner {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-bottom: 1px solid #fde68a;
+            padding: 0.65rem 1.5rem;
+            text-align: center;
+            font-size: 0.8125rem;
+            color: #92400e;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .ftc-banner a {
+            color: #92400e;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        .ftc-banner a:hover {
+            color: #78350f;
+        }
+
+        .ftc-banner-close {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #92400e;
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.25rem;
+            line-height: 1;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .ftc-banner-close:hover {
+            opacity: 1;
+        }
+
+        .ftc-banner.hidden {
+            display: none;
+        }
+
         header {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: saturate(180%) blur(20px);
@@ -34,6 +80,11 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header.header-hidden {
+            transform: translateY(-100%);
         }
 
         .header-content {
@@ -68,6 +119,7 @@
         .header-links {
             display: flex;
             gap: 1.5rem;
+            align-items: center;
         }
 
         .header-links a {
@@ -80,6 +132,37 @@
 
         .header-links a:hover {
             color: #10b981;
+        }
+
+        .header-social {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            margin-left: 0.5rem;
+            padding-left: 1rem;
+            border-left: 1px solid #e5e5e5;
+        }
+
+        .header-social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: #f5f5f5;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .header-social-link:hover {
+            background: #e5e5e5;
+            transform: translateY(-1px);
+        }
+
+        .header-social-link img {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
         }
 
         article {
@@ -774,7 +857,7 @@
         footer {
             background: #fafafa;
             border-top: 1px solid #e5e5e5;
-            padding: 2rem 1.5rem 1.5rem;
+            padding: 3rem 1.5rem 2rem;
             margin-top: 3rem;
         }
 
@@ -792,29 +875,114 @@
         .disclaimer h4 {
             font-size: 0.9375rem;
             color: #000;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .disclaimer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .disclaimer-item {
+            background: white;
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .disclaimer-item-title {
+            font-weight: 700;
+            color: #000;
+            font-size: 0.8125rem;
+            margin-bottom: 0.5rem;
         }
 
         .disclaimer p {
-            margin-bottom: 0.75rem;
+            margin-bottom: 0;
+            font-size: 0.8125rem;
+            line-height: 1.5;
         }
 
-        .disclaimer-toggle {
-            background: #000;
-            color: white;
-            border: none;
-            padding: 0.7rem 1.5rem;
+        .footer-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0 1.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .footer-button {
+            background: white;
+            color: #1d1d1f;
+            border: 1px solid #e5e5e5;
+            padding: 0.75rem 1.5rem;
             border-radius: 8px;
             font-size: 0.8125rem;
-            font-weight: 700;
+            font-weight: 600;
             cursor: pointer;
-            margin: 1rem auto;
-            display: block;
+            margin: 0;
             font-family: 'Inter', sans-serif;
+            transition: all 0.2s;
         }
 
-        .disclaimer-toggle:hover {
-            background: #1a1a1a;
+        .footer-button:hover {
+            background: #f5f5f5;
+            border-color: #d4d4d4;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+
+        .footer-social-label {
+            font-size: 0.8125rem;
+            color: #737373;
+            font-weight: 600;
+        }
+
+        .footer-social-links {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .footer-social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .footer-social-link:hover {
+            background: #f5f5f5;
+            border-color: #d4d4d4;
+            transform: translateY(-2px);
+        }
+
+        .footer-social-link img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.75rem;
+            margin: 0;
         }
 
         .modal-overlay {
@@ -965,6 +1133,19 @@
         }
 
         @media (max-width: 768px) {
+            .ftc-banner {
+                padding: 0.5rem 2.5rem 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+
+            .ftc-banner-close {
+                right: 0.5rem;
+            }
+
+            .header-social {
+                display: none;
+            }
+
             article {
                 padding: 1.5rem 1rem;
             }
@@ -1061,6 +1242,11 @@
                 grid-template-columns: 1fr;
                 gap: 0.75rem;
                 padding: 1rem 0;
+                text-align: center;
+            }
+
+            .cta-feature {
+                align-items: center;
             }
 
             .cta-feature-value {
@@ -1340,27 +1526,68 @@
             }
 
             footer {
-                padding: 1.5rem 1rem 1rem;
+                padding: 2rem 1rem 1.5rem;
                 margin-top: 2rem;
-            }
-
-            .disclaimer {
-                font-size: 0.75rem;
             }
 
             .disclaimer h4 {
                 font-size: 0.875rem;
-                margin-bottom: 0.5rem;
+                margin-bottom: 0.875rem;
+            }
+
+            .disclaimer-grid {
+                grid-template-columns: 1fr;
+                gap: 0.875rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .disclaimer-item {
+                padding: 1rem;
+            }
+
+            .disclaimer-item-title {
+                font-size: 0.75rem;
             }
 
             .disclaimer p {
-                margin-bottom: 0.65rem;
+                font-size: 0.75rem;
             }
 
-            .disclaimer-toggle {
-                padding: 0.65rem 1.25rem;
+            .footer-actions {
+                flex-direction: column;
+                gap: 0.75rem;
+                padding-top: 1.5rem;
+                margin: 1.5rem 0 1rem;
+            }
+
+            .footer-button {
+                width: 100%;
+                padding: 0.7rem 1.25rem;
                 font-size: 0.75rem;
-                margin: 0.75rem auto;
+            }
+
+            .footer-social {
+                flex-direction: column;
+                gap: 0.75rem;
+                margin: 1.25rem 0;
+            }
+
+            .footer-social-label {
+                font-size: 0.75rem;
+            }
+
+            .footer-social-link {
+                width: 36px;
+                height: 36px;
+            }
+
+            .footer-social-link img {
+                width: 18px;
+                height: 18px;
+            }
+
+            .footer-copyright {
+                font-size: 0.6875rem;
             }
 
             .modal {
@@ -1392,6 +1619,12 @@
     </style>
 </head>
 <body>
+    <!-- FTC Affiliate Banner -->
+    <div class="ftc-banner" id="ftcBanner">
+        <strong>Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a commission when you sign up through our links. <a href="#" onclick="event.preventDefault(); openDisclaimerModal();">Learn more</a>
+        <button class="ftc-banner-close" onclick="closeFtcBanner()" aria-label="Close banner">&times;</button>
+    </div>
+
     <header>
         <div class="header-content">
             <div class="logo">
@@ -1401,6 +1634,14 @@
             <div class="header-links">
                 <a href="#offers">Offers</a>
                 <a href="#faq">FAQ</a>
+                <div class="header-social">
+                    <a href="https://discord.com/invite/RJUDNxe2fZ" target="_blank" rel="noopener" class="header-social-link" title="Join our Discord">
+                        <img src="https://i.imgur.com/utPTm4M.png" alt="Discord">
+                    </a>
+                    <a href="https://www.reddit.com/r/SideHustleGold/" target="_blank" rel="noopener" class="header-social-link" title="Join our Subreddit">
+                        <img src="https://i.imgur.com/pvsQyO5.png" alt="Reddit">
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -1852,15 +2093,48 @@
     <footer>
         <div class="footer-content">
             <div class="disclaimer">
-                <h4>Required Legal Disclosures</h4>
-                <p><strong>Affiliate Disclosure:</strong> This site contains affiliate links. We earn commissions at no extra cost to you when you sign up through our links.</p>
-                <p><strong>Earnings Disclaimer:</strong> Amounts mentioned represent potential earnings based on current offers. Individual results vary based on eligibility, effort, timing, and location. Offers subject to change.</p>
-                <p><strong>Not Financial Advice:</strong> This is educational content only. Independently verify all offer terms and consult professionals before making financial decisions.</p>
-                <p><strong>Your Responsibility:</strong> You accept full responsibility for your actions and outcomes. We are not liable for losses, damages, or issues arising from use of these strategies.</p>
+                <h4>Important Information</h4>
                 
-                <button class="disclaimer-toggle" onclick="openDisclaimerModal()">View Full Legal Disclaimer</button>
+                <div class="disclaimer-grid">
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-title">Affiliate Disclosure</div>
+                        <p>This site contains affiliate links. We earn commissions when you sign up through our links, at no extra cost to you. We only recommend services we believe provide value.</p>
+                    </div>
+                    
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-title">Results May Vary</div>
+                        <p>Earnings shown are potential examples only. Most people earn little to no money. Your results depend on eligibility, location, timing, and effort. No results are guaranteed.</p>
+                    </div>
+                    
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-title">Educational Content</div>
+                        <p>This content is for educational purposes only and does not constitute financial, tax, or professional advice. Consult qualified professionals before making decisions.</p>
+                    </div>
+                    
+                    <div class="disclaimer-item">
+                        <div class="disclaimer-item-title">Your Responsibility</div>
+                        <p>You assume all risks when using this information. Verify all offer terms independently. We are not liable for losses, damages, or issues from using this information.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-actions">
+                    <button class="footer-button" onclick="openDisclaimerModal()">Full Disclaimer</button>
+                    <button class="footer-button" onclick="openContactModal()">Contact Us</button>
+                </div>
 
-                <p style="text-align: center; margin-top: 1.5rem; color: #9ca3af;">© 2025 Side Hustle Gold. All rights reserved.</p>
+                <div class="footer-social">
+                    <span class="footer-social-label">Join Our Community</span>
+                    <div class="footer-social-links">
+                        <a href="https://discord.com/invite/RJUDNxe2fZ" target="_blank" rel="noopener" class="footer-social-link" title="Join our Discord">
+                            <img src="https://i.imgur.com/utPTm4M.png" alt="Discord">
+                        </a>
+                        <a href="https://www.reddit.com/r/SideHustleGold/" target="_blank" rel="noopener" class="footer-social-link" title="Join our Subreddit">
+                            <img src="https://i.imgur.com/pvsQyO5.png" alt="Reddit">
+                        </a>
+                    </div>
+                </div>
+
+                <p class="footer-copyright">© 2025 Side Hustle Gold. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1868,33 +2142,82 @@
     <div class="modal-overlay" id="disclaimerModal" onclick="closeDisclaimerModal(event)">
         <div class="modal" onclick="event.stopPropagation()">
             <div class="modal-header">
-                <h3>Complete Legal Disclosure</h3>
+                <h3>Complete Disclaimer</h3>
                 <button class="modal-close" onclick="closeDisclaimerModal()">&times;</button>
             </div>
             <div class="modal-content">
-                <h4>No Guarantees</h4>
-                <p>Past performance does not guarantee future results. The offers and bonuses mentioned are subject to change without notice. Companies may modify, suspend, or terminate promotional offers at any time.</p>
+                <h4>Federal Trade Commission (FTC) Compliance</h4>
+                <p>This website complies with Federal Trade Commission 16 CFR Part 255 concerning the use of endorsements and testimonials in advertising. We maintain a material connection with the companies and services mentioned on this website through affiliate relationships. When you click on affiliate links and complete qualifying actions, we receive monetary compensation. This compensation may influence which products or services we promote, but does not affect the price you pay.</p>
                 
-                <h4>Eligibility Requirements</h4>
-                <p>Not all offers are available in all locations. You must meet each company's eligibility requirements, which may include age, residency, credit checks, and employment verification.</p>
+                <h4>Affiliate Relationship Disclosure</h4>
+                <p>We are professional affiliate marketers. The links provided throughout this website are affiliate links, meaning we earn a commission when you sign up for services through our unique tracking links. This commission comes from the companies offering these promotions, not from you. The presence of affiliate links should be considered as advertising. We only recommend services and offers that we believe have genuine value, but our opinions may be influenced by the compensation we receive.</p>
                 
-                <h4>Tax Implications</h4>
-                <p>Bonuses and rewards may be considered taxable income. Consult a tax professional regarding your specific situation and reporting requirements.</p>
+                <h4>No Guaranteed Results or Earnings</h4>
+                <p>The earnings figures, bonus amounts, and income potentials mentioned throughout this website are provided as examples of what may be possible under ideal circumstances. These figures are not typical, average, or guaranteed results. Your individual results will vary based on numerous factors including but not limited to: your geographic location, eligibility criteria, credit history, employment status, ability to meet specific requirements, timing of application, current promotional terms, and overall economic conditions. The majority of individuals who attempt these strategies earn substantially less than the amounts referenced or earn nothing at all. We make no promises, guarantees, representations, or warranties regarding your potential earnings.</p>
                 
-                <h4>Account Terms</h4>
-                <p>You are responsible for reading and complying with each company's terms of service. Violation of terms may result in bonus forfeiture, account closure, or legal action.</p>
+                <h4>Offer Terms and Availability</h4>
+                <p>All promotional offers, bonus amounts, eligibility requirements, and terms are subject to change without notice at the sole discretion of the companies providing these offers. Companies may modify, suspend, limit, or terminate their promotional offers at any time for any reason. The information provided on this website represents offers as they existed at the time of publication but may no longer be accurate or available. You are responsible for verifying all current terms, conditions, and availability directly with each company before participating. We are not responsible for any changes to offers or for offers that are no longer available.</p>
                 
-                <h4>Risk Disclosure</h4>
-                <p>Opening multiple financial accounts may impact your credit score, banking relationships, and financial standing. Consider the potential consequences before proceeding.</p>
+                <h4>Eligibility and Geographic Restrictions</h4>
+                <p>Not all offers are available in all geographic locations. Eligibility requirements vary by company and may include restrictions based on: state of residence, age (typically 18 or older), citizenship or legal residency status, credit history and score, existing customer status, employment verification, income requirements, and other factors. Some states, including but not limited to Vermont, may have additional restrictions. You are responsible for determining your eligibility for each offer. Attempting to participate in offers for which you are not eligible may result in denial, account closure, or forfeiture of bonuses.</p>
                 
-                <h4>Third-Party Platforms</h4>
-                <p>Gemsloot and other tracking platforms are independent third parties. We are not responsible for their policies, practices, payment processing, or any issues that arise from using their services.</p>
+                <h4>Tax Obligations and Reporting</h4>
+                <p>Bonuses, rewards, and promotional payments may be considered taxable income under federal, state, and local tax laws. Companies may report payments to you and tax authorities via Form 1099 or other tax documents if payments meet applicable thresholds (typically $600 or more per year). You are solely responsible for understanding your tax obligations, maintaining accurate records, reporting all income to appropriate tax authorities, and paying any taxes owed. We strongly recommend consulting with a qualified tax professional regarding the tax implications of participating in these offers. We are not tax professionals and provide no tax advice.</p>
                 
-                <h4>Information Accuracy</h4>
-                <p>While we strive for accuracy, information may be outdated or incorrect. Always verify current offer terms directly with the financial institution before participating.</p>
+                <h4>Account Terms and Conditions Compliance</h4>
+                <p>You are solely responsible for reading, understanding, and complying with each company's complete terms of service, user agreements, privacy policies, and promotional terms before signing up. Violation of any company's terms may result in immediate account termination, forfeiture of bonuses, clawback of previously received bonuses, negative impact on credit reports, legal action, and potential criminal prosecution for fraud. Creating multiple accounts, using false information, violating promotional terms, or attempting to abuse offers is strictly prohibited and may constitute fraud.</p>
                 
-                <h4>No Professional Relationship</h4>
-                <p>Nothing on this site creates an attorney-client, financial advisor-client, or any other professional relationship. Seek professional advice for your specific circumstances.</p>
+                <h4>Financial Risk Disclosure</h4>
+                <p>Opening multiple financial accounts, applying for multiple offers, or making frequent account inquiries may negatively impact your: credit score and credit reports (through hard or soft inquiries), banking relationships and history (through ChexSystems or Early Warning Services), ability to open future accounts, mortgage applications and interest rates, and overall financial profile. Some offers may require deposits, minimum balances, or maintenance fees that could result in financial loss if requirements are not met. You should carefully consider these risks before proceeding and only participate in offers you can afford.</p>
+                
+                <h4>Third-Party Platforms and Services</h4>
+                <p>This website references third-party tracking platforms including but not limited to Gemsloot. We are independent from these platforms and have no control over their operations, policies, practices, payment processing, customer service, or business continuity. We are not responsible or liable for any issues, delays, losses, or damages arising from your use of any third-party platform including: payment delays or non-payment, account restrictions or terminations, data breaches or security issues, technical problems or service interruptions, disputes or customer service issues, changes to platform terms or policies, or platform closure or bankruptcy. Your relationship with third-party platforms is governed by their own terms of service.</p>
+                
+                <h4>Information Accuracy and Currency</h4>
+                <p>While we make reasonable efforts to provide accurate and current information, we cannot guarantee the accuracy, completeness, timeliness, or reliability of any information provided on this website. Information may become outdated, incorrect, or incomplete due to: changes in company offers or terms, technical errors or omissions, delays in updating content, or other factors beyond our control. You must independently verify all information with official company sources before taking any action. We disclaim all liability for errors, omissions, or outdated information.</p>
+                
+                <h4>Not Professional Advice</h4>
+                <p>Nothing on this website creates or establishes an attorney-client, financial advisor-client, accountant-client, tax professional-client, or any other professional relationship. The information provided is general in nature and not tailored to your specific circumstances. We are not licensed as: attorneys, financial advisors, investment advisors, accountants, tax professionals, or any other regulated profession. You should seek advice from appropriately licensed professionals before making any financial, legal, tax, or investment decisions.</p>
+                
+                <h4>No Warranties</h4>
+                <p>This website and all information contained herein are provided "AS IS" and "AS AVAILABLE" without warranties of any kind, either express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, non-infringement, accuracy, completeness, or reliability. We expressly disclaim all warranties to the fullest extent permitted by law.</p>
+                
+                <h4>Limitation of Liability</h4>
+                <p>To the fullest extent permitted by applicable law, in no event shall this website, its owners, operators, affiliates, employees, agents, or representatives be liable for any direct, indirect, incidental, special, consequential, exemplary, or punitive damages, including but not limited to: loss of profits, revenue, or income; loss of data or information; loss of business opportunities; damage to reputation; or any other losses or damages arising from or related to your use of this website, your reliance on information provided, your participation in any offers or strategies described, or your inability to use this website, even if advised of the possibility of such damages.</p>
+                
+                <h4>Indemnification</h4>
+                <p>You agree to indemnify, defend, and hold harmless this website, its owners, operators, affiliates, employees, agents, and representatives from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising from or related to: your use of this website, your violation of these terms or any applicable law, your violation of any third-party rights, your participation in any offers or strategies, or any misrepresentation made by you.</p>
+                
+                <h4>Dispute Resolution and Governing Law</h4>
+                <p>Any disputes arising from or relating to this website or these terms shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to conflict of law principles. You agree to submit to the exclusive jurisdiction of courts located in California for resolution of any disputes. To the extent permitted by law, you waive any right to a jury trial.</p>
+                
+                <h4>Changes to Disclaimers</h4>
+                <p>We reserve the right to modify, update, or change these disclaimers and terms at any time without prior notice. Your continued use of this website following any changes constitutes acceptance of those changes. It is your responsibility to review these disclaimers periodically.</p>
+                
+                <h4>Severability</h4>
+                <p>If any provision of these disclaimers is found to be unenforceable or invalid under applicable law, such provision shall be modified to the minimum extent necessary to make it enforceable, or if not possible, severed from these disclaimers. The remaining provisions shall continue in full force and effect.</p>
+                
+                <h4>Contact and Questions</h4>
+                <p>If you have questions about these disclosures or disclaimers, you should consult with your own legal counsel. We do not provide legal advice regarding these terms or your use of this website.</p>
+                
+                <p style="margin-top: 1.5rem; font-weight: 600;">BY USING THIS WEBSITE, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE DISCLAIMERS AND DISCLOSURES.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="contactModal" onclick="closeContactModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3>Contact Us</h3>
+                <button class="modal-close" onclick="closeContactModal()">&times;</button>
+            </div>
+            <div class="modal-content">
+                <p style="text-align: center; margin-bottom: 1.5rem;">Have questions or need support? Get in touch with us.</p>
+                <div style="text-align: center; background: #f5f5f5; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                    <p style="font-size: 0.875rem; color: #737373; margin-bottom: 0.5rem;">Email us at:</p>
+                    <a href="mailto:contact@sidehustlegold.org" style="font-size: 1.125rem; font-weight: 700; color: #10b981; text-decoration: none;">contact@sidehustlegold.org</a>
+                </div>
+                <p style="font-size: 0.875rem; color: #737373; text-align: center; margin-top: 1rem;">We typically respond within 24-48 hours.</p>
             </div>
         </div>
     </div>
@@ -1952,8 +2275,33 @@
             }
         }
 
+        function openContactModal() {
+            document.getElementById('contactModal').classList.add('visible');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactModal(event) {
+            if (!event || event.target.id === 'contactModal') {
+                document.getElementById('contactModal').classList.remove('visible');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function closeFtcBanner() {
+            document.getElementById('ftcBanner').classList.add('hidden');
+            localStorage.setItem('ftcBannerClosed', 'true');
+        }
+
+        // Check if banner was previously closed
+        if (localStorage.getItem('ftcBannerClosed') === 'true') {
+            document.getElementById('ftcBanner').classList.add('hidden');
+        }
+
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeDisclaimerModal();
+            if (e.key === 'Escape') {
+                closeDisclaimerModal();
+                closeContactModal();
+            }
         });
 
         document.querySelectorAll('.offer-button').forEach(btn => {
@@ -1999,6 +2347,48 @@
                 document.body.removeChild(textArea);
             });
         }
+
+        // Header auto-hide on scroll
+        let lastHeaderScroll = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('header-hidden');
+                return;
+            }
+            
+            if (currentScroll > lastHeaderScroll && currentScroll > 100) {
+                // Scrolling down
+                header.classList.add('header-hidden');
+            } else {
+                // Scrolling up
+                header.classList.remove('header-hidden');
+            }
+            
+            lastHeaderScroll = currentScroll;
+        });
+
+        // Fix anchor link scrolling to account for sticky header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = header.offsetHeight + 20; // Add some extra padding
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
         // Mobile CTA scroll behavior - Simple and effective
         const mobileCTA = document.querySelector('.mobile-cta-bar');
