@@ -2880,10 +2880,15 @@
                 if (!ticking) {
                     window.requestAnimationFrame(() => {
                         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        const windowHeight = window.innerHeight;
+                        const documentHeight = document.documentElement.scrollHeight;
+                        
+                        // Check if near bottom (within 100px of bottom)
+                        const isNearBottom = (scrollTop + windowHeight) >= (documentHeight - 100);
                         
                         clearTimeout(hideTimeout);
                         
-                        if (scrollTop < 300) {
+                        if (isNearBottom || scrollTop < 300) {
                             mobileCTA.classList.add('hidden');
                         } else if (scrollTop < lastScrollTop) {
                             mobileCTA.classList.remove('hidden');
